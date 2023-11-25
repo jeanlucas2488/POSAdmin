@@ -225,6 +225,7 @@ public class MainActivity extends AppCompatActivity
 															us.setProd(pro.getText().toString());
 															us.setQuant(quant.getText().toString());
 															us.setValor(valor.getText().toString());
+															us.setImage(aba10.get(p3).getImage());
 															SQLiteControl db = new SQLiteControl(c);
 															db.postUp(us);
 
@@ -437,6 +438,7 @@ public class MainActivity extends AppCompatActivity
 															us.setProd(pro.getText().toString());
 															us.setQuant(quant.getText().toString());
 															us.setValor(valor.getText().toString());
+															us.setImage(aba9.get(p3).getImage());
 															SQLiteControl db = new SQLiteControl(c);
 															db.postUp(us);
 
@@ -649,6 +651,7 @@ public class MainActivity extends AppCompatActivity
 															us.setProd(pro.getText().toString());
 															us.setQuant(quant.getText().toString());
 															us.setValor(valor.getText().toString());
+															us.setImage(aba8.get(p3).getImage());
 															SQLiteControl db = new SQLiteControl(c);
 															db.postUp(us);
 
@@ -861,6 +864,7 @@ public class MainActivity extends AppCompatActivity
 															us.setProd(pro.getText().toString());
 															us.setQuant(quant.getText().toString());
 															us.setValor(valor.getText().toString());
+															us.setImage(aba7.get(p3).getImage());
 															SQLiteControl db = new SQLiteControl(c);
 															db.postUp(us);
 
@@ -1073,6 +1077,7 @@ public class MainActivity extends AppCompatActivity
 															us.setProd(pro.getText().toString());
 															us.setQuant(quant.getText().toString());
 															us.setValor(valor.getText().toString());
+															us.setImage(aba6.get(p3).getImage());
 															SQLiteControl db = new SQLiteControl(c);
 															db.postUp(us);
 
@@ -1285,6 +1290,7 @@ public class MainActivity extends AppCompatActivity
 															us.setProd(pro.getText().toString());
 															us.setQuant(quant.getText().toString());
 															us.setValor(valor.getText().toString());
+															us.setImage(aba5.get(p3).getImage());
 															SQLiteControl db = new SQLiteControl(c);
 															db.postUp(us);
 
@@ -1497,6 +1503,7 @@ public class MainActivity extends AppCompatActivity
 															us.setProd(pro.getText().toString());
 															us.setQuant(quant.getText().toString());
 															us.setValor(valor.getText().toString());
+															us.setImage(aba4.get(p3).getImage());
 															SQLiteControl db = new SQLiteControl(c);
 															db.postUp(us);
 
@@ -1710,6 +1717,7 @@ public class MainActivity extends AppCompatActivity
 															us.setProd(pro.getText().toString());
 															us.setQuant(quant.getText().toString());
 															us.setValor(valor.getText().toString());
+															us.setImage(aba3.get(p3).getImage());
 															SQLiteControl db = new SQLiteControl(c);
 															db.postUp(us);
 
@@ -1922,6 +1930,7 @@ public class MainActivity extends AppCompatActivity
 															us.setProd(pro.getText().toString());
 															us.setQuant(quant.getText().toString());
 															us.setValor(valor.getText().toString());
+															us.setImage(aba2.get(p3).getImage());
 															SQLiteControl db = new SQLiteControl(c);
 															db.postUp(us);
 
@@ -2134,6 +2143,7 @@ public class MainActivity extends AppCompatActivity
 															us.setProd(pro.getText().toString());
 															us.setQuant(quant.getText().toString());
 															us.setValor(valor.getText().toString());
+															us.setImage(aba1.get(p3).getImage());
 															SQLiteControl db = new SQLiteControl(c);
 															db.postUp(us);
 

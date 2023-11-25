@@ -3,7 +3,9 @@ import java.sql.*;
 
 public class util
 {
-	public String money, supVal,forn, eval, etotal;
+	public long supId, sanId, contasId;
+	public String cData, vencimento, cValor, cStatus;
+	public String money, supVal, supDesc, sanVal, sanMot,forn, eval, etotal;
 	public String sangria;
 	public String fundo;
 	public String op;
@@ -32,8 +34,71 @@ public class util
 	private byte[] image;
 	private long id;
 	private long userId;
-	
-	
+
+	public String getcData(){
+		return cData;
+	}
+	public void setcData(String cdata){
+		this.cData = cdata;
+	}
+
+	public String getVencimento(){
+		return vencimento;
+	}
+	public void setVencimento(String venc){
+		this.vencimento = venc;
+	}
+
+	public String getcValor(){
+		return cValor;
+	}
+	public void setcValor(String cval){
+		this.cValor = cval;
+	}
+
+	public String getcStatus(){
+		return cStatus;
+	}
+	public void setcStatus(String st){
+		this.cStatus = st;
+	}
+	public long getCid(){
+		return contasId;
+	}
+	public void setContasId(long i){
+		this.contasId = i;
+	}
+
+	public long getSupId(){
+		return supId;
+	}
+	public void setSupId(long id){
+		this.supId = id;
+	}
+	public long getSanId(){
+		return sanId;
+	}
+	public void setSanId(long id){
+		this.sanId = id;
+	}
+	public String getSupDesc(){
+		return supDesc;
+	}
+	public void setSupDesc(String sup){
+		this.supDesc = sup;
+	}
+	public String getSanMot(){
+		return sanMot;
+	}
+	public void setSanMot(String mot){
+		this.sanMot = mot;
+	}
+	public String getSanVal(){
+		return sanVal;
+	}
+	public void setSanVal(String val){
+		this.sanVal = val;
+	}
 	public long getUserId(){
 		return userId;
 	}

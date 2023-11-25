@@ -14,6 +14,9 @@ public class SQLiteHelper extends SQLiteOpenHelper
 	public void onCreate(SQLiteDatabase db)
 	{
 		// TODO: Implement this method
+
+		db.execSQL("CREATE TABLE ContasPagar" +
+				    "(id integer primary key, data text, vencimento text, valor text, status text)");
 		db.execSQL("CREATE TABLE senhas" + 
 		           "(userId integer primary key, usuario text, senha text);");
 		

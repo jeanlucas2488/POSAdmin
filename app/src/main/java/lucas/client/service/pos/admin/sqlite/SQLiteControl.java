@@ -74,6 +74,25 @@ public class SQLiteControl
 	public void delete(util us){
 		db.delete(us.getTable(), "id = ?", new String[]{String.valueOf(us.getId())});
 	}
+
+	public List<util> getContas(){
+		ArrayList<util> arr = new ArrayList<util>();
+		String[] cl = {"id", "data", "vencimento", "valor", "status"};
+		Cursor cs = db.query("ContasPagar", cl, null, null, null, null, "data ASC");
+		if(cs.getCount() >0){
+			cs.moveToFirst();
+			do{
+				util us = new util();
+				us.setContasId(Integer.parseInt(cs.getString(0)));
+				us.setcData(cs.getString(1));
+				us.setVencimento(cs.getString(2));
+				us.setcValor(cs.getString(3));
+				us.setcStatus(cs.getString(4));
+				arr.add(us);
+			} while(cs.moveToNext());
+		}
+		return arr;
+	}
 	public List<util> getUsers(){
 		ArrayList<util> ar = new ArrayList<util>();
 		String[] cl = {"userId", "usuario", "senha"};
@@ -89,6 +108,65 @@ public class SQLiteControl
 			} while(cs.moveToNext());
 		}
 		return ar;
+	}
+	public List<util> suFind(){
+		ArrayList<util> arr = new ArrayList<util>();
+		String[] cl = {"id", "sup"};
+		Cursor cs = db.query("supSom", cl, null, null, null, null, "sup ASC");
+		if(cs.getCount() >0){
+			cs.moveToFirst();
+			do{
+				util us = new util();
+				us.setSupVal(cs.getString(1));
+				arr.add(us);
+			}while(cs.moveToNext());
+		}
+		return arr;
+	}
+
+
+	public List<util> saFind(){
+		ArrayList<util> arr = new ArrayList<util>();
+		String[] cl = {"id", "sangria"};
+		Cursor cs = db.query("saldo", cl, null, null, null, null, "sangria ASC");
+		if(cs.getCount() >0){
+			cs.moveToFirst();
+			do{
+				util us = new util();
+				us.setSangria(cs.getString(1));
+				arr.add(us);
+			}while(cs.moveToNext());
+		}
+		return arr;
+	}
+
+
+
+	public util supFind(long id){
+		util us = new util();
+		Cursor cs = db.rawQuery("select * from Suprimentos WHERE id="+id+"", null);
+		if(cs.moveToFirst()){
+
+			do{
+				us.setSupId(cs.getLong(cs.getColumnIndex("id")));
+				us.setSupVal(cs.getString(cs.getColumnIndex("suprimento_val")));
+				us.setSupDesc(cs.getString(cs.getColumnIndex("suprimento_mot")));
+			}while(cs.moveToNext());
+		}
+		return us;
+	}
+	public util sanFind(long id){
+		util us = new util();
+		Cursor cs = db.rawQuery("select * from Sangrias WHERE id="+id+"", null);
+		if(cs.moveToFirst()){
+
+			do{
+				us.setSanId(cs.getLong(cs.getColumnIndex("id")));
+				us.setSanVal(cs.getString(cs.getColumnIndex("sangria_val")));
+				us.setSanMot(cs.getString(cs.getColumnIndex("sangria_mot")));
+			}while(cs.moveToNext());
+		}
+		return us;
 	}
 	public List<util> fechamento(){
 		ArrayList<util> arr = new ArrayList<util>();
