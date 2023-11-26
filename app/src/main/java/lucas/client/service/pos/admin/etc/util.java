@@ -137,14 +137,6 @@ public class util
 	}
 
 
-
-
-
-
-
-
-
-
 	public long getSupId(){
 		return supId;
 	}

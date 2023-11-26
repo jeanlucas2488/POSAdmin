@@ -22,7 +22,7 @@ import java.util.List;
 
 import lucas.client.service.pos.admin.R;
 import lucas.client.service.pos.admin.etc.util;
-import lucas.client.service.pos.admin.financeiro.adapter.ContasReceberAdapter;
+import lucas.client.service.pos.admin.financeiro.adapter.ContasPagarAdapter;
 import lucas.client.service.pos.admin.sqlite.SQLiteControl;
 
 public class ContasPagar extends AppCompatActivity
@@ -51,7 +51,7 @@ public class ContasPagar extends AppCompatActivity
                 DVencimento = r.findViewById(R.id.vencimento);
                 empresa = r.findViewById(R.id.empresa);
                 CBancaria = r.findViewById(R.id.conta_bancaria);
-                ValorPAg = r.findViewById(R.id.valorPago);
+                ValorPAg = r.findViewById(R.id.valorag);
                 dataAg = r.findViewById(R.id.dataAg);
                 pessoa = r.findViewById(R.id.pessoa);
                 dataComp = r.findViewById(R.id.dataComp);
@@ -140,7 +140,7 @@ public class ContasPagar extends AppCompatActivity
         });
         ListView l = (ListView) findViewById(R.id.list);
         l.setEmptyView(findViewById(android.R.id.empty));
-        l.setAdapter(new ContasReceberAdapter(c, lt));
+        l.setAdapter(new ContasPagarAdapter(c, lt));
         l.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -152,7 +152,7 @@ public class ContasPagar extends AppCompatActivity
                 DVencimento = r.findViewById(R.id.vencimento);
                 empresa = r.findViewById(R.id.empresa);
                 CBancaria = r.findViewById(R.id.conta_bancaria);
-                ValorPAg = r.findViewById(R.id.valorPago);
+                ValorPAg = r.findViewById(R.id.valorag);
                 dataAg = r.findViewById(R.id.dataAg);
                 pessoa = r.findViewById(R.id.pessoa);
                 dataComp = r.findViewById(R.id.dataComp);
@@ -161,6 +161,22 @@ public class ContasPagar extends AppCompatActivity
                 status = r.findViewById(R.id.status);
                 valPago = r.findViewById(R.id.valorPago);
                 saldoPagar = r.findViewById(R.id.saldopagar);
+
+                codigo.setText(lt.get(position).getContasCodigo());
+                clasif.setText(lt.get(position).getClassificacao());
+                valPagar.setText(lt.get(position).getValor_pagar());
+                DVencimento.setText(lt.get(position).getData_vencimento());
+                empresa.setText(lt.get(position).getEmpresa());
+                CBancaria.setText(lt.get(position).getConta_bancaria());
+                ValorPAg.setText(lt.get(position).getValor_pagar_ag());
+                dataAg.setText(lt.get(position).getData_ag());
+                pessoa.setText(lt.get(position).getPessoa());
+                dataComp.setText(lt.get(position).getData_comp());
+                descAg.setText(lt.get(position).getDesc_ag());
+                comentarios.setText(lt.get(position).getComentarios());
+                status.setText(lt.get(position).getStatus());
+                valPago.setText(lt.get(position).getValor_pago());
+                saldoPagar.setText(lt.get(position).getSaldo_pagar());
 
                 AlertDialog.Builder b = new AlertDialog.Builder(c);
                 b.setTitle("Cadastrar:");

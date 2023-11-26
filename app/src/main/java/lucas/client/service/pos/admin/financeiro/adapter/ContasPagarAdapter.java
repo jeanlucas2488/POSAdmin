@@ -1,8 +1,6 @@
 package lucas.client.service.pos.admin.financeiro.adapter;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,11 +13,11 @@ import java.util.List;
 import lucas.client.service.pos.admin.R;
 import lucas.client.service.pos.admin.etc.util;
 
-public class ContasReceberAdapter extends ArrayAdapter<util> {
+public class ContasPagarAdapter extends ArrayAdapter<util> {
     Context c;
     List<util> lt;
 
-    public ContasReceberAdapter(Context c2, List<util> lt2){
+    public ContasPagarAdapter(Context c2, List<util> lt2){
         super(c2, R.layout.contas_adapter, lt2);
         this.c = c2;
         this.lt = lt2;
@@ -31,7 +29,7 @@ public class ContasReceberAdapter extends ArrayAdapter<util> {
         View r = li.inflate(R.layout.contas_adapter, parent, false);
         final ImageView im = r.findViewById(R.id.im);
         final TextView tv = r.findViewById(R.id.tv);
-        tv.setText(lt.get(position).getContasCodigo());
+        tv.setText(lt.get(position).getContasCodigo() + " --> " + lt.get(position).getClassificacao());
         im.setImageResource(R.drawable.pago);
 
 
