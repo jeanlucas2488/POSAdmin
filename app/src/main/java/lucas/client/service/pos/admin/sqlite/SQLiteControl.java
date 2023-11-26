@@ -78,7 +78,7 @@ public class SQLiteControl
 		ContentValues ct = new ContentValues();
 		ct.put("codigo", us.getContasCodigo());
 		ct.put("classificacao", us.getClassificacao());
-		ct.put("valor_paagar", us.getValor_pagar());
+		ct.put("valor_pagar", us.getValor_pagar());
 		ct.put("data_vencimento", us.getData_vencimento());
 		ct.put("empresa", us.getEmpresa());
 		ct.put("conta_bancaria", us.getConta_bancaria());
@@ -97,7 +97,7 @@ public class SQLiteControl
 		ContentValues ct = new ContentValues();
 		ct.put("codigo", us.getContasCodigo());
 		ct.put("classificacao", us.getClassificacao());
-		ct.put("valor_paagar", us.getValor_pagar());
+		ct.put("valor_pagar", us.getValor_pagar());
 		ct.put("data_vencimento", us.getData_vencimento());
 		ct.put("empresa", us.getEmpresa());
 		ct.put("conta_bancaria", us.getConta_bancaria());

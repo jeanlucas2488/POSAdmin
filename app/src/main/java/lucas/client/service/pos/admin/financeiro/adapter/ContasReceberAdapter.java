@@ -32,7 +32,7 @@ public class ContasReceberAdapter extends ArrayAdapter<util> {
         final ImageView im = r.findViewById(R.id.im);
         final TextView tv = r.findViewById(R.id.tv);
         tv.setText(lt.get(position).getContasCodigo());
-
+        im.setImageResource(R.drawable.pago);
 
 
         return r;

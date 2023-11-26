@@ -20,7 +20,7 @@
                 >
 
                 <android.support.design.widget.TextInputEditText
-                    android:id="@+id/pessoa"
+                    android:id="@+id/codigo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -37,7 +37,7 @@
                 >
 
                 <android.support.design.widget.TextInputEditText
-                    android:id="@+id/dataComp"
+                    android:id="@+id/classificacao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -59,7 +59,7 @@
                 >
 
                 <android.support.design.widget.TextInputEditText
-                    android:id="@+id/pessoa"
+                    android:id="@+id/valorPagar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -77,7 +77,7 @@
                 >
 
                 <android.support.design.widget.TextInputEditText
-                    android:id="@+id/dataComp"
+                    android:id="@+id/vencimento"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -100,7 +100,7 @@
                 >
 
                 <android.support.design.widget.TextInputEditText
-                    android:id="@+id/pessoa"
+                    android:id="@+id/empresa"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -116,7 +116,7 @@
                 >
 
                 <android.support.design.widget.TextInputEditText
-                    android:id="@+id/dataComp"
+                    android:id="@+id/conta_bancaria"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -138,7 +138,7 @@
                 >
 
                 <android.support.design.widget.TextInputEditText
-                    android:id="@+id/pessoa"
+                    android:id="@+id/valorg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -156,7 +156,7 @@
                 >
 
                 <android.support.design.widget.TextInputEditText
-                    android:id="@+id/dataComp"
+                    android:id="@+id/dataAg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -218,7 +218,7 @@
                 >
 
                 <android.support.design.widget.TextInputEditText
-                    android:id="@+id/valorpago"
+                    android:id="@+id/status"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -234,7 +234,7 @@
                 >
 
                 <android.support.design.widget.TextInputEditText
-                    android:id="@+id/valorpago"
+                    android:id="@+id/valorPago"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="125dp"
@@ -273,7 +273,7 @@
             >
 
             <android.support.design.widget.TextInputEditText
-                android:id="@+id/comentarios"
+                android:id="@+id/descAg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
