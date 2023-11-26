@@ -74,20 +74,71 @@ public class SQLiteControl
 	public void delete(util us){
 		db.delete(us.getTable(), "id = ?", new String[]{String.valueOf(us.getId())});
 	}
-
+	public void setContasPagar(util us){
+		ContentValues ct = new ContentValues();
+		ct.put("codigo", us.getContasCodigo());
+		ct.put("classificacao", us.getClassificacao());
+		ct.put("valor_paagar", us.getValor_pagar());
+		ct.put("data_vencimento", us.getData_vencimento());
+		ct.put("empresa", us.getEmpresa());
+		ct.put("conta_bancaria", us.getConta_bancaria());
+		ct.put("valor_pagar_ag", us.getValor_pagar_ag());
+		ct.put("data_ag", us.getData_ag());
+		ct.put("pessoa", us.getPessoa());
+		ct.put("data_comp", us.getData_comp());
+		ct.put("desc_ag", us.getDesc_ag());
+		ct.put("comentarios", us.getComentarios());
+		ct.put("status", us.getStatus());
+		ct.put("valor_pago", us.getValor_pago());
+		ct.put("saldo_pagar", us.getSaldo_pagar());
+		db.insert("ContasPagar", null, ct);
+	}
+	public void upContasPagar(util us){
+		ContentValues ct = new ContentValues();
+		ct.put("codigo", us.getContasCodigo());
+		ct.put("classificacao", us.getClassificacao());
+		ct.put("valor_paagar", us.getValor_pagar());
+		ct.put("data_vencimento", us.getData_vencimento());
+		ct.put("empresa", us.getEmpresa());
+		ct.put("conta_bancaria", us.getConta_bancaria());
+		ct.put("valor_pagar_ag", us.getValor_pagar_ag());
+		ct.put("data_ag", us.getData_ag());
+		ct.put("pessoa", us.getPessoa());
+		ct.put("data_comp", us.getData_comp());
+		ct.put("desc_ag", us.getDesc_ag());
+		ct.put("comentarios", us.getComentarios());
+		ct.put("status", us.getStatus());
+		ct.put("valor_pago", us.getValor_pago());
+		ct.put("saldo_pagar", us.getSaldo_pagar());
+		db.update("ContasPagar", ct, "id = ?", new String[]{String.valueOf(us.getContasId())});
+	}
 	public List<util> getContas(){
 		ArrayList<util> arr = new ArrayList<util>();
-		String[] cl = {"id", "data", "vencimento", "valor", "status"};
-		Cursor cs = db.query("ContasPagar", cl, null, null, null, null, "data ASC");
+		String[] cl = {"id", "codigo", "classificacao", "valor_pagar", "data_vencimento", "empresa",
+				"conta_bancaria", "valor_pagar_ag", "data_ag", "pessoa", "data_comp", "desc_ag",
+				"comentarios", "status", "valor_pago", "saldo_pagar"};
+
+		Cursor cs = db.query("ContasPagar", cl, null, null, null, null, "codigo ASC");
 		if(cs.getCount() >0){
 			cs.moveToFirst();
 			do{
 				util us = new util();
 				us.setContasId(Integer.parseInt(cs.getString(0)));
-				us.setcData(cs.getString(1));
-				us.setVencimento(cs.getString(2));
-				us.setcValor(cs.getString(3));
-				us.setcStatus(cs.getString(4));
+				us.setContasCodigo(cs.getString(1));
+				us.setClassificacao(cs.getString(2));
+				us.setValor_pagar(cs.getString(3));
+				us.setData_vencimento(cs.getString(4));
+				us.setEmpresa(cs.getString(5));
+				us.setConta_bancaria(cs.getString(6));
+				us.setValor_pagar_ag(cs.getString(7));
+				us.setData_ag(cs.getString(8));
+				us.setPessoa(cs.getString(9));
+				us.setData_comp(cs.getString(10));
+				us.setDesc_ag(cs.getString(11));
+				us.setComentarios(cs.getString(12));
+				us.setStatus(cs.getString(13));
+				us.setValor_pago(cs.getString(14));
+				us.setSaldo_pagar(cs.getString(15));
 				arr.add(us);
 			} while(cs.moveToNext());
 		}

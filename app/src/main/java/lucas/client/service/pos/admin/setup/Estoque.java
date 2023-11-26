@@ -3,9 +3,7 @@ import android.content.*;
 import android.os.*;
 import android.support.design.widget.*;
 import android.support.v7.app.*;
-import android.support.v7.widget.*;
 import android.view.*;
-import android.view.View.*;
 import android.widget.*;
 import android.widget.AdapterView.*;
 import java.io.*;
@@ -163,7 +161,7 @@ public class Estoque extends AppCompatActivity
 					// TODO: Implement this method
 					LayoutInflater lay = getLayoutInflater();
 					View r = lay.inflate(R.layout.estoque_view_product, null);
-					final TextInputEditText prod = r.findViewById(R.id.prod);
+					final TextInputEditText prod = r.findViewById(R.id.pessoa);
 					final TextInputEditText quant = r.findViewById(R.id.quant);
 					final TextInputEditText valor = r.findViewById(R.id.valor);
 					final TextInputEditText etotal = r.findViewById(R.id.etotal);
@@ -269,7 +267,7 @@ public class Estoque extends AppCompatActivity
 					// TODO: Implement this method
 					LayoutInflater lay = getLayoutInflater();
 					View r = lay.inflate(R.layout.estoque_view_product, null);
-					final TextInputEditText prod = r.findViewById(R.id.prod);
+					final TextInputEditText prod = r.findViewById(R.id.pessoa);
 					final TextInputEditText quant = r.findViewById(R.id.quant);
 					final TextInputEditText valor = r.findViewById(R.id.valor);
 					final TextInputEditText etotal = r.findViewById(R.id.etotal);
@@ -375,7 +373,7 @@ public class Estoque extends AppCompatActivity
 					// TODO: Implement this method
 					LayoutInflater lay = getLayoutInflater();
 					View r = lay.inflate(R.layout.estoque_view_product, null);
-					final TextInputEditText prod = r.findViewById(R.id.prod);
+					final TextInputEditText prod = r.findViewById(R.id.pessoa);
 					final TextInputEditText quant = r.findViewById(R.id.quant);
 					final TextInputEditText valor = r.findViewById(R.id.valor);
 					final TextInputEditText etotal = r.findViewById(R.id.etotal);
@@ -481,7 +479,7 @@ public class Estoque extends AppCompatActivity
 					// TODO: Implement this method
 					LayoutInflater lay = getLayoutInflater();
 					View r = lay.inflate(R.layout.estoque_view_product, null);
-					final TextInputEditText prod = r.findViewById(R.id.prod);
+					final TextInputEditText prod = r.findViewById(R.id.pessoa);
 					final TextInputEditText quant = r.findViewById(R.id.quant);
 					final TextInputEditText valor = r.findViewById(R.id.valor);
 					final TextInputEditText etotal = r.findViewById(R.id.etotal);
@@ -587,7 +585,7 @@ public class Estoque extends AppCompatActivity
 					// TODO: Implement this method
 					LayoutInflater lay = getLayoutInflater();
 					View r = lay.inflate(R.layout.estoque_view_product, null);
-					final TextInputEditText prod = r.findViewById(R.id.prod);
+					final TextInputEditText prod = r.findViewById(R.id.pessoa);
 					final TextInputEditText quant = r.findViewById(R.id.quant);
 					final TextInputEditText valor = r.findViewById(R.id.valor);
 					final TextInputEditText etotal = r.findViewById(R.id.etotal);
@@ -692,7 +690,7 @@ public class Estoque extends AppCompatActivity
 					// TODO: Implement this method
 					LayoutInflater lay = getLayoutInflater();
 					View r = lay.inflate(R.layout.estoque_view_product, null);
-					final TextInputEditText prod = r.findViewById(R.id.prod);
+					final TextInputEditText prod = r.findViewById(R.id.pessoa);
 					final TextInputEditText quant = r.findViewById(R.id.quant);
 					final TextInputEditText valor = r.findViewById(R.id.valor);
 					final TextInputEditText etotal = r.findViewById(R.id.etotal);
@@ -797,7 +795,7 @@ public class Estoque extends AppCompatActivity
 					// TODO: Implement this method
 					LayoutInflater lay = getLayoutInflater();
 					View r = lay.inflate(R.layout.estoque_view_product, null);
-					final TextInputEditText prod = r.findViewById(R.id.prod);
+					final TextInputEditText prod = r.findViewById(R.id.pessoa);
 					final TextInputEditText quant = r.findViewById(R.id.quant);
 					final TextInputEditText valor = r.findViewById(R.id.valor);
 					final TextInputEditText etotal = r.findViewById(R.id.etotal);
@@ -902,7 +900,7 @@ public class Estoque extends AppCompatActivity
 					// TODO: Implement this method
 					LayoutInflater lay = getLayoutInflater();
 					View r = lay.inflate(R.layout.estoque_view_product, null);
-					final TextInputEditText prod = r.findViewById(R.id.prod);
+					final TextInputEditText prod = r.findViewById(R.id.pessoa);
 					final TextInputEditText quant = r.findViewById(R.id.quant);
 					final TextInputEditText valor = r.findViewById(R.id.valor);
 					final TextInputEditText etotal = r.findViewById(R.id.etotal);
@@ -1007,7 +1005,7 @@ public class Estoque extends AppCompatActivity
 					// TODO: Implement this method
 					LayoutInflater lay = getLayoutInflater();
 					View r = lay.inflate(R.layout.estoque_view_product, null);
-					final TextInputEditText prod = r.findViewById(R.id.prod);
+					final TextInputEditText prod = r.findViewById(R.id.pessoa);
 					final TextInputEditText quant = r.findViewById(R.id.quant);
 					final TextInputEditText valor = r.findViewById(R.id.valor);
 					final TextInputEditText etotal = r.findViewById(R.id.etotal);
@@ -1112,7 +1110,7 @@ public class Estoque extends AppCompatActivity
 					// TODO: Implement this method
 					LayoutInflater lay = getLayoutInflater();
 					View r = lay.inflate(R.layout.estoque_view_product, null);
-					final TextInputEditText prod = r.findViewById(R.id.prod);
+					final TextInputEditText prod = r.findViewById(R.id.pessoa);
 					final TextInputEditText quant = r.findViewById(R.id.quant);
 					final TextInputEditText valor = r.findViewById(R.id.valor);
 					final TextInputEditText etotal = r.findViewById(R.id.etotal);

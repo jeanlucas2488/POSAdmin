@@ -4,7 +4,7 @@ import java.sql.*;
 public class util
 {
 	public long supId, sanId, contasId;
-	public String cData, vencimento, cValor, cStatus;
+
 	public String money, supVal, supDesc, sanVal, sanMot,forn, eval, etotal;
 	public String sangria;
 	public String fundo;
@@ -34,40 +34,116 @@ public class util
 	private byte[] image;
 	private long id;
 	private long userId;
+	public String codigo, classificacao, valor_pagar, data_vencimento, empresa,
+			conta_bancaria , valor_pagar_ag, data_ag, pessoa, data_comp, desc_ag,
+			comentarios, status, valor_pago, saldo_pagar;
 
-	public String getcData(){
-		return cData;
-	}
-	public void setcData(String cdata){
-		this.cData = cdata;
-	}
-
-	public String getVencimento(){
-		return vencimento;
-	}
-	public void setVencimento(String venc){
-		this.vencimento = venc;
-	}
-
-	public String getcValor(){
-		return cValor;
-	}
-	public void setcValor(String cval){
-		this.cValor = cval;
-	}
-
-	public String getcStatus(){
-		return cStatus;
-	}
-	public void setcStatus(String st){
-		this.cStatus = st;
-	}
-	public long getCid(){
+	public long getContasId(){
 		return contasId;
 	}
-	public void setContasId(long i){
-		this.contasId = i;
+	public void setContasId(long id){
+		this.contasId = id;
 	}
+	public String getSaldo_pagar(){
+		return saldo_pagar;
+	}
+	public void setSaldo_pagar(String salp){
+		this.saldo_pagar = salp;
+	}
+	public String getValor_pago(){
+		return valor_pago;
+	}
+	public void setValor_pago(String valpag){
+		this.valor_pago = valpag;
+	}
+	public String getStatus(){
+		return status;
+	}
+	public void setStatus(String stat){
+		this.status = stat;
+	}
+	public String getComentarios(){
+		return comentarios;
+	}
+	public void setComentarios(String come){
+		this.comentarios = come;
+	}
+	public String getDesc_ag(){
+		return desc_ag;
+	}
+	public void setDesc_ag(String des){
+		this.desc_ag = des;
+	}
+	public String getData_comp(){
+		return data_comp;
+	}
+	public void setData_comp(String com){
+		this.data_comp = com;
+	}
+	public String getPessoa(){
+		return pessoa;
+	}
+	public void setPessoa(String pes){
+		this.pessoa = pes;
+	}
+	public String getData_ag(){
+		return data_ag;
+	}
+	public void setData_ag(String dag){
+		this.data_ag = dag;
+	}
+	public String getValor_pagar_ag(){
+		return valor_pagar_ag;
+	}
+	public void setValor_pagar_ag(String val){
+		this.valor_pagar_ag = val;
+	}
+	public String getConta_bancaria(){
+		return conta_bancaria;
+	}
+	public void setConta_bancaria(String cb){
+		this.conta_bancaria = cb;
+	}
+	public String getEmpresa(){
+		return empresa;
+	}
+	public void setEmpresa(String emp){
+		this.empresa = emp;
+	}
+	public String getData_vencimento(){
+		return data_vencimento;
+	}
+	public void setData_vencimento(String ven){
+		this.data_vencimento = ven;
+	}
+
+	public String getContasCodigo(){
+		return codigo;
+	}
+	public void setContasCodigo(String cod){
+		this.codigo = cod;
+	}
+	public String getClassificacao(){
+		return classificacao;
+	}
+	public void setClassificacao(String clas){
+		this.classificacao = clas;
+	}
+	public String getValor_pagar(){
+		return valor_pagar;
+	}
+	public void setValor_pagar(String va){
+		this.valor_pagar = va;
+	}
+
+
+
+
+
+
+
+
+
 
 	public long getSupId(){
 		return supId;

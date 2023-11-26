@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:hintTextAppearance="@style/HintText"
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/pessoa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:ems="5"
+                    android:hint="Código.:"
+                    android:inputType="number" />
+
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:hintTextAppearance="@style/HintText"
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/dataComp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:ems="20"
+                    android:hint="Classificação.:" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:hintTextAppearance="@style/HintText"
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/pessoa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:ems="6"
+                    android:hint="Valor a Pagar.:"
+                    android:inputType="number|numberDecimal" />
+
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:hintTextAppearance="@style/HintText"
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/dataComp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:ems="7"
+                    android:hint="Vencimento.:"
+                    android:inputType="datetime" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:hintTextAppearance="@style/HintText"
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/pessoa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:ems="9"
+                    android:hint="Empresa.:" />
+
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:hintTextAppearance="@style/HintText"
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/dataComp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:ems="20"
+                    android:hint="Conta Bancária.:" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:hintTextAppearance="@style/HintText"
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/pessoa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:ems="6"
+                    android:hint="Valor Ag.:"
+                    android:inputType="number|numberDecimal" />
+
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:hintTextAppearance="@style/HintText"
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/dataComp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:ems="7"
+                    android:hint="Data Ag.:"
+                    android:inputType="datetime" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:hintTextAppearance="@style/HintText"
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/pessoa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:ems="9"
+                    android:hint="Pessoa.:" />
+
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:hintTextAppearance="@style/HintText"
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/dataComp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:ems="20"
+                    android:hint="Data Comp.:"
+                    android:inputType="datetime" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:hintTextAppearance="@style/HintText"
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/valorpago"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:ems="5"
+                    android:hint="Status.:" />
+
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:hintTextAppearance="@style/HintText"
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/valorpago"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="125dp"
+                    android:layout_marginRight="10dp"
+                    android:ems="5"
+                    android:hint="Valor Pago.:"
+                    android:inputType="number|numberDecimal" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                app:hintTextAppearance="@style/HintText"
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/saldopagar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:ems="7"
+                    android:hint="Saldo a Pagar.:"
+                    android:inputType="number|numberDecimal" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </RelativeLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:hintTextAppearance="@style/HintText"
+            >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/comentarios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:ems="20"
+                android:hint="Descrição Agendamento.:" />
+
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:hintTextAppearance="@style/HintText"
+            >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/comentarios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:ems="20"
+                android:hint="Comentários.:" />
+
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+</ScrollView>

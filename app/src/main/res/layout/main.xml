@@ -378,7 +378,6 @@
 		android:contentDescription="description"
 		android:background="@drawable/oval_ripple"
 		android:elevation="14dp"
-
 		android:layout_alignParentBottom="true"
 		android:layout_alignParentRight="true"
 		android:layout_marginBottom="250dp"

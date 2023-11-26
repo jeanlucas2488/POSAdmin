@@ -7,7 +7,7 @@ public class SQLiteHelper extends SQLiteOpenHelper
 	public static String DB ="myDB.db";
 	
 	public SQLiteHelper (Context c){
-		super(c, DB, null, 7);
+		super(c, DB, null, 8);
 	}
 
 	@Override
@@ -16,7 +16,9 @@ public class SQLiteHelper extends SQLiteOpenHelper
 		// TODO: Implement this method
 
 		db.execSQL("CREATE TABLE ContasPagar" +
-				    "(id integer primary key, data text, vencimento text, valor text, status text)");
+				    "(id integer primary key, codigo text, classificacao text, valor_pagar text, data_vencimento text, empresa text, " +
+				                              "conta_bancaria text, valor_pagar_ag text, data_ag text, pessoa text, data_comp text, desc_ag text, " +
+				                              "comentarios text, status text, valor_pago text, saldo_pagar text);");
 		db.execSQL("CREATE TABLE senhas" + 
 		           "(userId integer primary key, usuario text, senha text);");
 		

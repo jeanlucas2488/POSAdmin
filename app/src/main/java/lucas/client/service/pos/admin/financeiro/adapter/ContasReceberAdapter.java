@@ -31,7 +31,7 @@ public class ContasReceberAdapter extends ArrayAdapter<util> {
         View r = li.inflate(R.layout.contas_adapter, parent, false);
         final ImageView im = r.findViewById(R.id.im);
         final TextView tv = r.findViewById(R.id.tv);
-        tv.setText(lt.get(position).getcData());
+        tv.setText(lt.get(position).getContasCodigo());
 
 
 

@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 
 import android.text.*;
 import android.view.*;
-import android.view.View.*;
 import android.widget.*;
 import android.widget.SearchView;
 import android.widget.AdapterView.*;
@@ -26,12 +25,8 @@ import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
 import android.support.v4.app.*;
 import android.support.v7.widget.*;
-import java.sql.*;
-import org.w3c.dom.ls.*;
-import android.widget.Magnifier.*;
 import android.support.design.widget.*;
 import lucas.client.service.pos.admin.setup.*;
-import android.support.v4.view.*;
 import lucas.client.service.pos.admin.financeiro.*;
 
 
@@ -119,8 +114,16 @@ public class MainActivity extends AppCompatActivity
 							public void onItemClick(AdapterView<?> p1, View p2, int p3, long p4)
 							{
 								// TODO: Implement this method
-								Intent it = new Intent(c, Fechamento.class);
-								startActivity(it);
+								switch(p3){
+									case 0:
+										Intent it = new Intent(c, Fechamento.class);
+										startActivity(it);
+										break;
+									case 1:
+										Intent it2 = new Intent(c, ContasPagar.class);
+										startActivity(it2);
+										break;
+								}
 								
 							}
 					});
@@ -202,7 +205,7 @@ public class MainActivity extends AppCompatActivity
 											if(opts[p10].toString().startsWith("Editar")){
 												LayoutInflater li = getLayoutInflater();
 												View r = li.inflate(R.layout.cadview, null);
-												final TextInputEditText pro = r.findViewById(R.id.prod);
+												final TextInputEditText pro = r.findViewById(R.id.pessoa);
 												final TextInputEditText quant = r.findViewById(R.id.quant);
 												final TextInputEditText valor = r.findViewById(R.id.valor);
 												
@@ -415,7 +418,7 @@ public class MainActivity extends AppCompatActivity
 											if(opts[p9].toString().startsWith("Editar")){
 												LayoutInflater li = getLayoutInflater();
 												View r = li.inflate(R.layout.cadview, null);
-												final EditText pro = r.findViewById(R.id.prod);
+												final EditText pro = r.findViewById(R.id.pessoa);
 												final EditText quant = r.findViewById(R.id.quant);
 												final EditText valor = r.findViewById(R.id.valor);
 												
@@ -628,7 +631,7 @@ public class MainActivity extends AppCompatActivity
 											if(opts[p8].toString().startsWith("Editar")){
 												LayoutInflater li = getLayoutInflater();
 												View r = li.inflate(R.layout.cadview, null);
-												final EditText pro = r.findViewById(R.id.prod);
+												final EditText pro = r.findViewById(R.id.pessoa);
 												final EditText quant = r.findViewById(R.id.quant);
 												final EditText valor = r.findViewById(R.id.valor);
 												
@@ -841,7 +844,7 @@ public class MainActivity extends AppCompatActivity
 											if(opts[p7].toString().startsWith("Editar")){
 												LayoutInflater li = getLayoutInflater();
 												View r = li.inflate(R.layout.cadview, null);
-												final EditText pro = r.findViewById(R.id.prod);
+												final EditText pro = r.findViewById(R.id.pessoa);
 												final EditText quant = r.findViewById(R.id.quant);
 												final EditText valor = r.findViewById(R.id.valor);
 												
@@ -1054,7 +1057,7 @@ public class MainActivity extends AppCompatActivity
 											if(opts[p6].toString().startsWith("Editar")){
 												LayoutInflater li = getLayoutInflater();
 												View r = li.inflate(R.layout.cadview, null);
-												final EditText pro = r.findViewById(R.id.prod);
+												final EditText pro = r.findViewById(R.id.pessoa);
 												final EditText quant = r.findViewById(R.id.quant);
 												final EditText valor = r.findViewById(R.id.valor);
 												
@@ -1267,7 +1270,7 @@ public class MainActivity extends AppCompatActivity
 											if(opts[p5].toString().startsWith("Editar")){
 												LayoutInflater li = getLayoutInflater();
 												View r = li.inflate(R.layout.cadview, null);
-												final EditText pro = r.findViewById(R.id.prod);
+												final EditText pro = r.findViewById(R.id.pessoa);
 												final EditText quant = r.findViewById(R.id.quant);
 												final EditText valor = r.findViewById(R.id.valor);
 												
@@ -1480,7 +1483,7 @@ public class MainActivity extends AppCompatActivity
 											if(opts[p2].toString().startsWith("Editar")){
 												LayoutInflater li = getLayoutInflater();
 												View r = li.inflate(R.layout.cadview, null);
-												final EditText pro = r.findViewById(R.id.prod);
+												final EditText pro = r.findViewById(R.id.pessoa);
 												final EditText quant = r.findViewById(R.id.quant);
 												final EditText valor = r.findViewById(R.id.valor);
 												
@@ -1694,7 +1697,7 @@ public class MainActivity extends AppCompatActivity
 											if(opts[p2].toString().startsWith("Editar")){
 												LayoutInflater li = getLayoutInflater();
 												View r = li.inflate(R.layout.cadview, null);
-												final EditText pro = r.findViewById(R.id.prod);
+												final EditText pro = r.findViewById(R.id.pessoa);
 												final EditText quant = r.findViewById(R.id.quant);
 												final EditText valor = r.findViewById(R.id.valor);
 												
@@ -1907,7 +1910,7 @@ public class MainActivity extends AppCompatActivity
 											if(opts[p2].toString().startsWith("Editar")){
 												LayoutInflater li = getLayoutInflater();
 												View r = li.inflate(R.layout.cadview, null);
-												final EditText pro = r.findViewById(R.id.prod);
+												final EditText pro = r.findViewById(R.id.pessoa);
 												final EditText quant = r.findViewById(R.id.quant);
 												final EditText valor = r.findViewById(R.id.valor);
 												
@@ -2120,7 +2123,7 @@ public class MainActivity extends AppCompatActivity
 											if(opts[p2].toString().startsWith("Editar")){
 												LayoutInflater li = getLayoutInflater();
 												View r = li.inflate(R.layout.cadview, null);
-												final EditText pro = r.findViewById(R.id.prod);
+												final EditText pro = r.findViewById(R.id.pessoa);
 												final EditText quant = r.findViewById(R.id.quant);
 												final EditText valor = r.findViewById(R.id.valor);
 												
@@ -4234,7 +4237,7 @@ public class MainActivity extends AppCompatActivity
 							LayoutInflater li = getLayoutInflater();
 							View r = li.inflate(R.layout.cadastro, null);
 							final EditText imp = r.findViewById(R.id.imP);
-							final TextInputEditText prod = r.findViewById(R.id.prod);
+							final TextInputEditText prod = r.findViewById(R.id.pessoa);
 							final TextInputEditText quant = r.findViewById(R.id.quant);
 							final TextInputEditText valor = r.findViewById(R.id.valor);
 							final TextInputEditText etotal = r.findViewById(R.id.etotal);
