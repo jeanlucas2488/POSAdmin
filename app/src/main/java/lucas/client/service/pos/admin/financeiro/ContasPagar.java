@@ -62,7 +62,7 @@ public class ContasPagar extends AppCompatActivity
                 saldoPagar = r.findViewById(R.id.saldopagar);
 
                 AlertDialog.Builder b = new AlertDialog.Builder(c);
-                b.setTitle("Cadastrar:");
+                b.setTitle("Cadastrar Ficha de Controle:");
                 b.setView(r);
                 b.setPositiveButton("Cadastrar", new DialogInterface.OnClickListener() {
                     @Override
@@ -179,7 +179,7 @@ public class ContasPagar extends AppCompatActivity
                 saldoPagar.setText(lt.get(position).getSaldo_pagar());
 
                 AlertDialog.Builder b = new AlertDialog.Builder(c);
-                b.setTitle("Cadastrar:");
+                b.setTitle("Visualização - Ficha de Controle:");
                 b.setView(r);
                 b.setPositiveButton("Atualizar", new DialogInterface.OnClickListener() {
                     @Override
