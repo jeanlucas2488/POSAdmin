@@ -37,7 +37,7 @@
         android:src="@drawable/contas_add" />
     <LinearLayout
         android:id="@android:id/empty"
-        android:layout_marginTop="160dp"
+        android:layout_centerInParent="true"
         android:gravity="center_vertical"
         android:orientation="vertical"
         android:layout_width="fill_parent"
@@ -50,8 +50,10 @@
             android:layout_height="195dp"/>
 
         <TextView
+            android:layout_marginTop="20dp"
             android:layout_gravity="center"
             android:textSize="20dp"
+            android:textColor="#000000"
             android:text="Nenhum Registro!"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>

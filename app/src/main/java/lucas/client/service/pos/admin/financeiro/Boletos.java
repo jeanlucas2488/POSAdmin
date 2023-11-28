@@ -69,6 +69,7 @@ public class Boletos extends AppCompatActivity {
         List<util> lt = db.getBoletos();
         ImageButton add = (ImageButton) findViewById(R.id.contasAdd);
         ListView l = (ListView) findViewById(R.id.list);
+        l.setEmptyView(findViewById(android.R.id.empty));
         ad = new BoletosAdapter(c, lt);
         l.setAdapter(ad);
         l.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -177,10 +178,14 @@ public class Boletos extends AppCompatActivity {
                                 us.setBtipo(tipo.getText().toString());
                                 us.setBdescricao(descricao.getText().toString());
                                 try {
-                                    FileInputStream fs = new FileInputStream(dirPath);
-                                    byte[] lm = new byte[fs.available()];
-                                    fs.read(lm);
-                                    us.setBImagem(lm);
+                                    if(!dirPath.toString().equals("")){
+                                        FileInputStream fs = new FileInputStream(dirPath);
+                                        byte[] lm = new byte[fs.available()];
+                                        fs.read(lm);
+                                        us.setBImagem(lm);
+                                    } else {
+                                        us.setBImagem(lt.get(position).getBImagem());
+                                    }
                                 } catch (IOException e) {
                                 }
                                 SQLiteControl db = new SQLiteControl(c);
