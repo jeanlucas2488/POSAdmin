@@ -2,6 +2,7 @@ package lucas.client.service.pos.admin.financeiro;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.design.widget.TextInputEditText;
@@ -11,7 +12,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import java.io.File;
@@ -29,6 +32,7 @@ public class ContasPagar extends AppCompatActivity
 {
     List<util> lt;
     Context c = this;
+
     TextInputEditText codigo, clasif, valPagar, DVencimento, empresa, CBancaria, ValorPAg, dataAg,
                       pessoa, dataComp, descAg, comentarios, status, valPago, saldoPagar;
     @Override
@@ -40,6 +44,14 @@ public class ContasPagar extends AppCompatActivity
         SQLiteControl db = new SQLiteControl(c);
         lt = db.getContas();
         ImageButton cadd = (ImageButton) findViewById(R.id.contasAdd);
+        ImageButton fatu = (ImageButton) findViewById(R.id.fatura);
+        fatu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it = new Intent(c, Boletos.class);
+                startActivity(it);
+            }
+        });
         cadd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -3,8 +3,9 @@ import java.sql.*;
 
 public class util
 {
-	public long supId, sanId, contasId;
-
+	public long supId, sanId, contasId, bolId;
+	public byte[] imagem;
+	public String bdata, bvencimento, btipo, bvalor, bdescricao;
 	public String money, supVal, supDesc, sanVal, sanMot,forn, eval, etotal;
 	public String sangria;
 	public String fundo;
@@ -38,6 +39,49 @@ public class util
 			conta_bancaria , valor_pagar_ag, data_ag, pessoa, data_comp, desc_ag,
 			comentarios, status, valor_pago, saldo_pagar;
 
+
+	public String getBdescricao(){
+		return bdescricao;
+	}
+	public void setBdescricao(String bdesc){
+		this.bdescricao = bdesc;
+	}
+	public String getBdata(){
+		return bdata;
+	}
+	public void setBdata(String bdata1){
+		this.bdata = bdata1;
+	}
+	public String getBvencimento(){
+		return  bvencimento;
+	}
+	public void setBvencimento(String bvencimento1){
+		this.bvencimento = bvencimento1;
+	}
+	public String getBtipo(){
+		return btipo;
+	}
+	public void setBtipo(String btipo1){
+		this.btipo = btipo1;
+	}
+	public byte[] getBImagem(){
+		return imagem;
+	}
+	public void setBImagem(byte[] im){
+		this.imagem = im;
+	}
+	public String getBvalor(){
+		return bvalor;
+	}
+	public void setBvalor(String bval){
+		this.bvalor = bval;
+	}
+	public long getBolId(){
+		return bolId;
+	}
+	public void setBolId(long id){
+		this.bolId = id;
+	}
 	public long getContasId(){
 		return contasId;
 	}

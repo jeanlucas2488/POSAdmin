@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="wrap_content"
+            android:textColorHint="#000000"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:hintTextAppearance="@style/HintText"
+            >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/bdata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:ems="7"
+                android:hint="Data.:"
+                android:inputType="date|datetime" />
+
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="wrap_content"
+            android:textColorHint="#000000"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentRight="true"
+            app:hintTextAppearance="@style/HintText"
+            >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/bvencimento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:ems="7"
+                android:hint="Vencimento.:"
+                android:inputType="date|datetime" />
+
+        </android.support.design.widget.TextInputLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="wrap_content"
+            android:textColorHint="#000000"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:hintTextAppearance="@style/HintText"
+            >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/bvalor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:ems="7"
+                android:hint="Valor.:"
+                android:inputType="numberDecimal" />
+
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="wrap_content"
+            android:textColorHint="#000000"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentRight="true"
+            app:hintTextAppearance="@style/HintText"
+            >
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/btipo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:ems="7"
+                android:hint="Tipo.:"
+                android:inputType="text" />
+
+        </android.support.design.widget.TextInputLayout>
+    </RelativeLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="wrap_content"
+        android:textColorHint="#000000"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentRight="true"
+        app:hintTextAppearance="@style/HintText"
+        >
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/bdesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:ems="30"
+            android:hint="Descrição.:"
+            android:inputType="text" />
+
+    </android.support.design.widget.TextInputLayout>
+    <RelativeLayout
+        android:id="@+id/laySel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="Digitalizar Boleto..."
+            android:id="@+id/imP"
+            android:editable="false"
+            android:ems="16"/>
+
+        <ImageView
+            android:src="@drawable/add_im"
+            android:layout_alignParentRight="true"
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/select"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/imres"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+           android:layout_centerInParent="true"
+            android:layout_width="140dp"
+            android:layout_height="135dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/im"/>
+    </RelativeLayout>
+</LinearLayout>
