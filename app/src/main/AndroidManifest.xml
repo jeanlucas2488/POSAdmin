@@ -36,6 +36,18 @@
         </activity>
         <activity
             android:theme="@style/AppTheme.NoActionBar"
+            android:name=".financeiro.baixas.baixaBoletos"
+            android:label="Histórico de Boletos - Baixa" >
+
+        </activity>
+        <activity
+            android:theme="@style/dialog"
+            android:name=".financeiro.view.boletoViewImageSource"
+            android:label="" >
+
+        </activity>
+        <activity
+            android:theme="@style/AppTheme.NoActionBar"
             android:name=".MainActivity"
             android:exported="true"
             android:label="POS Admin - Produtos" >

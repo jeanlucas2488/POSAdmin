@@ -43,6 +43,8 @@ import lucas.client.service.pos.admin.MainActivity;
 import lucas.client.service.pos.admin.R;
 import lucas.client.service.pos.admin.etc.util;
 import lucas.client.service.pos.admin.financeiro.adapter.BoletosAdapter;
+import lucas.client.service.pos.admin.financeiro.baixas.baixaBoletos;
+import lucas.client.service.pos.admin.financeiro.view.boletoViewImageSource;
 import lucas.client.service.pos.admin.sqlite.SQLiteControl;
 
 public class Boletos extends AppCompatActivity {
@@ -68,10 +70,18 @@ public class Boletos extends AppCompatActivity {
         SQLiteControl db = new SQLiteControl(c);
         List<util> lt = db.getBoletos();
         ImageButton add = (ImageButton) findViewById(R.id.contasAdd);
+        ImageButton baixa = (ImageButton) findViewById(R.id.baixas);
         ListView l = (ListView) findViewById(R.id.list);
         l.setEmptyView(findViewById(android.R.id.empty));
         ad = new BoletosAdapter(c, lt);
         l.setAdapter(ad);
+        baixa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it = new Intent(c, baixaBoletos.class);
+                startActivity(it);
+            }
+        });
         l.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -100,7 +110,17 @@ public class Boletos extends AppCompatActivity {
                 byte[] res = lt.get(position).getBImagem();
                 Bitmap bt = BitmapFactory.decodeByteArray(res, 0, res.length);
                 im.setImageBitmap(bt);
-
+                im.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        byte[] test = lt.get(position).getBImagem();
+                        Intent it = new Intent(c, boletoViewImageSource.class);
+                        Bundle b = new Bundle();
+                        b.putByteArray("image", test);
+                        it.putExtras(b);
+                        startActivity(it);
+                    }
+                });
                 up_im.setOnClickListener(new View.OnClickListener() {
                                              @Override
                                              public void onClick(View v) {
@@ -169,6 +189,52 @@ public class Boletos extends AppCompatActivity {
                         AlertDialog.Builder bs = new AlertDialog.Builder(c);
                         bs.setTitle("Visualizar Boleto:");
                         bs.setView(r);
+                        bs.setNeutralButton("Dar Baixa", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                AlertDialog a = new AlertDialog.Builder(c).create();
+                                a.setTitle("Atençao!");
+                                a.setMessage("Tem certeza que deseja dar baixa no Boleto? Verifique se o boleto foi pago antes de dar baixa. Essa ação não pode ser desfeita.");
+                                a.setButton("Dar baixa", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        util us = new util();
+                                        us.setBolId(lt.get(position).getBolId());
+                                        us.setBdata(data.getText().toString());
+                                        us.setBvencimento(vencimento.getText().toString());
+                                        us.setBvalor(valor.getText().toString());
+                                        us.setBtipo(tipo.getText().toString());
+                                        us.setBstatus(status.getText().toString());
+                                        us.setBdescricao(descricao.getText().toString());
+                                        try {
+                                            if(!dirPath.toString().equals("")){
+                                                FileInputStream fs = new FileInputStream(dirPath);
+                                                byte[] lm = new byte[fs.available()];
+                                                fs.read(lm);
+                                                us.setBImagem(lm);
+                                            } else {
+                                                us.setBImagem(lt.get(position).getBImagem());
+                                            }
+                                        } catch (IOException e) {
+                                        }
+                                        SQLiteControl db = new SQLiteControl(c);
+                                        db.setBaixaBoleto(us);
+                                        db.delBoleto(lt.get(position).getBolId());
+                                        lt.clear();
+                                        lt.addAll(db.getBoletos());
+                                        ad.notifyDataSetChanged();
+
+                                    }
+                                });
+                                a.setButton2("Cancelar", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+
+                                    }
+                                });
+                                a.show();
+                            }
+                        });
                         bs.setPositiveButton("Atualizar", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {

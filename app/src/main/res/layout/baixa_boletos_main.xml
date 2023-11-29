@@ -10,30 +10,7 @@
         android:layout_margin="10dp"
         android:layout_height="wrap_content"
         android:id="@+id/list" />
-    <ImageButton
-        android:id="@+id/baixas"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginRight="26dp"
-        android:layout_marginBottom="100dp"
-        android:background="@drawable/oval_ripple"
-        android:contentDescription="description"
-        android:elevation="14dp"
-        android:src="@drawable/baixas_icon" />
-    <ImageButton
-        android:id="@+id/contasAdd"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginRight="26dp"
-        android:layout_marginBottom="26dp"
-        android:background="@drawable/oval_ripple"
-        android:contentDescription="description"
-        android:elevation="14dp"
-        android:src="@drawable/add_conta" />
+
     <LinearLayout
         android:id="@android:id/empty"
         android:layout_centerInParent="true"

@@ -71,9 +71,35 @@ public class SQLiteControl
 	public void del(util us){
 		db.execSQL("delete from " + us.getTable());
 	}
+	public void delBoleto(long id){
+		db.delete("Boletos", "id = ?", new String[]{String.valueOf(id)});
+	}
 	public void delete(util us){
 		db.delete(us.getTable(), "id = ?", new String[]{String.valueOf(us.getId())});
 	}
+	public void setBaixaBoleto(util us){
+		ContentValues ct = new ContentValues();
+		ct.put("data", us.getBdata());
+		ct.put("vencimento", us.getBvencimento());
+		ct.put("valor", us.getBvalor());
+		ct.put("tipo", us.getBtipo());
+		ct.put("status", us.getBstatus());
+		ct.put("descricao", us.getBdescricao());
+		ct.put("imagem", us.getBImagem());
+		db.insert("BaixaBoletos", null, ct);
+	}
+	public void upBaixaBoleto(util us){
+		ContentValues ct = new ContentValues();
+		ct.put("data", us.getBdata());
+		ct.put("vencimento", us.getBvencimento());
+		ct.put("valor", us.getBvalor());
+		ct.put("tipo", us.getBtipo());
+		ct.put("status", us.getBstatus());
+		ct.put("descricao", us.getBdescricao());
+		ct.put("imagem", us.getBImagem());
+		db.update("BaixaBoletos", ct, "id = ?", new String[]{String.valueOf(us.getBolId())});
+	}
+
 	public void setBoleto(util us){
 		ContentValues ct = new ContentValues();
 		ct.put("data", us.getBdata());
@@ -138,6 +164,27 @@ public class SQLiteControl
 		ArrayList<util> arr = new ArrayList<util>();
 		String[] cl = {"id", "data", "vencimento", "valor", "tipo", "status", "descricao", "imagem"};
 		Cursor cs = db.query("Boletos", cl, null, null, null, null, "data ASC");
+		if(cs.getCount() >0){
+			cs.moveToFirst();
+			do{
+				util us = new util();
+				us.setBolId(Integer.parseInt(cs.getString(0)));
+				us.setBdata(cs.getString(1));
+				us.setBvencimento(cs.getString(2));
+				us.setBvalor(cs.getString(3));
+				us.setBtipo(cs.getString(4));
+				us.setBstatus(cs.getString(5));
+				us.setBdescricao(cs.getString(6));
+				us.setBImagem(cs.getBlob(7));
+				arr.add(us);
+			} while(cs.moveToNext());
+		}
+		return arr;
+	}
+	public List<util> getBaixaBoletos(){
+		ArrayList<util> arr = new ArrayList<util>();
+		String[] cl = {"id", "data", "vencimento", "valor", "tipo", "status", "descricao", "imagem"};
+		Cursor cs = db.query("BaixaBoletos", cl, null, null, null, null, "data ASC");
 		if(cs.getCount() >0){
 			cs.moveToFirst();
 			do{
