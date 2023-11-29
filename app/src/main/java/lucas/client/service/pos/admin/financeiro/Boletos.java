@@ -54,7 +54,7 @@ public class Boletos extends AppCompatActivity {
     public String dirPath="";
     public File dir;
     Context c = this;
-    TextInputEditText data, vencimento, valor, tipo, descricao;
+    TextInputEditText data, vencimento, valor, tipo, status, descricao;
     EditText imagem;
     ListView lr;
     BoletosAdapter ad;
@@ -81,6 +81,7 @@ public class Boletos extends AppCompatActivity {
                 vencimento = r.findViewById(R.id.bvencimento);
                 valor = r.findViewById(R.id.bvalor);
                 tipo = r.findViewById(R.id.btipo);
+                status = r.findViewById(R.id.status);
                 descricao = r.findViewById(R.id.bdesc);
                 imagem = r.findViewById(R.id.imP);
                 select = r.findViewById(R.id.select);
@@ -94,6 +95,7 @@ public class Boletos extends AppCompatActivity {
                 vencimento.setText(lt.get(position).getBvencimento());
                 valor.setText(lt.get(position).getBvalor());
                 tipo.setText(lt.get(position).getBtipo());
+                status.setText(lt.get(position).getBstatus());
                 descricao.setText(lt.get(position).getBdescricao());
                 byte[] res = lt.get(position).getBImagem();
                 Bitmap bt = BitmapFactory.decodeByteArray(res, 0, res.length);
@@ -176,6 +178,7 @@ public class Boletos extends AppCompatActivity {
                                 us.setBvencimento(vencimento.getText().toString());
                                 us.setBvalor(valor.getText().toString());
                                 us.setBtipo(tipo.getText().toString());
+                                us.setBstatus(status.getText().toString());
                                 us.setBdescricao(descricao.getText().toString());
                                 try {
                                     if(!dirPath.toString().equals("")){
@@ -255,6 +258,7 @@ public class Boletos extends AppCompatActivity {
                         vencimento = r.findViewById(R.id.bvencimento);
                         valor = r.findViewById(R.id.bvalor);
                         tipo = r.findViewById(R.id.btipo);
+                        status = r.findViewById(R.id.status);
                         descricao = r.findViewById(R.id.bdesc);
                         imagem = r.findViewById(R.id.imP);
                         select = r.findViewById(R.id.select);
@@ -272,6 +276,7 @@ public class Boletos extends AppCompatActivity {
                                 us.setBvencimento(vencimento.getText().toString());
                                 us.setBvalor(valor.getText().toString());
                                 us.setBtipo(tipo.getText().toString());
+                                us.setBstatus(status.getText().toString());
                                 us.setBdescricao(descricao.getText().toString());
                                 try {
                                     FileInputStream fs = new FileInputStream(dirPath);

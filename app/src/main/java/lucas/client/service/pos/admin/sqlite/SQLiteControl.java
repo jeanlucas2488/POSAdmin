@@ -80,6 +80,7 @@ public class SQLiteControl
 		ct.put("vencimento", us.getBvencimento());
 		ct.put("valor", us.getBvalor());
 		ct.put("tipo", us.getBtipo());
+		ct.put("status", us.getBstatus());
 		ct.put("descricao", us.getBdescricao());
 		ct.put("imagem", us.getBImagem());
 		db.insert("Boletos", null, ct);
@@ -90,6 +91,7 @@ public class SQLiteControl
 		ct.put("vencimento", us.getBvencimento());
 		ct.put("valor", us.getBvalor());
 		ct.put("tipo", us.getBtipo());
+		ct.put("status", us.getBstatus());
 		ct.put("descricao", us.getBdescricao());
 		ct.put("imagem", us.getBImagem());
 		db.update("Boletos", ct, "id = ?", new String[]{String.valueOf(us.getBolId())});
@@ -134,7 +136,7 @@ public class SQLiteControl
 	}
 	public List<util> getBoletos(){
 		ArrayList<util> arr = new ArrayList<util>();
-		String[] cl = {"id", "data", "vencimento", "valor", "tipo", "descricao", "imagem"};
+		String[] cl = {"id", "data", "vencimento", "valor", "tipo", "status", "descricao", "imagem"};
 		Cursor cs = db.query("Boletos", cl, null, null, null, null, "data ASC");
 		if(cs.getCount() >0){
 			cs.moveToFirst();
@@ -145,8 +147,9 @@ public class SQLiteControl
 				us.setBvencimento(cs.getString(2));
 				us.setBvalor(cs.getString(3));
 				us.setBtipo(cs.getString(4));
-				us.setBdescricao(cs.getString(5));
-				us.setBImagem(cs.getBlob(6));
+				us.setBstatus(cs.getString(5));
+				us.setBdescricao(cs.getString(6));
+				us.setBImagem(cs.getBlob(7));
 				arr.add(us);
 			} while(cs.moveToNext());
 		}

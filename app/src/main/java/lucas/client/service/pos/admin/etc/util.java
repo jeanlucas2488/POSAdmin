@@ -5,7 +5,7 @@ public class util
 {
 	public long supId, sanId, contasId, bolId;
 	public byte[] imagem;
-	public String bdata, bvencimento, btipo, bvalor, bdescricao;
+	public String bdata, bvencimento, btipo, bstatus,  bvalor, bdescricao;
 	public String money, supVal, supDesc, sanVal, sanMot,forn, eval, etotal;
 	public String sangria;
 	public String fundo;
@@ -40,6 +40,12 @@ public class util
 			comentarios, status, valor_pago, saldo_pagar;
 
 
+	public String getBstatus(){
+		return bstatus;
+	}
+	public void setBstatus(String st){
+		this.bstatus = st;
+	}
 	public String getBdescricao(){
 		return bdescricao;
 	}
