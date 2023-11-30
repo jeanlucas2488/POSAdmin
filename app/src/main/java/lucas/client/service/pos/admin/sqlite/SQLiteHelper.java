@@ -13,6 +13,8 @@ public class SQLiteHelper extends SQLiteOpenHelper
 	@Override
 	public void onCreate(SQLiteDatabase db)
 	{
+		db.execSQL("CREATE TABLE ContasReceber" +
+		           "(id integer primary key, docto text, cliente text, dataCadastro text, valRecebido text, valDoc text, desconto text, acrescimo text, saldo text);");
 		db.execSQL("CREATE TABLE BaixaBoletos" +
 				"(id integer primary key, data text, vencimento text, valor text, tipo text, status text, descricao text, imagem blob);");
 

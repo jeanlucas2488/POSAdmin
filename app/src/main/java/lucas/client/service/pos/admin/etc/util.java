@@ -39,7 +39,62 @@ public class util
 			conta_bancaria , valor_pagar_ag, data_ag, pessoa, data_comp, desc_ag,
 			comentarios, status, valor_pago, saldo_pagar;
 
-
+	public String docto, cliente, dataCadastro, valRecebido, valDoc, desconto, acrescimo, saldo;
+	public long contasReceberId;
+	public String getDocto(){
+		return docto;
+	}
+	public void setDocto(String doc){
+		this.docto = doc;
+	}
+	public String getCliente(){
+		return cliente;
+	}
+	public void setCliente(String cli){
+		this.cliente = cli;
+	}
+	public String getDataCadastro(){
+		return dataCadastro;
+	}
+	public void setDataCadastro(String cad){
+		this.dataCadastro = cad;
+	}
+	public String getValRecebido(){
+		return valRecebido;
+	}
+	public void setValRecebido(String val){
+		this.valRecebido = val;
+	}
+	public String getValDoc(){
+		return valDoc;
+	}
+	public void setValDoc(String valdoc){
+		this.valDoc = valdoc;
+	}
+	public String getDesconto(){
+		return desconto;
+	}
+	public void setDesconto(String desco){
+		this.desconto = desco;
+	}
+	public String getAcrescimo(){
+		return acrescimo;
+	}
+	public void setAcrescimo(String acre){
+		this.acrescimo = acre;
+	}
+	public String getSaldo(){
+		return saldo;
+	}
+	public void setSaldo(String sal){
+		this.saldo = sal;
+	}
+	public long getContasReceberId(){
+		return contasReceberId;
+	}
+	public void setContasReceberId(long id){
+		this.contasReceberId = id;
+	}
 	public String getBstatus(){
 		return bstatus;
 	}
