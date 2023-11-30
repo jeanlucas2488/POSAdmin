@@ -2,7 +2,6 @@ package lucas.client.service.pos.admin.financeiro.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,9 +25,8 @@ public class ContasReceberAdapter extends ArrayAdapter<util> {
         this.lt = lt2;
     }
 
-    @NonNull
     @Override
-    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+    public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater li = (LayoutInflater) c.getSystemService(c.LAYOUT_INFLATER_SERVICE);
         View r = li.inflate(R.layout.boletoa_adapter, parent, false);
         ImageView im = r.findViewById(R.id.im);

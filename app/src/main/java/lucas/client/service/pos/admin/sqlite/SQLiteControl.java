@@ -99,6 +99,30 @@ public class SQLiteControl
 		ct.put("imagem", us.getBImagem());
 		db.update("BaixaBoletos", ct, "id = ?", new String[]{String.valueOf(us.getBolId())});
 	}
+	public void setContasReceber(util us){
+		ContentValues ct = new ContentValues();
+		ct.put("docto", us.getDocto());
+		ct.put("cliente", us.getCliente());
+		ct.put("dataCadastro", us.getDataCadastro());
+		ct.put("valRecebido", us.getValRecebido());
+		ct.put("valDoc", us.getValDoc());
+		ct.put("desconto", us.getDesconto());
+		ct.put("acrescimo", us.getAcrescimo());
+		ct.put("saldo", us.getSaldo());
+		db.insert("ContasReceber", null, ct);
+	}
+	public void upContasReceber(util us){
+		ContentValues ct = new ContentValues();
+		ct.put("docto", us.getDocto());
+		ct.put("cliente", us.getCliente());
+		ct.put("dataCadastro", us.getDataCadastro());
+		ct.put("valRecebido", us.getValRecebido());
+		ct.put("valDoc", us.getValDoc());
+		ct.put("desconto", us.getDesconto());
+		ct.put("acrescimo", us.getAcrescimo());
+		ct.put("saldo", us.getSaldo());
+		db.update("ContasReceber", ct, "id = ?", new String[]{String.valueOf(us.getContasReceberId())});
+	}
 
 	public void setBoleto(util us){
 		ContentValues ct = new ContentValues();
@@ -159,6 +183,28 @@ public class SQLiteControl
 		ct.put("valor_pago", us.getValor_pago());
 		ct.put("saldo_pagar", us.getSaldo_pagar());
 		db.update("ContasPagar", ct, "id = ?", new String[]{String.valueOf(us.getContasId())});
+	}
+	public List<util> getContasReceber(){
+		ArrayList<util> arr = new ArrayList<util>();
+		String[] cl = {"id", "docto", "cliente", "dataCadastro", "valRecebido", "valDoc", "desconto", "acrescimo", "saldo"};
+		Cursor cs = db.query("ContasReceber", cl, null, null, null, null, "docto ASC");
+		if(cs.getCount() >0){
+			cs.moveToFirst();
+			do {
+				util us = new util();
+				us.setContasReceberId(Integer.parseInt(cs.getString(0)));
+				us.setDocto(cs.getString(1));
+				us.setCliente(cs.getString(2));
+				us.setDataCadastro(cs.getString(3));
+				us.setValRecebido(cs.getString(4));
+				us.setValDoc(cs.getString(5));
+				us.setDesconto(cs.getString(6));
+				us.setAcrescimo(cs.getString(7));
+				us.setSaldo(cs.getString(8));
+				arr.add(us);
+			} while(cs.moveToNext());
+		}
+		return arr;
 	}
 	public List<util> getBoletos(){
 		ArrayList<util> arr = new ArrayList<util>();

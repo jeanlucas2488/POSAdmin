@@ -123,6 +123,10 @@ public class MainActivity extends AppCompatActivity
 										Intent it2 = new Intent(c, ContasPagar.class);
 										startActivity(it2);
 										break;
+									case 2:
+										Intent it3 = new Intent(c, ContasReceber.class);
+										startActivity(it3);
+										break;
 								}
 								
 							}

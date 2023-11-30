@@ -7,7 +7,7 @@ public class SQLiteHelper extends SQLiteOpenHelper
 	public static String DB ="myDB.db";
 	
 	public SQLiteHelper (Context c){
-		super(c, DB, null, 11);
+		super(c, DB, null, 12);
 	}
 
 	@Override
