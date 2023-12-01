@@ -21,7 +21,7 @@ public class ContasReceberAdapter extends ArrayAdapter<util> {
     List<util> lt;
 
     public ContasReceberAdapter(Context c2, List<util> lt2){
-        super(c2, R.layout.boletoa_adapter, lt2);
+        super(c2, R.layout.contas_receber_adapter, lt2);
         this.c = c2;
         this.lt = lt2;
     }
@@ -29,13 +29,15 @@ public class ContasReceberAdapter extends ArrayAdapter<util> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater li = (LayoutInflater) c.getSystemService(c.LAYOUT_INFLATER_SERVICE);
-        View r = li.inflate(R.layout.boletoa_adapter, parent, false);
+        View r = li.inflate(R.layout.contas_receber_adapter, parent, false);
         ImageView im = r.findViewById(R.id.im);
         LinearLayout la = r.findViewById(R.id.la);
         TextView tv = r.findViewById(R.id.tv);
+        TextView tvD = r.findViewById(R.id.tvData);
         TextView tvS = r.findViewById(R.id.tvstatus);
         tv.setText(lt.get(position).getDocto() + " - " + lt.get(position).getCliente());
         tvS.setText("Status: " + lt.get(position).getCRStatus());
+        tvD.setText(lt.get(position).getDataCadastro());
         im.setImageResource(R.drawable.contas);
         if (tvS.getText().toString().endsWith("Pago")){
             la.setVisibility(View.VISIBLE);
