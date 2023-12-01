@@ -109,6 +109,7 @@ public class SQLiteControl
 		ct.put("desconto", us.getDesconto());
 		ct.put("acrescimo", us.getAcrescimo());
 		ct.put("saldo", us.getSaldo());
+		ct.put("status", us.getCRStatus());
 		db.insert("ContasReceber", null, ct);
 	}
 	public void upContasReceber(util us){
@@ -121,6 +122,7 @@ public class SQLiteControl
 		ct.put("desconto", us.getDesconto());
 		ct.put("acrescimo", us.getAcrescimo());
 		ct.put("saldo", us.getSaldo());
+		ct.put("status", us.getCRStatus());
 		db.update("ContasReceber", ct, "id = ?", new String[]{String.valueOf(us.getContasReceberId())});
 	}
 
@@ -186,7 +188,7 @@ public class SQLiteControl
 	}
 	public List<util> getContasReceber(){
 		ArrayList<util> arr = new ArrayList<util>();
-		String[] cl = {"id", "docto", "cliente", "dataCadastro", "valRecebido", "valDoc", "desconto", "acrescimo", "saldo"};
+		String[] cl = {"id", "docto", "cliente", "dataCadastro", "valRecebido", "valDoc", "desconto", "acrescimo", "saldo", "status"};
 		Cursor cs = db.query("ContasReceber", cl, null, null, null, null, "docto ASC");
 		if(cs.getCount() >0){
 			cs.moveToFirst();
@@ -201,6 +203,7 @@ public class SQLiteControl
 				us.setDesconto(cs.getString(6));
 				us.setAcrescimo(cs.getString(7));
 				us.setSaldo(cs.getString(8));
+				us.setCrstatus(cs.getString(9));
 				arr.add(us);
 			} while(cs.moveToNext());
 		}

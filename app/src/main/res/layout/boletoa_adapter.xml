@@ -22,7 +22,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="6dp"
         android:textSize="18sp"
-        android:text="hcnkjm"
+
         android:id="@+id/tv"/>
     <LinearLayout
         android:layout_toRightOf="@+id/tv"
@@ -44,7 +44,6 @@
         android:layout_alignParentRight="true"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-
         android:layout_marginLeft="6dp"
         android:textSize="18sp"
         android:id="@+id/tvstatus"/>

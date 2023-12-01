@@ -39,8 +39,14 @@ public class util
 			conta_bancaria , valor_pagar_ag, data_ag, pessoa, data_comp, desc_ag,
 			comentarios, status, valor_pago, saldo_pagar;
 
-	public String docto, cliente, dataCadastro, valRecebido, valDoc, desconto, acrescimo, saldo;
+	public String docto, cliente, dataCadastro, valRecebido, valDoc, desconto, acrescimo, saldo, crstatus;
 	public long contasReceberId;
+	public String getCRStatus(){
+		return crstatus;
+	}
+	public void setCrstatus(String st){
+		this.crstatus = st;
+	}
 	public String getDocto(){
 		return docto;
 	}

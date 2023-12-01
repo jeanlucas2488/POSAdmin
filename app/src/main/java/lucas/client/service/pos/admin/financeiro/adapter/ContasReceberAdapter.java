@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.List;
@@ -30,11 +31,17 @@ public class ContasReceberAdapter extends ArrayAdapter<util> {
         LayoutInflater li = (LayoutInflater) c.getSystemService(c.LAYOUT_INFLATER_SERVICE);
         View r = li.inflate(R.layout.boletoa_adapter, parent, false);
         ImageView im = r.findViewById(R.id.im);
+        LinearLayout la = r.findViewById(R.id.la);
         TextView tv = r.findViewById(R.id.tv);
         TextView tvS = r.findViewById(R.id.tvstatus);
         tv.setText(lt.get(position).getDocto() + " - " + lt.get(position).getCliente());
-        tvS.setText(lt.get(position).getStatus());
+        tvS.setText("Status: " + lt.get(position).getCRStatus());
         im.setImageResource(R.drawable.contas);
+        if (tvS.getText().toString().endsWith("Pago")){
+            la.setVisibility(View.VISIBLE);
+        } else{
+            la.setVisibility(View.GONE);
+        }
         return r;
     }
 }

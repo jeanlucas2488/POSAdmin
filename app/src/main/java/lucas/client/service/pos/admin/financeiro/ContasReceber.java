@@ -52,6 +52,7 @@ public class ContasReceber extends AppCompatActivity
                 final TextInputEditText desconto = r.findViewById(R.id.desconto);
                 final TextInputEditText acrescimo = r.findViewById(R.id.acrescimo);
                 final TextInputEditText saldo = r.findViewById(R.id.saldo);
+                final TextInputEditText status = r.findViewById(R.id.status);
 
 
                 AlertDialog.Builder bs = new AlertDialog.Builder(c);
@@ -69,6 +70,7 @@ public class ContasReceber extends AppCompatActivity
                         us.setDesconto(desconto.getText().toString());
                         us.setAcrescimo(acrescimo.getText().toString());
                         us.setSaldo(saldo.getText().toString());
+                        us.setCrstatus(status.getText().toString());
                         SQLiteControl db = new SQLiteControl(c);
                         db.setContasReceber(us);
                         lt.clear();
@@ -94,7 +96,7 @@ public class ContasReceber extends AppCompatActivity
                 final TextInputEditText desconto = r.findViewById(R.id.desconto);
                 final TextInputEditText acrescimo = r.findViewById(R.id.acrescimo);
                 final TextInputEditText saldo = r.findViewById(R.id.saldo);
-
+                final TextInputEditText status = r.findViewById(R.id.status);
 
                 doc.setText(lt.get(position).getDocto());
                 cliente.setText(lt.get(position).getCliente());
@@ -104,7 +106,7 @@ public class ContasReceber extends AppCompatActivity
                 desconto.setText(lt.get(position).getDesconto());
                 acrescimo.setText(lt.get(position).getAcrescimo());
                 saldo.setText(lt.get(position).getSaldo());
-
+                status.setText(lt.get(position).getCRStatus());
 
                 AlertDialog.Builder bs = new AlertDialog.Builder(c);
                 bs.setTitle("Visualizar Ficha de Cadastro");
@@ -122,6 +124,7 @@ public class ContasReceber extends AppCompatActivity
                         us.setDesconto(desconto.getText().toString());
                         us.setAcrescimo(acrescimo.getText().toString());
                         us.setSaldo(saldo.getText().toString());
+                        us.setCrstatus(status.getText().toString());
                         SQLiteControl db = new SQLiteControl(c);
                         db.upContasReceber(us);
                         lt.clear();
