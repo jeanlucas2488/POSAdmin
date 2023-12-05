@@ -114,7 +114,6 @@
 			android:layout_height="45dp"
 			android:layout_marginTop="10dp"
 			android:layout_marginLeft="10dp"
-			android:id="@+id/im"
 			android:src="@drawable/paginas"/>
 
 		<TextView
@@ -159,7 +158,6 @@
 			android:layout_height="45dp"
 			android:layout_marginTop="10dp"
 			android:layout_marginLeft="10dp"
-			android:id="@+id/im"
 			android:src="@drawable/paginas"/>
 
 		<TextView
@@ -204,7 +202,6 @@
 			android:layout_height="45dp"
 			android:layout_marginTop="10dp"
 			android:layout_marginLeft="10dp"
-			android:id="@+id/im"
 			android:src="@drawable/paginas"/>
 
 		<TextView
@@ -249,7 +246,6 @@
 			android:layout_height="45dp"
 			android:layout_marginTop="10dp"
 			android:layout_marginLeft="10dp"
-			android:id="@+id/im"
 			android:src="@drawable/paginas"/>
 
 		<TextView
@@ -339,7 +335,6 @@
 			android:layout_height="45dp"
 			android:layout_marginTop="10dp"
 			android:layout_marginLeft="10dp"
-			android:id="@+id/im"
 			android:src="@drawable/paginas"/>
 
 		<TextView
@@ -384,7 +379,6 @@
 			android:layout_height="45dp"
 			android:layout_marginTop="10dp"
 			android:layout_marginLeft="10dp"
-			android:id="@+id/im"
 			android:src="@drawable/paginas"/>
 
 		<TextView
@@ -429,7 +423,6 @@
 			android:layout_height="45dp"
 			android:layout_marginTop="10dp"
 			android:layout_marginLeft="10dp"
-			android:id="@+id/im"
 			android:src="@drawable/paginas"/>
 
 		<TextView

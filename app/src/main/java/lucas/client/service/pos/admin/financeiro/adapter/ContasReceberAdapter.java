@@ -37,7 +37,7 @@ public class ContasReceberAdapter extends ArrayAdapter<util> {
         TextView tvS = r.findViewById(R.id.tvstatus);
         tv.setText(lt.get(position).getDocto() + " - " + lt.get(position).getCliente());
         tvS.setText("Status: " + lt.get(position).getCRStatus());
-        tvD.setText(lt.get(position).getDataCadastro());
+        tvD.setText("Data: " + lt.get(position).getDataCadastro());
         im.setImageResource(R.drawable.contas);
         if (tvS.getText().toString().endsWith("Pago")){
             la.setVisibility(View.VISIBLE);

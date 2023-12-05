@@ -4,12 +4,12 @@ plugins {
 
 android {
     namespace 'lucas.client.service.pos.admin'
-    compileSdk 34
+    compileSdk 31
 
     defaultConfig {
         applicationId "lucas.client.service.pos.admin"
         minSdk 22
-        targetSdk 34
+        targetSdk 31
         versionCode 1
         versionName "1.0"
 
