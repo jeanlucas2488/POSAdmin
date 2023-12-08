@@ -7,7 +7,7 @@
 	android:orientation="vertical"
 	android:layout_height="match_parent"
 	tools:showIn="@layout/main_">
-	<android.support.v4.widget.NestedScrollView
+	<androidx.core.widget.NestedScrollView
 		android:orientation="vertical"
 		android:layout_marginTop="65dp"
 		android:layout_width="match_parent"
@@ -16,7 +16,7 @@
 			android:orientation="vertical"
 			android:layout_width="match_parent"
 			android:layout_height="match_parent">
-    <android.support.v7.widget.CardView
+    <androidx.cardview.widget.CardView
 		android:id="@+id/cv1"
         android:orientation="vertical" android:layout_width="match_parent"
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -50,8 +50,8 @@
 			</RelativeLayout>
 
 		</LinearLayout>
-    </android.support.v7.widget.CardView>
-			<android.support.v7.widget.CardView
+    </androidx.cardview.widget.CardView>
+			<androidx.cardview.widget.CardView
 				android:id="@+id/cv2"
 				android:orientation="vertical" android:layout_width="match_parent"
 				xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -85,8 +85,8 @@
 					</RelativeLayout>
 
 				</LinearLayout>
-			</android.support.v7.widget.CardView>
-			<android.support.v7.widget.CardView
+			</androidx.cardview.widget.CardView>
+			<androidx.cardview.widget.CardView
 				android:id="@+id/cv3"
 				android:orientation="vertical" android:layout_width="match_parent"
 				xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -120,8 +120,8 @@
 					</RelativeLayout>
 
 				</LinearLayout>
-			</android.support.v7.widget.CardView>
-			<android.support.v7.widget.CardView
+			</androidx.cardview.widget.CardView>
+			<androidx.cardview.widget.CardView
 				android:id="@+id/cv4"
 				android:orientation="vertical" android:layout_width="match_parent"
 				xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -155,8 +155,8 @@
 					</RelativeLayout>
 
 				</LinearLayout>
-			</android.support.v7.widget.CardView>
-			<android.support.v7.widget.CardView
+			</androidx.cardview.widget.CardView>
+			<androidx.cardview.widget.CardView
 				android:id="@+id/cv5"
 				android:orientation="vertical" android:layout_width="match_parent"
 				xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -190,8 +190,8 @@
 					</RelativeLayout>
 
 				</LinearLayout>
-			</android.support.v7.widget.CardView>
-			<android.support.v7.widget.CardView
+			</androidx.cardview.widget.CardView>
+			<androidx.cardview.widget.CardView
 				android:id="@+id/cv6"
 				android:orientation="vertical" android:layout_width="match_parent"
 				xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -225,8 +225,8 @@
 					</RelativeLayout>
 
 				</LinearLayout>
-			</android.support.v7.widget.CardView>
-			<android.support.v7.widget.CardView
+			</androidx.cardview.widget.CardView>
+			<androidx.cardview.widget.CardView
 				android:id="@+id/cv7"
 				android:orientation="vertical" android:layout_width="match_parent"
 				xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -260,8 +260,8 @@
 					</RelativeLayout>
 
 				</LinearLayout>
-			</android.support.v7.widget.CardView>
-			<android.support.v7.widget.CardView
+			</androidx.cardview.widget.CardView>
+			<androidx.cardview.widget.CardView
 				android:id="@+id/cv8"
 				android:orientation="vertical" android:layout_width="match_parent"
 				xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -295,8 +295,8 @@
 					</RelativeLayout>
 
 				</LinearLayout>
-			</android.support.v7.widget.CardView>
-			<android.support.v7.widget.CardView
+			</androidx.cardview.widget.CardView>
+			<androidx.cardview.widget.CardView
 				android:id="@+id/cv9"
 				android:orientation="vertical" android:layout_width="match_parent"
 				xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -330,8 +330,8 @@
 					</RelativeLayout>
 
 				</LinearLayout>
-			</android.support.v7.widget.CardView>
-			<android.support.v7.widget.CardView
+			</androidx.cardview.widget.CardView>
+			<androidx.cardview.widget.CardView
 				android:id="@+id/cv10"
 				android:orientation="vertical" android:layout_width="match_parent"
 				xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -365,10 +365,10 @@
 					</RelativeLayout>
 
 				</LinearLayout>
-			</android.support.v7.widget.CardView>
+			</androidx.cardview.widget.CardView>
 		</LinearLayout>
 	
-</android.support.v4.widget.NestedScrollView>
+</androidx.core.widget.NestedScrollView>
 	
 
 	<ImageButton

@@ -1,62 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
     <application
         android:allowBackup="true"
         android:icon="@drawable/icon"
         android:requestLegacyExternalStorage="true"
         android:label="@string/app_name"
-        android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:targetApi="31">
+       >
         <activity
+            android:exported="true"
             android:theme="@style/AppTheme.NoActionBar"
             android:name=".setup.Estoque"
             android:label="POS Admin - Estoque" >
 
         </activity>
         <activity
+            android:exported="true"
             android:theme="@style/AppTheme.NoActionBar"
             android:name=".financeiro.Fechamento"
             android:label="Histórico de Fechamento" >
 
         </activity>
         <activity
+            android:exported="true"
             android:theme="@style/AppTheme.NoActionBar"
             android:name=".financeiro.ContasPagar"
             android:label="Contas a Pagar" >
 
         </activity>
         <activity
+            android:exported="true"
             android:theme="@style/AppTheme.NoActionBar"
             android:name=".financeiro.Boletos"
             android:label="Boletos a Pagar" >
 
         </activity>
         <activity
+            android:exported="true"
             android:theme="@style/AppTheme.NoActionBar"
             android:name=".financeiro.baixas.baixaBoletos"
             android:label="Histórico de Boletos - Baixa" >
 
         </activity>
         <activity
+            android:exported="true"
             android:theme="@style/dialog"
             android:name=".financeiro.view.boletoViewImageSource"
             android:label="" >
 
         </activity>
         <activity
+            android:exported="true"
             android:theme="@style/AppTheme.NoActionBar"
             android:name=".financeiro.ContasReceber"
             android:label="POS Admin - Contas a Receber" >
 
         </activity>
         <activity
+            android:exported="true"
             android:theme="@style/AppTheme.NoActionBar"
             android:name=".MainActivity"
-            android:exported="true"
             android:label="POS Admin - Produtos" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

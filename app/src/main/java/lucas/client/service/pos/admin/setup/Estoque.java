@@ -1,8 +1,8 @@
 package lucas.client.service.pos.admin.setup;
 import android.content.*;
 import android.os.*;
-import android.support.design.widget.*;
-import android.support.v7.app.*;
+
+import androidx.appcompat.app.*;
 import android.view.*;
 import android.widget.*;
 import android.widget.AdapterView.*;
@@ -14,8 +14,10 @@ import lucas.client.service.pos.admin.etc.*;
 import lucas.client.service.pos.admin.setup.adapters.*;
 import lucas.client.service.pos.admin.sqlite.*;
 
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.widget.Toolbar;
 import android.view.View.OnClickListener;
+
+import com.google.android.material.textfield.TextInputEditText;
 
 public class Estoque extends AppCompatActivity
 {

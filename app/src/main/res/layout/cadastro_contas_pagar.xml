@@ -13,7 +13,7 @@
             android:orientation="horizontal"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="wrap_content"
                 android:textColorHint="#000000"
                 android:layout_height="wrap_content"
@@ -21,7 +21,7 @@
                 app:hintTextAppearance="@style/HintText"
                 >
 
-                <android.support.design.widget.TextInputEditText
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/codigo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -30,8 +30,8 @@
                     android:hint="Código.:"
                     android:inputType="number" />
 
-            </android.support.design.widget.TextInputLayout>
-            <android.support.design.widget.TextInputLayout
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="wrap_content"
                 android:textColorHint="#000000"
                 android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
                 app:hintTextAppearance="@style/HintText"
                 >
 
-                <android.support.design.widget.TextInputEditText
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/classificacao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -47,14 +47,14 @@
                     android:ems="20"
                     android:hint="Classificação.:" />
 
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
         <RelativeLayout
             android:orientation="horizontal"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="wrap_content"
                 android:textColorHint="#000000"
                 android:layout_height="wrap_content"
@@ -62,7 +62,7 @@
                 app:hintTextAppearance="@style/HintText"
                 >
 
-                <android.support.design.widget.TextInputEditText
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/valorPagar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -71,8 +71,8 @@
                     android:hint="Valor a Pagar.:"
                     android:inputType="number|numberDecimal" />
 
-            </android.support.design.widget.TextInputLayout>
-            <android.support.design.widget.TextInputLayout
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="wrap_content"
                 android:textColorHint="#000000"
                 android:layout_alignParentRight="true"
@@ -81,7 +81,7 @@
                 app:hintTextAppearance="@style/HintText"
                 >
 
-                <android.support.design.widget.TextInputEditText
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/vencimento"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -90,14 +90,14 @@
                     android:hint="Vencimento.:"
                     android:inputType="datetime" />
 
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
         </RelativeLayout>
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="wrap_content"
                 android:textColorHint="#000000"
                 android:layout_height="wrap_content"
@@ -105,7 +105,7 @@
                 app:hintTextAppearance="@style/HintText"
                 >
 
-                <android.support.design.widget.TextInputEditText
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/empresa"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -113,8 +113,8 @@
                     android:ems="9"
                     android:hint="Empresa.:" />
 
-            </android.support.design.widget.TextInputLayout>
-            <android.support.design.widget.TextInputLayout
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColorHint="#000000"
@@ -122,7 +122,7 @@
                 app:hintTextAppearance="@style/HintText"
                 >
 
-                <android.support.design.widget.TextInputEditText
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/conta_bancaria"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -130,14 +130,14 @@
                     android:ems="20"
                     android:hint="Conta Bancária.:" />
 
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
         <RelativeLayout
             android:orientation="horizontal"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="wrap_content"
                 android:textColorHint="#000000"
                 android:layout_height="wrap_content"
@@ -145,7 +145,7 @@
                 app:hintTextAppearance="@style/HintText"
                 >
 
-                <android.support.design.widget.TextInputEditText
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/valorag"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -154,8 +154,8 @@
                     android:hint="Valor Ag.:"
                     android:inputType="number|numberDecimal" />
 
-            </android.support.design.widget.TextInputLayout>
-            <android.support.design.widget.TextInputLayout
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="wrap_content"
                 android:textColorHint="#000000"
                 android:layout_alignParentRight="true"
@@ -164,7 +164,7 @@
                 app:hintTextAppearance="@style/HintText"
                 >
 
-                <android.support.design.widget.TextInputEditText
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/dataAg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -173,14 +173,14 @@
                     android:hint="Data Ag.:"
                     android:inputType="datetime" />
 
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
         </RelativeLayout>
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="wrap_content"
                 android:textColorHint="#000000"
                 android:layout_height="wrap_content"
@@ -188,7 +188,7 @@
                 app:hintTextAppearance="@style/HintText"
                 >
 
-                <android.support.design.widget.TextInputEditText
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/pessoa"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -196,8 +196,8 @@
                     android:ems="9"
                     android:hint="Pessoa.:" />
 
-            </android.support.design.widget.TextInputLayout>
-            <android.support.design.widget.TextInputLayout
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="wrap_content"
                 android:textColorHint="#000000"
                 android:layout_height="wrap_content"
@@ -205,7 +205,7 @@
                 app:hintTextAppearance="@style/HintText"
                 >
 
-                <android.support.design.widget.TextInputEditText
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/dataComp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -214,14 +214,14 @@
                     android:hint="Data Comp.:"
                     android:inputType="datetime" />
 
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
         <RelativeLayout
             android:orientation="horizontal"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColorHint="#000000"
@@ -229,7 +229,7 @@
                 app:hintTextAppearance="@style/HintText"
                 >
 
-                <android.support.design.widget.TextInputEditText
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/status"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -237,8 +237,8 @@
                     android:ems="5"
                     android:hint="Status.:" />
 
-            </android.support.design.widget.TextInputLayout>
-            <android.support.design.widget.TextInputLayout
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -247,7 +247,7 @@
                 app:hintTextAppearance="@style/HintText"
                 >
 
-                <android.support.design.widget.TextInputEditText
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/valorPago"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -256,9 +256,9 @@
                     android:hint="Valor Pago.:"
                     android:inputType="number|numberDecimal" />
 
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColorHint="#000000"
@@ -267,7 +267,7 @@
                 app:hintTextAppearance="@style/HintText"
                 >
 
-                <android.support.design.widget.TextInputEditText
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/saldopagar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -276,10 +276,10 @@
                     android:hint="Saldo a Pagar.:"
                     android:inputType="number|numberDecimal" />
 
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
         </RelativeLayout>
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColorHint="#000000"
@@ -287,7 +287,7 @@
             app:hintTextAppearance="@style/HintText"
             >
 
-            <android.support.design.widget.TextInputEditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/descAg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -295,8 +295,8 @@
                 android:ems="30"
                 android:hint="Descrição Agendamento.:" />
 
-        </android.support.design.widget.TextInputLayout>
-        <android.support.design.widget.TextInputLayout
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="wrap_content"
             android:textColorHint="#000000"
             android:layout_height="wrap_content"
@@ -304,7 +304,7 @@
             app:hintTextAppearance="@style/HintText"
             >
 
-            <android.support.design.widget.TextInputEditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/comentarios"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -312,7 +312,7 @@
                 android:ems="30"
                 android:hint="Comentários.:" />
 
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
 </ScrollView>

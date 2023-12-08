@@ -1,7 +1,6 @@
 package lucas.client.service.pos.admin.financeiro.adapter;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;

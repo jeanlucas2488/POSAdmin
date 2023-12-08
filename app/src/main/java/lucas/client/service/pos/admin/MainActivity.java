@@ -1,34 +1,76 @@
 package lucas.client.service.pos.admin;
 
-import android.app.*;
-import android.content.*;
-import android.os.*;
-import android.support.v7.app.AppCompatActivity;
-
-import android.text.*;
-import android.view.*;
-import android.widget.*;
-import android.widget.SearchView;
-import android.widget.AdapterView.*;
-import java.io.*;
-import java.nio.channels.*;
-import java.util.*;
-import lucas.client.service.pos.admin.adapters.*;
-import lucas.client.service.pos.admin.etc.*;
-import lucas.client.service.pos.admin.sqlite.*;
-
-import android.app.AlertDialog;
-import android.support.v7.widget.Toolbar;
-import android.view.View.OnClickListener;
-
-import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
+import static android.Manifest.permission.MANAGE_EXTERNAL_STORAGE;
 import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
-import android.support.v4.app.*;
-import android.support.v7.widget.*;
-import android.support.design.widget.*;
-import lucas.client.service.pos.admin.setup.*;
-import lucas.client.service.pos.admin.financeiro.*;
+import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
+import android.Manifest;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
+import android.os.Build;
+import android.os.Bundle;
+import android.os.Environment;
+import android.provider.Settings;
+import com.google.android.material.textfield.TextInputEditText;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+import androidx.appcompat.widget.Toolbar;
+import android.text.TextUtils;
+import android.util.Log;
+import android.view.KeyEvent;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
+import android.widget.SearchView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.nio.channels.FileChannel;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+
+import lucas.client.service.pos.admin.adapters.adapter;
+import lucas.client.service.pos.admin.adapters.financeiroAdapter;
+import lucas.client.service.pos.admin.adapters.userAdapter;
+import lucas.client.service.pos.admin.etc.util;
+import lucas.client.service.pos.admin.financeiro.ContasPagar;
+import lucas.client.service.pos.admin.financeiro.ContasReceber;
+import lucas.client.service.pos.admin.financeiro.Fechamento;
+import lucas.client.service.pos.admin.setup.Estoque;
+import lucas.client.service.pos.admin.sqlite.SQLiteControl;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -43,6 +85,7 @@ public class MainActivity extends AppCompatActivity
 	long id;
 	public String dirPath="";
 	private static final int PERMISSION_REQUEST_CODE = 200;
+	private static final String TAG = "PERMISSION_TAG";
     public String ParentdirPath="";
     public ArrayList<String> theNamesOfFiles;
     public ArrayList<Integer> intImages;
@@ -57,10 +100,7 @@ public class MainActivity extends AppCompatActivity
 		
 		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
-		ActivityCompat.requestPermissions(MainActivity.this, new String[]{WRITE_EXTERNAL_STORAGE, READ_EXTERNAL_STORAGE}, PERMISSION_REQUEST_CODE);
-		
-		try{
-			Thread.sleep(5000);
+		if(checkPermission()){
 			File root = new File(Environment.getExternalStorageDirectory(), "pdvMain");
 			root.exists();
 			root.mkdir();
@@ -77,8 +117,8 @@ public class MainActivity extends AppCompatActivity
 
 			File root6 = new File(Environment.getExternalStorageDirectory(), "pdvMain/data/lucas.client.service/.fechamentos");
 			root6.mkdir();
-		}catch(Exception e){
-			
+		} else {
+			requestPermission();
 		}
 		SQLiteControl sql = new SQLiteControl(c);
 	    aba1 = sql.findP1();
@@ -5308,5 +5348,72 @@ public class MainActivity extends AppCompatActivity
 		}
 		return super.onKeyUp(keyCode, event);
 	}
+	private void requestPermission(){
+		if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.R){
+			try{
 
+				Intent it = new Intent();
+				it.setAction(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);
+				Uri uri = Uri.fromParts("package", this.getPackageName(), null);
+				it.setData(uri);
+				storageActivityResultLauncher.launch(it);
+			}catch (Exception e){
+
+				Intent it2 = new Intent();
+				it2.setAction(Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION);
+				storageActivityResultLauncher.launch(it2);
+			}
+		} else {
+			ActivityCompat.requestPermissions(MainActivity.this, new String[]{WRITE_EXTERNAL_STORAGE, MANAGE_EXTERNAL_STORAGE,  READ_EXTERNAL_STORAGE}, PERMISSION_REQUEST_CODE);
+		}
+	}
+	private ActivityResultLauncher<Intent> storageActivityResultLauncher =
+			registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
+					new ActivityResultCallback<ActivityResult>(){
+
+						@Override
+						public void onActivityResult(ActivityResult o) {
+							if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.R){
+								//Android is 11 (R) or above
+								if(Environment.isExternalStorageManager()){
+									//Manage External Storage Permissions Granted
+
+									Log.d(TAG, "onActivityResult: Manage External Storage Permissions Granted");
+								}else{
+									Toast.makeText(MainActivity.this, "Storage Permissions Denied", Toast.LENGTH_SHORT).show();
+								}
+							}else{
+								//Below android 11
+
+							}
+						}
+					});
+
+	public boolean checkPermission(){
+		if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.R){
+			return Environment.isExternalStorageManager();
+		} else {
+			int write = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+			int read = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);
+
+			return write == PackageManager.PERMISSION_GRANTED && read == PackageManager.PERMISSION_GRANTED;
+		}
+
+	}
+	@Override
+	public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+		super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+		if(requestCode == PERMISSION_REQUEST_CODE){
+			if(grantResults.length > 0){
+				boolean write = grantResults[0] == PackageManager.PERMISSION_GRANTED;
+				boolean read = grantResults[1] == PackageManager.PERMISSION_GRANTED;
+
+				if(read && write){
+					Toast.makeText(MainActivity.this, "Storage Permissions Granted", Toast.LENGTH_SHORT).show();
+				}else{
+					Toast.makeText(MainActivity.this, "Storage Permissions Denied", Toast.LENGTH_SHORT).show();
+				}
+			}
+		}
+	}
 }
