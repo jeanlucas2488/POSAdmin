@@ -100,6 +100,7 @@ public class MainActivity extends AppCompatActivity
 		
 		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		if(checkPermission()){
 			File root = new File(Environment.getExternalStorageDirectory(), "pdvMain");
 			root.exists();
