@@ -360,9 +360,7 @@ public class SQLiteControl
 	}
 	public List<util> fechamento(){
 		ArrayList<util> arr = new ArrayList<util>();
-		String[] cl = {"id", "data", "operador", "fundo", "dinheiro",
-		               "eloD", "eloC", "visaD", "visaC", "masterD", "masterC", "hiper", "hiperc", "cabal", "pix", "verde", "person", "soro", "ouro",
-					   "banrisul", "banric", "banes", "americ"};
+		String[] cl = {"id", "data", "NfeHtml"};
 		Cursor cs = db.query("Fechamento", cl, null, null, null, null, "data ASC");
 		if(cs.getCount() >0){
 			cs.moveToFirst();
@@ -370,27 +368,8 @@ public class SQLiteControl
 				util us = new util();
 				us.setId(Integer.parseInt(cs.getString(0)));
 				us.setData(cs.getString(1));
-				us.setOperador(cs.getString(2));
-				us.setFundo(cs.getString(3));
-				us.setDinheiro(cs.getString(4));
-				us.setEloD(cs.getString(5));
-				us.setEloC(cs.getString(6));
-				us.setVisaD(cs.getString(7));
-				us.setVisaC(cs.getString(8));
-				us.setMasterD(cs.getString(9));
-				us.setMasterC(cs.getString(10));
-				us.setHiper(cs.getString(11));
-				us.setHiperC(cs.getString(12));
-				us.setCabal(cs.getString(13));
-				us.setPix(cs.getString(14));
-				us.setVerde(cs.getString(15));
-				us.setPerson(cs.getString(16));
-				us.setSoro(cs.getString(17));
-				us.setOuro(cs.getString(18));
-				us.setBanric(cs.getString(19));
-				us.setBanriC(cs.getString(20));
-				us.setBanes(cs.getString(21));
-				us.setAmeric(cs.getString(22));
+				us.setNfehtml(cs.getString(2));
+
 				arr.add(us);
 			}while(cs.moveToNext());
 		}

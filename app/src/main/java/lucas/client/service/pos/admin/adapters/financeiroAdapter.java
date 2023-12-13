@@ -12,7 +12,7 @@ public class financeiroAdapter extends ArrayAdapter<String>
 	List<String> lt;
 	
 	public financeiroAdapter(Context c2, List<String> lt2){
-		super(c2, R.layout.adapter, lt2);
+		super(c2, R.layout.fin_adapter, lt2);
 		this.c = c2;
 		this.lt = lt2;
 	}
@@ -22,7 +22,7 @@ public class financeiroAdapter extends ArrayAdapter<String>
 	{
 		// TODO: Implement this method
 		LayoutInflater li = (LayoutInflater) c.getSystemService(c.LAYOUT_INFLATER_SERVICE);
-		View r = li.inflate(R.layout.adapter, parent, false);
+		View r = li.inflate(R.layout.fin_adapter, parent, false);
 		ImageView im = r.findViewById(R.id.im);
 		TextView tv = r.findViewById(R.id.tv);
 		tv.setText(lt.get(position));

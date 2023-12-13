@@ -3,6 +3,7 @@ import java.sql.*;
 
 public class util
 {
+	public String nfehtml;
 	public long supId, sanId, contasId, bolId;
 	public byte[] imagem;
 	public String bdata, bvencimento, btipo, bstatus,  bvalor, bdescricao;
@@ -41,6 +42,12 @@ public class util
 
 	public String docto, cliente, dataCadastro, valRecebido, valDoc, desconto, acrescimo, saldo, crstatus;
 	public long contasReceberId;
+	public String getNfehtml(){
+		return nfehtml;
+	}
+	public void setNfehtml(String nfe){
+		this.nfehtml = nfe;
+	}
 	public String getCRStatus(){
 		return crstatus;
 	}

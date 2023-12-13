@@ -13,7 +13,7 @@ public class fechamentoAdapter extends ArrayAdapter<util>
 	List<util> lt;
 	
 	public fechamentoAdapter(Context c2, List<util> lt2){
-		super(c2, R.layout.adapter, lt2);
+		super(c2, R.layout.fechamento_adapter, lt2);
 		this.c = c2;
 		this.lt = lt2;
 	}
@@ -23,7 +23,7 @@ public class fechamentoAdapter extends ArrayAdapter<util>
 	{
 		// TODO: Implement this method
 		LayoutInflater li = (LayoutInflater) c.getSystemService(c.LAYOUT_INFLATER_SERVICE);
-		View r = li.inflate(R.layout.adapter, parent, false);
+		View r = li.inflate(R.layout.fechamento_adapter, parent, false);
 		ImageView im = r.findViewById(R.id.im);
 		TextView tv = r.findViewById(R.id.tv);
 		tv.setText("Fechamento: " + lt.get(position).getData());
