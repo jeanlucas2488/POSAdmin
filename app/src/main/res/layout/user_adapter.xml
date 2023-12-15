@@ -2,24 +2,121 @@
 <LinearLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="fill_parent"
+	android:layout_marginTop="15dp"
 	android:layout_height="wrap_content"
-	android:orientation="horizontal"
+	android:orientation="vertical"
 >
+	<RelativeLayout
+		android:background="@drawable/util"
+		android:id="@+id/l1"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+		<ImageView
+			android:layout_width="40dp"
+			android:layout_height="35dp"
+			android:layout_margin="10dp"
+			android:id="@+id/im1"/>
 
-	<ImageView
-		android:layout_width="40dp"
-		android:layout_height="35dp"
-		android:layout_margin="10dp"
-		android:id="@+id/im"/>
+		<TextView
+			android:layout_toRightOf="@+id/im1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:layout_marginLeft="10dp"
+			android:textSize="18sp"
+			android:id="@+id/tv1"/>
+		<ImageView
+			android:src="@drawable/edit_icon"
+			android:layout_width="45dp"
+			android:layout_height="30dp"
+			android:layout_alignParentRight="true"
+			android:layout_marginTop="15dp"
+			android:layout_marginRight="5dp"
+			android:id="@+id/edit1"/>
+	</RelativeLayout>
+	<RelativeLayout
+		android:background="@drawable/util"
+		android:id="@+id/l2"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+		<ImageView
+			android:layout_width="40dp"
+			android:layout_height="35dp"
+			android:layout_margin="10dp"
+			android:id="@+id/im2"/>
 
-	<TextView
-		
-		android:layout_width="fill_parent"
-		android:layout_height="wrap_content"
-		android:layout_margin="10dp"
-		
-		android:textSize="18sp"
-		android:id="@+id/tv"/>
+		<TextView
+			android:layout_toRightOf="@+id/im2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:layout_marginLeft="15dp"
+			android:textSize="18sp"
+			android:id="@+id/tv2"/>
+		<ImageView
+			android:src="@drawable/edit_icon"
+			android:layout_width="45dp"
+			android:layout_height="30dp"
+			android:layout_alignParentRight="true"
+			android:layout_marginTop="15dp"
+			android:layout_marginRight="5dp"
+			android:id="@+id/edit2"/>
+	</RelativeLayout>
+	<RelativeLayout
+		android:background="@drawable/util"
+		android:id="@+id/l3"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+		<ImageView
+			android:layout_width="40dp"
+			android:layout_height="35dp"
+			android:layout_margin="10dp"
+			android:id="@+id/im3"/>
 
+		<TextView
+			android:layout_toRightOf="@+id/im3"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:layout_marginLeft="15dp"
+			android:textSize="18sp"
+			android:id="@+id/tv3"/>
+		<ImageView
+			android:src="@drawable/edit_icon"
+			android:layout_width="45dp"
+			android:layout_height="30dp"
+			android:layout_alignParentRight="true"
+			android:layout_marginTop="15dp"
+			android:layout_marginRight="5dp"
+			android:id="@+id/edit3"/>
+	</RelativeLayout>
+	<RelativeLayout
+		android:background="@drawable/util"
+		android:id="@+id/l4"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+		<ImageView
+			android:layout_width="40dp"
+			android:layout_height="35dp"
+			android:layout_margin="10dp"
+			android:id="@+id/im4"/>
+
+		<TextView
+			android:layout_toRightOf="@+id/im4"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:layout_marginLeft="15dp"
+			android:textSize="18sp"
+			android:id="@+id/tv4"/>
+		<ImageView
+			android:src="@drawable/edit_icon"
+			android:layout_width="45dp"
+			android:layout_height="30dp"
+			android:layout_alignParentRight="true"
+			android:layout_marginTop="15dp"
+			android:layout_marginRight="5dp"
+			android:id="@+id/edit4"/>
+	</RelativeLayout>
 </LinearLayout>
 

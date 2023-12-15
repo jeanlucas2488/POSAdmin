@@ -7,7 +7,7 @@ public class SQLiteHelper extends SQLiteOpenHelper
 	public static String DB ="myDB.db";
 	
 	public SQLiteHelper (Context c){
-		super(c, DB, null, 2);
+		super(c, DB, null, 4);
 	}
 
 	@Override
@@ -25,9 +25,15 @@ public class SQLiteHelper extends SQLiteOpenHelper
 				    "(id integer primary key, codigo text, classificacao text, valor_pagar text, data_vencimento text, empresa text, " +
 				                              "conta_bancaria text, valor_pagar_ag text, data_ag text, pessoa text, data_comp text, desc_ag text, " +
 				                              "comentarios text, status text, valor_pago text, saldo_pagar text);");
-		db.execSQL("CREATE TABLE senhas" + 
-		           "(userId integer primary key, usuario text, senha text);");
-		
+		db.execSQL("CREATE TABLE supervisor" +
+				"(id integer primary key, superV text);");
+		db.execSQL("CREATE TABLE retPass" +
+				   "(id integer primary key, usuario text, senha text);");
+		db.execSQL("CREATE TABLE senhaCM" +
+				"(userId integer primary key, usuario text, senha text);");
+		db.execSQL("CREATE TABLE senhaMCR" +
+				"(userId integer primary key, usuario text, senha text);");
+
 		db.execSQL("CREATE TABLE Sangrias" +
 		           "(id integer primary key, sangria_val text, sangria_mot text);");
 

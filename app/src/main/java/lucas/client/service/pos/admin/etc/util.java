@@ -42,6 +42,21 @@ public class util
 
 	public String docto, cliente, dataCadastro, valRecebido, valDoc, desconto, acrescimo, saldo, crstatus;
 	public long contasReceberId;
+	public String senha_supervisor;
+	public long supervisor_id;
+
+	public long getSupervisor_id(){
+		return supervisor_id;
+	}
+	public void setSupervisor_id(long id){
+		this.supervisor_id = id;
+	}
+	public String getSenhaSuperVisor(){
+		return senha_supervisor;
+	}
+	public void setSenhaSuperVisor(String superv){
+		this.senha_supervisor = superv;
+	}
 	public String getNfehtml(){
 		return nfehtml;
 	}

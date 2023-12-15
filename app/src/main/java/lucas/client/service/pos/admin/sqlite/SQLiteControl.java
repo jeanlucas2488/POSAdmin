@@ -27,19 +27,7 @@ public class SQLiteControl
 		cv.put("paginas", us.getCategory());
 		db.insert("Paginas", null, cv);
 	}
-	public void userUp(util us){
-		ContentValues cv = new ContentValues();
-		cv.put("userId", us.getUserId());
-		cv.put("usuario", us.getUsuario());
-		cv.put("senha", us.getSenha());
-		db.update("senhas", cv, "userId = ?", new String[]{String.valueOf(us.getUserId())});
-	}
-	public void userIn(util us){
-		ContentValues cv = new ContentValues();
-		cv.put("usuario", us.getUsuario());
-		cv.put("senha", us.getSenha());
-		db.insert("senhas", null, cv);
-	}
+
 	public void post(util us){
 		ContentValues ct = new ContentValues();
 		ct.put("prod", us.getProd());
@@ -283,21 +271,107 @@ public class SQLiteControl
 		}
 		return arr;
 	}
-	public List<util> getUsers(){
-		ArrayList<util> ar = new ArrayList<util>();
-		String[] cl = {"userId", "usuario", "senha"};
-		Cursor cs = db.query("senhas", cl, null, null, null, null, "usuario ASC");
-		if(cs.getCount() >0){
-			cs.moveToFirst();
-			do{
-				util us = new util();
-				us.setUserId(Integer.parseInt(cs.getString(0)));
-				us.setUsuario(cs.getString(1));
-				us.setSenha(cs.getString(2));
-				ar.add(us);
+	public void setSenhaMCR(util us){
+		ContentValues ct = new ContentValues();
+		ct.put("usuario", us.getUsuario());
+		ct.put("senha", us.getSenha());
+		db.insert("senhaMCR", null, ct);
+	}
+	public void upSenhaMCR(util us){
+		ContentValues ct = new ContentValues();
+		ct.put("userId", us.getUserId());
+		ct.put("usuario", us.getUsuario());
+		ct.put("senha", us.getSenha());
+		db.update("senhaMCR", ct, "userId = ?", new String[]{String.valueOf(us.getUserId())});
+	}
+	public void setSenhaCM(util us){
+		ContentValues ct = new ContentValues();
+		ct.put("usuario", us.getUsuario());
+		ct.put("senha", us.getSenha());
+		db.insert("senhaCM", null, ct);
+	}
+	public void upSenhaCM(util us){
+		ContentValues ct = new ContentValues();
+		ct.put("userId", us.getUserId());
+		ct.put("usuario", us.getUsuario());
+		ct.put("senha", us.getSenha());
+		db.update("senhaCM", ct, "userId = ?", new String[]{String.valueOf(us.getUserId())});
+	}
+	public void setRetPass(util us){
+		ContentValues ct = new ContentValues();
+		ct.put("usuario", us.getUsuario());
+		ct.put("senha", us.getSenha());
+		db.insert("retPass", null, ct);
+	}
+	public void upRetPass(util us){
+		ContentValues ct = new ContentValues();
+		ct.put("id", us.getUserId());
+		ct.put("usuario", us.getUsuario());
+		ct.put("senha", us.getSenha());
+		db.update("retPass", ct, "id = ?", new String[]{String.valueOf(us.getUserId())});
+	}
+	public void setSuperVisor(util us){
+		ContentValues ct = new ContentValues();
+		ct.put("superV", us.getSenhaSuperVisor());
+		db.insert("supervisor", null, ct);
+	}
+	public void upSuperVisor(util us){
+		ContentValues ct = new ContentValues();
+		ct.put("id", us.getSupervisor_id());
+		ct.put("superV", us.getSenhaSuperVisor());
+		db.update("supervisor", ct, "id = ?", new String[]{String.valueOf(us.getSupervisor_id())});
+	}
+	public util getSuperVisor(long id){
+		util us2 = new util();
+		Cursor cs = db.rawQuery("select * from supervisor WHERE id ="+id+"", null);
+		if(cs.moveToFirst()){
+			do {
+				us2.setSupervisor_id(cs.getLong(cs.getColumnIndex("id")));
+				us2.setSenhaSuperVisor(cs.getString(cs.getColumnIndex("superV")));
+
 			} while(cs.moveToNext());
 		}
-		return ar;
+		return us2;
+	}
+
+	public util getSenhaCM(long id){
+		util us = new util();
+		Cursor cs = db.rawQuery("select * from senhaCM WHERE userId =" + id + "", null);
+		if(cs.moveToFirst()){
+			do {
+				us.setUserId(cs.getLong(cs.getColumnIndex("userId")));
+				us.setUsuario(cs.getString(cs.getColumnIndex("usuario")));
+				us.setSenha(cs.getString(cs.getColumnIndex("senha")));
+
+			} while(cs.moveToNext());
+		}
+		return us;
+	}
+	public util getSenhaRet(long id){
+		util us = new util();
+		Cursor cs = db.rawQuery("select * from retPass WHERE id =" +id+ "", null);
+		if(cs.moveToFirst()){
+			do {
+				us.setUserId(cs.getLong(cs.getColumnIndex("id")));
+				us.setUsuario(cs.getString(cs.getColumnIndex("usuario")));
+				us.setSenha(cs.getString(cs.getColumnIndex("senha")));
+
+			} while(cs.moveToNext());
+		}
+		return us;
+	}
+	public util getSenhaMCR(long id){
+		util us = new util();
+		Cursor cs = db.rawQuery("select * from senhaMCR WHERE userId =" + id + "", null);
+		if(cs.moveToFirst()){
+			do {
+				us.setUserId(cs.getLong(cs.getColumnIndex("userId")));
+				us.setUsuario(cs.getString(cs.getColumnIndex("usuario")));
+				us.setSenha(cs.getString(cs.getColumnIndex("senha")));
+
+			} while(cs.moveToNext());
+		}
+		return us;
 	}
 	public List<util> suFind(){
 		ArrayList<util> arr = new ArrayList<util>();

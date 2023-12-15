@@ -67,6 +67,13 @@
             android:theme="@style/AppTheme.NoActionBar"
             android:name=".MainActivity"
             android:label="POS Admin - Produtos" >
+
+        </activity>
+        <activity
+            android:exported="true"
+            android:theme="@style/dialog"
+            android:name=".checkPWD"
+            android:label="POS Admin - Produtos" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
