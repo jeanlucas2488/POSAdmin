@@ -31,7 +31,7 @@ public class checkPWD extends AppCompatActivity {
             util us = db.getSenhaRet(1);
             if(!us.getUsuario().toString().equals("")){
                 LayoutInflater li = getLayoutInflater();
-                View r = li.inflate(R.layout.password_pos_client, null);
+                View r = li.inflate(R.layout.login, null);
                 final TextInputEditText user = r.findViewById(R.id.user);
                 final TextInputEditText pass = r.findViewById(R.id.pass);
                 Button login = r.findViewById(R.id.login);
