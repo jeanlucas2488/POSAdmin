@@ -5158,7 +5158,7 @@ public class MainActivity extends AppCompatActivity
 
 							SQLiteControl db = new SQLiteControl(c);
 							final util us = db.getSuperVisor(1);
-							pass.setText(us.getSenha());
+							pass.setText(us.getSenhaSuperVisor());
 							user.setVisibility(View.GONE);
 							AlertDialog.Builder sv = new AlertDialog.Builder(c);
 							sv.setTitle("Atualizar Usuário / Senha Sup:");
@@ -5246,7 +5246,7 @@ public class MainActivity extends AppCompatActivity
 								public void onClick(DialogInterface dialog, int which) {
 									util us2 = new util();
 									us2.setUserId(us.getUserId());
-									us2.setUsuario(us2.getUsuario());
+									us2.setUsuario(user.getText().toString());
 									us2.setSenha(pass.getText().toString());
 									SQLiteControl db = new SQLiteControl(c);
 									db.upRetPass(us2);
