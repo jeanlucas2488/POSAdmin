@@ -71,6 +71,13 @@
         </activity>
         <activity
             android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name=".mercearia.MCRMain"
+            android:label="POS Admin - MCR" >
+
+        </activity>
+        <activity
+            android:exported="true"
             android:theme="@style/dialog"
             android:name=".checkPWD"
             android:label="POS Admin - Produtos" >

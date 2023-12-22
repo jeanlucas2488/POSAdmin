@@ -263,15 +263,15 @@ public class MCRMain extends AppCompatActivity {
 
                                                 if (sd.canWrite()) {
                                                     String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                            + "//databases//" + "myDB.db";
+                                                            + "//databases//" + "MCRDB.db";
                                                     String  currentDBPath10 = "//data//" + c.getOpPackageName()
-                                                            + "//databases//" + "myDB.db-shm";
+                                                            + "//databases//" + "MCRDB.db-shm";
                                                     String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                            + "//databases//" + "myDB.db-wal";
+                                                            + "//databases//" + "MCRDB.db-wal";
 
-                                                    String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                    String backupDBPath10  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                    String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                                    String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                    String backupDBPath10  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                    String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                                     File currentDB = new File(data, currentDBPath);
                                                     File currentDB10 = new File(data, currentDBPath10);
@@ -327,15 +327,15 @@ public class MCRMain extends AppCompatActivity {
 
                                         if (sd.canWrite()) {
                                             String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                    + "//databases//" + "myDB.db";
+                                                    + "//databases//" + "MCRDB.db";
                                             String  currentDBPath10 = "//data//" + c.getOpPackageName()
-                                                    + "//databases//" + "myDB.db-shm";
+                                                    + "//databases//" + "MCRDB.db-shm";
                                             String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                    + "//databases//" + "myDB.db-wal";
+                                                    + "//databases//" + "MCRDB.db-wal";
 
-                                            String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                            String backupDBPath10  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                            String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                            String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                            String backupDBPath10  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                            String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                             File currentDB = new File(data, currentDBPath);
                                             File currentDB10 = new File(data, currentDBPath10);
@@ -476,15 +476,15 @@ public class MCRMain extends AppCompatActivity {
 
                                                 if (sd.canWrite()) {
                                                     String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                            + "//databases//" + "myDB.db";
+                                                            + "//databases//" + "MCRDB.db";
                                                     String  currentDBPath9 = "//data//" + c.getOpPackageName()
-                                                            + "//databases//" + "myDB.db-shm";
+                                                            + "//databases//" + "MCRDB.db-shm";
                                                     String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                            + "//databases//" + "myDB.db-wal";
+                                                            + "//databases//" + "MCRDB.db-wal";
 
-                                                    String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                    String backupDBPath9  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                    String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                                    String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                    String backupDBPath9  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                    String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                                     File currentDB = new File(data, currentDBPath);
                                                     File currentDB9 = new File(data, currentDBPath9);
@@ -540,15 +540,15 @@ public class MCRMain extends AppCompatActivity {
 
                                         if (sd.canWrite()) {
                                             String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                    + "//databases//" + "myDB.db";
+                                                    + "//databases//" + "MCRDB.db";
                                             String  currentDBPath9 = "//data//" + c.getOpPackageName()
-                                                    + "//databases//" + "myDB.db-shm";
+                                                    + "//databases//" + "MCRDB.db-shm";
                                             String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                    + "//databases//" + "myDB.db-wal";
+                                                    + "//databases//" + "MCRDB.db-wal";
 
-                                            String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                            String backupDBPath9  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                            String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                            String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                            String backupDBPath9  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                            String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                             File currentDB = new File(data, currentDBPath);
                                             File currentDB9 = new File(data, currentDBPath9);
@@ -689,15 +689,15 @@ public class MCRMain extends AppCompatActivity {
 
                                                 if (sd.canWrite()) {
                                                     String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                            + "//databases//" + "myDB.db";
+                                                            + "//databases//" + "MCRDB.db";
                                                     String  currentDBPath8 = "//data//" + c.getOpPackageName()
-                                                            + "//databases//" + "myDB.db-shm";
+                                                            + "//databases//" + "MCRDB.db-shm";
                                                     String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                            + "//databases//" + "myDB.db-wal";
+                                                            + "//databases//" + "MCRDB.db-wal";
 
-                                                    String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                    String backupDBPath8  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                    String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                                    String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                    String backupDBPath8  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                    String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                                     File currentDB = new File(data, currentDBPath);
                                                     File currentDB8 = new File(data, currentDBPath8);
@@ -753,15 +753,15 @@ public class MCRMain extends AppCompatActivity {
 
                                         if (sd.canWrite()) {
                                             String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                    + "//databases//" + "myDB.db";
+                                                    + "//databases//" + "MCRDB.db";
                                             String  currentDBPath8 = "//data//" + c.getOpPackageName()
-                                                    + "//databases//" + "myDB.db-shm";
+                                                    + "//databases//" + "MCRDB.db-shm";
                                             String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                    + "//databases//" + "myDB.db-wal";
+                                                    + "//databases//" + "MCRDB.db-wal";
 
-                                            String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                            String backupDBPath8  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                            String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                            String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                            String backupDBPath8  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                            String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                             File currentDB = new File(data, currentDBPath);
                                             File currentDB8 = new File(data, currentDBPath8);
@@ -902,15 +902,15 @@ public class MCRMain extends AppCompatActivity {
 
                                                 if (sd.canWrite()) {
                                                     String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                            + "//databases//" + "myDB.db";
+                                                            + "//databases//" + "MCRDB.db";
                                                     String  currentDBPath7 = "//data//" + c.getOpPackageName()
-                                                            + "//databases//" + "myDB.db-shm";
+                                                            + "//databases//" + "MCRDB.db-shm";
                                                     String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                            + "//databases//" + "myDB.db-wal";
+                                                            + "//databases//" + "MCRDB.db-wal";
 
-                                                    String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                    String backupDBPath7  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                    String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                                    String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                    String backupDBPath7  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                    String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                                     File currentDB = new File(data, currentDBPath);
                                                     File currentDB7 = new File(data, currentDBPath7);
@@ -966,15 +966,15 @@ public class MCRMain extends AppCompatActivity {
 
                                         if (sd.canWrite()) {
                                             String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                    + "//databases//" + "myDB.db";
+                                                    + "//databases//" + "MCRDB.db";
                                             String  currentDBPath7 = "//data//" + c.getOpPackageName()
-                                                    + "//databases//" + "myDB.db-shm";
+                                                    + "//databases//" + "MCRDB.db-shm";
                                             String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                    + "//databases//" + "myDB.db-wal";
+                                                    + "//databases//" + "MCRDB.db-wal";
 
-                                            String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                            String backupDBPath7  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                            String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                            String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                            String backupDBPath7  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                            String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                             File currentDB = new File(data, currentDBPath);
                                             File currentDB7 = new File(data, currentDBPath7);
@@ -1115,15 +1115,15 @@ public class MCRMain extends AppCompatActivity {
 
                                                 if (sd.canWrite()) {
                                                     String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                            + "//databases//" + "myDB.db";
+                                                            + "//databases//" + "MCRDB.db";
                                                     String  currentDBPath6 = "//data//" + c.getOpPackageName()
-                                                            + "//databases//" + "myDB.db-shm";
+                                                            + "//databases//" + "MCRDB.db-shm";
                                                     String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                            + "//databases//" + "myDB.db-wal";
+                                                            + "//databases//" + "MCRDB.db-wal";
 
-                                                    String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                    String backupDBPath6  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                    String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                                    String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                    String backupDBPath6  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                    String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                                     File currentDB = new File(data, currentDBPath);
                                                     File currentDB6 = new File(data, currentDBPath6);
@@ -1179,15 +1179,15 @@ public class MCRMain extends AppCompatActivity {
 
                                         if (sd.canWrite()) {
                                             String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                    + "//databases//" + "myDB.db";
+                                                    + "//databases//" + "MCRDB.db";
                                             String  currentDBPath6 = "//data//" + c.getOpPackageName()
-                                                    + "//databases//" + "myDB.db-shm";
+                                                    + "//databases//" + "MCRDB.db-shm";
                                             String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                    + "//databases//" + "myDB.db-wal";
+                                                    + "//databases//" + "MCRDB.db-wal";
 
-                                            String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                            String backupDBPath6  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                            String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                            String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                            String backupDBPath6  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                            String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                             File currentDB = new File(data, currentDBPath);
                                             File currentDB6 = new File(data, currentDBPath6);
@@ -1328,15 +1328,15 @@ public class MCRMain extends AppCompatActivity {
 
                                                 if (sd.canWrite()) {
                                                     String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                            + "//databases//" + "myDB.db";
+                                                            + "//databases//" + "MCRDB.db";
                                                     String  currentDBPath5 = "//data//" + c.getOpPackageName()
-                                                            + "//databases//" + "myDB.db-shm";
+                                                            + "//databases//" + "MCRDB.db-shm";
                                                     String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                            + "//databases//" + "myDB.db-wal";
+                                                            + "//databases//" + "MCRDB.db-wal";
 
-                                                    String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                    String backupDBPath5  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                    String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                                    String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                    String backupDBPath5  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                    String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                                     File currentDB = new File(data, currentDBPath);
                                                     File currentDB5 = new File(data, currentDBPath5);
@@ -1392,15 +1392,15 @@ public class MCRMain extends AppCompatActivity {
 
                                         if (sd.canWrite()) {
                                             String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                    + "//databases//" + "myDB.db";
+                                                    + "//databases//" + "MCRDB.db";
                                             String  currentDBPath5 = "//data//" + c.getOpPackageName()
-                                                    + "//databases//" + "myDB.db-shm";
+                                                    + "//databases//" + "MCRDB.db-shm";
                                             String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                    + "//databases//" + "myDB.db-wal";
+                                                    + "//databases//" + "MCRDB.db-wal";
 
-                                            String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                            String backupDBPath5  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                            String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                            String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                            String backupDBPath5  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                            String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                             File currentDB = new File(data, currentDBPath);
                                             File currentDB5 = new File(data, currentDBPath5);
@@ -1541,15 +1541,15 @@ public class MCRMain extends AppCompatActivity {
 
                                                 if (sd.canWrite()) {
                                                     String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                            + "//databases//" + "myDB.db";
+                                                            + "//databases//" + "MCRDB.db";
                                                     String  currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                            + "//databases//" + "myDB.db-shm";
+                                                            + "//databases//" + "MCRDB.db-shm";
                                                     String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                            + "//databases//" + "myDB.db-wal";
+                                                            + "//databases//" + "MCRDB.db-wal";
 
-                                                    String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                    String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                    String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                                    String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                    String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                    String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                                     File currentDB = new File(data, currentDBPath);
                                                     File currentDB2 = new File(data, currentDBPath2);
@@ -1605,15 +1605,15 @@ public class MCRMain extends AppCompatActivity {
 
                                         if (sd.canWrite()) {
                                             String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                    + "//databases//" + "myDB.db";
+                                                    + "//databases//" + "MCRDB.db";
                                             String  currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                    + "//databases//" + "myDB.db-shm";
+                                                    + "//databases//" + "MCRDB.db-shm";
                                             String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                    + "//databases//" + "myDB.db-wal";
+                                                    + "//databases//" + "MCRDB.db-wal";
 
-                                            String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                            String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                            String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                            String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                            String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                            String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                             File currentDB = new File(data, currentDBPath);
                                             File currentDB2 = new File(data, currentDBPath2);
@@ -1755,15 +1755,15 @@ public class MCRMain extends AppCompatActivity {
 
                                                 if (sd.canWrite()) {
                                                     String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                            + "//databases//" + "myDB.db";
+                                                            + "//databases//" + "MCRDB.db";
                                                     String  currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                            + "//databases//" + "myDB.db-shm";
+                                                            + "//databases//" + "MCRDB.db-shm";
                                                     String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                            + "//databases//" + "myDB.db-wal";
+                                                            + "//databases//" + "MCRDB.db-wal";
 
-                                                    String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                    String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                    String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                                    String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                    String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                    String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                                     File currentDB = new File(data, currentDBPath);
                                                     File currentDB2 = new File(data, currentDBPath2);
@@ -1819,15 +1819,15 @@ public class MCRMain extends AppCompatActivity {
 
                                         if (sd.canWrite()) {
                                             String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                    + "//databases//" + "myDB.db";
+                                                    + "//databases//" + "MCRDB.db";
                                             String  currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                    + "//databases//" + "myDB.db-shm";
+                                                    + "//databases//" + "MCRDB.db-shm";
                                             String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                    + "//databases//" + "myDB.db-wal";
+                                                    + "//databases//" + "MCRDB.db-wal";
 
-                                            String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                            String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                            String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                            String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                            String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                            String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                             File currentDB = new File(data, currentDBPath);
                                             File currentDB2 = new File(data, currentDBPath2);
@@ -1968,15 +1968,15 @@ public class MCRMain extends AppCompatActivity {
 
                                                 if (sd.canWrite()) {
                                                     String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                            + "//databases//" + "myDB.db";
+                                                            + "//databases//" + "MCRDB.db";
                                                     String  currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                            + "//databases//" + "myDB.db-shm";
+                                                            + "//databases//" + "MCRDB.db-shm";
                                                     String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                            + "//databases//" + "myDB.db-wal";
+                                                            + "//databases//" + "MCRDB.db-wal";
 
-                                                    String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                    String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                    String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                                    String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                    String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                    String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                                     File currentDB = new File(data, currentDBPath);
                                                     File currentDB2 = new File(data, currentDBPath2);
@@ -2032,15 +2032,15 @@ public class MCRMain extends AppCompatActivity {
 
                                         if (sd.canWrite()) {
                                             String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                    + "//databases//" + "myDB.db";
+                                                    + "//databases//" + "MCRDB.db";
                                             String  currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                    + "//databases//" + "myDB.db-shm";
+                                                    + "//databases//" + "MCRDB.db-shm";
                                             String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                    + "//databases//" + "myDB.db-wal";
+                                                    + "//databases//" + "MCRDB.db-wal";
 
-                                            String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                            String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                            String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                            String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                            String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                            String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                             File currentDB = new File(data, currentDBPath);
                                             File currentDB2 = new File(data, currentDBPath2);
@@ -2181,15 +2181,15 @@ public class MCRMain extends AppCompatActivity {
 
                                                 if (sd.canWrite()) {
                                                     String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                            + "//databases//" + "myDB.db";
+                                                            + "//databases//" + "MCRDB.db";
                                                     String  currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                            + "//databases//" + "myDB.db-shm";
+                                                            + "//databases//" + "MCRDB.db-shm";
                                                     String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                            + "//databases//" + "myDB.db-wal";
+                                                            + "//databases//" + "MCRDB.db-wal";
 
-                                                    String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                    String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                    String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                                    String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                    String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                    String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                                     File currentDB = new File(data, currentDBPath);
                                                     File currentDB2 = new File(data, currentDBPath2);
@@ -2245,15 +2245,15 @@ public class MCRMain extends AppCompatActivity {
 
                                         if (sd.canWrite()) {
                                             String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                    + "//databases//" + "myDB.db";
+                                                    + "//databases//" + "MCRDB.db";
                                             String  currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                    + "//databases//" + "myDB.db-shm";
+                                                    + "//databases//" + "MCRDB.db-shm";
                                             String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                    + "//databases//" + "myDB.db-wal";
+                                                    + "//databases//" + "MCRDB.db-wal";
 
-                                            String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                            String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                            String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                            String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                            String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                            String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                             File currentDB = new File(data, currentDBPath);
                                             File currentDB2 = new File(data, currentDBPath2);
@@ -2498,15 +2498,15 @@ public class MCRMain extends AppCompatActivity {
 
                                                     if (sd.canWrite()) {
                                                         String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db";
+                                                                + "//databases//" + "MCRDB.db";
                                                         String  currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-shm";
+                                                                + "//databases//" + "MCRDB.db-shm";
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-wal";
+                                                                + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                                         File currentDB = new File(data, currentDBPath);
                                                         File currentDB2 = new File(data, currentDBPath2);
@@ -2578,15 +2578,15 @@ public class MCRMain extends AppCompatActivity {
 
                                                     if (sd.canWrite()) {
                                                         String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db";
+                                                                + "//databases//" + "MCRDB.db";
                                                         String  currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-shm";
+                                                                + "//databases//" + "MCRDB.db-shm";
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-wal";
+                                                                + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                                         File currentDB = new File(data, currentDBPath);
                                                         File currentDB2 = new File(data, currentDBPath2);
@@ -2658,15 +2658,15 @@ public class MCRMain extends AppCompatActivity {
 
                                                     if (sd.canWrite()) {
                                                         String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db";
+                                                                + "//databases//" + "MCRDB.db";
                                                         String  currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-shm";
+                                                                + "//databases//" + "MCRDB.db-shm";
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-wal";
+                                                                + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                                         File currentDB = new File(data, currentDBPath);
                                                         File currentDB2 = new File(data, currentDBPath2);
@@ -2739,15 +2739,15 @@ public class MCRMain extends AppCompatActivity {
 
                                                     if (sd.canWrite()) {
                                                         String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db";
+                                                                + "//databases//" + "MCRDB.db";
                                                         String  currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-shm";
+                                                                + "//databases//" + "MCRDB.db-shm";
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-wal";
+                                                                + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                                         File currentDB = new File(data, currentDBPath);
                                                         File currentDB2 = new File(data, currentDBPath2);
@@ -2820,15 +2820,15 @@ public class MCRMain extends AppCompatActivity {
 
                                                     if (sd.canWrite()) {
                                                         String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db";
+                                                                + "//databases//" + "MCRDB.db";
                                                         String  currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-shm";
+                                                                + "//databases//" + "MCRDB.db-shm";
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-wal";
+                                                                + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                                         File currentDB = new File(data, currentDBPath);
                                                         File currentDB2 = new File(data, currentDBPath2);
@@ -2901,15 +2901,15 @@ public class MCRMain extends AppCompatActivity {
 
                                                     if (sd.canWrite()) {
                                                         String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db";
+                                                                + "//databases//" + "MCRDB.db";
                                                         String  currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-shm";
+                                                                + "//databases//" + "MCRDB.db-shm";
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-wal";
+                                                                + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                                         File currentDB = new File(data, currentDBPath);
                                                         File currentDB2 = new File(data, currentDBPath2);
@@ -2983,15 +2983,15 @@ public class MCRMain extends AppCompatActivity {
 
                                                     if (sd.canWrite()) {
                                                         String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db";
+                                                                + "//databases//" + "MCRDB.db";
                                                         String  currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-shm";
+                                                                + "//databases//" + "MCRDB.db-shm";
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-wal";
+                                                                + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                                         File currentDB = new File(data, currentDBPath);
                                                         File currentDB2 = new File(data, currentDBPath2);
@@ -3065,15 +3065,15 @@ public class MCRMain extends AppCompatActivity {
 
                                                     if (sd.canWrite()) {
                                                         String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db";
+                                                                + "//databases//" + "MCRDB.db";
                                                         String  currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-shm";
+                                                                + "//databases//" + "MCRDB.db-shm";
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-wal";
+                                                                + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                                         File currentDB = new File(data, currentDBPath);
                                                         File currentDB2 = new File(data, currentDBPath2);
@@ -3147,15 +3147,15 @@ public class MCRMain extends AppCompatActivity {
 
                                                     if (sd.canWrite()) {
                                                         String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db";
+                                                                + "//databases//" + "MCRDB.db";
                                                         String  currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-shm";
+                                                                + "//databases//" + "MCRDB.db-shm";
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-wal";
+                                                                + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                                         File currentDB = new File(data, currentDBPath);
                                                         File currentDB2 = new File(data, currentDBPath2);
@@ -3232,15 +3232,15 @@ public class MCRMain extends AppCompatActivity {
                                                     if (sd.canWrite()) {
 
                                                         String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db";
+                                                                + "//databases//" + "MCRDB.db";
                                                         String  currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-shm";
+                                                                + "//databases//" + "MCRDB.db-shm";
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-wal";
+                                                                + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
 
                                                         File currentDB = new File(data, currentDBPath);
@@ -3321,15 +3321,15 @@ public class MCRMain extends AppCompatActivity {
 
                                                     if (sd.canWrite()) {
                                                         String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db";
+                                                                + "//databases//" + "MCRDB.db";
                                                         String  currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-shm";
+                                                                + "//databases//" + "MCRDB.db-shm";
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-wal";
+                                                                + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                                         File currentDB = new File(data, currentDBPath);
                                                         File currentDB2 = new File(data, currentDBPath2);
@@ -3409,15 +3409,15 @@ public class MCRMain extends AppCompatActivity {
 
                                                     if (sd.canWrite()) {
                                                         String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db";
+                                                                + "//databases//" + "MCRDB.db";
                                                         String  currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-shm";
+                                                                + "//databases//" + "MCRDB.db-shm";
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-wal";
+                                                                + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                                         File currentDB = new File(data, currentDBPath);
                                                         File currentDB2 = new File(data, currentDBPath2);
@@ -3496,15 +3496,15 @@ public class MCRMain extends AppCompatActivity {
 
                                                     if (sd.canWrite()) {
                                                         String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db";
+                                                                + "//databases//" + "MCRDB.db";
                                                         String  currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-shm";
+                                                                + "//databases//" + "MCRDB.db-shm";
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-wal";
+                                                                + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                                         File currentDB = new File(data, currentDBPath);
                                                         File currentDB2 = new File(data, currentDBPath2);
@@ -3583,15 +3583,15 @@ public class MCRMain extends AppCompatActivity {
 
                                                     if (sd.canWrite()) {
                                                         String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db";
+                                                                + "//databases//" + "MCRDB.db";
                                                         String  currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-shm";
+                                                                + "//databases//" + "MCRDB.db-shm";
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-wal";
+                                                                + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                                         File currentDB = new File(data, currentDBPath);
                                                         File currentDB2 = new File(data, currentDBPath2);
@@ -3670,15 +3670,15 @@ public class MCRMain extends AppCompatActivity {
 
                                                     if (sd.canWrite()) {
                                                         String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db";
+                                                                + "//databases//" + "MCRDB.db";
                                                         String  currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-shm";
+                                                                + "//databases//" + "MCRDB.db-shm";
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-wal";
+                                                                + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                                         File currentDB = new File(data, currentDBPath);
                                                         File currentDB2 = new File(data, currentDBPath2);
@@ -3757,15 +3757,15 @@ public class MCRMain extends AppCompatActivity {
 
                                                     if (sd.canWrite()) {
                                                         String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db";
+                                                                + "//databases//" + "MCRDB.db";
                                                         String  currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-shm";
+                                                                + "//databases//" + "MCRDB.db-shm";
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-wal";
+                                                                + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                                         File currentDB = new File(data, currentDBPath);
                                                         File currentDB2 = new File(data, currentDBPath2);
@@ -3844,15 +3844,15 @@ public class MCRMain extends AppCompatActivity {
 
                                                     if (sd.canWrite()) {
                                                         String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db";
+                                                                + "//databases//" + "MCRDB.db";
                                                         String  currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-shm";
+                                                                + "//databases//" + "MCRDB.db-shm";
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-wal";
+                                                                + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                                         File currentDB = new File(data, currentDBPath);
                                                         File currentDB2 = new File(data, currentDBPath2);
@@ -3931,15 +3931,15 @@ public class MCRMain extends AppCompatActivity {
 
                                                     if (sd.canWrite()) {
                                                         String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db";
+                                                                + "//databases//" + "MCRDB.db";
                                                         String  currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-shm";
+                                                                + "//databases//" + "MCRDB.db-shm";
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-wal";
+                                                                + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                                         File currentDB = new File(data, currentDBPath);
                                                         File currentDB2 = new File(data, currentDBPath2);
@@ -4018,15 +4018,15 @@ public class MCRMain extends AppCompatActivity {
 
                                                     if (sd.canWrite()) {
                                                         String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db";
+                                                                + "//databases//" + "MCRDB.db";
                                                         String  currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-shm";
+                                                                + "//databases//" + "MCRDB.db-shm";
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-wal";
+                                                                + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                                         File currentDB = new File(data, currentDBPath);
                                                         File currentDB2 = new File(data, currentDBPath2);
@@ -4105,15 +4105,15 @@ public class MCRMain extends AppCompatActivity {
 
                                                     if (sd.canWrite()) {
                                                         String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db";
+                                                                + "//databases//" + "MCRDB.db";
                                                         String  currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-shm";
+                                                                + "//databases//" + "MCRDB.db-shm";
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-wal";
+                                                                + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                                         File currentDB = new File(data, currentDBPath);
                                                         File currentDB2 = new File(data, currentDBPath2);
@@ -4192,15 +4192,15 @@ public class MCRMain extends AppCompatActivity {
 
                                             if (sd.canWrite()) {
                                                 String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                        + "//databases//" + "myDB.db";
+                                                        + "//databases//" + "MCRDB.db";
                                                 String  currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                        + "//databases//" + "myDB.db-shm";
+                                                        + "//databases//" + "MCRDB.db-shm";
                                                 String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                        + "//databases//" + "myDB.db-wal";
+                                                        + "//databases//" + "MCRDB.db-wal";
 
-                                                String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                                String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                                 File currentDB = new File(data, currentDBPath);
                                                 File currentDB2 = new File(data, currentDBPath2);
@@ -4755,15 +4755,15 @@ public class MCRMain extends AppCompatActivity {
 
                                     if (sd.canWrite()) {
                                         String  currentDBPath= "//data//" + c.getOpPackageName()
-                                                + "//databases//" + "myDB.db";
+                                                + "//databases//" + "MCRDB.db";
                                         String  currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                + "//databases//" + "myDB.db-shm";
+                                                + "//databases//" + "MCRDB.db-shm";
                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                + "//databases//" + "myDB.db-wal";
+                                                + "//databases//" + "MCRDB.db-wal";
 
-                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
 
                                         File currentDB = new File(data, currentDBPath);
                                         File currentDB2 = new File(data, currentDBPath2);
@@ -4907,1006 +4907,1006 @@ public class MCRMain extends AppCompatActivity {
             ch.setItems(op, new DialogInterface.OnClickListener(){
 
                 @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    if(op[which].toString().startsWith("Gerenciar Usuários")) {
-                        SQLiteControl db = new SQLiteControl(c);
-                        try {
-                            util test = db.getSenhaCM(1);
-                            if (!test.getUsuario().toString().equals("")) {
-                                LayoutInflater li = getLayoutInflater();
-                                View r = li.inflate(R.layout.user_adapter, null);
-                                final RelativeLayout l1 = r.findViewById(R.id.l1);
-                                final RelativeLayout l2 = r.findViewById(R.id.l2);
-                                final RelativeLayout l3 = r.findViewById(R.id.l3);
-                                final RelativeLayout l4 = r.findViewById(R.id.l4);
-
-                                final ImageView im1 = r.findViewById(R.id.im1);
-                                final ImageView ed1 = r.findViewById(R.id.edit1);
-                                final TextView tv1 = r.findViewById(R.id.tv1);
-
-                                final ImageView ed2 = r.findViewById(R.id.edit2);
-                                final ImageView im2 = r.findViewById(R.id.im2);
-                                final TextView tv2 = r.findViewById(R.id.tv2);
-
-                                final ImageView ed3 = r.findViewById(R.id.edit3);
-                                final ImageView im3 = r.findViewById(R.id.im3);
-                                final TextView tv3 = r.findViewById(R.id.tv3);
-
-                                final ImageView ed4 = r.findViewById(R.id.edit4);
-                                final ImageView im4 = r.findViewById(R.id.im4);
-                                final TextView tv4 = r.findViewById(R.id.tv4);
-
-                                try {
-                                    SQLiteControl dbus = new SQLiteControl(c);
-                                    util us = dbus.getSenhaCM(1);
-                                    if (!us.getUsuario().toString().equals("")) {
-                                        l1.setVisibility(View.VISIBLE);
-                                        tv1.setText(us.getUsuario());
-                                        im1.setImageResource(R.drawable.chave);
-                                    }
-                                } catch (Exception e) {
-                                    l1.setVisibility(View.GONE);
-                                }
-                                try {
-                                    SQLiteControl dbus = new SQLiteControl(c);
-                                    util us = dbus.getSenhaMCR(1);
-                                    if (!us.getUsuario().toString().equals("")) {
-                                        l2.setVisibility(View.VISIBLE);
-                                        tv2.setText(us.getUsuario());
-                                        im2.setImageResource(R.drawable.chave);
-                                    }
-                                } catch (Exception e) {
-                                    l2.setVisibility(View.GONE);
-                                }
-                                try {
-                                    SQLiteControl dbus = new SQLiteControl(c);
-                                    util us = dbus.getSuperVisor(1);
-                                    if (!us.getSenhaSuperVisor().toString().equals("")) {
-                                        l3.setVisibility(View.VISIBLE);
-                                        tv3.setText(us.getSenhaSuperVisor());
-                                        im3.setImageResource(R.drawable.chave);
-                                    }
-                                } catch (Exception e) {
-                                    l3.setVisibility(View.GONE);
-                                }
-                                try {
-                                    SQLiteControl dbus = new SQLiteControl(c);
-                                    util us = dbus.getSenhaRet(1);
-                                    if (!us.getUsuario().toString().equals("")) {
-                                        l4.setVisibility(View.VISIBLE);
-                                        tv4.setText(us.getUsuario());
-                                        im4.setImageResource(R.drawable.chave);
-                                    }
-                                } catch (Exception e) {
-                                    l4.setVisibility(View.GONE);
-                                }
-                                ed1.setOnClickListener(new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(View v) {
-                                        LayoutInflater li = getLayoutInflater();
-                                        View r = li.inflate(R.layout.password_pos_client, null);
-                                        final TextInputEditText user = r.findViewById(R.id.user);
-                                        final TextInputEditText pass = r.findViewById(R.id.pass);
-
-                                        SQLiteControl db = new SQLiteControl(c);
-                                        final util us = db.getSenhaCM(1);
-                                        user.setText(us.getUsuario());
-                                        pass.setText(us.getSenha());
-
-                                        AlertDialog.Builder sv = new AlertDialog.Builder(c);
-                                        sv.setTitle("Atualizar Usuário / Senha CM:");
-                                        sv.setView(r);
-                                        sv.setPositiveButton("Atualizar", new DialogInterface.OnClickListener() {
-                                            @Override
-                                            public void onClick(DialogInterface dialog, int which) {
-                                                util us2 = new util();
-                                                us2.setUserId(us.getUserId());
-                                                us2.setUsuario(user.getText().toString());
-                                                us2.setSenha(pass.getText().toString());
-                                                SQLiteControl db = new SQLiteControl(c);
-                                                db.upSenhaCM(us2);
-                                                root.dismiss();
-                                                try {
-                                                    File sd = Environment.getExternalStorageDirectory();
-                                                    File data = Environment.getDataDirectory();
-
-                                                    if (sd.canWrite()) {
-                                                        String currentDBPath = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db";
-                                                        String currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-shm";
-                                                        String currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-wal";
-
-                                                        String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                        String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                        String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
-
-                                                        File currentDB = new File(data, currentDBPath);
-                                                        File currentDB2 = new File(data, currentDBPath2);
-                                                        File currentDB3 = new File(data, currentDBPath3);
-                                                        File backupDB = new File(sd, backupDBPath);
-                                                        File backupDB2 = new File(sd, backupDBPath2);
-                                                        File backupDB3 = new File(sd, backupDBPath3);
-
-                                                        if (currentDB2.exists()) {
-                                                            FileChannel src2 = new FileInputStream(currentDB2).getChannel();
-                                                            FileChannel dst = new FileOutputStream(backupDB2).getChannel();
-                                                            dst.transferFrom(src2, 0, src2.size());
-                                                            src2.close();
-                                                            dst.close();
-                                                        }
-                                                        if (currentDB3.exists()) {
-                                                            FileChannel src3 = new FileInputStream(currentDB3).getChannel();
-                                                            FileChannel dst = new FileOutputStream(backupDB3).getChannel();
-                                                            dst.transferFrom(src3, 0, src3.size());
-                                                            src3.close();
-                                                            dst.close();
-                                                        }
-                                                        FileChannel src4 = new FileInputStream(currentDB).getChannel();
-                                                        FileChannel dst = new FileOutputStream(backupDB).getChannel();
-                                                        dst.transferFrom(src4, 0, src4.size());
-                                                        src4.close();
-                                                        dst.close();
-                                                    }
-                                                } catch (Exception e2) {
-
-                                                }
-                                            }
-                                        });
-                                        sv.setNegativeButton("Cancelar", null);
-                                        sv.create();
-                                        sv.show();
-                                    }
-                                });
-                                ed2.setOnClickListener(new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(View v) {
-                                        LayoutInflater li = getLayoutInflater();
-                                        View r = li.inflate(R.layout.password_pos_client, null);
-                                        final TextInputEditText user = r.findViewById(R.id.user);
-                                        final TextInputEditText pass = r.findViewById(R.id.pass);
-
-                                        SQLiteControl db = new SQLiteControl(c);
-                                        final util us = db.getSenhaMCR(1);
-                                        user.setText(us.getUsuario());
-                                        pass.setText(us.getSenha());
-
-                                        AlertDialog.Builder sv = new AlertDialog.Builder(c);
-                                        sv.setTitle("Atualizar Usuário / Senha MCR:");
-                                        sv.setView(r);
-                                        sv.setPositiveButton("Atualizar", new DialogInterface.OnClickListener() {
-                                            @Override
-                                            public void onClick(DialogInterface dialog, int which) {
-                                                util us2 = new util();
-                                                us2.setUserId(us.getUserId());
-                                                us2.setUsuario(user.getText().toString());
-                                                us2.setSenha(pass.getText().toString());
-                                                SQLiteControl db = new SQLiteControl(c);
-                                                db.upSenhaMCR(us2);
-                                                root.dismiss();
-                                                try {
-                                                    File sd = Environment.getExternalStorageDirectory();
-                                                    File data = Environment.getDataDirectory();
-
-                                                    if (sd.canWrite()) {
-                                                        String currentDBPath = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db";
-                                                        String currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-shm";
-                                                        String currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-wal";
-
-                                                        String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                        String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                        String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
-
-                                                        File currentDB = new File(data, currentDBPath);
-                                                        File currentDB2 = new File(data, currentDBPath2);
-                                                        File currentDB3 = new File(data, currentDBPath3);
-                                                        File backupDB = new File(sd, backupDBPath);
-                                                        File backupDB2 = new File(sd, backupDBPath2);
-                                                        File backupDB3 = new File(sd, backupDBPath3);
-
-                                                        if (currentDB2.exists()) {
-                                                            FileChannel src2 = new FileInputStream(currentDB2).getChannel();
-                                                            FileChannel dst = new FileOutputStream(backupDB2).getChannel();
-                                                            dst.transferFrom(src2, 0, src2.size());
-                                                            src2.close();
-                                                            dst.close();
-                                                        }
-                                                        if (currentDB3.exists()) {
-                                                            FileChannel src3 = new FileInputStream(currentDB3).getChannel();
-                                                            FileChannel dst = new FileOutputStream(backupDB3).getChannel();
-                                                            dst.transferFrom(src3, 0, src3.size());
-                                                            src3.close();
-                                                            dst.close();
-                                                        }
-                                                        FileChannel src4 = new FileInputStream(currentDB).getChannel();
-                                                        FileChannel dst = new FileOutputStream(backupDB).getChannel();
-                                                        dst.transferFrom(src4, 0, src4.size());
-                                                        src4.close();
-                                                        dst.close();
-                                                    }
-                                                } catch (Exception e2) {
-
-                                                }
-                                            }
-                                        });
-                                        sv.setNegativeButton("Cancelar", null);
-                                        sv.create();
-                                        sv.show();
-                                    }
-                                });
-                                ed3.setOnClickListener(new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(View v) {
-                                        LayoutInflater li = getLayoutInflater();
-                                        View r = li.inflate(R.layout.password_pos_client, null);
-                                        final TextInputEditText user = r.findViewById(R.id.user);
-                                        final TextInputEditText pass = r.findViewById(R.id.pass);
-
-                                        SQLiteControl db = new SQLiteControl(c);
-                                        final util us = db.getSuperVisor(1);
-                                        pass.setText(us.getSenhaSuperVisor());
-                                        user.setVisibility(View.GONE);
-                                        AlertDialog.Builder sv = new AlertDialog.Builder(c);
-                                        sv.setTitle("Atualizar Usuário / Senha Sup:");
-                                        sv.setView(r);
-                                        sv.setPositiveButton("Atualizar", new DialogInterface.OnClickListener() {
-                                            @Override
-                                            public void onClick(DialogInterface dialog, int which) {
-                                                util us2 = new util();
-                                                us2.setUserId(us2.getSupervisor_id());
-                                                us2.setSenhaSuperVisor(pass.getText().toString());
-                                                SQLiteControl db = new SQLiteControl(c);
-                                                db.upSuperVisor(us2);
-                                                root.dismiss();
-                                                try {
-                                                    File sd = Environment.getExternalStorageDirectory();
-                                                    File data = Environment.getDataDirectory();
-
-                                                    if (sd.canWrite()) {
-                                                        String currentDBPath = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db";
-                                                        String currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-shm";
-                                                        String currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-wal";
-
-                                                        String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                        String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                        String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
-
-                                                        File currentDB = new File(data, currentDBPath);
-                                                        File currentDB2 = new File(data, currentDBPath2);
-                                                        File currentDB3 = new File(data, currentDBPath3);
-                                                        File backupDB = new File(sd, backupDBPath);
-                                                        File backupDB2 = new File(sd, backupDBPath2);
-                                                        File backupDB3 = new File(sd, backupDBPath3);
-
-                                                        if (currentDB2.exists()) {
-                                                            FileChannel src2 = new FileInputStream(currentDB2).getChannel();
-                                                            FileChannel dst = new FileOutputStream(backupDB2).getChannel();
-                                                            dst.transferFrom(src2, 0, src2.size());
-                                                            src2.close();
-                                                            dst.close();
-                                                        }
-                                                        if (currentDB3.exists()) {
-                                                            FileChannel src3 = new FileInputStream(currentDB3).getChannel();
-                                                            FileChannel dst = new FileOutputStream(backupDB3).getChannel();
-                                                            dst.transferFrom(src3, 0, src3.size());
-                                                            src3.close();
-                                                            dst.close();
-                                                        }
-                                                        FileChannel src4 = new FileInputStream(currentDB).getChannel();
-                                                        FileChannel dst = new FileOutputStream(backupDB).getChannel();
-                                                        dst.transferFrom(src4, 0, src4.size());
-                                                        src4.close();
-                                                        dst.close();
-                                                    }
-                                                } catch (Exception e2) {
-
-                                                }
-                                            }
-                                        });
-                                        sv.setNegativeButton("Cancelar", null);
-                                        sv.create();
-                                        sv.show();
-                                    }
-                                });
-
-                                ed4.setOnClickListener(new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(View v) {
-                                        LayoutInflater li = getLayoutInflater();
-                                        View r = li.inflate(R.layout.password_pos_client, null);
-                                        final TextInputEditText user = r.findViewById(R.id.user);
-                                        final TextInputEditText pass = r.findViewById(R.id.pass);
-
-                                        SQLiteControl db = new SQLiteControl(c);
-                                        final util us = db.getSenhaRet(1);
-                                        pass.setText(us.getSenha());
-                                        user.setText(us.getUsuario());
-                                        AlertDialog.Builder sv = new AlertDialog.Builder(c);
-                                        sv.setTitle("Atualizar Usuário / Senha Ret:");
-                                        sv.setView(r);
-                                        sv.setPositiveButton("Atualizar", new DialogInterface.OnClickListener() {
-                                            @Override
-                                            public void onClick(DialogInterface dialog, int which) {
-                                                util us2 = new util();
-                                                us2.setUserId(us.getUserId());
-                                                us2.setUsuario(user.getText().toString());
-                                                us2.setSenha(pass.getText().toString());
-                                                SQLiteControl db = new SQLiteControl(c);
-                                                db.upRetPass(us2);
-                                                root.dismiss();
-                                                try {
-                                                    File sd = Environment.getExternalStorageDirectory();
-                                                    File data = Environment.getDataDirectory();
-
-                                                    if (sd.canWrite()) {
-                                                        String currentDBPath = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db";
-                                                        String currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-shm";
-                                                        String currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                                + "//databases//" + "myDB.db-wal";
-
-                                                        String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                        String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                        String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
-
-                                                        File currentDB = new File(data, currentDBPath);
-                                                        File currentDB2 = new File(data, currentDBPath2);
-                                                        File currentDB3 = new File(data, currentDBPath3);
-                                                        File backupDB = new File(sd, backupDBPath);
-                                                        File backupDB2 = new File(sd, backupDBPath2);
-                                                        File backupDB3 = new File(sd, backupDBPath3);
-
-                                                        if (currentDB2.exists()) {
-                                                            FileChannel src2 = new FileInputStream(currentDB2).getChannel();
-                                                            FileChannel dst = new FileOutputStream(backupDB2).getChannel();
-                                                            dst.transferFrom(src2, 0, src2.size());
-                                                            src2.close();
-                                                            dst.close();
-                                                        }
-                                                        if (currentDB3.exists()) {
-                                                            FileChannel src3 = new FileInputStream(currentDB3).getChannel();
-                                                            FileChannel dst = new FileOutputStream(backupDB3).getChannel();
-                                                            dst.transferFrom(src3, 0, src3.size());
-                                                            src3.close();
-                                                            dst.close();
-                                                        }
-                                                        FileChannel src4 = new FileInputStream(currentDB).getChannel();
-                                                        FileChannel dst = new FileOutputStream(backupDB).getChannel();
-                                                        dst.transferFrom(src4, 0, src4.size());
-                                                        src4.close();
-                                                        dst.close();
-                                                    }
-                                                } catch (Exception e2) {
-
-                                                }
-                                            }
-                                        });
-                                        sv.setNegativeButton("Cancelar", null);
-                                        sv.create();
-                                        sv.show();
-                                    }
-                                });
-                                AlertDialog.Builder alert = new AlertDialog.Builder(c);
-                                alert.setTitle("Gerenciar Senhas:");
-                                alert.setView(r);
-                                alert.setPositiveButton("Cadastrar", new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        String[] op = {
-                                                "Senha P/ PDV Informática",
-                                                "Senha P/ PDV Mercearia",
-                                                "Senha P/ Supervisor",
-                                                "Senha P/ Retaguarda"
-                                        };
-                                        AlertDialog.Builder chosser = new AlertDialog.Builder(c);
-                                        chosser.setSingleChoiceItems(op, 0, new DialogInterface.OnClickListener() {
-
-                                            @Override
-                                            public void onClick(DialogInterface dialog, int which) {
-                                                switch (which) {
-                                                    case 0:
-                                                        LayoutInflater li = getLayoutInflater();
-                                                        View r = li.inflate(R.layout.password_pos_client, null);
-                                                        final TextInputEditText user = r.findViewById(R.id.user);
-                                                        final TextInputEditText pass = r.findViewById(R.id.pass);
-
-                                                        AlertDialog.Builder sv = new AlertDialog.Builder(c);
-                                                        sv.setTitle("Cadastrar Usuário / Senha CM:");
-                                                        sv.setView(r);
-                                                        sv.setPositiveButton("Cadastrar", new DialogInterface.OnClickListener() {
-                                                            @Override
-                                                            public void onClick(DialogInterface dialog, int which) {
-                                                                util us2 = new util();
-                                                                us2.setUsuario(user.getText().toString());
-                                                                us2.setSenha(pass.getText().toString());
-                                                                SQLiteControl db = new SQLiteControl(c);
-                                                                db.setSenhaCM(us2);
-                                                                root.dismiss();
-                                                                try {
-                                                                    File sd = Environment.getExternalStorageDirectory();
-                                                                    File data = Environment.getDataDirectory();
-
-                                                                    if (sd.canWrite()) {
-                                                                        String currentDBPath = "//data//" + c.getOpPackageName()
-                                                                                + "//databases//" + "myDB.db";
-                                                                        String currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                                                + "//databases//" + "myDB.db-shm";
-                                                                        String currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                                                + "//databases//" + "myDB.db-wal";
-
-                                                                        String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                                        String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                                        String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
-
-                                                                        File currentDB = new File(data, currentDBPath);
-                                                                        File currentDB2 = new File(data, currentDBPath2);
-                                                                        File currentDB3 = new File(data, currentDBPath3);
-                                                                        File backupDB = new File(sd, backupDBPath);
-                                                                        File backupDB2 = new File(sd, backupDBPath2);
-                                                                        File backupDB3 = new File(sd, backupDBPath3);
-
-                                                                        if (currentDB2.exists()) {
-                                                                            FileChannel src2 = new FileInputStream(currentDB2).getChannel();
-                                                                            FileChannel dst = new FileOutputStream(backupDB2).getChannel();
-                                                                            dst.transferFrom(src2, 0, src2.size());
-                                                                            src2.close();
-                                                                            dst.close();
-                                                                        }
-                                                                        if (currentDB3.exists()) {
-                                                                            FileChannel src3 = new FileInputStream(currentDB3).getChannel();
-                                                                            FileChannel dst = new FileOutputStream(backupDB3).getChannel();
-                                                                            dst.transferFrom(src3, 0, src3.size());
-                                                                            src3.close();
-                                                                            dst.close();
-                                                                        }
-                                                                        FileChannel src4 = new FileInputStream(currentDB).getChannel();
-                                                                        FileChannel dst = new FileOutputStream(backupDB).getChannel();
-                                                                        dst.transferFrom(src4, 0, src4.size());
-                                                                        src4.close();
-                                                                        dst.close();
-                                                                    }
-                                                                } catch (Exception e2) {
-
-                                                                }
-                                                            }
-                                                        });
-                                                        sv.setNegativeButton("Cancelar", null);
-                                                        sv.create();
-                                                        sv.show();
-                                                        break;
-                                                    case 1:
-                                                        LayoutInflater li2 = getLayoutInflater();
-                                                        View r2 = li2.inflate(R.layout.password_pos_client, null);
-                                                        final TextInputEditText user2 = r2.findViewById(R.id.user);
-                                                        final TextInputEditText pass2 = r2.findViewById(R.id.pass);
-
-                                                        AlertDialog.Builder sv2 = new AlertDialog.Builder(c);
-                                                        sv2.setTitle("Cadastrar Usuário / Senha MCR:");
-                                                        sv2.setView(r2);
-                                                        sv2.setPositiveButton("Cadastrar", new DialogInterface.OnClickListener() {
-                                                            @Override
-                                                            public void onClick(DialogInterface dialog, int which) {
-                                                                util us2 = new util();
-                                                                us2.setUsuario(user2.getText().toString());
-                                                                us2.setSenha(pass2.getText().toString());
-                                                                SQLiteControl db = new SQLiteControl(c);
-                                                                db.setSenhaMCR(us2);
-                                                                root.dismiss();
-                                                                try {
-                                                                    File sd = Environment.getExternalStorageDirectory();
-                                                                    File data = Environment.getDataDirectory();
-
-                                                                    if (sd.canWrite()) {
-                                                                        String currentDBPath = "//data//" + c.getOpPackageName()
-                                                                                + "//databases//" + "myDB.db";
-                                                                        String currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                                                + "//databases//" + "myDB.db-shm";
-                                                                        String currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                                                + "//databases//" + "myDB.db-wal";
-
-                                                                        String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                                        String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                                        String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
-
-                                                                        File currentDB = new File(data, currentDBPath);
-                                                                        File currentDB2 = new File(data, currentDBPath2);
-                                                                        File currentDB3 = new File(data, currentDBPath3);
-                                                                        File backupDB = new File(sd, backupDBPath);
-                                                                        File backupDB2 = new File(sd, backupDBPath2);
-                                                                        File backupDB3 = new File(sd, backupDBPath3);
-
-                                                                        if (currentDB2.exists()) {
-                                                                            FileChannel src2 = new FileInputStream(currentDB2).getChannel();
-                                                                            FileChannel dst = new FileOutputStream(backupDB2).getChannel();
-                                                                            dst.transferFrom(src2, 0, src2.size());
-                                                                            src2.close();
-                                                                            dst.close();
-                                                                        }
-                                                                        if (currentDB3.exists()) {
-                                                                            FileChannel src3 = new FileInputStream(currentDB3).getChannel();
-                                                                            FileChannel dst = new FileOutputStream(backupDB3).getChannel();
-                                                                            dst.transferFrom(src3, 0, src3.size());
-                                                                            src3.close();
-                                                                            dst.close();
-                                                                        }
-                                                                        FileChannel src4 = new FileInputStream(currentDB).getChannel();
-                                                                        FileChannel dst = new FileOutputStream(backupDB).getChannel();
-                                                                        dst.transferFrom(src4, 0, src4.size());
-                                                                        src4.close();
-                                                                        dst.close();
-                                                                    }
-                                                                } catch (Exception e2) {
-
-                                                                }
-                                                            }
-                                                        });
-                                                        sv2.setNegativeButton("Cancelar", null);
-                                                        sv2.create();
-                                                        sv2.show();
-                                                        break;
-                                                    case 2:
-                                                        LayoutInflater li3 = getLayoutInflater();
-                                                        View r3 = li3.inflate(R.layout.password_pos_client, null);
-                                                        final TextInputEditText user3 = r3.findViewById(R.id.user);
-                                                        final TextInputEditText pass3 = r3.findViewById(R.id.pass);
-                                                        user3.setVisibility(View.GONE);
-                                                        AlertDialog.Builder sv3 = new AlertDialog.Builder(c);
-                                                        sv3.setTitle("Cadastrar Usuário / Senha Sup:");
-                                                        sv3.setView(r3);
-                                                        sv3.setPositiveButton("Cadastrar", new DialogInterface.OnClickListener() {
-                                                            @Override
-                                                            public void onClick(DialogInterface dialog, int which) {
-                                                                util us2 = new util();
-                                                                us2.setSenhaSuperVisor(pass3.getText().toString());
-                                                                SQLiteControl db = new SQLiteControl(c);
-                                                                db.setSuperVisor(us2);
-                                                                root.dismiss();
-                                                                try {
-                                                                    File sd = Environment.getExternalStorageDirectory();
-                                                                    File data = Environment.getDataDirectory();
-
-                                                                    if (sd.canWrite()) {
-                                                                        String currentDBPath = "//data//" + c.getOpPackageName()
-                                                                                + "//databases//" + "myDB.db";
-                                                                        String currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                                                + "//databases//" + "myDB.db-shm";
-                                                                        String currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                                                + "//databases//" + "myDB.db-wal";
-
-                                                                        String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                                        String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                                        String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
-
-                                                                        File currentDB = new File(data, currentDBPath);
-                                                                        File currentDB2 = new File(data, currentDBPath2);
-                                                                        File currentDB3 = new File(data, currentDBPath3);
-                                                                        File backupDB = new File(sd, backupDBPath);
-                                                                        File backupDB2 = new File(sd, backupDBPath2);
-                                                                        File backupDB3 = new File(sd, backupDBPath3);
-
-                                                                        if (currentDB2.exists()) {
-                                                                            FileChannel src2 = new FileInputStream(currentDB2).getChannel();
-                                                                            FileChannel dst = new FileOutputStream(backupDB2).getChannel();
-                                                                            dst.transferFrom(src2, 0, src2.size());
-                                                                            src2.close();
-                                                                            dst.close();
-                                                                        }
-                                                                        if (currentDB3.exists()) {
-                                                                            FileChannel src3 = new FileInputStream(currentDB3).getChannel();
-                                                                            FileChannel dst = new FileOutputStream(backupDB3).getChannel();
-                                                                            dst.transferFrom(src3, 0, src3.size());
-                                                                            src3.close();
-                                                                            dst.close();
-                                                                        }
-                                                                        FileChannel src4 = new FileInputStream(currentDB).getChannel();
-                                                                        FileChannel dst = new FileOutputStream(backupDB).getChannel();
-                                                                        dst.transferFrom(src4, 0, src4.size());
-                                                                        src4.close();
-                                                                        dst.close();
-                                                                    }
-                                                                } catch (Exception e2) {
-
-                                                                }
-                                                            }
-                                                        });
-                                                        sv3.setNegativeButton("Cancelar", null);
-                                                        sv3.create();
-                                                        sv3.show();
-                                                        break;
-                                                    case 3:
-                                                        LayoutInflater li4 = getLayoutInflater();
-                                                        View r4 = li4.inflate(R.layout.password_pos_client, null);
-                                                        final TextInputEditText user4 = r4.findViewById(R.id.user);
-                                                        final TextInputEditText pass4 = r4.findViewById(R.id.pass);
-
-                                                        AlertDialog.Builder sv4 = new AlertDialog.Builder(c);
-                                                        sv4.setTitle("Cadastrar Usuário / Senha Ret:");
-                                                        sv4.setView(r4);
-                                                        sv4.setPositiveButton("Cadastrar", new DialogInterface.OnClickListener() {
-                                                            @Override
-                                                            public void onClick(DialogInterface dialog, int which) {
-                                                                util us2 = new util();
-                                                                us2.setUsuario(user4.getText().toString());
-                                                                us2.setSenha(pass4.getText().toString());
-                                                                SQLiteControl db = new SQLiteControl(c);
-                                                                db.setRetPass(us2);
-                                                                root.dismiss();
-                                                                try {
-                                                                    File sd = Environment.getExternalStorageDirectory();
-                                                                    File data = Environment.getDataDirectory();
-
-                                                                    if (sd.canWrite()) {
-                                                                        String currentDBPath = "//data//" + c.getOpPackageName()
-                                                                                + "//databases//" + "myDB.db";
-                                                                        String currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                                                + "//databases//" + "myDB.db-shm";
-                                                                        String currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                                                + "//databases//" + "myDB.db-wal";
-
-                                                                        String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                                        String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                                        String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
-
-                                                                        File currentDB = new File(data, currentDBPath);
-                                                                        File currentDB2 = new File(data, currentDBPath2);
-                                                                        File currentDB3 = new File(data, currentDBPath3);
-                                                                        File backupDB = new File(sd, backupDBPath);
-                                                                        File backupDB2 = new File(sd, backupDBPath2);
-                                                                        File backupDB3 = new File(sd, backupDBPath3);
-
-                                                                        if (currentDB2.exists()) {
-                                                                            FileChannel src2 = new FileInputStream(currentDB2).getChannel();
-                                                                            FileChannel dst = new FileOutputStream(backupDB2).getChannel();
-                                                                            dst.transferFrom(src2, 0, src2.size());
-                                                                            src2.close();
-                                                                            dst.close();
-                                                                        }
-                                                                        if (currentDB3.exists()) {
-                                                                            FileChannel src3 = new FileInputStream(currentDB3).getChannel();
-                                                                            FileChannel dst = new FileOutputStream(backupDB3).getChannel();
-                                                                            dst.transferFrom(src3, 0, src3.size());
-                                                                            src3.close();
-                                                                            dst.close();
-                                                                        }
-                                                                        FileChannel src4 = new FileInputStream(currentDB).getChannel();
-                                                                        FileChannel dst = new FileOutputStream(backupDB).getChannel();
-                                                                        dst.transferFrom(src4, 0, src4.size());
-                                                                        src4.close();
-                                                                        dst.close();
-                                                                    }
-                                                                } catch (Exception e2) {
-
-                                                                }
-                                                            }
-                                                        });
-                                                        sv4.setNegativeButton("Cancelar", null);
-                                                        sv4.create();
-                                                        sv4.show();
-                                                        break;
-                                                }
-                                            }
-                                        });
-                                        chosser.create();
-                                        chosser.show();
-                                    }
-                                });
-                                alert.setNegativeButton("Cancelar", null);
-                                root = alert.create();
-                                root = alert.show();
-                            }
-                        } catch (Exception e) {
-                            String[] op = {
-                                    "Senha P/ PDV Informática",
-                                    "Senha P/ PDV Mercearia",
-                                    "Senha P/ Supervisor",
-                                    "Senha P/ Retaguarda"
-                            };
-                            AlertDialog.Builder chosser = new AlertDialog.Builder(c);
-                            chosser.setSingleChoiceItems(op, 0, new DialogInterface.OnClickListener() {
-
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    switch (which) {
-                                        case 0:
-                                            LayoutInflater li = getLayoutInflater();
-                                            View r = li.inflate(R.layout.password_pos_client, null);
-                                            final TextInputEditText user = r.findViewById(R.id.user);
-                                            final TextInputEditText pass = r.findViewById(R.id.pass);
-
-                                            AlertDialog.Builder sv = new AlertDialog.Builder(c);
-                                            sv.setTitle("Cadastrar Usuário / Senha CM:");
-                                            sv.setView(r);
-                                            sv.setPositiveButton("Cadastrar", new DialogInterface.OnClickListener() {
-                                                @Override
-                                                public void onClick(DialogInterface dialog, int which) {
-                                                    util us2 = new util();
-                                                    us2.setUsuario(user.getText().toString());
-                                                    us2.setSenha(pass.getText().toString());
-                                                    SQLiteControl db = new SQLiteControl(c);
-                                                    db.setSenhaCM(us2);
-                                                    try {
-                                                        File sd = Environment.getExternalStorageDirectory();
-                                                        File data = Environment.getDataDirectory();
-
-                                                        if (sd.canWrite()) {
-                                                            String currentDBPath = "//data//" + c.getOpPackageName()
-                                                                    + "//databases//" + "myDB.db";
-                                                            String currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                                    + "//databases//" + "myDB.db-shm";
-                                                            String currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                                    + "//databases//" + "myDB.db-wal";
-
-                                                            String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                            String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                            String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
-
-                                                            File currentDB = new File(data, currentDBPath);
-                                                            File currentDB2 = new File(data, currentDBPath2);
-                                                            File currentDB3 = new File(data, currentDBPath3);
-                                                            File backupDB = new File(sd, backupDBPath);
-                                                            File backupDB2 = new File(sd, backupDBPath2);
-                                                            File backupDB3 = new File(sd, backupDBPath3);
-
-                                                            if (currentDB2.exists()) {
-                                                                FileChannel src2 = new FileInputStream(currentDB2).getChannel();
-                                                                FileChannel dst = new FileOutputStream(backupDB2).getChannel();
-                                                                dst.transferFrom(src2, 0, src2.size());
-                                                                src2.close();
-                                                                dst.close();
-                                                            }
-                                                            if (currentDB3.exists()) {
-                                                                FileChannel src3 = new FileInputStream(currentDB3).getChannel();
-                                                                FileChannel dst = new FileOutputStream(backupDB3).getChannel();
-                                                                dst.transferFrom(src3, 0, src3.size());
-                                                                src3.close();
-                                                                dst.close();
-                                                            }
-                                                            FileChannel src4 = new FileInputStream(currentDB).getChannel();
-                                                            FileChannel dst = new FileOutputStream(backupDB).getChannel();
-                                                            dst.transferFrom(src4, 0, src4.size());
-                                                            src4.close();
-                                                            dst.close();
-                                                        }
-                                                    } catch (Exception e2) {
-
-                                                    }
-                                                }
-                                            });
-                                            sv.setNegativeButton("Cancelar", null);
-                                            sv.create();
-                                            sv.show();
-                                            break;
-                                        case 1:
-                                            LayoutInflater li2 = getLayoutInflater();
-                                            View r2 = li2.inflate(R.layout.password_pos_client, null);
-                                            final TextInputEditText user2 = r2.findViewById(R.id.user);
-                                            final TextInputEditText pass2 = r2.findViewById(R.id.pass);
-
-                                            AlertDialog.Builder sv2 = new AlertDialog.Builder(c);
-                                            sv2.setTitle("Cadastrar Usuário / Senha MCR:");
-                                            sv2.setView(r2);
-                                            sv2.setPositiveButton("Cadastrar", new DialogInterface.OnClickListener() {
-                                                @Override
-                                                public void onClick(DialogInterface dialog, int which) {
-                                                    util us2 = new util();
-                                                    us2.setUsuario(user2.getText().toString());
-                                                    us2.setSenha(pass2.getText().toString());
-                                                    SQLiteControl db = new SQLiteControl(c);
-                                                    db.setSenhaMCR(us2);
-                                                    try {
-                                                        File sd = Environment.getExternalStorageDirectory();
-                                                        File data = Environment.getDataDirectory();
-
-                                                        if (sd.canWrite()) {
-                                                            String currentDBPath = "//data//" + c.getOpPackageName()
-                                                                    + "//databases//" + "myDB.db";
-                                                            String currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                                    + "//databases//" + "myDB.db-shm";
-                                                            String currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                                    + "//databases//" + "myDB.db-wal";
-
-                                                            String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                            String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                            String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
-
-                                                            File currentDB = new File(data, currentDBPath);
-                                                            File currentDB2 = new File(data, currentDBPath2);
-                                                            File currentDB3 = new File(data, currentDBPath3);
-                                                            File backupDB = new File(sd, backupDBPath);
-                                                            File backupDB2 = new File(sd, backupDBPath2);
-                                                            File backupDB3 = new File(sd, backupDBPath3);
-
-                                                            if (currentDB2.exists()) {
-                                                                FileChannel src2 = new FileInputStream(currentDB2).getChannel();
-                                                                FileChannel dst = new FileOutputStream(backupDB2).getChannel();
-                                                                dst.transferFrom(src2, 0, src2.size());
-                                                                src2.close();
-                                                                dst.close();
-                                                            }
-                                                            if (currentDB3.exists()) {
-                                                                FileChannel src3 = new FileInputStream(currentDB3).getChannel();
-                                                                FileChannel dst = new FileOutputStream(backupDB3).getChannel();
-                                                                dst.transferFrom(src3, 0, src3.size());
-                                                                src3.close();
-                                                                dst.close();
-                                                            }
-                                                            FileChannel src4 = new FileInputStream(currentDB).getChannel();
-                                                            FileChannel dst = new FileOutputStream(backupDB).getChannel();
-                                                            dst.transferFrom(src4, 0, src4.size());
-                                                            src4.close();
-                                                            dst.close();
-                                                        }
-                                                    } catch (Exception e2) {
-
-                                                    }
-                                                }
-                                            });
-                                            sv2.setNegativeButton("Cancelar", null);
-                                            sv2.create();
-                                            sv2.show();
-                                            break;
-                                        case 2:
-                                            LayoutInflater li3 = getLayoutInflater();
-                                            View r3 = li3.inflate(R.layout.password_pos_client, null);
-                                            final TextInputEditText user3 = r3.findViewById(R.id.user);
-                                            final TextInputEditText pass3 = r3.findViewById(R.id.pass);
-                                            user3.setVisibility(View.GONE);
-                                            AlertDialog.Builder sv3 = new AlertDialog.Builder(c);
-                                            sv3.setTitle("Cadastrar Usuário / Senha Sup:");
-                                            sv3.setView(r3);
-                                            sv3.setPositiveButton("Cadastrar", new DialogInterface.OnClickListener() {
-                                                @Override
-                                                public void onClick(DialogInterface dialog, int which) {
-                                                    util us2 = new util();
-                                                    us2.setSenhaSuperVisor(pass3.getText().toString());
-                                                    SQLiteControl db = new SQLiteControl(c);
-                                                    db.setSuperVisor(us2);
-                                                    try {
-                                                        File sd = Environment.getExternalStorageDirectory();
-                                                        File data = Environment.getDataDirectory();
-
-                                                        if (sd.canWrite()) {
-                                                            String currentDBPath = "//data//" + c.getOpPackageName()
-                                                                    + "//databases//" + "myDB.db";
-                                                            String currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                                    + "//databases//" + "myDB.db-shm";
-                                                            String currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                                    + "//databases//" + "myDB.db-wal";
-
-                                                            String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                            String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                            String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
-
-                                                            File currentDB = new File(data, currentDBPath);
-                                                            File currentDB2 = new File(data, currentDBPath2);
-                                                            File currentDB3 = new File(data, currentDBPath3);
-                                                            File backupDB = new File(sd, backupDBPath);
-                                                            File backupDB2 = new File(sd, backupDBPath2);
-                                                            File backupDB3 = new File(sd, backupDBPath3);
-
-                                                            if (currentDB2.exists()) {
-                                                                FileChannel src2 = new FileInputStream(currentDB2).getChannel();
-                                                                FileChannel dst = new FileOutputStream(backupDB2).getChannel();
-                                                                dst.transferFrom(src2, 0, src2.size());
-                                                                src2.close();
-                                                                dst.close();
-                                                            }
-                                                            if (currentDB3.exists()) {
-                                                                FileChannel src3 = new FileInputStream(currentDB3).getChannel();
-                                                                FileChannel dst = new FileOutputStream(backupDB3).getChannel();
-                                                                dst.transferFrom(src3, 0, src3.size());
-                                                                src3.close();
-                                                                dst.close();
-                                                            }
-                                                            FileChannel src4 = new FileInputStream(currentDB).getChannel();
-                                                            FileChannel dst = new FileOutputStream(backupDB).getChannel();
-                                                            dst.transferFrom(src4, 0, src4.size());
-                                                            src4.close();
-                                                            dst.close();
-                                                        }
-                                                    } catch (Exception e2) {
-
-                                                    }
-                                                }
-                                            });
-                                            sv3.setNegativeButton("Cancelar", null);
-                                            sv3.create();
-                                            sv3.show();
-                                            break;
-                                        case 3:
-                                            LayoutInflater li4 = getLayoutInflater();
-                                            View r4 = li4.inflate(R.layout.password_pos_client, null);
-                                            final TextInputEditText user4 = r4.findViewById(R.id.user);
-                                            final TextInputEditText pass4 = r4.findViewById(R.id.pass);
-
-                                            AlertDialog.Builder sv4 = new AlertDialog.Builder(c);
-                                            sv4.setTitle("Cadastrar Usuário / Senha Ret:");
-                                            sv4.setView(r4);
-                                            sv4.setPositiveButton("Cadastrar", new DialogInterface.OnClickListener() {
-                                                @Override
-                                                public void onClick(DialogInterface dialog, int which) {
-                                                    util us2 = new util();
-                                                    us2.setUsuario(user4.getText().toString());
-                                                    us2.setSenha(pass4.getText().toString());
-                                                    SQLiteControl db = new SQLiteControl(c);
-                                                    db.setRetPass(us2);
-                                                    try {
-                                                        File sd = Environment.getExternalStorageDirectory();
-                                                        File data = Environment.getDataDirectory();
-
-                                                        if (sd.canWrite()) {
-                                                            String currentDBPath = "//data//" + c.getOpPackageName()
-                                                                    + "//databases//" + "myDB.db";
-                                                            String currentDBPath2 = "//data//" + c.getOpPackageName()
-                                                                    + "//databases//" + "myDB.db-shm";
-                                                            String currentDBPath3 = "//data//" + c.getOpPackageName()
-                                                                    + "//databases//" + "myDB.db-wal";
-
-                                                            String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-                                                            String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-                                                            String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
-
-                                                            File currentDB = new File(data, currentDBPath);
-                                                            File currentDB2 = new File(data, currentDBPath2);
-                                                            File currentDB3 = new File(data, currentDBPath3);
-                                                            File backupDB = new File(sd, backupDBPath);
-                                                            File backupDB2 = new File(sd, backupDBPath2);
-                                                            File backupDB3 = new File(sd, backupDBPath3);
-
-                                                            if (currentDB2.exists()) {
-                                                                FileChannel src2 = new FileInputStream(currentDB2).getChannel();
-                                                                FileChannel dst = new FileOutputStream(backupDB2).getChannel();
-                                                                dst.transferFrom(src2, 0, src2.size());
-                                                                src2.close();
-                                                                dst.close();
-                                                            }
-                                                            if (currentDB3.exists()) {
-                                                                FileChannel src3 = new FileInputStream(currentDB3).getChannel();
-                                                                FileChannel dst = new FileOutputStream(backupDB3).getChannel();
-                                                                dst.transferFrom(src3, 0, src3.size());
-                                                                src3.close();
-                                                                dst.close();
-                                                            }
-                                                            FileChannel src4 = new FileInputStream(currentDB).getChannel();
-                                                            FileChannel dst = new FileOutputStream(backupDB).getChannel();
-                                                            dst.transferFrom(src4, 0, src4.size());
-                                                            src4.close();
-                                                            dst.close();
-                                                        }
-                                                    } catch (Exception e2) {
-
-                                                    }
-                                                }
-                                            });
-                                            sv4.setNegativeButton("Cancelar", null);
-                                            sv4.create();
-                                            sv4.show();
-                                            break;
-                                    }
-                                }
-                            });
-                            chosser.create();
-                            chosser.show();
-                        }
-                        if (op[which].toString().startsWith("Trocar Retaguarda")) {
-                            Intent it = new Intent(c, MCRMain.class);
-                            startActivity(it);
-                        }
-                       }
+                public void onClick(DialogInterface dialog, int position) {
+                   switch(position){
+                       case 0:
+                           SQLiteControl db = new SQLiteControl(c);
+                           try {
+                               util test = db.getSenhaCM(1);
+                               if (!test.getUsuario().toString().equals("")) {
+                                   LayoutInflater li = getLayoutInflater();
+                                   View r = li.inflate(R.layout.user_adapter, null);
+                                   final RelativeLayout l1 = r.findViewById(R.id.l1);
+                                   final RelativeLayout l2 = r.findViewById(R.id.l2);
+                                   final RelativeLayout l3 = r.findViewById(R.id.l3);
+                                   final RelativeLayout l4 = r.findViewById(R.id.l4);
+
+                                   final ImageView im1 = r.findViewById(R.id.im1);
+                                   final ImageView ed1 = r.findViewById(R.id.edit1);
+                                   final TextView tv1 = r.findViewById(R.id.tv1);
+
+                                   final ImageView ed2 = r.findViewById(R.id.edit2);
+                                   final ImageView im2 = r.findViewById(R.id.im2);
+                                   final TextView tv2 = r.findViewById(R.id.tv2);
+
+                                   final ImageView ed3 = r.findViewById(R.id.edit3);
+                                   final ImageView im3 = r.findViewById(R.id.im3);
+                                   final TextView tv3 = r.findViewById(R.id.tv3);
+
+                                   final ImageView ed4 = r.findViewById(R.id.edit4);
+                                   final ImageView im4 = r.findViewById(R.id.im4);
+                                   final TextView tv4 = r.findViewById(R.id.tv4);
+
+                                   try {
+                                       SQLiteControl dbus = new SQLiteControl(c);
+                                       util us = dbus.getSenhaCM(1);
+                                       if (!us.getUsuario().toString().equals("")) {
+                                           l1.setVisibility(View.VISIBLE);
+                                           tv1.setText(us.getUsuario());
+                                           im1.setImageResource(R.drawable.chave);
+                                       }
+                                   } catch (Exception e) {
+                                       l1.setVisibility(View.GONE);
+                                   }
+                                   try {
+                                       SQLiteControl dbus = new SQLiteControl(c);
+                                       util us = dbus.getSenhaMCR(1);
+                                       if (!us.getUsuario().toString().equals("")) {
+                                           l2.setVisibility(View.VISIBLE);
+                                           tv2.setText(us.getUsuario());
+                                           im2.setImageResource(R.drawable.chave);
+                                       }
+                                   } catch (Exception e) {
+                                       l2.setVisibility(View.GONE);
+                                   }
+                                   try {
+                                       SQLiteControl dbus = new SQLiteControl(c);
+                                       util us = dbus.getSuperVisor(1);
+                                       if (!us.getSenhaSuperVisor().toString().equals("")) {
+                                           l3.setVisibility(View.VISIBLE);
+                                           tv3.setText(us.getSenhaSuperVisor());
+                                           im3.setImageResource(R.drawable.chave);
+                                       }
+                                   } catch (Exception e) {
+                                       l3.setVisibility(View.GONE);
+                                   }
+                                   try {
+                                       SQLiteControl dbus = new SQLiteControl(c);
+                                       util us = dbus.getSenhaRet(1);
+                                       if (!us.getUsuario().toString().equals("")) {
+                                           l4.setVisibility(View.VISIBLE);
+                                           tv4.setText(us.getUsuario());
+                                           im4.setImageResource(R.drawable.chave);
+                                       }
+                                   } catch (Exception e) {
+                                       l4.setVisibility(View.GONE);
+                                   }
+                                   ed1.setOnClickListener(new View.OnClickListener() {
+                                       @Override
+                                       public void onClick(View v) {
+                                           LayoutInflater li = getLayoutInflater();
+                                           View r = li.inflate(R.layout.password_pos_client, null);
+                                           final TextInputEditText user = r.findViewById(R.id.user);
+                                           final TextInputEditText pass = r.findViewById(R.id.pass);
+
+                                           SQLiteControl db = new SQLiteControl(c);
+                                           final util us = db.getSenhaCM(1);
+                                           user.setText(us.getUsuario());
+                                           pass.setText(us.getSenha());
+
+                                           AlertDialog.Builder sv = new AlertDialog.Builder(c);
+                                           sv.setTitle("Atualizar Usuário / Senha CM:");
+                                           sv.setView(r);
+                                           sv.setPositiveButton("Atualizar", new DialogInterface.OnClickListener() {
+                                               @Override
+                                               public void onClick(DialogInterface dialog, int which) {
+                                                   util us2 = new util();
+                                                   us2.setUserId(us.getUserId());
+                                                   us2.setUsuario(user.getText().toString());
+                                                   us2.setSenha(pass.getText().toString());
+                                                   SQLiteControl db = new SQLiteControl(c);
+                                                   db.upSenhaCM(us2);
+                                                   root.dismiss();
+                                                   try {
+                                                       File sd = Environment.getExternalStorageDirectory();
+                                                       File data = Environment.getDataDirectory();
+
+                                                       if (sd.canWrite()) {
+                                                           String currentDBPath = "//data//" + c.getOpPackageName()
+                                                                   + "//databases//" + "MCRDB.db";
+                                                           String currentDBPath2 = "//data//" + c.getOpPackageName()
+                                                                   + "//databases//" + "MCRDB.db-shm";
+                                                           String currentDBPath3 = "//data//" + c.getOpPackageName()
+                                                                   + "//databases//" + "MCRDB.db-wal";
+
+                                                           String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                           String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                           String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+
+                                                           File currentDB = new File(data, currentDBPath);
+                                                           File currentDB2 = new File(data, currentDBPath2);
+                                                           File currentDB3 = new File(data, currentDBPath3);
+                                                           File backupDB = new File(sd, backupDBPath);
+                                                           File backupDB2 = new File(sd, backupDBPath2);
+                                                           File backupDB3 = new File(sd, backupDBPath3);
+
+                                                           if (currentDB2.exists()) {
+                                                               FileChannel src2 = new FileInputStream(currentDB2).getChannel();
+                                                               FileChannel dst = new FileOutputStream(backupDB2).getChannel();
+                                                               dst.transferFrom(src2, 0, src2.size());
+                                                               src2.close();
+                                                               dst.close();
+                                                           }
+                                                           if (currentDB3.exists()) {
+                                                               FileChannel src3 = new FileInputStream(currentDB3).getChannel();
+                                                               FileChannel dst = new FileOutputStream(backupDB3).getChannel();
+                                                               dst.transferFrom(src3, 0, src3.size());
+                                                               src3.close();
+                                                               dst.close();
+                                                           }
+                                                           FileChannel src4 = new FileInputStream(currentDB).getChannel();
+                                                           FileChannel dst = new FileOutputStream(backupDB).getChannel();
+                                                           dst.transferFrom(src4, 0, src4.size());
+                                                           src4.close();
+                                                           dst.close();
+                                                       }
+                                                   } catch (Exception e2) {
+
+                                                   }
+                                               }
+                                           });
+                                           sv.setNegativeButton("Cancelar", null);
+                                           sv.create();
+                                           sv.show();
+                                       }
+                                   });
+                                   ed2.setOnClickListener(new View.OnClickListener() {
+                                       @Override
+                                       public void onClick(View v) {
+                                           LayoutInflater li = getLayoutInflater();
+                                           View r = li.inflate(R.layout.password_pos_client, null);
+                                           final TextInputEditText user = r.findViewById(R.id.user);
+                                           final TextInputEditText pass = r.findViewById(R.id.pass);
+
+                                           SQLiteControl db = new SQLiteControl(c);
+                                           final util us = db.getSenhaMCR(1);
+                                           user.setText(us.getUsuario());
+                                           pass.setText(us.getSenha());
+
+                                           AlertDialog.Builder sv = new AlertDialog.Builder(c);
+                                           sv.setTitle("Atualizar Usuário / Senha MCR:");
+                                           sv.setView(r);
+                                           sv.setPositiveButton("Atualizar", new DialogInterface.OnClickListener() {
+                                               @Override
+                                               public void onClick(DialogInterface dialog, int which) {
+                                                   util us2 = new util();
+                                                   us2.setUserId(us.getUserId());
+                                                   us2.setUsuario(user.getText().toString());
+                                                   us2.setSenha(pass.getText().toString());
+                                                   SQLiteControl db = new SQLiteControl(c);
+                                                   db.upSenhaMCR(us2);
+                                                   root.dismiss();
+                                                   try {
+                                                       File sd = Environment.getExternalStorageDirectory();
+                                                       File data = Environment.getDataDirectory();
+
+                                                       if (sd.canWrite()) {
+                                                           String currentDBPath = "//data//" + c.getOpPackageName()
+                                                                   + "//databases//" + "MCRDB.db";
+                                                           String currentDBPath2 = "//data//" + c.getOpPackageName()
+                                                                   + "//databases//" + "MCRDB.db-shm";
+                                                           String currentDBPath3 = "//data//" + c.getOpPackageName()
+                                                                   + "//databases//" + "MCRDB.db-wal";
+
+                                                           String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                           String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                           String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+
+                                                           File currentDB = new File(data, currentDBPath);
+                                                           File currentDB2 = new File(data, currentDBPath2);
+                                                           File currentDB3 = new File(data, currentDBPath3);
+                                                           File backupDB = new File(sd, backupDBPath);
+                                                           File backupDB2 = new File(sd, backupDBPath2);
+                                                           File backupDB3 = new File(sd, backupDBPath3);
+
+                                                           if (currentDB2.exists()) {
+                                                               FileChannel src2 = new FileInputStream(currentDB2).getChannel();
+                                                               FileChannel dst = new FileOutputStream(backupDB2).getChannel();
+                                                               dst.transferFrom(src2, 0, src2.size());
+                                                               src2.close();
+                                                               dst.close();
+                                                           }
+                                                           if (currentDB3.exists()) {
+                                                               FileChannel src3 = new FileInputStream(currentDB3).getChannel();
+                                                               FileChannel dst = new FileOutputStream(backupDB3).getChannel();
+                                                               dst.transferFrom(src3, 0, src3.size());
+                                                               src3.close();
+                                                               dst.close();
+                                                           }
+                                                           FileChannel src4 = new FileInputStream(currentDB).getChannel();
+                                                           FileChannel dst = new FileOutputStream(backupDB).getChannel();
+                                                           dst.transferFrom(src4, 0, src4.size());
+                                                           src4.close();
+                                                           dst.close();
+                                                       }
+                                                   } catch (Exception e2) {
+
+                                                   }
+                                               }
+                                           });
+                                           sv.setNegativeButton("Cancelar", null);
+                                           sv.create();
+                                           sv.show();
+                                       }
+                                   });
+                                   ed3.setOnClickListener(new View.OnClickListener() {
+                                       @Override
+                                       public void onClick(View v) {
+                                           LayoutInflater li = getLayoutInflater();
+                                           View r = li.inflate(R.layout.password_pos_client, null);
+                                           final TextInputEditText user = r.findViewById(R.id.user);
+                                           final TextInputEditText pass = r.findViewById(R.id.pass);
+
+                                           SQLiteControl db = new SQLiteControl(c);
+                                           final util us = db.getSuperVisor(1);
+                                           pass.setText(us.getSenhaSuperVisor());
+                                           user.setVisibility(View.GONE);
+                                           AlertDialog.Builder sv = new AlertDialog.Builder(c);
+                                           sv.setTitle("Atualizar Usuário / Senha Sup:");
+                                           sv.setView(r);
+                                           sv.setPositiveButton("Atualizar", new DialogInterface.OnClickListener() {
+                                               @Override
+                                               public void onClick(DialogInterface dialog, int which) {
+                                                   util us2 = new util();
+                                                   us2.setUserId(us2.getSupervisor_id());
+                                                   us2.setSenhaSuperVisor(pass.getText().toString());
+                                                   SQLiteControl db = new SQLiteControl(c);
+                                                   db.upSuperVisor(us2);
+                                                   root.dismiss();
+                                                   try {
+                                                       File sd = Environment.getExternalStorageDirectory();
+                                                       File data = Environment.getDataDirectory();
+
+                                                       if (sd.canWrite()) {
+                                                           String currentDBPath = "//data//" + c.getOpPackageName()
+                                                                   + "//databases//" + "MCRDB.db";
+                                                           String currentDBPath2 = "//data//" + c.getOpPackageName()
+                                                                   + "//databases//" + "MCRDB.db-shm";
+                                                           String currentDBPath3 = "//data//" + c.getOpPackageName()
+                                                                   + "//databases//" + "MCRDB.db-wal";
+
+                                                           String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                           String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                           String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+
+                                                           File currentDB = new File(data, currentDBPath);
+                                                           File currentDB2 = new File(data, currentDBPath2);
+                                                           File currentDB3 = new File(data, currentDBPath3);
+                                                           File backupDB = new File(sd, backupDBPath);
+                                                           File backupDB2 = new File(sd, backupDBPath2);
+                                                           File backupDB3 = new File(sd, backupDBPath3);
+
+                                                           if (currentDB2.exists()) {
+                                                               FileChannel src2 = new FileInputStream(currentDB2).getChannel();
+                                                               FileChannel dst = new FileOutputStream(backupDB2).getChannel();
+                                                               dst.transferFrom(src2, 0, src2.size());
+                                                               src2.close();
+                                                               dst.close();
+                                                           }
+                                                           if (currentDB3.exists()) {
+                                                               FileChannel src3 = new FileInputStream(currentDB3).getChannel();
+                                                               FileChannel dst = new FileOutputStream(backupDB3).getChannel();
+                                                               dst.transferFrom(src3, 0, src3.size());
+                                                               src3.close();
+                                                               dst.close();
+                                                           }
+                                                           FileChannel src4 = new FileInputStream(currentDB).getChannel();
+                                                           FileChannel dst = new FileOutputStream(backupDB).getChannel();
+                                                           dst.transferFrom(src4, 0, src4.size());
+                                                           src4.close();
+                                                           dst.close();
+                                                       }
+                                                   } catch (Exception e2) {
+
+                                                   }
+                                               }
+                                           });
+                                           sv.setNegativeButton("Cancelar", null);
+                                           sv.create();
+                                           sv.show();
+                                       }
+                                   });
+
+                                   ed4.setOnClickListener(new View.OnClickListener() {
+                                       @Override
+                                       public void onClick(View v) {
+                                           LayoutInflater li = getLayoutInflater();
+                                           View r = li.inflate(R.layout.password_pos_client, null);
+                                           final TextInputEditText user = r.findViewById(R.id.user);
+                                           final TextInputEditText pass = r.findViewById(R.id.pass);
+
+                                           SQLiteControl db = new SQLiteControl(c);
+                                           final util us = db.getSenhaRet(1);
+                                           pass.setText(us.getSenha());
+                                           user.setText(us.getUsuario());
+                                           AlertDialog.Builder sv = new AlertDialog.Builder(c);
+                                           sv.setTitle("Atualizar Usuário / Senha Ret:");
+                                           sv.setView(r);
+                                           sv.setPositiveButton("Atualizar", new DialogInterface.OnClickListener() {
+                                               @Override
+                                               public void onClick(DialogInterface dialog, int which) {
+                                                   util us2 = new util();
+                                                   us2.setUserId(us.getUserId());
+                                                   us2.setUsuario(user.getText().toString());
+                                                   us2.setSenha(pass.getText().toString());
+                                                   SQLiteControl db = new SQLiteControl(c);
+                                                   db.upRetPass(us2);
+                                                   root.dismiss();
+                                                   try {
+                                                       File sd = Environment.getExternalStorageDirectory();
+                                                       File data = Environment.getDataDirectory();
+
+                                                       if (sd.canWrite()) {
+                                                           String currentDBPath = "//data//" + c.getOpPackageName()
+                                                                   + "//databases//" + "MCRDB.db";
+                                                           String currentDBPath2 = "//data//" + c.getOpPackageName()
+                                                                   + "//databases//" + "MCRDB.db-shm";
+                                                           String currentDBPath3 = "//data//" + c.getOpPackageName()
+                                                                   + "//databases//" + "MCRDB.db-wal";
+
+                                                           String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                           String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                           String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+
+                                                           File currentDB = new File(data, currentDBPath);
+                                                           File currentDB2 = new File(data, currentDBPath2);
+                                                           File currentDB3 = new File(data, currentDBPath3);
+                                                           File backupDB = new File(sd, backupDBPath);
+                                                           File backupDB2 = new File(sd, backupDBPath2);
+                                                           File backupDB3 = new File(sd, backupDBPath3);
+
+                                                           if (currentDB2.exists()) {
+                                                               FileChannel src2 = new FileInputStream(currentDB2).getChannel();
+                                                               FileChannel dst = new FileOutputStream(backupDB2).getChannel();
+                                                               dst.transferFrom(src2, 0, src2.size());
+                                                               src2.close();
+                                                               dst.close();
+                                                           }
+                                                           if (currentDB3.exists()) {
+                                                               FileChannel src3 = new FileInputStream(currentDB3).getChannel();
+                                                               FileChannel dst = new FileOutputStream(backupDB3).getChannel();
+                                                               dst.transferFrom(src3, 0, src3.size());
+                                                               src3.close();
+                                                               dst.close();
+                                                           }
+                                                           FileChannel src4 = new FileInputStream(currentDB).getChannel();
+                                                           FileChannel dst = new FileOutputStream(backupDB).getChannel();
+                                                           dst.transferFrom(src4, 0, src4.size());
+                                                           src4.close();
+                                                           dst.close();
+                                                       }
+                                                   } catch (Exception e2) {
+
+                                                   }
+                                               }
+                                           });
+                                           sv.setNegativeButton("Cancelar", null);
+                                           sv.create();
+                                           sv.show();
+                                       }
+                                   });
+                                   AlertDialog.Builder alert = new AlertDialog.Builder(c);
+                                   alert.setTitle("Gerenciar Senhas:");
+                                   alert.setView(r);
+                                   alert.setPositiveButton("Cadastrar", new DialogInterface.OnClickListener() {
+                                       @Override
+                                       public void onClick(DialogInterface dialog, int which) {
+                                           String[] op = {
+                                                   "Senha P/ PDV Informática",
+                                                   "Senha P/ PDV Mercearia",
+                                                   "Senha P/ Supervisor",
+                                                   "Senha P/ Retaguarda"
+                                           };
+                                           AlertDialog.Builder chosser = new AlertDialog.Builder(c);
+                                           chosser.setSingleChoiceItems(op, 0, new DialogInterface.OnClickListener() {
+
+                                               @Override
+                                               public void onClick(DialogInterface dialog, int which) {
+                                                   switch (which) {
+                                                       case 0:
+                                                           LayoutInflater li = getLayoutInflater();
+                                                           View r = li.inflate(R.layout.password_pos_client, null);
+                                                           final TextInputEditText user = r.findViewById(R.id.user);
+                                                           final TextInputEditText pass = r.findViewById(R.id.pass);
+
+                                                           AlertDialog.Builder sv = new AlertDialog.Builder(c);
+                                                           sv.setTitle("Cadastrar Usuário / Senha CM:");
+                                                           sv.setView(r);
+                                                           sv.setPositiveButton("Cadastrar", new DialogInterface.OnClickListener() {
+                                                               @Override
+                                                               public void onClick(DialogInterface dialog, int which) {
+                                                                   util us2 = new util();
+                                                                   us2.setUsuario(user.getText().toString());
+                                                                   us2.setSenha(pass.getText().toString());
+                                                                   SQLiteControl db = new SQLiteControl(c);
+                                                                   db.setSenhaCM(us2);
+                                                                   root.dismiss();
+                                                                   try {
+                                                                       File sd = Environment.getExternalStorageDirectory();
+                                                                       File data = Environment.getDataDirectory();
+
+                                                                       if (sd.canWrite()) {
+                                                                           String currentDBPath = "//data//" + c.getOpPackageName()
+                                                                                   + "//databases//" + "MCRDB.db";
+                                                                           String currentDBPath2 = "//data//" + c.getOpPackageName()
+                                                                                   + "//databases//" + "MCRDB.db-shm";
+                                                                           String currentDBPath3 = "//data//" + c.getOpPackageName()
+                                                                                   + "//databases//" + "MCRDB.db-wal";
+
+                                                                           String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                                           String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                                           String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+
+                                                                           File currentDB = new File(data, currentDBPath);
+                                                                           File currentDB2 = new File(data, currentDBPath2);
+                                                                           File currentDB3 = new File(data, currentDBPath3);
+                                                                           File backupDB = new File(sd, backupDBPath);
+                                                                           File backupDB2 = new File(sd, backupDBPath2);
+                                                                           File backupDB3 = new File(sd, backupDBPath3);
+
+                                                                           if (currentDB2.exists()) {
+                                                                               FileChannel src2 = new FileInputStream(currentDB2).getChannel();
+                                                                               FileChannel dst = new FileOutputStream(backupDB2).getChannel();
+                                                                               dst.transferFrom(src2, 0, src2.size());
+                                                                               src2.close();
+                                                                               dst.close();
+                                                                           }
+                                                                           if (currentDB3.exists()) {
+                                                                               FileChannel src3 = new FileInputStream(currentDB3).getChannel();
+                                                                               FileChannel dst = new FileOutputStream(backupDB3).getChannel();
+                                                                               dst.transferFrom(src3, 0, src3.size());
+                                                                               src3.close();
+                                                                               dst.close();
+                                                                           }
+                                                                           FileChannel src4 = new FileInputStream(currentDB).getChannel();
+                                                                           FileChannel dst = new FileOutputStream(backupDB).getChannel();
+                                                                           dst.transferFrom(src4, 0, src4.size());
+                                                                           src4.close();
+                                                                           dst.close();
+                                                                       }
+                                                                   } catch (Exception e2) {
+
+                                                                   }
+                                                               }
+                                                           });
+                                                           sv.setNegativeButton("Cancelar", null);
+                                                           sv.create();
+                                                           sv.show();
+                                                           break;
+                                                       case 1:
+                                                           LayoutInflater li2 = getLayoutInflater();
+                                                           View r2 = li2.inflate(R.layout.password_pos_client, null);
+                                                           final TextInputEditText user2 = r2.findViewById(R.id.user);
+                                                           final TextInputEditText pass2 = r2.findViewById(R.id.pass);
+
+                                                           AlertDialog.Builder sv2 = new AlertDialog.Builder(c);
+                                                           sv2.setTitle("Cadastrar Usuário / Senha MCR:");
+                                                           sv2.setView(r2);
+                                                           sv2.setPositiveButton("Cadastrar", new DialogInterface.OnClickListener() {
+                                                               @Override
+                                                               public void onClick(DialogInterface dialog, int which) {
+                                                                   util us2 = new util();
+                                                                   us2.setUsuario(user2.getText().toString());
+                                                                   us2.setSenha(pass2.getText().toString());
+                                                                   SQLiteControl db = new SQLiteControl(c);
+                                                                   db.setSenhaMCR(us2);
+                                                                   root.dismiss();
+                                                                   try {
+                                                                       File sd = Environment.getExternalStorageDirectory();
+                                                                       File data = Environment.getDataDirectory();
+
+                                                                       if (sd.canWrite()) {
+                                                                           String currentDBPath = "//data//" + c.getOpPackageName()
+                                                                                   + "//databases//" + "MCRDB.db";
+                                                                           String currentDBPath2 = "//data//" + c.getOpPackageName()
+                                                                                   + "//databases//" + "MCRDB.db-shm";
+                                                                           String currentDBPath3 = "//data//" + c.getOpPackageName()
+                                                                                   + "//databases//" + "MCRDB.db-wal";
+
+                                                                           String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                                           String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                                           String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+
+                                                                           File currentDB = new File(data, currentDBPath);
+                                                                           File currentDB2 = new File(data, currentDBPath2);
+                                                                           File currentDB3 = new File(data, currentDBPath3);
+                                                                           File backupDB = new File(sd, backupDBPath);
+                                                                           File backupDB2 = new File(sd, backupDBPath2);
+                                                                           File backupDB3 = new File(sd, backupDBPath3);
+
+                                                                           if (currentDB2.exists()) {
+                                                                               FileChannel src2 = new FileInputStream(currentDB2).getChannel();
+                                                                               FileChannel dst = new FileOutputStream(backupDB2).getChannel();
+                                                                               dst.transferFrom(src2, 0, src2.size());
+                                                                               src2.close();
+                                                                               dst.close();
+                                                                           }
+                                                                           if (currentDB3.exists()) {
+                                                                               FileChannel src3 = new FileInputStream(currentDB3).getChannel();
+                                                                               FileChannel dst = new FileOutputStream(backupDB3).getChannel();
+                                                                               dst.transferFrom(src3, 0, src3.size());
+                                                                               src3.close();
+                                                                               dst.close();
+                                                                           }
+                                                                           FileChannel src4 = new FileInputStream(currentDB).getChannel();
+                                                                           FileChannel dst = new FileOutputStream(backupDB).getChannel();
+                                                                           dst.transferFrom(src4, 0, src4.size());
+                                                                           src4.close();
+                                                                           dst.close();
+                                                                       }
+                                                                   } catch (Exception e2) {
+
+                                                                   }
+                                                               }
+                                                           });
+                                                           sv2.setNegativeButton("Cancelar", null);
+                                                           sv2.create();
+                                                           sv2.show();
+                                                           break;
+                                                       case 2:
+                                                           LayoutInflater li3 = getLayoutInflater();
+                                                           View r3 = li3.inflate(R.layout.password_pos_client, null);
+                                                           final TextInputEditText user3 = r3.findViewById(R.id.user);
+                                                           final TextInputEditText pass3 = r3.findViewById(R.id.pass);
+                                                           user3.setVisibility(View.GONE);
+                                                           AlertDialog.Builder sv3 = new AlertDialog.Builder(c);
+                                                           sv3.setTitle("Cadastrar Usuário / Senha Sup:");
+                                                           sv3.setView(r3);
+                                                           sv3.setPositiveButton("Cadastrar", new DialogInterface.OnClickListener() {
+                                                               @Override
+                                                               public void onClick(DialogInterface dialog, int which) {
+                                                                   util us2 = new util();
+                                                                   us2.setSenhaSuperVisor(pass3.getText().toString());
+                                                                   SQLiteControl db = new SQLiteControl(c);
+                                                                   db.setSuperVisor(us2);
+                                                                   root.dismiss();
+                                                                   try {
+                                                                       File sd = Environment.getExternalStorageDirectory();
+                                                                       File data = Environment.getDataDirectory();
+
+                                                                       if (sd.canWrite()) {
+                                                                           String currentDBPath = "//data//" + c.getOpPackageName()
+                                                                                   + "//databases//" + "MCRDB.db";
+                                                                           String currentDBPath2 = "//data//" + c.getOpPackageName()
+                                                                                   + "//databases//" + "MCRDB.db-shm";
+                                                                           String currentDBPath3 = "//data//" + c.getOpPackageName()
+                                                                                   + "//databases//" + "MCRDB.db-wal";
+
+                                                                           String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                                           String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                                           String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+
+                                                                           File currentDB = new File(data, currentDBPath);
+                                                                           File currentDB2 = new File(data, currentDBPath2);
+                                                                           File currentDB3 = new File(data, currentDBPath3);
+                                                                           File backupDB = new File(sd, backupDBPath);
+                                                                           File backupDB2 = new File(sd, backupDBPath2);
+                                                                           File backupDB3 = new File(sd, backupDBPath3);
+
+                                                                           if (currentDB2.exists()) {
+                                                                               FileChannel src2 = new FileInputStream(currentDB2).getChannel();
+                                                                               FileChannel dst = new FileOutputStream(backupDB2).getChannel();
+                                                                               dst.transferFrom(src2, 0, src2.size());
+                                                                               src2.close();
+                                                                               dst.close();
+                                                                           }
+                                                                           if (currentDB3.exists()) {
+                                                                               FileChannel src3 = new FileInputStream(currentDB3).getChannel();
+                                                                               FileChannel dst = new FileOutputStream(backupDB3).getChannel();
+                                                                               dst.transferFrom(src3, 0, src3.size());
+                                                                               src3.close();
+                                                                               dst.close();
+                                                                           }
+                                                                           FileChannel src4 = new FileInputStream(currentDB).getChannel();
+                                                                           FileChannel dst = new FileOutputStream(backupDB).getChannel();
+                                                                           dst.transferFrom(src4, 0, src4.size());
+                                                                           src4.close();
+                                                                           dst.close();
+                                                                       }
+                                                                   } catch (Exception e2) {
+
+                                                                   }
+                                                               }
+                                                           });
+                                                           sv3.setNegativeButton("Cancelar", null);
+                                                           sv3.create();
+                                                           sv3.show();
+                                                           break;
+                                                       case 3:
+                                                           LayoutInflater li4 = getLayoutInflater();
+                                                           View r4 = li4.inflate(R.layout.password_pos_client, null);
+                                                           final TextInputEditText user4 = r4.findViewById(R.id.user);
+                                                           final TextInputEditText pass4 = r4.findViewById(R.id.pass);
+
+                                                           AlertDialog.Builder sv4 = new AlertDialog.Builder(c);
+                                                           sv4.setTitle("Cadastrar Usuário / Senha Ret:");
+                                                           sv4.setView(r4);
+                                                           sv4.setPositiveButton("Cadastrar", new DialogInterface.OnClickListener() {
+                                                               @Override
+                                                               public void onClick(DialogInterface dialog, int which) {
+                                                                   util us2 = new util();
+                                                                   us2.setUsuario(user4.getText().toString());
+                                                                   us2.setSenha(pass4.getText().toString());
+                                                                   SQLiteControl db = new SQLiteControl(c);
+                                                                   db.setRetPass(us2);
+                                                                   root.dismiss();
+                                                                   try {
+                                                                       File sd = Environment.getExternalStorageDirectory();
+                                                                       File data = Environment.getDataDirectory();
+
+                                                                       if (sd.canWrite()) {
+                                                                           String currentDBPath = "//data//" + c.getOpPackageName()
+                                                                                   + "//databases//" + "MCRDB.db";
+                                                                           String currentDBPath2 = "//data//" + c.getOpPackageName()
+                                                                                   + "//databases//" + "MCRDB.db-shm";
+                                                                           String currentDBPath3 = "//data//" + c.getOpPackageName()
+                                                                                   + "//databases//" + "MCRDB.db-wal";
+
+                                                                           String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                                           String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                                           String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+
+                                                                           File currentDB = new File(data, currentDBPath);
+                                                                           File currentDB2 = new File(data, currentDBPath2);
+                                                                           File currentDB3 = new File(data, currentDBPath3);
+                                                                           File backupDB = new File(sd, backupDBPath);
+                                                                           File backupDB2 = new File(sd, backupDBPath2);
+                                                                           File backupDB3 = new File(sd, backupDBPath3);
+
+                                                                           if (currentDB2.exists()) {
+                                                                               FileChannel src2 = new FileInputStream(currentDB2).getChannel();
+                                                                               FileChannel dst = new FileOutputStream(backupDB2).getChannel();
+                                                                               dst.transferFrom(src2, 0, src2.size());
+                                                                               src2.close();
+                                                                               dst.close();
+                                                                           }
+                                                                           if (currentDB3.exists()) {
+                                                                               FileChannel src3 = new FileInputStream(currentDB3).getChannel();
+                                                                               FileChannel dst = new FileOutputStream(backupDB3).getChannel();
+                                                                               dst.transferFrom(src3, 0, src3.size());
+                                                                               src3.close();
+                                                                               dst.close();
+                                                                           }
+                                                                           FileChannel src4 = new FileInputStream(currentDB).getChannel();
+                                                                           FileChannel dst = new FileOutputStream(backupDB).getChannel();
+                                                                           dst.transferFrom(src4, 0, src4.size());
+                                                                           src4.close();
+                                                                           dst.close();
+                                                                       }
+                                                                   } catch (Exception e2) {
+
+                                                                   }
+                                                               }
+                                                           });
+                                                           sv4.setNegativeButton("Cancelar", null);
+                                                           sv4.create();
+                                                           sv4.show();
+                                                           break;
+                                                   }
+                                               }
+                                           });
+                                           chosser.create();
+                                           chosser.show();
+                                       }
+                                   });
+                                   alert.setNegativeButton("Cancelar", null);
+                                   root = alert.create();
+                                   root = alert.show();
+                               }
+                           } catch (Exception e) {
+                               String[] op = {
+                                       "Senha P/ PDV Informática",
+                                       "Senha P/ PDV Mercearia",
+                                       "Senha P/ Supervisor",
+                                       "Senha P/ Retaguarda"
+                               };
+                               AlertDialog.Builder chosser = new AlertDialog.Builder(c);
+                               chosser.setSingleChoiceItems(op, 0, new DialogInterface.OnClickListener() {
+
+                                   @Override
+                                   public void onClick(DialogInterface dialog, int which) {
+                                       switch (which) {
+                                           case 0:
+                                               LayoutInflater li = getLayoutInflater();
+                                               View r = li.inflate(R.layout.password_pos_client, null);
+                                               final TextInputEditText user = r.findViewById(R.id.user);
+                                               final TextInputEditText pass = r.findViewById(R.id.pass);
+
+                                               AlertDialog.Builder sv = new AlertDialog.Builder(c);
+                                               sv.setTitle("Cadastrar Usuário / Senha CM:");
+                                               sv.setView(r);
+                                               sv.setPositiveButton("Cadastrar", new DialogInterface.OnClickListener() {
+                                                   @Override
+                                                   public void onClick(DialogInterface dialog, int which) {
+                                                       util us2 = new util();
+                                                       us2.setUsuario(user.getText().toString());
+                                                       us2.setSenha(pass.getText().toString());
+                                                       SQLiteControl db = new SQLiteControl(c);
+                                                       db.setSenhaCM(us2);
+                                                       try {
+                                                           File sd = Environment.getExternalStorageDirectory();
+                                                           File data = Environment.getDataDirectory();
+
+                                                           if (sd.canWrite()) {
+                                                               String currentDBPath = "//data//" + c.getOpPackageName()
+                                                                       + "//databases//" + "MCRDB.db";
+                                                               String currentDBPath2 = "//data//" + c.getOpPackageName()
+                                                                       + "//databases//" + "MCRDB.db-shm";
+                                                               String currentDBPath3 = "//data//" + c.getOpPackageName()
+                                                                       + "//databases//" + "MCRDB.db-wal";
+
+                                                               String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                               String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                               String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+
+                                                               File currentDB = new File(data, currentDBPath);
+                                                               File currentDB2 = new File(data, currentDBPath2);
+                                                               File currentDB3 = new File(data, currentDBPath3);
+                                                               File backupDB = new File(sd, backupDBPath);
+                                                               File backupDB2 = new File(sd, backupDBPath2);
+                                                               File backupDB3 = new File(sd, backupDBPath3);
+
+                                                               if (currentDB2.exists()) {
+                                                                   FileChannel src2 = new FileInputStream(currentDB2).getChannel();
+                                                                   FileChannel dst = new FileOutputStream(backupDB2).getChannel();
+                                                                   dst.transferFrom(src2, 0, src2.size());
+                                                                   src2.close();
+                                                                   dst.close();
+                                                               }
+                                                               if (currentDB3.exists()) {
+                                                                   FileChannel src3 = new FileInputStream(currentDB3).getChannel();
+                                                                   FileChannel dst = new FileOutputStream(backupDB3).getChannel();
+                                                                   dst.transferFrom(src3, 0, src3.size());
+                                                                   src3.close();
+                                                                   dst.close();
+                                                               }
+                                                               FileChannel src4 = new FileInputStream(currentDB).getChannel();
+                                                               FileChannel dst = new FileOutputStream(backupDB).getChannel();
+                                                               dst.transferFrom(src4, 0, src4.size());
+                                                               src4.close();
+                                                               dst.close();
+                                                           }
+                                                       } catch (Exception e2) {
+
+                                                       }
+                                                   }
+                                               });
+                                               sv.setNegativeButton("Cancelar", null);
+                                               sv.create();
+                                               sv.show();
+                                               break;
+                                           case 1:
+                                               LayoutInflater li2 = getLayoutInflater();
+                                               View r2 = li2.inflate(R.layout.password_pos_client, null);
+                                               final TextInputEditText user2 = r2.findViewById(R.id.user);
+                                               final TextInputEditText pass2 = r2.findViewById(R.id.pass);
+
+                                               AlertDialog.Builder sv2 = new AlertDialog.Builder(c);
+                                               sv2.setTitle("Cadastrar Usuário / Senha MCR:");
+                                               sv2.setView(r2);
+                                               sv2.setPositiveButton("Cadastrar", new DialogInterface.OnClickListener() {
+                                                   @Override
+                                                   public void onClick(DialogInterface dialog, int which) {
+                                                       util us2 = new util();
+                                                       us2.setUsuario(user2.getText().toString());
+                                                       us2.setSenha(pass2.getText().toString());
+                                                       SQLiteControl db = new SQLiteControl(c);
+                                                       db.setSenhaMCR(us2);
+                                                       try {
+                                                           File sd = Environment.getExternalStorageDirectory();
+                                                           File data = Environment.getDataDirectory();
+
+                                                           if (sd.canWrite()) {
+                                                               String currentDBPath = "//data//" + c.getOpPackageName()
+                                                                       + "//databases//" + "MCRDB.db";
+                                                               String currentDBPath2 = "//data//" + c.getOpPackageName()
+                                                                       + "//databases//" + "MCRDB.db-shm";
+                                                               String currentDBPath3 = "//data//" + c.getOpPackageName()
+                                                                       + "//databases//" + "MCRDB.db-wal";
+
+                                                               String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                               String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                               String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+
+                                                               File currentDB = new File(data, currentDBPath);
+                                                               File currentDB2 = new File(data, currentDBPath2);
+                                                               File currentDB3 = new File(data, currentDBPath3);
+                                                               File backupDB = new File(sd, backupDBPath);
+                                                               File backupDB2 = new File(sd, backupDBPath2);
+                                                               File backupDB3 = new File(sd, backupDBPath3);
+
+                                                               if (currentDB2.exists()) {
+                                                                   FileChannel src2 = new FileInputStream(currentDB2).getChannel();
+                                                                   FileChannel dst = new FileOutputStream(backupDB2).getChannel();
+                                                                   dst.transferFrom(src2, 0, src2.size());
+                                                                   src2.close();
+                                                                   dst.close();
+                                                               }
+                                                               if (currentDB3.exists()) {
+                                                                   FileChannel src3 = new FileInputStream(currentDB3).getChannel();
+                                                                   FileChannel dst = new FileOutputStream(backupDB3).getChannel();
+                                                                   dst.transferFrom(src3, 0, src3.size());
+                                                                   src3.close();
+                                                                   dst.close();
+                                                               }
+                                                               FileChannel src4 = new FileInputStream(currentDB).getChannel();
+                                                               FileChannel dst = new FileOutputStream(backupDB).getChannel();
+                                                               dst.transferFrom(src4, 0, src4.size());
+                                                               src4.close();
+                                                               dst.close();
+                                                           }
+                                                       } catch (Exception e2) {
+
+                                                       }
+                                                   }
+                                               });
+                                               sv2.setNegativeButton("Cancelar", null);
+                                               sv2.create();
+                                               sv2.show();
+                                               break;
+                                           case 2:
+                                               LayoutInflater li3 = getLayoutInflater();
+                                               View r3 = li3.inflate(R.layout.password_pos_client, null);
+                                               final TextInputEditText user3 = r3.findViewById(R.id.user);
+                                               final TextInputEditText pass3 = r3.findViewById(R.id.pass);
+                                               user3.setVisibility(View.GONE);
+                                               AlertDialog.Builder sv3 = new AlertDialog.Builder(c);
+                                               sv3.setTitle("Cadastrar Usuário / Senha Sup:");
+                                               sv3.setView(r3);
+                                               sv3.setPositiveButton("Cadastrar", new DialogInterface.OnClickListener() {
+                                                   @Override
+                                                   public void onClick(DialogInterface dialog, int which) {
+                                                       util us2 = new util();
+                                                       us2.setSenhaSuperVisor(pass3.getText().toString());
+                                                       SQLiteControl db = new SQLiteControl(c);
+                                                       db.setSuperVisor(us2);
+                                                       try {
+                                                           File sd = Environment.getExternalStorageDirectory();
+                                                           File data = Environment.getDataDirectory();
+
+                                                           if (sd.canWrite()) {
+                                                               String currentDBPath = "//data//" + c.getOpPackageName()
+                                                                       + "//databases//" + "MCRDB.db";
+                                                               String currentDBPath2 = "//data//" + c.getOpPackageName()
+                                                                       + "//databases//" + "MCRDB.db-shm";
+                                                               String currentDBPath3 = "//data//" + c.getOpPackageName()
+                                                                       + "//databases//" + "MCRDB.db-wal";
+
+                                                               String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                               String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                               String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+
+                                                               File currentDB = new File(data, currentDBPath);
+                                                               File currentDB2 = new File(data, currentDBPath2);
+                                                               File currentDB3 = new File(data, currentDBPath3);
+                                                               File backupDB = new File(sd, backupDBPath);
+                                                               File backupDB2 = new File(sd, backupDBPath2);
+                                                               File backupDB3 = new File(sd, backupDBPath3);
+
+                                                               if (currentDB2.exists()) {
+                                                                   FileChannel src2 = new FileInputStream(currentDB2).getChannel();
+                                                                   FileChannel dst = new FileOutputStream(backupDB2).getChannel();
+                                                                   dst.transferFrom(src2, 0, src2.size());
+                                                                   src2.close();
+                                                                   dst.close();
+                                                               }
+                                                               if (currentDB3.exists()) {
+                                                                   FileChannel src3 = new FileInputStream(currentDB3).getChannel();
+                                                                   FileChannel dst = new FileOutputStream(backupDB3).getChannel();
+                                                                   dst.transferFrom(src3, 0, src3.size());
+                                                                   src3.close();
+                                                                   dst.close();
+                                                               }
+                                                               FileChannel src4 = new FileInputStream(currentDB).getChannel();
+                                                               FileChannel dst = new FileOutputStream(backupDB).getChannel();
+                                                               dst.transferFrom(src4, 0, src4.size());
+                                                               src4.close();
+                                                               dst.close();
+                                                           }
+                                                       } catch (Exception e2) {
+
+                                                       }
+                                                   }
+                                               });
+                                               sv3.setNegativeButton("Cancelar", null);
+                                               sv3.create();
+                                               sv3.show();
+                                               break;
+                                           case 3:
+                                               LayoutInflater li4 = getLayoutInflater();
+                                               View r4 = li4.inflate(R.layout.password_pos_client, null);
+                                               final TextInputEditText user4 = r4.findViewById(R.id.user);
+                                               final TextInputEditText pass4 = r4.findViewById(R.id.pass);
+
+                                               AlertDialog.Builder sv4 = new AlertDialog.Builder(c);
+                                               sv4.setTitle("Cadastrar Usuário / Senha Ret:");
+                                               sv4.setView(r4);
+                                               sv4.setPositiveButton("Cadastrar", new DialogInterface.OnClickListener() {
+                                                   @Override
+                                                   public void onClick(DialogInterface dialog, int which) {
+                                                       util us2 = new util();
+                                                       us2.setUsuario(user4.getText().toString());
+                                                       us2.setSenha(pass4.getText().toString());
+                                                       SQLiteControl db = new SQLiteControl(c);
+                                                       db.setRetPass(us2);
+                                                       try {
+                                                           File sd = Environment.getExternalStorageDirectory();
+                                                           File data = Environment.getDataDirectory();
+
+                                                           if (sd.canWrite()) {
+                                                               String currentDBPath = "//data//" + c.getOpPackageName()
+                                                                       + "//databases//" + "MCRDB.db";
+                                                               String currentDBPath2 = "//data//" + c.getOpPackageName()
+                                                                       + "//databases//" + "MCRDB.db-shm";
+                                                               String currentDBPath3 = "//data//" + c.getOpPackageName()
+                                                                       + "//databases//" + "MCRDB.db-wal";
+
+                                                               String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                                                               String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
+                                                               String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+
+                                                               File currentDB = new File(data, currentDBPath);
+                                                               File currentDB2 = new File(data, currentDBPath2);
+                                                               File currentDB3 = new File(data, currentDBPath3);
+                                                               File backupDB = new File(sd, backupDBPath);
+                                                               File backupDB2 = new File(sd, backupDBPath2);
+                                                               File backupDB3 = new File(sd, backupDBPath3);
+
+                                                               if (currentDB2.exists()) {
+                                                                   FileChannel src2 = new FileInputStream(currentDB2).getChannel();
+                                                                   FileChannel dst = new FileOutputStream(backupDB2).getChannel();
+                                                                   dst.transferFrom(src2, 0, src2.size());
+                                                                   src2.close();
+                                                                   dst.close();
+                                                               }
+                                                               if (currentDB3.exists()) {
+                                                                   FileChannel src3 = new FileInputStream(currentDB3).getChannel();
+                                                                   FileChannel dst = new FileOutputStream(backupDB3).getChannel();
+                                                                   dst.transferFrom(src3, 0, src3.size());
+                                                                   src3.close();
+                                                                   dst.close();
+                                                               }
+                                                               FileChannel src4 = new FileInputStream(currentDB).getChannel();
+                                                               FileChannel dst = new FileOutputStream(backupDB).getChannel();
+                                                               dst.transferFrom(src4, 0, src4.size());
+                                                               src4.close();
+                                                               dst.close();
+                                                           }
+                                                       } catch (Exception e2) {
+
+                                                       }
+                                                   }
+                                               });
+                                               sv4.setNegativeButton("Cancelar", null);
+                                               sv4.create();
+                                               sv4.show();
+                                               break;
+                                       }
+                                   }
+                               });
+                               chosser.create();
+                               chosser.show();
+                           }
+                           break;
+                       case 1:
+                           startActivity(new Intent(c, MCRMain.class));
+                           break;
+                   }
                     }
                 });
             }
             return super.onKeyDown(keyCode, event);
         }
-
         @Override
         public boolean onKeyUp(int keyCode, KeyEvent event)
         {
@@ -5918,8 +5918,8 @@ public class MCRMain extends AppCompatActivity {
 
                     if (sd.canWrite()) {
                         String  currentDBPath= "//data//" + c.getOpPackageName()
-                                + "//databases//" + "myDB.db";
-                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
+                                + "//databases//" + "MCRDB.db";
+                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
                         File dbshm = new File(data, currentDBPath + "-shm");
                         File dbwal = new File(data, currentDBPath + "-wal");
                         if (dbshm.exists()) {

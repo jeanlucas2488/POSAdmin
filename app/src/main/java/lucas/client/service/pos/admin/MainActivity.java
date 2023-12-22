@@ -4929,731 +4929,120 @@ public class MainActivity extends AppCompatActivity
 			ch.setItems(op, new DialogInterface.OnClickListener(){
 
 				@Override
-				public void onClick(DialogInterface dialog, int which) {
-					if(op[which].toString().startsWith("Gerenciar Usuários")) {
-						SQLiteControl db = new SQLiteControl(c);
-						try {
-							util test = db.getSenhaCM(1);
-							if (!test.getUsuario().toString().equals("")) {
-								LayoutInflater li = getLayoutInflater();
-								View r = li.inflate(R.layout.user_adapter, null);
-								final RelativeLayout l1 = r.findViewById(R.id.l1);
-								final RelativeLayout l2 = r.findViewById(R.id.l2);
-								final RelativeLayout l3 = r.findViewById(R.id.l3);
-								final RelativeLayout l4 = r.findViewById(R.id.l4);
+				public void onClick(DialogInterface dialog, int position) {
 
-								final ImageView im1 = r.findViewById(R.id.im1);
-								final ImageView ed1 = r.findViewById(R.id.edit1);
-								final TextView tv1 = r.findViewById(R.id.tv1);
+					switch (position){
+						case 0:
+							SQLiteControl db = new SQLiteControl(c);
+							try {
+								util test = db.getSenhaCM(1);
+								if (!test.getUsuario().toString().equals("")) {
+									LayoutInflater li = getLayoutInflater();
+									View r = li.inflate(R.layout.user_adapter, null);
+									final RelativeLayout l1 = r.findViewById(R.id.l1);
+									final RelativeLayout l2 = r.findViewById(R.id.l2);
+									final RelativeLayout l3 = r.findViewById(R.id.l3);
+									final RelativeLayout l4 = r.findViewById(R.id.l4);
 
-								final ImageView ed2 = r.findViewById(R.id.edit2);
-								final ImageView im2 = r.findViewById(R.id.im2);
-								final TextView tv2 = r.findViewById(R.id.tv2);
+									final RelativeLayout t1 = r.findViewById(R.id.t1);
+									final RelativeLayout t2 = r.findViewById(R.id.t2);
+									final RelativeLayout t3 = r.findViewById(R.id.t3);
+									final RelativeLayout t4 = r.findViewById(R.id.t4);
 
-								final ImageView ed3 = r.findViewById(R.id.edit3);
-								final ImageView im3 = r.findViewById(R.id.im3);
-								final TextView tv3 = r.findViewById(R.id.tv3);
+									final ImageView im1 = r.findViewById(R.id.im1);
+									final ImageView ed1 = r.findViewById(R.id.edit1);
+									final TextView tv1 = r.findViewById(R.id.tv1);
 
-								final ImageView ed4 = r.findViewById(R.id.edit4);
-								final ImageView im4 = r.findViewById(R.id.im4);
-								final TextView tv4 = r.findViewById(R.id.tv4);
+									final ImageView ed2 = r.findViewById(R.id.edit2);
+									final ImageView im2 = r.findViewById(R.id.im2);
+									final TextView tv2 = r.findViewById(R.id.tv2);
 
-								try {
-									SQLiteControl dbus = new SQLiteControl(c);
-									util us = dbus.getSenhaCM(1);
-									if (!us.getUsuario().toString().equals("")) {
-										l1.setVisibility(View.VISIBLE);
-										tv1.setText(us.getUsuario());
-										im1.setImageResource(R.drawable.chave);
+									final ImageView ed3 = r.findViewById(R.id.edit3);
+									final ImageView im3 = r.findViewById(R.id.im3);
+									final TextView tv3 = r.findViewById(R.id.tv3);
+
+									final ImageView ed4 = r.findViewById(R.id.edit4);
+									final ImageView im4 = r.findViewById(R.id.im4);
+									final TextView tv4 = r.findViewById(R.id.tv4);
+
+									try {
+										SQLiteControl dbus = new SQLiteControl(c);
+										util us = dbus.getSenhaCM(1);
+										if (!us.getUsuario().toString().equals("")) {
+											t1.setVisibility(View.VISIBLE);
+											l1.setVisibility(View.VISIBLE);
+											tv1.setText(us.getUsuario());
+											im1.setImageResource(R.drawable.chave);
+										}
+									} catch (Exception e) {
+										t1.setVisibility(View.GONE);
+										l1.setVisibility(View.GONE);
 									}
-								} catch (Exception e) {
-									l1.setVisibility(View.GONE);
-								}
-								try {
-									SQLiteControl dbus = new SQLiteControl(c);
-									util us = dbus.getSenhaMCR(1);
-									if (!us.getUsuario().toString().equals("")) {
-										l2.setVisibility(View.VISIBLE);
-										tv2.setText(us.getUsuario());
-										im2.setImageResource(R.drawable.chave);
+									try {
+										SQLiteControl dbus = new SQLiteControl(c);
+										util us = dbus.getSenhaMCR(1);
+										if (!us.getUsuario().toString().equals("")) {
+											t2.setVisibility(View.VISIBLE);
+											l2.setVisibility(View.VISIBLE);
+											tv2.setText(us.getUsuario());
+											im2.setImageResource(R.drawable.chave);
+										}
+									} catch (Exception e) {
+										t2.setVisibility(View.GONE);
+										l2.setVisibility(View.GONE);
 									}
-								} catch (Exception e) {
-									l2.setVisibility(View.GONE);
-								}
-								try {
-									SQLiteControl dbus = new SQLiteControl(c);
-									util us = dbus.getSuperVisor(1);
-									if (!us.getSenhaSuperVisor().toString().equals("")) {
-										l3.setVisibility(View.VISIBLE);
-										tv3.setText(us.getSenhaSuperVisor());
-										im3.setImageResource(R.drawable.chave);
+									try {
+										SQLiteControl dbus = new SQLiteControl(c);
+										util us = dbus.getSuperVisor(1);
+										if (!us.getSenhaSuperVisor().toString().equals("")) {
+											t3.setVisibility(View.VISIBLE);
+											l3.setVisibility(View.VISIBLE);
+											tv3.setText(us.getSenhaSuperVisor());
+											im3.setImageResource(R.drawable.chave);
+										}
+									} catch (Exception e) {
+										t3.setVisibility(View.GONE);
+										l3.setVisibility(View.GONE);
 									}
-								} catch (Exception e) {
-									l3.setVisibility(View.GONE);
-								}
-								try {
-									SQLiteControl dbus = new SQLiteControl(c);
-									util us = dbus.getSenhaRet(1);
-									if (!us.getUsuario().toString().equals("")) {
-										l4.setVisibility(View.VISIBLE);
-										tv4.setText(us.getUsuario());
-										im4.setImageResource(R.drawable.chave);
+									try {
+										SQLiteControl dbus = new SQLiteControl(c);
+										util us = dbus.getSenhaRet(1);
+										if (!us.getUsuario().toString().equals("")) {
+											t4.setVisibility(View.VISIBLE);
+											l4.setVisibility(View.VISIBLE);
+											tv4.setText(us.getUsuario());
+											im4.setImageResource(R.drawable.chave);
+										}
+									} catch (Exception e) {
+										t4.setVisibility(View.GONE);
+										l4.setVisibility(View.GONE);
 									}
-								} catch (Exception e) {
-									l4.setVisibility(View.GONE);
-								}
-								ed1.setOnClickListener(new OnClickListener() {
-									@Override
-									public void onClick(View v) {
-										LayoutInflater li = getLayoutInflater();
-										View r = li.inflate(R.layout.password_pos_client, null);
-										final TextInputEditText user = r.findViewById(R.id.user);
-										final TextInputEditText pass = r.findViewById(R.id.pass);
-
-										SQLiteControl db = new SQLiteControl(c);
-										final util us = db.getSenhaCM(1);
-										user.setText(us.getUsuario());
-										pass.setText(us.getSenha());
-
-										AlertDialog.Builder sv = new AlertDialog.Builder(c);
-										sv.setTitle("Atualizar Usuário / Senha CM:");
-										sv.setView(r);
-										sv.setPositiveButton("Atualizar", new DialogInterface.OnClickListener() {
-											@Override
-											public void onClick(DialogInterface dialog, int which) {
-												util us2 = new util();
-												us2.setUserId(us.getUserId());
-												us2.setUsuario(user.getText().toString());
-												us2.setSenha(pass.getText().toString());
-												SQLiteControl db = new SQLiteControl(c);
-												db.upSenhaCM(us2);
-												root.dismiss();
-												try {
-													File sd = Environment.getExternalStorageDirectory();
-													File data = Environment.getDataDirectory();
-
-													if (sd.canWrite()) {
-														String currentDBPath = "//data//" + c.getOpPackageName()
-																+ "//databases//" + "myDB.db";
-														String currentDBPath2 = "//data//" + c.getOpPackageName()
-																+ "//databases//" + "myDB.db-shm";
-														String currentDBPath3 = "//data//" + c.getOpPackageName()
-																+ "//databases//" + "myDB.db-wal";
-
-														String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-														String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-														String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
-
-														File currentDB = new File(data, currentDBPath);
-														File currentDB2 = new File(data, currentDBPath2);
-														File currentDB3 = new File(data, currentDBPath3);
-														File backupDB = new File(sd, backupDBPath);
-														File backupDB2 = new File(sd, backupDBPath2);
-														File backupDB3 = new File(sd, backupDBPath3);
-
-														if (currentDB2.exists()) {
-															FileChannel src2 = new FileInputStream(currentDB2).getChannel();
-															FileChannel dst = new FileOutputStream(backupDB2).getChannel();
-															dst.transferFrom(src2, 0, src2.size());
-															src2.close();
-															dst.close();
-														}
-														if (currentDB3.exists()) {
-															FileChannel src3 = new FileInputStream(currentDB3).getChannel();
-															FileChannel dst = new FileOutputStream(backupDB3).getChannel();
-															dst.transferFrom(src3, 0, src3.size());
-															src3.close();
-															dst.close();
-														}
-														FileChannel src4 = new FileInputStream(currentDB).getChannel();
-														FileChannel dst = new FileOutputStream(backupDB).getChannel();
-														dst.transferFrom(src4, 0, src4.size());
-														src4.close();
-														dst.close();
-													}
-												} catch (Exception e2) {
-
-												}
-											}
-										});
-										sv.setNegativeButton("Cancelar", null);
-										sv.create();
-										sv.show();
-									}
-								});
-								ed2.setOnClickListener(new OnClickListener() {
-									@Override
-									public void onClick(View v) {
-										LayoutInflater li = getLayoutInflater();
-										View r = li.inflate(R.layout.password_pos_client, null);
-										final TextInputEditText user = r.findViewById(R.id.user);
-										final TextInputEditText pass = r.findViewById(R.id.pass);
-
-										SQLiteControl db = new SQLiteControl(c);
-										final util us = db.getSenhaMCR(1);
-										user.setText(us.getUsuario());
-										pass.setText(us.getSenha());
-
-										AlertDialog.Builder sv = new AlertDialog.Builder(c);
-										sv.setTitle("Atualizar Usuário / Senha MCR:");
-										sv.setView(r);
-										sv.setPositiveButton("Atualizar", new DialogInterface.OnClickListener() {
-											@Override
-											public void onClick(DialogInterface dialog, int which) {
-												util us2 = new util();
-												us2.setUserId(us.getUserId());
-												us2.setUsuario(user.getText().toString());
-												us2.setSenha(pass.getText().toString());
-												SQLiteControl db = new SQLiteControl(c);
-												db.upSenhaMCR(us2);
-												root.dismiss();
-												try {
-													File sd = Environment.getExternalStorageDirectory();
-													File data = Environment.getDataDirectory();
-
-													if (sd.canWrite()) {
-														String currentDBPath = "//data//" + c.getOpPackageName()
-																+ "//databases//" + "myDB.db";
-														String currentDBPath2 = "//data//" + c.getOpPackageName()
-																+ "//databases//" + "myDB.db-shm";
-														String currentDBPath3 = "//data//" + c.getOpPackageName()
-																+ "//databases//" + "myDB.db-wal";
-
-														String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-														String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-														String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
-
-														File currentDB = new File(data, currentDBPath);
-														File currentDB2 = new File(data, currentDBPath2);
-														File currentDB3 = new File(data, currentDBPath3);
-														File backupDB = new File(sd, backupDBPath);
-														File backupDB2 = new File(sd, backupDBPath2);
-														File backupDB3 = new File(sd, backupDBPath3);
-
-														if (currentDB2.exists()) {
-															FileChannel src2 = new FileInputStream(currentDB2).getChannel();
-															FileChannel dst = new FileOutputStream(backupDB2).getChannel();
-															dst.transferFrom(src2, 0, src2.size());
-															src2.close();
-															dst.close();
-														}
-														if (currentDB3.exists()) {
-															FileChannel src3 = new FileInputStream(currentDB3).getChannel();
-															FileChannel dst = new FileOutputStream(backupDB3).getChannel();
-															dst.transferFrom(src3, 0, src3.size());
-															src3.close();
-															dst.close();
-														}
-														FileChannel src4 = new FileInputStream(currentDB).getChannel();
-														FileChannel dst = new FileOutputStream(backupDB).getChannel();
-														dst.transferFrom(src4, 0, src4.size());
-														src4.close();
-														dst.close();
-													}
-												} catch (Exception e2) {
-
-												}
-											}
-										});
-										sv.setNegativeButton("Cancelar", null);
-										sv.create();
-										sv.show();
-									}
-								});
-								ed3.setOnClickListener(new OnClickListener() {
-									@Override
-									public void onClick(View v) {
-										LayoutInflater li = getLayoutInflater();
-										View r = li.inflate(R.layout.password_pos_client, null);
-										final TextInputEditText user = r.findViewById(R.id.user);
-										final TextInputEditText pass = r.findViewById(R.id.pass);
-
-										SQLiteControl db = new SQLiteControl(c);
-										final util us = db.getSuperVisor(1);
-										pass.setText(us.getSenhaSuperVisor());
-										user.setVisibility(View.GONE);
-										AlertDialog.Builder sv = new AlertDialog.Builder(c);
-										sv.setTitle("Atualizar Usuário / Senha Sup:");
-										sv.setView(r);
-										sv.setPositiveButton("Atualizar", new DialogInterface.OnClickListener() {
-											@Override
-											public void onClick(DialogInterface dialog, int which) {
-												util us2 = new util();
-												us2.setUserId(us2.getSupervisor_id());
-												us2.setSenhaSuperVisor(pass.getText().toString());
-												SQLiteControl db = new SQLiteControl(c);
-												db.upSuperVisor(us2);
-												root.dismiss();
-												try {
-													File sd = Environment.getExternalStorageDirectory();
-													File data = Environment.getDataDirectory();
-
-													if (sd.canWrite()) {
-														String currentDBPath = "//data//" + c.getOpPackageName()
-																+ "//databases//" + "myDB.db";
-														String currentDBPath2 = "//data//" + c.getOpPackageName()
-																+ "//databases//" + "myDB.db-shm";
-														String currentDBPath3 = "//data//" + c.getOpPackageName()
-																+ "//databases//" + "myDB.db-wal";
-
-														String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-														String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-														String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
-
-														File currentDB = new File(data, currentDBPath);
-														File currentDB2 = new File(data, currentDBPath2);
-														File currentDB3 = new File(data, currentDBPath3);
-														File backupDB = new File(sd, backupDBPath);
-														File backupDB2 = new File(sd, backupDBPath2);
-														File backupDB3 = new File(sd, backupDBPath3);
-
-														if (currentDB2.exists()) {
-															FileChannel src2 = new FileInputStream(currentDB2).getChannel();
-															FileChannel dst = new FileOutputStream(backupDB2).getChannel();
-															dst.transferFrom(src2, 0, src2.size());
-															src2.close();
-															dst.close();
-														}
-														if (currentDB3.exists()) {
-															FileChannel src3 = new FileInputStream(currentDB3).getChannel();
-															FileChannel dst = new FileOutputStream(backupDB3).getChannel();
-															dst.transferFrom(src3, 0, src3.size());
-															src3.close();
-															dst.close();
-														}
-														FileChannel src4 = new FileInputStream(currentDB).getChannel();
-														FileChannel dst = new FileOutputStream(backupDB).getChannel();
-														dst.transferFrom(src4, 0, src4.size());
-														src4.close();
-														dst.close();
-													}
-												} catch (Exception e2) {
-
-												}
-											}
-										});
-										sv.setNegativeButton("Cancelar", null);
-										sv.create();
-										sv.show();
-									}
-								});
-
-								ed4.setOnClickListener(new OnClickListener() {
-									@Override
-									public void onClick(View v) {
-										LayoutInflater li = getLayoutInflater();
-										View r = li.inflate(R.layout.password_pos_client, null);
-										final TextInputEditText user = r.findViewById(R.id.user);
-										final TextInputEditText pass = r.findViewById(R.id.pass);
-
-										SQLiteControl db = new SQLiteControl(c);
-										final util us = db.getSenhaRet(1);
-										pass.setText(us.getSenha());
-										user.setText(us.getUsuario());
-										AlertDialog.Builder sv = new AlertDialog.Builder(c);
-										sv.setTitle("Atualizar Usuário / Senha Ret:");
-										sv.setView(r);
-										sv.setPositiveButton("Atualizar", new DialogInterface.OnClickListener() {
-											@Override
-											public void onClick(DialogInterface dialog, int which) {
-												util us2 = new util();
-												us2.setUserId(us.getUserId());
-												us2.setUsuario(user.getText().toString());
-												us2.setSenha(pass.getText().toString());
-												SQLiteControl db = new SQLiteControl(c);
-												db.upRetPass(us2);
-												root.dismiss();
-												try {
-													File sd = Environment.getExternalStorageDirectory();
-													File data = Environment.getDataDirectory();
-
-													if (sd.canWrite()) {
-														String currentDBPath = "//data//" + c.getOpPackageName()
-																+ "//databases//" + "myDB.db";
-														String currentDBPath2 = "//data//" + c.getOpPackageName()
-																+ "//databases//" + "myDB.db-shm";
-														String currentDBPath3 = "//data//" + c.getOpPackageName()
-																+ "//databases//" + "myDB.db-wal";
-
-														String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-														String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-														String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
-
-														File currentDB = new File(data, currentDBPath);
-														File currentDB2 = new File(data, currentDBPath2);
-														File currentDB3 = new File(data, currentDBPath3);
-														File backupDB = new File(sd, backupDBPath);
-														File backupDB2 = new File(sd, backupDBPath2);
-														File backupDB3 = new File(sd, backupDBPath3);
-
-														if (currentDB2.exists()) {
-															FileChannel src2 = new FileInputStream(currentDB2).getChannel();
-															FileChannel dst = new FileOutputStream(backupDB2).getChannel();
-															dst.transferFrom(src2, 0, src2.size());
-															src2.close();
-															dst.close();
-														}
-														if (currentDB3.exists()) {
-															FileChannel src3 = new FileInputStream(currentDB3).getChannel();
-															FileChannel dst = new FileOutputStream(backupDB3).getChannel();
-															dst.transferFrom(src3, 0, src3.size());
-															src3.close();
-															dst.close();
-														}
-														FileChannel src4 = new FileInputStream(currentDB).getChannel();
-														FileChannel dst = new FileOutputStream(backupDB).getChannel();
-														dst.transferFrom(src4, 0, src4.size());
-														src4.close();
-														dst.close();
-													}
-												} catch (Exception e2) {
-
-												}
-											}
-										});
-										sv.setNegativeButton("Cancelar", null);
-										sv.create();
-										sv.show();
-									}
-								});
-								AlertDialog.Builder alert = new AlertDialog.Builder(c);
-								alert.setTitle("Gerenciar Senhas:");
-								alert.setView(r);
-								alert.setPositiveButton("Cadastrar", new DialogInterface.OnClickListener() {
-									@Override
-									public void onClick(DialogInterface dialog, int which) {
-										String[] op = {
-												"Senha P/ PDV Informática",
-												"Senha P/ PDV Mercearia",
-												"Senha P/ Supervisor",
-												"Senha P/ Retaguarda"
-										};
-										AlertDialog.Builder chosser = new AlertDialog.Builder(c);
-										chosser.setSingleChoiceItems(op, 0, new DialogInterface.OnClickListener() {
-
-											@Override
-											public void onClick(DialogInterface dialog, int which) {
-												switch (which) {
-													case 0:
-														LayoutInflater li = getLayoutInflater();
-														View r = li.inflate(R.layout.password_pos_client, null);
-														final TextInputEditText user = r.findViewById(R.id.user);
-														final TextInputEditText pass = r.findViewById(R.id.pass);
-
-														AlertDialog.Builder sv = new AlertDialog.Builder(c);
-														sv.setTitle("Cadastrar Usuário / Senha CM:");
-														sv.setView(r);
-														sv.setPositiveButton("Cadastrar", new DialogInterface.OnClickListener() {
-															@Override
-															public void onClick(DialogInterface dialog, int which) {
-																util us2 = new util();
-																us2.setUsuario(user.getText().toString());
-																us2.setSenha(pass.getText().toString());
-																SQLiteControl db = new SQLiteControl(c);
-																db.setSenhaCM(us2);
-																root.dismiss();
-																try {
-																	File sd = Environment.getExternalStorageDirectory();
-																	File data = Environment.getDataDirectory();
-
-																	if (sd.canWrite()) {
-																		String currentDBPath = "//data//" + c.getOpPackageName()
-																				+ "//databases//" + "myDB.db";
-																		String currentDBPath2 = "//data//" + c.getOpPackageName()
-																				+ "//databases//" + "myDB.db-shm";
-																		String currentDBPath3 = "//data//" + c.getOpPackageName()
-																				+ "//databases//" + "myDB.db-wal";
-
-																		String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																		String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																		String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
-
-																		File currentDB = new File(data, currentDBPath);
-																		File currentDB2 = new File(data, currentDBPath2);
-																		File currentDB3 = new File(data, currentDBPath3);
-																		File backupDB = new File(sd, backupDBPath);
-																		File backupDB2 = new File(sd, backupDBPath2);
-																		File backupDB3 = new File(sd, backupDBPath3);
-
-																		if (currentDB2.exists()) {
-																			FileChannel src2 = new FileInputStream(currentDB2).getChannel();
-																			FileChannel dst = new FileOutputStream(backupDB2).getChannel();
-																			dst.transferFrom(src2, 0, src2.size());
-																			src2.close();
-																			dst.close();
-																		}
-																		if (currentDB3.exists()) {
-																			FileChannel src3 = new FileInputStream(currentDB3).getChannel();
-																			FileChannel dst = new FileOutputStream(backupDB3).getChannel();
-																			dst.transferFrom(src3, 0, src3.size());
-																			src3.close();
-																			dst.close();
-																		}
-																		FileChannel src4 = new FileInputStream(currentDB).getChannel();
-																		FileChannel dst = new FileOutputStream(backupDB).getChannel();
-																		dst.transferFrom(src4, 0, src4.size());
-																		src4.close();
-																		dst.close();
-																	}
-																} catch (Exception e2) {
-
-																}
-															}
-														});
-														sv.setNegativeButton("Cancelar", null);
-														sv.create();
-														sv.show();
-														break;
-													case 1:
-														LayoutInflater li2 = getLayoutInflater();
-														View r2 = li2.inflate(R.layout.password_pos_client, null);
-														final TextInputEditText user2 = r2.findViewById(R.id.user);
-														final TextInputEditText pass2 = r2.findViewById(R.id.pass);
-
-														AlertDialog.Builder sv2 = new AlertDialog.Builder(c);
-														sv2.setTitle("Cadastrar Usuário / Senha MCR:");
-														sv2.setView(r2);
-														sv2.setPositiveButton("Cadastrar", new DialogInterface.OnClickListener() {
-															@Override
-															public void onClick(DialogInterface dialog, int which) {
-																util us2 = new util();
-																us2.setUsuario(user2.getText().toString());
-																us2.setSenha(pass2.getText().toString());
-																SQLiteControl db = new SQLiteControl(c);
-																db.setSenhaMCR(us2);
-																root.dismiss();
-																try {
-																	File sd = Environment.getExternalStorageDirectory();
-																	File data = Environment.getDataDirectory();
-
-																	if (sd.canWrite()) {
-																		String currentDBPath = "//data//" + c.getOpPackageName()
-																				+ "//databases//" + "myDB.db";
-																		String currentDBPath2 = "//data//" + c.getOpPackageName()
-																				+ "//databases//" + "myDB.db-shm";
-																		String currentDBPath3 = "//data//" + c.getOpPackageName()
-																				+ "//databases//" + "myDB.db-wal";
-
-																		String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																		String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																		String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
-
-																		File currentDB = new File(data, currentDBPath);
-																		File currentDB2 = new File(data, currentDBPath2);
-																		File currentDB3 = new File(data, currentDBPath3);
-																		File backupDB = new File(sd, backupDBPath);
-																		File backupDB2 = new File(sd, backupDBPath2);
-																		File backupDB3 = new File(sd, backupDBPath3);
-
-																		if (currentDB2.exists()) {
-																			FileChannel src2 = new FileInputStream(currentDB2).getChannel();
-																			FileChannel dst = new FileOutputStream(backupDB2).getChannel();
-																			dst.transferFrom(src2, 0, src2.size());
-																			src2.close();
-																			dst.close();
-																		}
-																		if (currentDB3.exists()) {
-																			FileChannel src3 = new FileInputStream(currentDB3).getChannel();
-																			FileChannel dst = new FileOutputStream(backupDB3).getChannel();
-																			dst.transferFrom(src3, 0, src3.size());
-																			src3.close();
-																			dst.close();
-																		}
-																		FileChannel src4 = new FileInputStream(currentDB).getChannel();
-																		FileChannel dst = new FileOutputStream(backupDB).getChannel();
-																		dst.transferFrom(src4, 0, src4.size());
-																		src4.close();
-																		dst.close();
-																	}
-																} catch (Exception e2) {
-
-																}
-															}
-														});
-														sv2.setNegativeButton("Cancelar", null);
-														sv2.create();
-														sv2.show();
-														break;
-													case 2:
-														LayoutInflater li3 = getLayoutInflater();
-														View r3 = li3.inflate(R.layout.password_pos_client, null);
-														final TextInputEditText user3 = r3.findViewById(R.id.user);
-														final TextInputEditText pass3 = r3.findViewById(R.id.pass);
-														user3.setVisibility(View.GONE);
-														AlertDialog.Builder sv3 = new AlertDialog.Builder(c);
-														sv3.setTitle("Cadastrar Usuário / Senha Sup:");
-														sv3.setView(r3);
-														sv3.setPositiveButton("Cadastrar", new DialogInterface.OnClickListener() {
-															@Override
-															public void onClick(DialogInterface dialog, int which) {
-																util us2 = new util();
-																us2.setSenhaSuperVisor(pass3.getText().toString());
-																SQLiteControl db = new SQLiteControl(c);
-																db.setSuperVisor(us2);
-																root.dismiss();
-																try {
-																	File sd = Environment.getExternalStorageDirectory();
-																	File data = Environment.getDataDirectory();
-
-																	if (sd.canWrite()) {
-																		String currentDBPath = "//data//" + c.getOpPackageName()
-																				+ "//databases//" + "myDB.db";
-																		String currentDBPath2 = "//data//" + c.getOpPackageName()
-																				+ "//databases//" + "myDB.db-shm";
-																		String currentDBPath3 = "//data//" + c.getOpPackageName()
-																				+ "//databases//" + "myDB.db-wal";
-
-																		String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																		String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																		String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
-
-																		File currentDB = new File(data, currentDBPath);
-																		File currentDB2 = new File(data, currentDBPath2);
-																		File currentDB3 = new File(data, currentDBPath3);
-																		File backupDB = new File(sd, backupDBPath);
-																		File backupDB2 = new File(sd, backupDBPath2);
-																		File backupDB3 = new File(sd, backupDBPath3);
-
-																		if (currentDB2.exists()) {
-																			FileChannel src2 = new FileInputStream(currentDB2).getChannel();
-																			FileChannel dst = new FileOutputStream(backupDB2).getChannel();
-																			dst.transferFrom(src2, 0, src2.size());
-																			src2.close();
-																			dst.close();
-																		}
-																		if (currentDB3.exists()) {
-																			FileChannel src3 = new FileInputStream(currentDB3).getChannel();
-																			FileChannel dst = new FileOutputStream(backupDB3).getChannel();
-																			dst.transferFrom(src3, 0, src3.size());
-																			src3.close();
-																			dst.close();
-																		}
-																		FileChannel src4 = new FileInputStream(currentDB).getChannel();
-																		FileChannel dst = new FileOutputStream(backupDB).getChannel();
-																		dst.transferFrom(src4, 0, src4.size());
-																		src4.close();
-																		dst.close();
-																	}
-																} catch (Exception e2) {
-
-																}
-															}
-														});
-														sv3.setNegativeButton("Cancelar", null);
-														sv3.create();
-														sv3.show();
-														break;
-													case 3:
-														LayoutInflater li4 = getLayoutInflater();
-														View r4 = li4.inflate(R.layout.password_pos_client, null);
-														final TextInputEditText user4 = r4.findViewById(R.id.user);
-														final TextInputEditText pass4 = r4.findViewById(R.id.pass);
-
-														AlertDialog.Builder sv4 = new AlertDialog.Builder(c);
-														sv4.setTitle("Cadastrar Usuário / Senha Ret:");
-														sv4.setView(r4);
-														sv4.setPositiveButton("Cadastrar", new DialogInterface.OnClickListener() {
-															@Override
-															public void onClick(DialogInterface dialog, int which) {
-																util us2 = new util();
-																us2.setUsuario(user4.getText().toString());
-																us2.setSenha(pass4.getText().toString());
-																SQLiteControl db = new SQLiteControl(c);
-																db.setRetPass(us2);
-																root.dismiss();
-																try {
-																	File sd = Environment.getExternalStorageDirectory();
-																	File data = Environment.getDataDirectory();
-
-																	if (sd.canWrite()) {
-																		String currentDBPath = "//data//" + c.getOpPackageName()
-																				+ "//databases//" + "myDB.db";
-																		String currentDBPath2 = "//data//" + c.getOpPackageName()
-																				+ "//databases//" + "myDB.db-shm";
-																		String currentDBPath3 = "//data//" + c.getOpPackageName()
-																				+ "//databases//" + "myDB.db-wal";
-
-																		String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																		String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																		String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
-
-																		File currentDB = new File(data, currentDBPath);
-																		File currentDB2 = new File(data, currentDBPath2);
-																		File currentDB3 = new File(data, currentDBPath3);
-																		File backupDB = new File(sd, backupDBPath);
-																		File backupDB2 = new File(sd, backupDBPath2);
-																		File backupDB3 = new File(sd, backupDBPath3);
-
-																		if (currentDB2.exists()) {
-																			FileChannel src2 = new FileInputStream(currentDB2).getChannel();
-																			FileChannel dst = new FileOutputStream(backupDB2).getChannel();
-																			dst.transferFrom(src2, 0, src2.size());
-																			src2.close();
-																			dst.close();
-																		}
-																		if (currentDB3.exists()) {
-																			FileChannel src3 = new FileInputStream(currentDB3).getChannel();
-																			FileChannel dst = new FileOutputStream(backupDB3).getChannel();
-																			dst.transferFrom(src3, 0, src3.size());
-																			src3.close();
-																			dst.close();
-																		}
-																		FileChannel src4 = new FileInputStream(currentDB).getChannel();
-																		FileChannel dst = new FileOutputStream(backupDB).getChannel();
-																		dst.transferFrom(src4, 0, src4.size());
-																		src4.close();
-																		dst.close();
-																	}
-																} catch (Exception e2) {
-
-																}
-															}
-														});
-														sv4.setNegativeButton("Cancelar", null);
-														sv4.create();
-														sv4.show();
-														break;
-												}
-											}
-										});
-										chosser.create();
-										chosser.show();
-									}
-								});
-								alert.setNegativeButton("Cancelar", null);
-								root = alert.create();
-								root = alert.show();
-							}
-						} catch (Exception e) {
-							String[] op = {
-									"Senha P/ PDV Informática",
-									"Senha P/ PDV Mercearia",
-									"Senha P/ Supervisor",
-									"Senha P/ Retaguarda"
-							};
-							AlertDialog.Builder chosser = new AlertDialog.Builder(c);
-							chosser.setSingleChoiceItems(op, 0, new DialogInterface.OnClickListener() {
-
-								@Override
-								public void onClick(DialogInterface dialog, int which) {
-									switch (which) {
-										case 0:
+									ed1.setOnClickListener(new OnClickListener() {
+										@Override
+										public void onClick(View v) {
 											LayoutInflater li = getLayoutInflater();
 											View r = li.inflate(R.layout.password_pos_client, null);
 											final TextInputEditText user = r.findViewById(R.id.user);
 											final TextInputEditText pass = r.findViewById(R.id.pass);
 
+											SQLiteControl db = new SQLiteControl(c);
+											final util us = db.getSenhaCM(1);
+											user.setText(us.getUsuario());
+											pass.setText(us.getSenha());
+
 											AlertDialog.Builder sv = new AlertDialog.Builder(c);
-											sv.setTitle("Cadastrar Usuário / Senha CM:");
+											sv.setTitle("Atualizar Usuário / Senha CM:");
 											sv.setView(r);
-											sv.setPositiveButton("Cadastrar", new DialogInterface.OnClickListener() {
+											sv.setPositiveButton("Atualizar", new DialogInterface.OnClickListener() {
 												@Override
 												public void onClick(DialogInterface dialog, int which) {
 													util us2 = new util();
+													us2.setUserId(us.getUserId());
 													us2.setUsuario(user.getText().toString());
 													us2.setSenha(pass.getText().toString());
 													SQLiteControl db = new SQLiteControl(c);
-													db.setSenhaCM(us2);
+													db.upSenhaCM(us2);
+													root.dismiss();
 													try {
 														File sd = Environment.getExternalStorageDirectory();
 														File data = Environment.getDataDirectory();
@@ -5705,24 +5094,34 @@ public class MainActivity extends AppCompatActivity
 											sv.setNegativeButton("Cancelar", null);
 											sv.create();
 											sv.show();
-											break;
-										case 1:
-											LayoutInflater li2 = getLayoutInflater();
-											View r2 = li2.inflate(R.layout.password_pos_client, null);
-											final TextInputEditText user2 = r2.findViewById(R.id.user);
-											final TextInputEditText pass2 = r2.findViewById(R.id.pass);
+										}
+									});
+									ed2.setOnClickListener(new OnClickListener() {
+										@Override
+										public void onClick(View v) {
+											LayoutInflater li = getLayoutInflater();
+											View r = li.inflate(R.layout.password_pos_client, null);
+											final TextInputEditText user = r.findViewById(R.id.user);
+											final TextInputEditText pass = r.findViewById(R.id.pass);
 
-											AlertDialog.Builder sv2 = new AlertDialog.Builder(c);
-											sv2.setTitle("Cadastrar Usuário / Senha MCR:");
-											sv2.setView(r2);
-											sv2.setPositiveButton("Cadastrar", new DialogInterface.OnClickListener() {
+											SQLiteControl db = new SQLiteControl(c);
+											final util us = db.getSenhaMCR(1);
+											user.setText(us.getUsuario());
+											pass.setText(us.getSenha());
+
+											AlertDialog.Builder sv = new AlertDialog.Builder(c);
+											sv.setTitle("Atualizar Usuário / Senha MCR:");
+											sv.setView(r);
+											sv.setPositiveButton("Atualizar", new DialogInterface.OnClickListener() {
 												@Override
 												public void onClick(DialogInterface dialog, int which) {
 													util us2 = new util();
-													us2.setUsuario(user2.getText().toString());
-													us2.setSenha(pass2.getText().toString());
+													us2.setUserId(us.getUserId());
+													us2.setUsuario(user.getText().toString());
+													us2.setSenha(pass.getText().toString());
 													SQLiteControl db = new SQLiteControl(c);
-													db.setSenhaMCR(us2);
+													db.upSenhaMCR(us2);
+													root.dismiss();
 													try {
 														File sd = Environment.getExternalStorageDirectory();
 														File data = Environment.getDataDirectory();
@@ -5771,26 +5170,35 @@ public class MainActivity extends AppCompatActivity
 													}
 												}
 											});
-											sv2.setNegativeButton("Cancelar", null);
-											sv2.create();
-											sv2.show();
-											break;
-										case 2:
-											LayoutInflater li3 = getLayoutInflater();
-											View r3 = li3.inflate(R.layout.password_pos_client, null);
-											final TextInputEditText user3 = r3.findViewById(R.id.user);
-											final TextInputEditText pass3 = r3.findViewById(R.id.pass);
-											user3.setVisibility(View.GONE);
-											AlertDialog.Builder sv3 = new AlertDialog.Builder(c);
-											sv3.setTitle("Cadastrar Usuário / Senha Sup:");
-											sv3.setView(r3);
-											sv3.setPositiveButton("Cadastrar", new DialogInterface.OnClickListener() {
+											sv.setNegativeButton("Cancelar", null);
+											sv.create();
+											sv.show();
+										}
+									});
+									ed3.setOnClickListener(new OnClickListener() {
+										@Override
+										public void onClick(View v) {
+											LayoutInflater li = getLayoutInflater();
+											View r = li.inflate(R.layout.password_pos_client, null);
+											final TextInputEditText user = r.findViewById(R.id.user);
+											final TextInputEditText pass = r.findViewById(R.id.pass);
+
+											SQLiteControl db = new SQLiteControl(c);
+											final util us = db.getSuperVisor(1);
+											pass.setText(us.getSenhaSuperVisor());
+											user.setVisibility(View.GONE);
+											AlertDialog.Builder sv = new AlertDialog.Builder(c);
+											sv.setTitle("Atualizar Usuário / Senha Sup:");
+											sv.setView(r);
+											sv.setPositiveButton("Atualizar", new DialogInterface.OnClickListener() {
 												@Override
 												public void onClick(DialogInterface dialog, int which) {
 													util us2 = new util();
-													us2.setSenhaSuperVisor(pass3.getText().toString());
+													us2.setUserId(us2.getSupervisor_id());
+													us2.setSenhaSuperVisor(pass.getText().toString());
 													SQLiteControl db = new SQLiteControl(c);
-													db.setSuperVisor(us2);
+													db.upSuperVisor(us2);
+													root.dismiss();
 													try {
 														File sd = Environment.getExternalStorageDirectory();
 														File data = Environment.getDataDirectory();
@@ -5839,27 +5247,37 @@ public class MainActivity extends AppCompatActivity
 													}
 												}
 											});
-											sv3.setNegativeButton("Cancelar", null);
-											sv3.create();
-											sv3.show();
-											break;
-										case 3:
-											LayoutInflater li4 = getLayoutInflater();
-											View r4 = li4.inflate(R.layout.password_pos_client, null);
-											final TextInputEditText user4 = r4.findViewById(R.id.user);
-											final TextInputEditText pass4 = r4.findViewById(R.id.pass);
+											sv.setNegativeButton("Cancelar", null);
+											sv.create();
+											sv.show();
+										}
+									});
 
-											AlertDialog.Builder sv4 = new AlertDialog.Builder(c);
-											sv4.setTitle("Cadastrar Usuário / Senha Ret:");
-											sv4.setView(r4);
-											sv4.setPositiveButton("Cadastrar", new DialogInterface.OnClickListener() {
+									ed4.setOnClickListener(new OnClickListener() {
+										@Override
+										public void onClick(View v) {
+											LayoutInflater li = getLayoutInflater();
+											View r = li.inflate(R.layout.password_pos_client, null);
+											final TextInputEditText user = r.findViewById(R.id.user);
+											final TextInputEditText pass = r.findViewById(R.id.pass);
+
+											SQLiteControl db = new SQLiteControl(c);
+											final util us = db.getSenhaRet(1);
+											pass.setText(us.getSenha());
+											user.setText(us.getUsuario());
+											AlertDialog.Builder sv = new AlertDialog.Builder(c);
+											sv.setTitle("Atualizar Usuário / Senha Ret:");
+											sv.setView(r);
+											sv.setPositiveButton("Atualizar", new DialogInterface.OnClickListener() {
 												@Override
 												public void onClick(DialogInterface dialog, int which) {
 													util us2 = new util();
-													us2.setUsuario(user4.getText().toString());
-													us2.setSenha(pass4.getText().toString());
+													us2.setUserId(us.getUserId());
+													us2.setUsuario(user.getText().toString());
+													us2.setSenha(pass.getText().toString());
 													SQLiteControl db = new SQLiteControl(c);
-													db.setRetPass(us2);
+													db.upRetPass(us2);
+													root.dismiss();
 													try {
 														File sd = Environment.getExternalStorageDirectory();
 														File data = Environment.getDataDirectory();
@@ -5908,25 +5326,623 @@ public class MainActivity extends AppCompatActivity
 													}
 												}
 											});
-											sv4.setNegativeButton("Cancelar", null);
-											sv4.create();
-											sv4.show();
-											break;
-									}
+											sv.setNegativeButton("Cancelar", null);
+											sv.create();
+											sv.show();
+										}
+									});
+									AlertDialog.Builder alert = new AlertDialog.Builder(c);
+									alert.setTitle("Gerenciar Senhas:");
+									alert.setView(r);
+									alert.setPositiveButton("Cadastrar", new DialogInterface.OnClickListener() {
+										@Override
+										public void onClick(DialogInterface dialog, int which) {
+											String[] op = {
+													"Senha P/ PDV Informática",
+													"Senha P/ PDV Mercearia",
+													"Senha P/ Supervisor",
+													"Senha P/ Retaguarda"
+											};
+											AlertDialog.Builder chosser = new AlertDialog.Builder(c);
+											chosser.setSingleChoiceItems(op, 0, new DialogInterface.OnClickListener() {
+
+												@Override
+												public void onClick(DialogInterface dialog, int which) {
+													switch (which) {
+														case 0:
+															LayoutInflater li = getLayoutInflater();
+															View r = li.inflate(R.layout.password_pos_client, null);
+															final TextInputEditText user = r.findViewById(R.id.user);
+															final TextInputEditText pass = r.findViewById(R.id.pass);
+
+															AlertDialog.Builder sv = new AlertDialog.Builder(c);
+															sv.setTitle("Cadastrar Usuário / Senha CM:");
+															sv.setView(r);
+															sv.setPositiveButton("Cadastrar", new DialogInterface.OnClickListener() {
+																@Override
+																public void onClick(DialogInterface dialog, int which) {
+																	util us2 = new util();
+																	us2.setUsuario(user.getText().toString());
+																	us2.setSenha(pass.getText().toString());
+																	SQLiteControl db = new SQLiteControl(c);
+																	db.setSenhaCM(us2);
+																	root.dismiss();
+																	try {
+																		File sd = Environment.getExternalStorageDirectory();
+																		File data = Environment.getDataDirectory();
+
+																		if (sd.canWrite()) {
+																			String currentDBPath = "//data//" + c.getOpPackageName()
+																					+ "//databases//" + "myDB.db";
+																			String currentDBPath2 = "//data//" + c.getOpPackageName()
+																					+ "//databases//" + "myDB.db-shm";
+																			String currentDBPath3 = "//data//" + c.getOpPackageName()
+																					+ "//databases//" + "myDB.db-wal";
+
+																			String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
+																			String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
+																			String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+
+																			File currentDB = new File(data, currentDBPath);
+																			File currentDB2 = new File(data, currentDBPath2);
+																			File currentDB3 = new File(data, currentDBPath3);
+																			File backupDB = new File(sd, backupDBPath);
+																			File backupDB2 = new File(sd, backupDBPath2);
+																			File backupDB3 = new File(sd, backupDBPath3);
+
+																			if (currentDB2.exists()) {
+																				FileChannel src2 = new FileInputStream(currentDB2).getChannel();
+																				FileChannel dst = new FileOutputStream(backupDB2).getChannel();
+																				dst.transferFrom(src2, 0, src2.size());
+																				src2.close();
+																				dst.close();
+																			}
+																			if (currentDB3.exists()) {
+																				FileChannel src3 = new FileInputStream(currentDB3).getChannel();
+																				FileChannel dst = new FileOutputStream(backupDB3).getChannel();
+																				dst.transferFrom(src3, 0, src3.size());
+																				src3.close();
+																				dst.close();
+																			}
+																			FileChannel src4 = new FileInputStream(currentDB).getChannel();
+																			FileChannel dst = new FileOutputStream(backupDB).getChannel();
+																			dst.transferFrom(src4, 0, src4.size());
+																			src4.close();
+																			dst.close();
+																		}
+																	} catch (Exception e2) {
+
+																	}
+																}
+															});
+															sv.setNegativeButton("Cancelar", null);
+															sv.create();
+															sv.show();
+															break;
+														case 1:
+															LayoutInflater li2 = getLayoutInflater();
+															View r2 = li2.inflate(R.layout.password_pos_client, null);
+															final TextInputEditText user2 = r2.findViewById(R.id.user);
+															final TextInputEditText pass2 = r2.findViewById(R.id.pass);
+
+															AlertDialog.Builder sv2 = new AlertDialog.Builder(c);
+															sv2.setTitle("Cadastrar Usuário / Senha MCR:");
+															sv2.setView(r2);
+															sv2.setPositiveButton("Cadastrar", new DialogInterface.OnClickListener() {
+																@Override
+																public void onClick(DialogInterface dialog, int which) {
+																	util us2 = new util();
+																	us2.setUsuario(user2.getText().toString());
+																	us2.setSenha(pass2.getText().toString());
+																	SQLiteControl db = new SQLiteControl(c);
+																	db.setSenhaMCR(us2);
+																	root.dismiss();
+																	try {
+																		File sd = Environment.getExternalStorageDirectory();
+																		File data = Environment.getDataDirectory();
+
+																		if (sd.canWrite()) {
+																			String currentDBPath = "//data//" + c.getOpPackageName()
+																					+ "//databases//" + "myDB.db";
+																			String currentDBPath2 = "//data//" + c.getOpPackageName()
+																					+ "//databases//" + "myDB.db-shm";
+																			String currentDBPath3 = "//data//" + c.getOpPackageName()
+																					+ "//databases//" + "myDB.db-wal";
+
+																			String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
+																			String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
+																			String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+
+																			File currentDB = new File(data, currentDBPath);
+																			File currentDB2 = new File(data, currentDBPath2);
+																			File currentDB3 = new File(data, currentDBPath3);
+																			File backupDB = new File(sd, backupDBPath);
+																			File backupDB2 = new File(sd, backupDBPath2);
+																			File backupDB3 = new File(sd, backupDBPath3);
+
+																			if (currentDB2.exists()) {
+																				FileChannel src2 = new FileInputStream(currentDB2).getChannel();
+																				FileChannel dst = new FileOutputStream(backupDB2).getChannel();
+																				dst.transferFrom(src2, 0, src2.size());
+																				src2.close();
+																				dst.close();
+																			}
+																			if (currentDB3.exists()) {
+																				FileChannel src3 = new FileInputStream(currentDB3).getChannel();
+																				FileChannel dst = new FileOutputStream(backupDB3).getChannel();
+																				dst.transferFrom(src3, 0, src3.size());
+																				src3.close();
+																				dst.close();
+																			}
+																			FileChannel src4 = new FileInputStream(currentDB).getChannel();
+																			FileChannel dst = new FileOutputStream(backupDB).getChannel();
+																			dst.transferFrom(src4, 0, src4.size());
+																			src4.close();
+																			dst.close();
+																		}
+																	} catch (Exception e2) {
+
+																	}
+																}
+															});
+															sv2.setNegativeButton("Cancelar", null);
+															sv2.create();
+															sv2.show();
+															break;
+														case 2:
+															LayoutInflater li3 = getLayoutInflater();
+															View r3 = li3.inflate(R.layout.password_pos_client, null);
+															final TextInputEditText user3 = r3.findViewById(R.id.user);
+															final TextInputEditText pass3 = r3.findViewById(R.id.pass);
+															user3.setVisibility(View.GONE);
+															AlertDialog.Builder sv3 = new AlertDialog.Builder(c);
+															sv3.setTitle("Cadastrar Usuário / Senha Sup:");
+															sv3.setView(r3);
+															sv3.setPositiveButton("Cadastrar", new DialogInterface.OnClickListener() {
+																@Override
+																public void onClick(DialogInterface dialog, int which) {
+																	util us2 = new util();
+																	us2.setSenhaSuperVisor(pass3.getText().toString());
+																	SQLiteControl db = new SQLiteControl(c);
+																	db.setSuperVisor(us2);
+																	root.dismiss();
+																	try {
+																		File sd = Environment.getExternalStorageDirectory();
+																		File data = Environment.getDataDirectory();
+
+																		if (sd.canWrite()) {
+																			String currentDBPath = "//data//" + c.getOpPackageName()
+																					+ "//databases//" + "myDB.db";
+																			String currentDBPath2 = "//data//" + c.getOpPackageName()
+																					+ "//databases//" + "myDB.db-shm";
+																			String currentDBPath3 = "//data//" + c.getOpPackageName()
+																					+ "//databases//" + "myDB.db-wal";
+
+																			String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
+																			String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
+																			String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+
+																			File currentDB = new File(data, currentDBPath);
+																			File currentDB2 = new File(data, currentDBPath2);
+																			File currentDB3 = new File(data, currentDBPath3);
+																			File backupDB = new File(sd, backupDBPath);
+																			File backupDB2 = new File(sd, backupDBPath2);
+																			File backupDB3 = new File(sd, backupDBPath3);
+
+																			if (currentDB2.exists()) {
+																				FileChannel src2 = new FileInputStream(currentDB2).getChannel();
+																				FileChannel dst = new FileOutputStream(backupDB2).getChannel();
+																				dst.transferFrom(src2, 0, src2.size());
+																				src2.close();
+																				dst.close();
+																			}
+																			if (currentDB3.exists()) {
+																				FileChannel src3 = new FileInputStream(currentDB3).getChannel();
+																				FileChannel dst = new FileOutputStream(backupDB3).getChannel();
+																				dst.transferFrom(src3, 0, src3.size());
+																				src3.close();
+																				dst.close();
+																			}
+																			FileChannel src4 = new FileInputStream(currentDB).getChannel();
+																			FileChannel dst = new FileOutputStream(backupDB).getChannel();
+																			dst.transferFrom(src4, 0, src4.size());
+																			src4.close();
+																			dst.close();
+																		}
+																	} catch (Exception e2) {
+
+																	}
+																}
+															});
+															sv3.setNegativeButton("Cancelar", null);
+															sv3.create();
+															sv3.show();
+															break;
+														case 3:
+															LayoutInflater li4 = getLayoutInflater();
+															View r4 = li4.inflate(R.layout.password_pos_client, null);
+															final TextInputEditText user4 = r4.findViewById(R.id.user);
+															final TextInputEditText pass4 = r4.findViewById(R.id.pass);
+
+															AlertDialog.Builder sv4 = new AlertDialog.Builder(c);
+															sv4.setTitle("Cadastrar Usuário / Senha Ret:");
+															sv4.setView(r4);
+															sv4.setPositiveButton("Cadastrar", new DialogInterface.OnClickListener() {
+																@Override
+																public void onClick(DialogInterface dialog, int which) {
+																	util us2 = new util();
+																	us2.setUsuario(user4.getText().toString());
+																	us2.setSenha(pass4.getText().toString());
+																	SQLiteControl db = new SQLiteControl(c);
+																	db.setRetPass(us2);
+																	root.dismiss();
+																	try {
+																		File sd = Environment.getExternalStorageDirectory();
+																		File data = Environment.getDataDirectory();
+
+																		if (sd.canWrite()) {
+																			String currentDBPath = "//data//" + c.getOpPackageName()
+																					+ "//databases//" + "myDB.db";
+																			String currentDBPath2 = "//data//" + c.getOpPackageName()
+																					+ "//databases//" + "myDB.db-shm";
+																			String currentDBPath3 = "//data//" + c.getOpPackageName()
+																					+ "//databases//" + "myDB.db-wal";
+
+																			String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
+																			String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
+																			String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+
+																			File currentDB = new File(data, currentDBPath);
+																			File currentDB2 = new File(data, currentDBPath2);
+																			File currentDB3 = new File(data, currentDBPath3);
+																			File backupDB = new File(sd, backupDBPath);
+																			File backupDB2 = new File(sd, backupDBPath2);
+																			File backupDB3 = new File(sd, backupDBPath3);
+
+																			if (currentDB2.exists()) {
+																				FileChannel src2 = new FileInputStream(currentDB2).getChannel();
+																				FileChannel dst = new FileOutputStream(backupDB2).getChannel();
+																				dst.transferFrom(src2, 0, src2.size());
+																				src2.close();
+																				dst.close();
+																			}
+																			if (currentDB3.exists()) {
+																				FileChannel src3 = new FileInputStream(currentDB3).getChannel();
+																				FileChannel dst = new FileOutputStream(backupDB3).getChannel();
+																				dst.transferFrom(src3, 0, src3.size());
+																				src3.close();
+																				dst.close();
+																			}
+																			FileChannel src4 = new FileInputStream(currentDB).getChannel();
+																			FileChannel dst = new FileOutputStream(backupDB).getChannel();
+																			dst.transferFrom(src4, 0, src4.size());
+																			src4.close();
+																			dst.close();
+																		}
+																	} catch (Exception e2) {
+
+																	}
+																}
+															});
+															sv4.setNegativeButton("Cancelar", null);
+															sv4.create();
+															sv4.show();
+															break;
+													}
+												}
+											});
+											chosser.create();
+											chosser.show();
+										}
+									});
+									alert.setNegativeButton("Cancelar", null);
+									root = alert.create();
+									root = alert.show();
 								}
-							});
-							chosser.create();
-							chosser.show();
-						}
-						if (op[which].toString().startsWith("Trocar Retaguarda")) {
+							} catch (Exception e) {
+								String[] op = {
+										"Senha P/ PDV Informática",
+										"Senha P/ PDV Mercearia",
+										"Senha P/ Supervisor",
+										"Senha P/ Retaguarda"
+								};
+								AlertDialog.Builder chosser = new AlertDialog.Builder(c);
+								chosser.setSingleChoiceItems(op, 0, new DialogInterface.OnClickListener() {
+
+									@Override
+									public void onClick(DialogInterface dialog, int which) {
+										switch (which) {
+											case 0:
+												LayoutInflater li = getLayoutInflater();
+												View r = li.inflate(R.layout.password_pos_client, null);
+												final TextInputEditText user = r.findViewById(R.id.user);
+												final TextInputEditText pass = r.findViewById(R.id.pass);
+
+												AlertDialog.Builder sv = new AlertDialog.Builder(c);
+												sv.setTitle("Cadastrar Usuário / Senha CM:");
+												sv.setView(r);
+												sv.setPositiveButton("Cadastrar", new DialogInterface.OnClickListener() {
+													@Override
+													public void onClick(DialogInterface dialog, int which) {
+														util us2 = new util();
+														us2.setUsuario(user.getText().toString());
+														us2.setSenha(pass.getText().toString());
+														SQLiteControl db = new SQLiteControl(c);
+														db.setSenhaCM(us2);
+														try {
+															File sd = Environment.getExternalStorageDirectory();
+															File data = Environment.getDataDirectory();
+
+															if (sd.canWrite()) {
+																String currentDBPath = "//data//" + c.getOpPackageName()
+																		+ "//databases//" + "myDB.db";
+																String currentDBPath2 = "//data//" + c.getOpPackageName()
+																		+ "//databases//" + "myDB.db-shm";
+																String currentDBPath3 = "//data//" + c.getOpPackageName()
+																		+ "//databases//" + "myDB.db-wal";
+
+																String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
+																String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
+																String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+
+																File currentDB = new File(data, currentDBPath);
+																File currentDB2 = new File(data, currentDBPath2);
+																File currentDB3 = new File(data, currentDBPath3);
+																File backupDB = new File(sd, backupDBPath);
+																File backupDB2 = new File(sd, backupDBPath2);
+																File backupDB3 = new File(sd, backupDBPath3);
+
+																if (currentDB2.exists()) {
+																	FileChannel src2 = new FileInputStream(currentDB2).getChannel();
+																	FileChannel dst = new FileOutputStream(backupDB2).getChannel();
+																	dst.transferFrom(src2, 0, src2.size());
+																	src2.close();
+																	dst.close();
+																}
+																if (currentDB3.exists()) {
+																	FileChannel src3 = new FileInputStream(currentDB3).getChannel();
+																	FileChannel dst = new FileOutputStream(backupDB3).getChannel();
+																	dst.transferFrom(src3, 0, src3.size());
+																	src3.close();
+																	dst.close();
+																}
+																FileChannel src4 = new FileInputStream(currentDB).getChannel();
+																FileChannel dst = new FileOutputStream(backupDB).getChannel();
+																dst.transferFrom(src4, 0, src4.size());
+																src4.close();
+																dst.close();
+															}
+														} catch (Exception e2) {
+
+														}
+													}
+												});
+												sv.setNegativeButton("Cancelar", null);
+												sv.create();
+												sv.show();
+												break;
+											case 1:
+												LayoutInflater li2 = getLayoutInflater();
+												View r2 = li2.inflate(R.layout.password_pos_client, null);
+												final TextInputEditText user2 = r2.findViewById(R.id.user);
+												final TextInputEditText pass2 = r2.findViewById(R.id.pass);
+
+												AlertDialog.Builder sv2 = new AlertDialog.Builder(c);
+												sv2.setTitle("Cadastrar Usuário / Senha MCR:");
+												sv2.setView(r2);
+												sv2.setPositiveButton("Cadastrar", new DialogInterface.OnClickListener() {
+													@Override
+													public void onClick(DialogInterface dialog, int which) {
+														util us2 = new util();
+														us2.setUsuario(user2.getText().toString());
+														us2.setSenha(pass2.getText().toString());
+														SQLiteControl db = new SQLiteControl(c);
+														db.setSenhaMCR(us2);
+														try {
+															File sd = Environment.getExternalStorageDirectory();
+															File data = Environment.getDataDirectory();
+
+															if (sd.canWrite()) {
+																String currentDBPath = "//data//" + c.getOpPackageName()
+																		+ "//databases//" + "myDB.db";
+																String currentDBPath2 = "//data//" + c.getOpPackageName()
+																		+ "//databases//" + "myDB.db-shm";
+																String currentDBPath3 = "//data//" + c.getOpPackageName()
+																		+ "//databases//" + "myDB.db-wal";
+
+																String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
+																String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
+																String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+
+																File currentDB = new File(data, currentDBPath);
+																File currentDB2 = new File(data, currentDBPath2);
+																File currentDB3 = new File(data, currentDBPath3);
+																File backupDB = new File(sd, backupDBPath);
+																File backupDB2 = new File(sd, backupDBPath2);
+																File backupDB3 = new File(sd, backupDBPath3);
+
+																if (currentDB2.exists()) {
+																	FileChannel src2 = new FileInputStream(currentDB2).getChannel();
+																	FileChannel dst = new FileOutputStream(backupDB2).getChannel();
+																	dst.transferFrom(src2, 0, src2.size());
+																	src2.close();
+																	dst.close();
+																}
+																if (currentDB3.exists()) {
+																	FileChannel src3 = new FileInputStream(currentDB3).getChannel();
+																	FileChannel dst = new FileOutputStream(backupDB3).getChannel();
+																	dst.transferFrom(src3, 0, src3.size());
+																	src3.close();
+																	dst.close();
+																}
+																FileChannel src4 = new FileInputStream(currentDB).getChannel();
+																FileChannel dst = new FileOutputStream(backupDB).getChannel();
+																dst.transferFrom(src4, 0, src4.size());
+																src4.close();
+																dst.close();
+															}
+														} catch (Exception e2) {
+
+														}
+													}
+												});
+												sv2.setNegativeButton("Cancelar", null);
+												sv2.create();
+												sv2.show();
+												break;
+											case 2:
+												LayoutInflater li3 = getLayoutInflater();
+												View r3 = li3.inflate(R.layout.password_pos_client, null);
+												final TextInputEditText user3 = r3.findViewById(R.id.user);
+												final TextInputEditText pass3 = r3.findViewById(R.id.pass);
+												user3.setVisibility(View.GONE);
+												AlertDialog.Builder sv3 = new AlertDialog.Builder(c);
+												sv3.setTitle("Cadastrar Usuário / Senha Sup:");
+												sv3.setView(r3);
+												sv3.setPositiveButton("Cadastrar", new DialogInterface.OnClickListener() {
+													@Override
+													public void onClick(DialogInterface dialog, int which) {
+														util us2 = new util();
+														us2.setSenhaSuperVisor(pass3.getText().toString());
+														SQLiteControl db = new SQLiteControl(c);
+														db.setSuperVisor(us2);
+														try {
+															File sd = Environment.getExternalStorageDirectory();
+															File data = Environment.getDataDirectory();
+
+															if (sd.canWrite()) {
+																String currentDBPath = "//data//" + c.getOpPackageName()
+																		+ "//databases//" + "myDB.db";
+																String currentDBPath2 = "//data//" + c.getOpPackageName()
+																		+ "//databases//" + "myDB.db-shm";
+																String currentDBPath3 = "//data//" + c.getOpPackageName()
+																		+ "//databases//" + "myDB.db-wal";
+
+																String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
+																String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
+																String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+
+																File currentDB = new File(data, currentDBPath);
+																File currentDB2 = new File(data, currentDBPath2);
+																File currentDB3 = new File(data, currentDBPath3);
+																File backupDB = new File(sd, backupDBPath);
+																File backupDB2 = new File(sd, backupDBPath2);
+																File backupDB3 = new File(sd, backupDBPath3);
+
+																if (currentDB2.exists()) {
+																	FileChannel src2 = new FileInputStream(currentDB2).getChannel();
+																	FileChannel dst = new FileOutputStream(backupDB2).getChannel();
+																	dst.transferFrom(src2, 0, src2.size());
+																	src2.close();
+																	dst.close();
+																}
+																if (currentDB3.exists()) {
+																	FileChannel src3 = new FileInputStream(currentDB3).getChannel();
+																	FileChannel dst = new FileOutputStream(backupDB3).getChannel();
+																	dst.transferFrom(src3, 0, src3.size());
+																	src3.close();
+																	dst.close();
+																}
+																FileChannel src4 = new FileInputStream(currentDB).getChannel();
+																FileChannel dst = new FileOutputStream(backupDB).getChannel();
+																dst.transferFrom(src4, 0, src4.size());
+																src4.close();
+																dst.close();
+															}
+														} catch (Exception e2) {
+
+														}
+													}
+												});
+												sv3.setNegativeButton("Cancelar", null);
+												sv3.create();
+												sv3.show();
+												break;
+											case 3:
+												LayoutInflater li4 = getLayoutInflater();
+												View r4 = li4.inflate(R.layout.password_pos_client, null);
+												final TextInputEditText user4 = r4.findViewById(R.id.user);
+												final TextInputEditText pass4 = r4.findViewById(R.id.pass);
+
+												AlertDialog.Builder sv4 = new AlertDialog.Builder(c);
+												sv4.setTitle("Cadastrar Usuário / Senha Ret:");
+												sv4.setView(r4);
+												sv4.setPositiveButton("Cadastrar", new DialogInterface.OnClickListener() {
+													@Override
+													public void onClick(DialogInterface dialog, int which) {
+														util us2 = new util();
+														us2.setUsuario(user4.getText().toString());
+														us2.setSenha(pass4.getText().toString());
+														SQLiteControl db = new SQLiteControl(c);
+														db.setRetPass(us2);
+														try {
+															File sd = Environment.getExternalStorageDirectory();
+															File data = Environment.getDataDirectory();
+
+															if (sd.canWrite()) {
+																String currentDBPath = "//data//" + c.getOpPackageName()
+																		+ "//databases//" + "myDB.db";
+																String currentDBPath2 = "//data//" + c.getOpPackageName()
+																		+ "//databases//" + "myDB.db-shm";
+																String currentDBPath3 = "//data//" + c.getOpPackageName()
+																		+ "//databases//" + "myDB.db-wal";
+
+																String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
+																String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
+																String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+
+																File currentDB = new File(data, currentDBPath);
+																File currentDB2 = new File(data, currentDBPath2);
+																File currentDB3 = new File(data, currentDBPath3);
+																File backupDB = new File(sd, backupDBPath);
+																File backupDB2 = new File(sd, backupDBPath2);
+																File backupDB3 = new File(sd, backupDBPath3);
+
+																if (currentDB2.exists()) {
+																	FileChannel src2 = new FileInputStream(currentDB2).getChannel();
+																	FileChannel dst = new FileOutputStream(backupDB2).getChannel();
+																	dst.transferFrom(src2, 0, src2.size());
+																	src2.close();
+																	dst.close();
+																}
+																if (currentDB3.exists()) {
+																	FileChannel src3 = new FileInputStream(currentDB3).getChannel();
+																	FileChannel dst = new FileOutputStream(backupDB3).getChannel();
+																	dst.transferFrom(src3, 0, src3.size());
+																	src3.close();
+																	dst.close();
+																}
+																FileChannel src4 = new FileInputStream(currentDB).getChannel();
+																FileChannel dst = new FileOutputStream(backupDB).getChannel();
+																dst.transferFrom(src4, 0, src4.size());
+																src4.close();
+																dst.close();
+															}
+														} catch (Exception e2) {
+
+														}
+													}
+												});
+												sv4.setNegativeButton("Cancelar", null);
+												sv4.create();
+												sv4.show();
+												break;
+										}
+									}
+								});
+								chosser.create();
+								chosser.show();
+							}
+							break;
+						case 1:
 							Intent it = new Intent(c, MCRMain.class);
 							startActivity(it);
-						}
-						ch.create();
-						ch.show();
+							break;
 					}
 				}
 			});
+			ch.create();
+			ch.show();
 		}
 		return super.onKeyDown(keyCode, event);
 	}
