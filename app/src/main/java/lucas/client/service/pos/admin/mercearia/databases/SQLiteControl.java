@@ -34,7 +34,6 @@ public class SQLiteControl {
         ct.put("quant", us.getQuant());
         ct.put("valor", us.getValor());
         ct.put("forn", us.getForn());
-
         ct.put("etotal", us.getETotal());
         ct.put("dataIn", us.getDataIn());
         ct.put("dataOut", us.getDataOut());
