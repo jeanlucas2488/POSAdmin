@@ -62,6 +62,57 @@
             android:label="POS Admin - Contas a Receber" >
 
         </activity>
+
+
+        <activity
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name=".mercearia.setup.Estoque"
+            android:label="POS Admin MCR - Estoque" >
+
+        </activity>
+        <activity
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name=".mercearia.financeiro.Fechamento"
+            android:label="Histórico de Fechamento" >
+
+        </activity>
+        <activity
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name=".mercearia.financeiro.ContasPagar"
+            android:label="Contas a Pagar" >
+
+        </activity>
+        <activity
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name=".mercearia.financeiro.Boletos"
+            android:label="Boletos a Pagar" >
+
+        </activity>
+        <activity
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name=".mercearia.financeiro.baixas.baixaBoletos"
+            android:label="Histórico de Boletos - Baixa" >
+
+        </activity>
+        <activity
+            android:exported="true"
+            android:theme="@style/dialog"
+            android:name=".mercearia.financeiro.view.boletoViewImageSource"
+            android:label="" >
+
+        </activity>
+        <activity
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name=".mercearia.financeiro.ContasReceber"
+            android:label="POS Admin - Contas a Receber" >
+
+        </activity>
         <activity
             android:exported="true"
             android:theme="@style/AppTheme.NoActionBar"

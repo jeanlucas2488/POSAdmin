@@ -67,11 +67,11 @@ import lucas.client.service.pos.admin.R;
 import lucas.client.service.pos.admin.adapters.adapter;
 import lucas.client.service.pos.admin.adapters.financeiroAdapter;
 import lucas.client.service.pos.admin.etc.util;
-import lucas.client.service.pos.admin.financeiro.ContasPagar;
-import lucas.client.service.pos.admin.financeiro.ContasReceber;
-import lucas.client.service.pos.admin.financeiro.Fechamento;
+import lucas.client.service.pos.admin.mercearia.financeiro.ContasPagar;
+import lucas.client.service.pos.admin.mercearia.financeiro.ContasReceber;
+import lucas.client.service.pos.admin.mercearia.financeiro.Fechamento;
 import lucas.client.service.pos.admin.mercearia.databases.SQLiteControl;
-import lucas.client.service.pos.admin.setup.Estoque;
+import lucas.client.service.pos.admin.mercearia.setup.Estoque;
 
 public class MCRMain extends AppCompatActivity {
     Context c = this;
