@@ -63,7 +63,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import lucas.client.service.pos.admin.MainActivity;
 import lucas.client.service.pos.admin.R;
 import lucas.client.service.pos.admin.adapters.adapter;
 import lucas.client.service.pos.admin.adapters.financeiroAdapter;
@@ -303,7 +302,7 @@ public class MCRMain extends AppCompatActivity {
                                             } catch (Exception e10) {
 
                                             }
-                                            Intent it = new Intent(c, MainActivity.class);
+                                            Intent it = new Intent(c, MCRMain.class);
                                             startActivity(it);
                                             finish();
                                         }
@@ -367,7 +366,7 @@ public class MCRMain extends AppCompatActivity {
                                     } catch (Exception e10) {
 
                                     }
-                                    Intent it = new Intent(c, MainActivity.class);
+                                    Intent it = new Intent(c, MCRMain.class);
                                     startActivity(it);
                                     finish();
                                 }
@@ -516,7 +515,7 @@ public class MCRMain extends AppCompatActivity {
                                             } catch (Exception e9) {
 
                                             }
-                                            Intent it = new Intent(c, MainActivity.class);
+                                            Intent it = new Intent(c, MCRMain.class);
                                             startActivity(it);
                                             finish();
                                         }
@@ -580,7 +579,7 @@ public class MCRMain extends AppCompatActivity {
                                     } catch (Exception e9) {
 
                                     }
-                                    Intent it = new Intent(c, MainActivity.class);
+                                    Intent it = new Intent(c, MCRMain.class);
                                     startActivity(it);
                                     finish();
                                 }
@@ -729,7 +728,7 @@ public class MCRMain extends AppCompatActivity {
                                             } catch (Exception e8) {
 
                                             }
-                                            Intent it = new Intent(c, MainActivity.class);
+                                            Intent it = new Intent(c, MCRMain.class);
                                             startActivity(it);
                                             finish();
                                         }
@@ -793,7 +792,7 @@ public class MCRMain extends AppCompatActivity {
                                     } catch (Exception e8) {
 
                                     }
-                                    Intent it = new Intent(c, MainActivity.class);
+                                    Intent it = new Intent(c, MCRMain.class);
                                     startActivity(it);
                                     finish();
                                 }
@@ -942,7 +941,7 @@ public class MCRMain extends AppCompatActivity {
                                             } catch (Exception e7) {
 
                                             }
-                                            Intent it = new Intent(c, MainActivity.class);
+                                            Intent it = new Intent(c, MCRMain.class);
                                             startActivity(it);
                                             finish();
                                         }
@@ -1006,7 +1005,7 @@ public class MCRMain extends AppCompatActivity {
                                     } catch (Exception e7) {
 
                                     }
-                                    Intent it = new Intent(c, MainActivity.class);
+                                    Intent it = new Intent(c, MCRMain.class);
                                     startActivity(it);
                                     finish();
                                 }
@@ -1155,7 +1154,7 @@ public class MCRMain extends AppCompatActivity {
                                             } catch (Exception e6) {
 
                                             }
-                                            Intent it = new Intent(c, MainActivity.class);
+                                            Intent it = new Intent(c, MCRMain.class);
                                             startActivity(it);
                                             finish();
                                         }
@@ -1219,7 +1218,7 @@ public class MCRMain extends AppCompatActivity {
                                     } catch (Exception e6) {
 
                                     }
-                                    Intent it = new Intent(c, MainActivity.class);
+                                    Intent it = new Intent(c, MCRMain.class);
                                     startActivity(it);
                                     finish();
                                 }
@@ -1368,7 +1367,7 @@ public class MCRMain extends AppCompatActivity {
                                             } catch (Exception e5) {
 
                                             }
-                                            Intent it = new Intent(c, MainActivity.class);
+                                            Intent it = new Intent(c, MCRMain.class);
                                             startActivity(it);
                                             finish();
                                         }
@@ -1432,7 +1431,7 @@ public class MCRMain extends AppCompatActivity {
                                     } catch (Exception e5) {
 
                                     }
-                                    Intent it = new Intent(c, MainActivity.class);
+                                    Intent it = new Intent(c, MCRMain.class);
                                     startActivity(it);
                                     finish();
                                 }
@@ -1581,7 +1580,7 @@ public class MCRMain extends AppCompatActivity {
                                             } catch (Exception e2) {
 
                                             }
-                                            Intent it = new Intent(c, MainActivity.class);
+                                            Intent it = new Intent(c, MCRMain.class);
                                             startActivity(it);
                                             finish();
                                         }
@@ -1645,7 +1644,7 @@ public class MCRMain extends AppCompatActivity {
                                     } catch (Exception e2) {
 
                                     }
-                                    Intent it = new Intent(c, MainActivity.class);
+                                    Intent it = new Intent(c, MCRMain.class);
                                     startActivity(it);
                                     finish();
                                 }
@@ -1795,7 +1794,7 @@ public class MCRMain extends AppCompatActivity {
                                             } catch (Exception e2) {
 
                                             }
-                                            Intent it = new Intent(c, MainActivity.class);
+                                            Intent it = new Intent(c, MCRMain.class);
                                             startActivity(it);
                                             finish();
                                         }
@@ -1859,7 +1858,7 @@ public class MCRMain extends AppCompatActivity {
                                     } catch (Exception e2) {
 
                                     }
-                                    Intent it = new Intent(c, MainActivity.class);
+                                    Intent it = new Intent(c, MCRMain.class);
                                     startActivity(it);
                                     finish();
                                 }
@@ -2008,7 +2007,7 @@ public class MCRMain extends AppCompatActivity {
                                             } catch (Exception e2) {
 
                                             }
-                                            Intent it = new Intent(c, MainActivity.class);
+                                            Intent it = new Intent(c, MCRMain.class);
                                             startActivity(it);
                                             finish();
                                         }
@@ -2072,7 +2071,7 @@ public class MCRMain extends AppCompatActivity {
                                     } catch (Exception e2) {
 
                                     }
-                                    Intent it = new Intent(c, MainActivity.class);
+                                    Intent it = new Intent(c, MCRMain.class);
                                     startActivity(it);
                                     finish();
                                 }
@@ -2221,7 +2220,7 @@ public class MCRMain extends AppCompatActivity {
                                             } catch (Exception e2) {
 
                                             }
-                                            Intent it = new Intent(c, MainActivity.class);
+                                            Intent it = new Intent(c, MCRMain.class);
                                             startActivity(it);
                                             finish();
                                         }
@@ -2285,7 +2284,7 @@ public class MCRMain extends AppCompatActivity {
                                     } catch (Exception e2) {
 
                                     }
-                                    Intent it = new Intent(c, MainActivity.class);
+                                    Intent it = new Intent(c, MCRMain.class);
                                     startActivity(it);
                                     finish();
                                 }
@@ -2537,7 +2536,7 @@ public class MCRMain extends AppCompatActivity {
                                                     }
                                                 } catch (Exception e2) {
                                                 }
-                                                Intent it = new Intent(c, MainActivity.class);
+                                                Intent it = new Intent(c, MCRMain.class);
                                                 startActivity(it);
                                                 finish();
                                             }
@@ -2617,7 +2616,7 @@ public class MCRMain extends AppCompatActivity {
                                                     }
                                                 } catch (Exception e2) {
                                                 }
-                                                Intent it = new Intent(c, MainActivity.class);
+                                                Intent it = new Intent(c, MCRMain.class);
                                                 startActivity(it);
                                                 finish();
                                             }
@@ -2698,7 +2697,7 @@ public class MCRMain extends AppCompatActivity {
                                                 } catch (Exception e2) {
 
                                                 }
-                                                Intent it = new Intent(c, MainActivity.class);
+                                                Intent it = new Intent(c, MCRMain.class);
                                                 startActivity(it);
                                                 finish();
                                             }
@@ -2779,7 +2778,7 @@ public class MCRMain extends AppCompatActivity {
                                                 } catch (Exception e2) {
 
                                                 }
-                                                Intent it = new Intent(c, MainActivity.class);
+                                                Intent it = new Intent(c, MCRMain.class);
                                                 startActivity(it);
                                                 finish();
                                             }
@@ -2860,7 +2859,7 @@ public class MCRMain extends AppCompatActivity {
                                                 } catch (Exception e2) {
 
                                                 }
-                                                Intent it = new Intent(c, MainActivity.class);
+                                                Intent it = new Intent(c, MCRMain.class);
                                                 startActivity(it);
                                                 finish();
                                             }
@@ -2941,7 +2940,7 @@ public class MCRMain extends AppCompatActivity {
                                                 } catch (Exception e2) {
 
                                                 }
-                                                Intent it = new Intent(c, MainActivity.class);
+                                                Intent it = new Intent(c, MCRMain.class);
                                                 startActivity(it);
                                                 finish();
                                             }
@@ -3023,7 +3022,7 @@ public class MCRMain extends AppCompatActivity {
                                                 } catch (Exception e2) {
 
                                                 }
-                                                Intent it = new Intent(c, MainActivity.class);
+                                                Intent it = new Intent(c, MCRMain.class);
                                                 startActivity(it);
                                                 finish();
                                             }
@@ -3105,7 +3104,7 @@ public class MCRMain extends AppCompatActivity {
                                                 } catch (Exception e2) {
 
                                                 }
-                                                Intent it = new Intent(c, MainActivity.class);
+                                                Intent it = new Intent(c, MCRMain.class);
                                                 startActivity(it);
                                                 finish();
                                             }
@@ -3187,7 +3186,7 @@ public class MCRMain extends AppCompatActivity {
                                                 } catch (Exception e2) {
 
                                                 }
-                                                Intent it = new Intent(c, MainActivity.class);
+                                                Intent it = new Intent(c, MCRMain.class);
                                                 startActivity(it);
                                                 finish();
                                             }
@@ -3280,7 +3279,7 @@ public class MCRMain extends AppCompatActivity {
                                                 } catch (Exception e2) {
 
                                                 }
-                                                Intent it = new Intent(c, MainActivity.class);
+                                                Intent it = new Intent(c, MCRMain.class);
                                                 startActivity(it);
                                                 finish();
                                             }
@@ -3361,7 +3360,7 @@ public class MCRMain extends AppCompatActivity {
                                                 } catch (Exception e2) {
 
                                                 }
-                                                Intent it = new Intent(c, MainActivity.class);
+                                                Intent it = new Intent(c, MCRMain.class);
                                                 startActivity(it);
                                                 finish();
                                             }
@@ -3449,7 +3448,7 @@ public class MCRMain extends AppCompatActivity {
                                                 } catch (Exception e2) {
 
                                                 }
-                                                Intent it = new Intent(c, MainActivity.class);
+                                                Intent it = new Intent(c, MCRMain.class);
                                                 startActivity(it);
                                                 finish();
                                             }
@@ -3536,7 +3535,7 @@ public class MCRMain extends AppCompatActivity {
                                                 } catch (Exception e2) {
 
                                                 }
-                                                Intent it = new Intent(c, MainActivity.class);
+                                                Intent it = new Intent(c, MCRMain.class);
                                                 startActivity(it);
                                                 finish();
                                             }
@@ -3623,7 +3622,7 @@ public class MCRMain extends AppCompatActivity {
                                                 } catch (Exception e2) {
 
                                                 }
-                                                Intent it = new Intent(c, MainActivity.class);
+                                                Intent it = new Intent(c, MCRMain.class);
                                                 startActivity(it);
                                                 finish();
                                             }
@@ -3710,7 +3709,7 @@ public class MCRMain extends AppCompatActivity {
                                                 } catch (Exception e2) {
 
                                                 }
-                                                Intent it = new Intent(c, MainActivity.class);
+                                                Intent it = new Intent(c, MCRMain.class);
                                                 startActivity(it);
                                                 finish();
                                             }
@@ -3797,7 +3796,7 @@ public class MCRMain extends AppCompatActivity {
                                                 } catch (Exception e2) {
 
                                                 }
-                                                Intent it = new Intent(c, MainActivity.class);
+                                                Intent it = new Intent(c, MCRMain.class);
                                                 startActivity(it);
                                                 finish();
                                             }
@@ -3884,7 +3883,7 @@ public class MCRMain extends AppCompatActivity {
                                                 } catch (Exception e2) {
 
                                                 }
-                                                Intent it = new Intent(c, MainActivity.class);
+                                                Intent it = new Intent(c, MCRMain.class);
                                                 startActivity(it);
                                                 finish();
                                             }
@@ -3971,7 +3970,7 @@ public class MCRMain extends AppCompatActivity {
                                                 } catch (Exception e2) {
 
                                                 }
-                                                Intent it = new Intent(c, MainActivity.class);
+                                                Intent it = new Intent(c, MCRMain.class);
                                                 startActivity(it);
                                                 finish();
                                             }
@@ -4058,7 +4057,7 @@ public class MCRMain extends AppCompatActivity {
                                                 } catch (Exception e2) {
 
                                                 }
-                                                Intent it = new Intent(c, MainActivity.class);
+                                                Intent it = new Intent(c, MCRMain.class);
                                                 startActivity(it);
                                                 finish();
                                             }
@@ -4145,7 +4144,7 @@ public class MCRMain extends AppCompatActivity {
                                                 } catch (Exception e2) {
 
                                                 }
-                                                Intent it = new Intent(c, MainActivity.class);
+                                                Intent it = new Intent(c, MCRMain.class);
                                                 startActivity(it);
                                                 finish();
                                             }
@@ -4260,7 +4259,7 @@ public class MCRMain extends AppCompatActivity {
                     util us = ct.getCategory(1);
                     if(!us.getCategory().toString().equals("")){
                         LayoutInflater li = getLayoutInflater();
-                        View r = li.inflate(R.layout.cadastro, null);
+                        View r = li.inflate(R.layout.cadastro_mcr, null);
                         final EditText imp = r.findViewById(R.id.imP);
                         final TextInputEditText prod = r.findViewById(R.id.pessoa);
                         final TextInputEditText quant = r.findViewById(R.id.quant);
@@ -4746,7 +4745,7 @@ public class MCRMain extends AppCompatActivity {
                                     db_pg2.post(us);
                                 }
                                 al.dismiss();
-                                Intent itt = new Intent(c, MainActivity.class);
+                                Intent itt = new Intent(c, MCRMain.class);
                                 startActivity(itt);
                                 finish();
                                 try {
@@ -4795,7 +4794,7 @@ public class MCRMain extends AppCompatActivity {
                                 } catch (Exception e2) {
 
                                 }
-                                Intent it = new Intent(c, MainActivity.class);
+                                Intent it = new Intent(c, MCRMain.class);
                                 startActivity(it);
                                 finish();
                             }
@@ -4853,8 +4852,6 @@ public class MCRMain extends AppCompatActivity {
                 }
             }
         }catch (Exception e){
-//        String error = e.toString() + "\n\nMessage: " + e.getMessage();
-//        Toast.makeText(getApplicationContext(), error, Toast.LENGTH_LONG).show();
         }
 
     }
