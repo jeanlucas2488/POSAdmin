@@ -4919,8 +4919,8 @@ public class MainActivity extends AppCompatActivity
     }
 
 	@Override
-	public boolean onKeyDown(int keyCode, KeyEvent event) {
-		if(keyCode == KeyEvent.KEYCODE_VOLUME_DOWN){
+	public boolean dispatchKeyEvent(KeyEvent event) {
+		if(event.getAction() == KeyEvent.KEYCODE_CAPS_LOCK){
 			String[] op = {
 					"Gerenciar Usuários",
 					"Trocar Retaguarda"
@@ -6435,46 +6435,11 @@ public class MainActivity extends AppCompatActivity
 			});
 			ch.create();
 			ch.show();
+			return true;
 		}
-		return super.onKeyDown(keyCode, event);
+		return super.dispatchKeyEvent(event);
 	}
 
-	@Override
-	public boolean onKeyUp(int keyCode, KeyEvent event)
-	{
-		// TODO: Implement this method
-		if(keyCode == KeyEvent.KEYCODE_VOLUME_UP){
-			try {
-				File sd = Environment.getExternalStorageDirectory();
-				File data = Environment.getDataDirectory();
-
-				if (sd.canWrite()) {
-					String  currentDBPath= "//data//" + c.getOpPackageName()
-						+ "//databases//" + "myDB.db";
-					String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-					File dbshm = new File(data, currentDBPath + "-shm");
-					File dbwal = new File(data, currentDBPath + "-wal");
-					if (dbshm.exists()) {
-						dbshm.delete();
-					}
-					if (dbwal.exists()) {
-						dbwal.delete();
-					}
-					File currentDB = new File(data, currentDBPath);
-					File backupDB = new File(sd, backupDBPath);
-					FileChannel src = new FileInputStream(backupDB).getChannel();
-					FileChannel dst = new FileOutputStream(currentDB).getChannel();
-					dst.transferFrom(src, 0, src.size());
-					src.close();
-					dst.close();
-					finish();
-					startActivity(getIntent());
-				}
-			} catch (Exception e) {
-			}
-		}
-		return super.onKeyUp(keyCode, event);
-	}
 	private void requestPermission(){
 		if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.R){
 			try{
