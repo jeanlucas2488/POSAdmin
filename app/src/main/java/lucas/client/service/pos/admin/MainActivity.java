@@ -5031,7 +5031,7 @@ public class MainActivity extends AppCompatActivity
 												public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
 													if(actionId == EditorInfo.IME_NULL){
 														util us2 = new util();
-														us2.setUserId(us.getUserId());
+														us2.setUserId(us2.getUserId());
 														us2.setUsuario(user.getText().toString());
 														us2.setSenha(pass.getText().toString());
 														SQLiteControl db = new SQLiteControl(c);
@@ -5172,7 +5172,7 @@ public class MainActivity extends AppCompatActivity
 												public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
 													if(actionId == EditorInfo.IME_NULL){
 														util us2 = new util();
-														us2.setUserId(us.getUserId());
+														us2.setUserId(us2.getUserId());
 														us2.setUsuario(user.getText().toString());
 														us2.setSenha(pass.getText().toString());
 														SQLiteControl db = new SQLiteControl(c);
@@ -5452,7 +5452,7 @@ public class MainActivity extends AppCompatActivity
 												public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
 													if(actionId == EditorInfo.IME_NULL){
 														util us2 = new util();
-														us2.setUserId(us.getUserId());
+														us2.setUserId(us2.getUserId());
 														us2.setUsuario(user.getText().toString());
 														us2.setSenha(pass.getText().toString());
 														SQLiteControl db = new SQLiteControl(c);
