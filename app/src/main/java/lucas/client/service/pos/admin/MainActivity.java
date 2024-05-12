@@ -4920,7 +4920,7 @@ public class MainActivity extends AppCompatActivity
 
 	@Override
 	public boolean dispatchKeyEvent(KeyEvent event) {
-		if(event.getAction() == KeyEvent.KEYCODE_CAPS_LOCK){
+		if(event.getKeyCode() == KeyEvent.KEYCODE_TAB) {
 			String[] op = {
 					"Gerenciar Usuários",
 					"Trocar Retaguarda"
