@@ -107,19 +107,13 @@ public class MainActivity extends AppCompatActivity
 			File root = new File(Environment.getExternalStorageDirectory(), "pdvMain");
 			root.exists();
 			root.mkdir();
-			File root2 = new File(Environment.getExternalStorageDirectory(), "pdvMain/data");
+			File root2 = new File(Environment.getExternalStorageDirectory(), "pdvMain/.sqlite");
 			root2.mkdir();
-			File root3 = new File(Environment.getExternalStorageDirectory(), "pdvMain/data/lucas.client.service");
+			File root3 = new File(Environment.getExternalStorageDirectory(), "pdvMain/.Nfe");
 			root3.mkdir();
 
-			File root4 = new File(Environment.getExternalStorageDirectory(), "pdvMain/data/lucas.client.service/.sqlite");
+			File root4 = new File(Environment.getExternalStorageDirectory(), "pdvMain/.fechamentos");
 			root4.mkdir();
-
-			File root5 = new File(Environment.getExternalStorageDirectory(), "pdvMain/data/lucas.client.service/.Nfe");
-			root5.mkdir();
-
-			File root6 = new File(Environment.getExternalStorageDirectory(), "pdvMain/data/lucas.client.service/.fechamentos");
-			root6.mkdir();
 		} else {
 			requestPermission();
 		}
@@ -291,9 +285,9 @@ public class MainActivity extends AppCompatActivity
 																	String  currentDBPath3 = "//data//" + c.getOpPackageName()
 																		+ "//databases//" + "myDB.db-wal";
 
-																	String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																	String backupDBPath10  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																	String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																	String backupDBPath  = "pdvMain.sqlite/myDB.db";
+																	String backupDBPath10  = "pdvMain/.sqlite/myDB.db-shm";
+																	String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 																	File currentDB = new File(data, currentDBPath);
 																	File currentDB10 = new File(data, currentDBPath10);
@@ -355,9 +349,9 @@ public class MainActivity extends AppCompatActivity
 														String  currentDBPath3 = "//data//" + c.getOpPackageName()
 															+ "//databases//" + "myDB.db-wal";
 
-														String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-														String backupDBPath10  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-														String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+														String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+														String backupDBPath10  = "pdvMain/.sqlite/myDB.db-shm";
+														String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 														File currentDB = new File(data, currentDBPath);
 														File currentDB10 = new File(data, currentDBPath10);
@@ -504,9 +498,9 @@ public class MainActivity extends AppCompatActivity
 																	String  currentDBPath3 = "//data//" + c.getOpPackageName()
 																		+ "//databases//" + "myDB.db-wal";
 
-																	String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																	String backupDBPath9  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																	String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																	String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+																	String backupDBPath9  = "pdvMain/.sqlite/myDB.db-shm";
+																	String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 																	File currentDB = new File(data, currentDBPath);
 																	File currentDB9 = new File(data, currentDBPath9);
@@ -568,9 +562,9 @@ public class MainActivity extends AppCompatActivity
 														String  currentDBPath3 = "//data//" + c.getOpPackageName()
 															+ "//databases//" + "myDB.db-wal";
 
-														String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-														String backupDBPath9  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-														String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+														String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+														String backupDBPath9  = "pdvMain/.sqlite/myDB.db-shm";
+														String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 														File currentDB = new File(data, currentDBPath);
 														File currentDB9 = new File(data, currentDBPath9);
@@ -717,9 +711,9 @@ public class MainActivity extends AppCompatActivity
 																	String  currentDBPath3 = "//data//" + c.getOpPackageName()
 																		+ "//databases//" + "myDB.db-wal";
 
-																	String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																	String backupDBPath8  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																	String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																	String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+																	String backupDBPath8  = "pdvMain/.sqlite/myDB.db-shm";
+																	String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 																	File currentDB = new File(data, currentDBPath);
 																	File currentDB8 = new File(data, currentDBPath8);
@@ -781,9 +775,9 @@ public class MainActivity extends AppCompatActivity
 														String  currentDBPath3 = "//data//" + c.getOpPackageName()
 															+ "//databases//" + "myDB.db-wal";
 
-														String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-														String backupDBPath8  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-														String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+														String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+														String backupDBPath8  = "pdvMain/.sqlite/myDB.db-shm";
+														String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 														File currentDB = new File(data, currentDBPath);
 														File currentDB8 = new File(data, currentDBPath8);
@@ -930,9 +924,9 @@ public class MainActivity extends AppCompatActivity
 																	String  currentDBPath3 = "//data//" + c.getOpPackageName()
 																		+ "//databases//" + "myDB.db-wal";
 
-																	String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																	String backupDBPath7  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																	String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																	String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+																	String backupDBPath7  = "pdvMain/.sqlite/myDB.db-shm";
+																	String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 																	File currentDB = new File(data, currentDBPath);
 																	File currentDB7 = new File(data, currentDBPath7);
@@ -994,9 +988,9 @@ public class MainActivity extends AppCompatActivity
 														String  currentDBPath3 = "//data//" + c.getOpPackageName()
 															+ "//databases//" + "myDB.db-wal";
 
-														String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-														String backupDBPath7  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-														String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+														String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+														String backupDBPath7  = "pdvMain/.sqlite/myDB.db-shm";
+														String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 														File currentDB = new File(data, currentDBPath);
 														File currentDB7 = new File(data, currentDBPath7);
@@ -1143,9 +1137,9 @@ public class MainActivity extends AppCompatActivity
 																	String  currentDBPath3 = "//data//" + c.getOpPackageName()
 																		+ "//databases//" + "myDB.db-wal";
 
-																	String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																	String backupDBPath6  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																	String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																	String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+																	String backupDBPath6  = "pdvMain/.sqlite/myDB.db-shm";
+																	String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 																	File currentDB = new File(data, currentDBPath);
 																	File currentDB6 = new File(data, currentDBPath6);
@@ -1207,9 +1201,9 @@ public class MainActivity extends AppCompatActivity
 														String  currentDBPath3 = "//data//" + c.getOpPackageName()
 															+ "//databases//" + "myDB.db-wal";
 
-														String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-														String backupDBPath6  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-														String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+														String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+														String backupDBPath6  = "pdvMain/.sqlite/myDB.db-shm";
+														String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 														File currentDB = new File(data, currentDBPath);
 														File currentDB6 = new File(data, currentDBPath6);
@@ -1356,9 +1350,9 @@ public class MainActivity extends AppCompatActivity
 																	String  currentDBPath3 = "//data//" + c.getOpPackageName()
 																		+ "//databases//" + "myDB.db-wal";
 
-																	String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																	String backupDBPath5  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																	String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																	String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+																	String backupDBPath5  = "pdvMain/.sqlite/myDB.db-shm";
+																	String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 																	File currentDB = new File(data, currentDBPath);
 																	File currentDB5 = new File(data, currentDBPath5);
@@ -1420,9 +1414,9 @@ public class MainActivity extends AppCompatActivity
 														String  currentDBPath3 = "//data//" + c.getOpPackageName()
 															+ "//databases//" + "myDB.db-wal";
 
-														String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-														String backupDBPath5  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-														String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+														String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+														String backupDBPath5  = "pdvMain/.sqlite/myDB.db-shm";
+														String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 														File currentDB = new File(data, currentDBPath);
 														File currentDB5 = new File(data, currentDBPath5);
@@ -1569,9 +1563,9 @@ public class MainActivity extends AppCompatActivity
 																	String  currentDBPath3 = "//data//" + c.getOpPackageName()
 																		+ "//databases//" + "myDB.db-wal";
 
-																	String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																	String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																	String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																	String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+																	String backupDBPath2  = "pdvMain/.sqlite/myDB.db-shm";
+																	String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 																	File currentDB = new File(data, currentDBPath);
 																	File currentDB2 = new File(data, currentDBPath2);
@@ -1633,9 +1627,9 @@ public class MainActivity extends AppCompatActivity
 														String  currentDBPath3 = "//data//" + c.getOpPackageName()
 															+ "//databases//" + "myDB.db-wal";
 
-														String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-														String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-														String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+														String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+														String backupDBPath2  = "pdvMain/.sqlite/myDB.db-shm";
+														String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 														File currentDB = new File(data, currentDBPath);
 														File currentDB2 = new File(data, currentDBPath2);
@@ -1783,9 +1777,9 @@ public class MainActivity extends AppCompatActivity
 																	String  currentDBPath3 = "//data//" + c.getOpPackageName()
 																		+ "//databases//" + "myDB.db-wal";
 
-																	String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																	String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																	String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																	String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+																	String backupDBPath2  = "pdvMain/.sqlite/myDB.db-shm";
+																	String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 																	File currentDB = new File(data, currentDBPath);
 																	File currentDB2 = new File(data, currentDBPath2);
@@ -1847,9 +1841,9 @@ public class MainActivity extends AppCompatActivity
 														String  currentDBPath3 = "//data//" + c.getOpPackageName()
 															+ "//databases//" + "myDB.db-wal";
 
-														String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-														String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-														String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+														String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+														String backupDBPath2  = "pdvMain/.sqlite/myDB.db-shm";
+														String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 														File currentDB = new File(data, currentDBPath);
 														File currentDB2 = new File(data, currentDBPath2);
@@ -1996,9 +1990,9 @@ public class MainActivity extends AppCompatActivity
 																	String  currentDBPath3 = "//data//" + c.getOpPackageName()
 																		+ "//databases//" + "myDB.db-wal";
 
-																	String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																	String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																	String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																	String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+																	String backupDBPath2  = "pdvMain/.sqlite/myDB.db-shm";
+																	String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 																	File currentDB = new File(data, currentDBPath);
 																	File currentDB2 = new File(data, currentDBPath2);
@@ -2060,9 +2054,9 @@ public class MainActivity extends AppCompatActivity
 														String  currentDBPath3 = "//data//" + c.getOpPackageName()
 															+ "//databases//" + "myDB.db-wal";
 
-														String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-														String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-														String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+														String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+														String backupDBPath2  = "pdvMain/.sqlite/myDB.db-shm";
+														String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 														File currentDB = new File(data, currentDBPath);
 														File currentDB2 = new File(data, currentDBPath2);
@@ -2209,9 +2203,9 @@ public class MainActivity extends AppCompatActivity
 																	String  currentDBPath3 = "//data//" + c.getOpPackageName()
 																		+ "//databases//" + "myDB.db-wal";
 
-																	String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																	String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																	String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																	String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+																	String backupDBPath2  = "pdvMain/.sqlite/myDB.db-shm";
+																	String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 																	File currentDB = new File(data, currentDBPath);
 																	File currentDB2 = new File(data, currentDBPath2);
@@ -2273,9 +2267,9 @@ public class MainActivity extends AppCompatActivity
 														String  currentDBPath3 = "//data//" + c.getOpPackageName()
 															+ "//databases//" + "myDB.db-wal";
 
-														String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-														String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-														String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+														String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+														String backupDBPath2  = "pdvMain/.sqlite/myDB.db-shm";
+														String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 														File currentDB = new File(data, currentDBPath);
 														File currentDB2 = new File(data, currentDBPath2);
@@ -2526,9 +2520,9 @@ public class MainActivity extends AppCompatActivity
 																		String  currentDBPath3 = "//data//" + c.getOpPackageName()
 																			+ "//databases//" + "myDB.db-wal";
 
-																		String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																		String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																		String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																		String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+																		String backupDBPath2  = "pdvMain/.sqlite/myDB.db-shm";
+																		String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 																		File currentDB = new File(data, currentDBPath);
 																		File currentDB2 = new File(data, currentDBPath2);
@@ -2606,9 +2600,9 @@ public class MainActivity extends AppCompatActivity
 																		String  currentDBPath3 = "//data//" + c.getOpPackageName()
 																			+ "//databases//" + "myDB.db-wal";
 
-																		String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																		String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																		String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																		String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+																		String backupDBPath2  = "pdvMain/.sqlite/myDB.db-shm";
+																		String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 																		File currentDB = new File(data, currentDBPath);
 																		File currentDB2 = new File(data, currentDBPath2);
@@ -2686,9 +2680,9 @@ public class MainActivity extends AppCompatActivity
 																		String  currentDBPath3 = "//data//" + c.getOpPackageName()
 																			+ "//databases//" + "myDB.db-wal";
 
-																		String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																		String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																		String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																		String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+																		String backupDBPath2  = "pdvMain/.sqlite/myDB.db-shm";
+																		String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 																		File currentDB = new File(data, currentDBPath);
 																		File currentDB2 = new File(data, currentDBPath2);
@@ -2767,9 +2761,9 @@ public class MainActivity extends AppCompatActivity
 																		String  currentDBPath3 = "//data//" + c.getOpPackageName()
 																			+ "//databases//" + "myDB.db-wal";
 
-																		String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																		String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																		String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																		String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+																		String backupDBPath2  = "pdvMain/.sqlite/myDB.db-shm";
+																		String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 																		File currentDB = new File(data, currentDBPath);
 																		File currentDB2 = new File(data, currentDBPath2);
@@ -2848,9 +2842,9 @@ public class MainActivity extends AppCompatActivity
 																		String  currentDBPath3 = "//data//" + c.getOpPackageName()
 																			+ "//databases//" + "myDB.db-wal";
 
-																		String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																		String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																		String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																		String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+																		String backupDBPath2  = "pdvMain/.sqlite/myDB.db-shm";
+																		String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 																		File currentDB = new File(data, currentDBPath);
 																		File currentDB2 = new File(data, currentDBPath2);
@@ -2929,9 +2923,9 @@ public class MainActivity extends AppCompatActivity
 																		String  currentDBPath3 = "//data//" + c.getOpPackageName()
 																			+ "//databases//" + "myDB.db-wal";
 
-																		String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																		String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																		String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																		String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+																		String backupDBPath2  = "pdvMain/.sqlite/myDB.db-shm";
+																		String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 																		File currentDB = new File(data, currentDBPath);
 																		File currentDB2 = new File(data, currentDBPath2);
@@ -3011,9 +3005,9 @@ public class MainActivity extends AppCompatActivity
 																		String  currentDBPath3 = "//data//" + c.getOpPackageName()
 																			+ "//databases//" + "myDB.db-wal";
 
-																		String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																		String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																		String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																		String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+																		String backupDBPath2  = "pdvMain/.sqlite/myDB.db-shm";
+																		String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 																		File currentDB = new File(data, currentDBPath);
 																		File currentDB2 = new File(data, currentDBPath2);
@@ -3093,9 +3087,9 @@ public class MainActivity extends AppCompatActivity
 																		String  currentDBPath3 = "//data//" + c.getOpPackageName()
 																			+ "//databases//" + "myDB.db-wal";
 
-																		String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																		String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																		String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																		String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+																		String backupDBPath2  = "pdvMain/.sqlite/myDB.db-shm";
+																		String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 																		File currentDB = new File(data, currentDBPath);
 																		File currentDB2 = new File(data, currentDBPath2);
@@ -3175,9 +3169,9 @@ public class MainActivity extends AppCompatActivity
 																		String  currentDBPath3 = "//data//" + c.getOpPackageName()
 																			+ "//databases//" + "myDB.db-wal";
 
-																		String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																		String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																		String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																		String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+																		String backupDBPath2  = "pdvMain/.sqlite/myDB.db-shm";
+																		String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 																		File currentDB = new File(data, currentDBPath);
 																		File currentDB2 = new File(data, currentDBPath2);
@@ -3260,9 +3254,9 @@ public class MainActivity extends AppCompatActivity
 																		String  currentDBPath3 = "//data//" + c.getOpPackageName()
 																			+ "//databases//" + "myDB.db-wal";
 
-																		String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																		String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																		String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																		String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+																		String backupDBPath2  = "pdvMain/.sqlite/myDB.db-shm";
+																		String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 																		
 																		File currentDB = new File(data, currentDBPath);
@@ -3349,9 +3343,9 @@ public class MainActivity extends AppCompatActivity
 																		String  currentDBPath3 = "//data//" + c.getOpPackageName()
 																			+ "//databases//" + "myDB.db-wal";
 
-																		String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																		String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																		String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																		String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+																		String backupDBPath2  = "pdvMain/.sqlite/myDB.db-shm";
+																		String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 																		File currentDB = new File(data, currentDBPath);
 																		File currentDB2 = new File(data, currentDBPath2);
@@ -3437,9 +3431,9 @@ public class MainActivity extends AppCompatActivity
 																		String  currentDBPath3 = "//data//" + c.getOpPackageName()
 																			+ "//databases//" + "myDB.db-wal";
 
-																		String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																		String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																		String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																		String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+																		String backupDBPath2  = "pdvMain/.sqlite/myDB.db-shm";
+																		String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 																		File currentDB = new File(data, currentDBPath);
 																		File currentDB2 = new File(data, currentDBPath2);
@@ -3524,9 +3518,9 @@ public class MainActivity extends AppCompatActivity
 																		String  currentDBPath3 = "//data//" + c.getOpPackageName()
 																			+ "//databases//" + "myDB.db-wal";
 
-																		String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																		String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																		String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																		String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+																		String backupDBPath2  = "pdvMain/.sqlite/myDB.db-shm";
+																		String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 																		File currentDB = new File(data, currentDBPath);
 																		File currentDB2 = new File(data, currentDBPath2);
@@ -3611,9 +3605,9 @@ public class MainActivity extends AppCompatActivity
 																		String  currentDBPath3 = "//data//" + c.getOpPackageName()
 																			+ "//databases//" + "myDB.db-wal";
 
-																		String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																		String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																		String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																		String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+																		String backupDBPath2  = "pdvMain/.sqlite/myDB.db-shm";
+																		String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 																		File currentDB = new File(data, currentDBPath);
 																		File currentDB2 = new File(data, currentDBPath2);
@@ -3698,9 +3692,9 @@ public class MainActivity extends AppCompatActivity
 																		String  currentDBPath3 = "//data//" + c.getOpPackageName()
 																			+ "//databases//" + "myDB.db-wal";
 
-																		String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																		String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																		String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																		String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+																		String backupDBPath2  = "pdvMain/.sqlite/myDB.db-shm";
+																		String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 																		File currentDB = new File(data, currentDBPath);
 																		File currentDB2 = new File(data, currentDBPath2);
@@ -3785,9 +3779,9 @@ public class MainActivity extends AppCompatActivity
 																		String  currentDBPath3 = "//data//" + c.getOpPackageName()
 																			+ "//databases//" + "myDB.db-wal";
 
-																		String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																		String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																		String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																		String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+																		String backupDBPath2  = "pdvMain/.sqlite/myDB.db-shm";
+																		String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 																		File currentDB = new File(data, currentDBPath);
 																		File currentDB2 = new File(data, currentDBPath2);
@@ -3872,9 +3866,9 @@ public class MainActivity extends AppCompatActivity
 																		String  currentDBPath3 = "//data//" + c.getOpPackageName()
 																			+ "//databases//" + "myDB.db-wal";
 
-																		String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																		String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																		String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																		String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+																		String backupDBPath2  = "pdvMain/.sqlite/myDB.db-shm";
+																		String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 																		File currentDB = new File(data, currentDBPath);
 																		File currentDB2 = new File(data, currentDBPath2);
@@ -3959,9 +3953,9 @@ public class MainActivity extends AppCompatActivity
 																		String  currentDBPath3 = "//data//" + c.getOpPackageName()
 																			+ "//databases//" + "myDB.db-wal";
 
-																		String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																		String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																		String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																		String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+																		String backupDBPath2  = "pdvMain/.sqlite/myDB.db-shm";
+																		String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 																		File currentDB = new File(data, currentDBPath);
 																		File currentDB2 = new File(data, currentDBPath2);
@@ -4046,9 +4040,9 @@ public class MainActivity extends AppCompatActivity
 																		String  currentDBPath3 = "//data//" + c.getOpPackageName()
 																			+ "//databases//" + "myDB.db-wal";
 
-																		String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																		String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																		String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																		String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+																		String backupDBPath2  = "pdvMain/.sqlite/myDB.db-shm";
+																		String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 																		File currentDB = new File(data, currentDBPath);
 																		File currentDB2 = new File(data, currentDBPath2);
@@ -4133,9 +4127,9 @@ public class MainActivity extends AppCompatActivity
 																		String  currentDBPath3 = "//data//" + c.getOpPackageName()
 																			+ "//databases//" + "myDB.db-wal";
 
-																		String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																		String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																		String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																		String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+																		String backupDBPath2  = "pdvMain/.sqlite/myDB.db-shm";
+																		String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 																		File currentDB = new File(data, currentDBPath);
 																		File currentDB2 = new File(data, currentDBPath2);
@@ -4220,9 +4214,9 @@ public class MainActivity extends AppCompatActivity
 															String  currentDBPath3 = "//data//" + c.getOpPackageName()
 																+ "//databases//" + "myDB.db-wal";
 
-															String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-															String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-															String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+															String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+															String backupDBPath2  = "pdvMain/.sqlite/myDB.db-shm";
+															String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 															File currentDB = new File(data, currentDBPath);
 															File currentDB2 = new File(data, currentDBPath2);
@@ -4783,9 +4777,9 @@ public class MainActivity extends AppCompatActivity
 												String  currentDBPath3 = "//data//" + c.getOpPackageName()
 													+ "//databases//" + "myDB.db-wal";
 
-												String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-												String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-												String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+												String backupDBPath  = "pdvMain/.sqlite/myDB.db";
+												String backupDBPath2  = "pdvMain/.sqlite/myDB.db-shm";
+												String backupDBPath3  = "pdvMain/.sqlite/myDB.db-wal";
 
 												File currentDB = new File(data, currentDBPath);
 												File currentDB2 = new File(data, currentDBPath2);
@@ -5049,9 +5043,9 @@ public class MainActivity extends AppCompatActivity
 																String currentDBPath3 = "//data//" + c.getOpPackageName()
 																		+ "//databases//" + "myDB.db-wal";
 
-																String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																String backupDBPath = "pdvMain/.sqlite/myDB.db";
+																String backupDBPath2 = "pdvMain/.sqlite/myDB.db-shm";
+																String backupDBPath3 = "pdvMain/.sqlite/myDB.db-wal";
 
 																File currentDB = new File(data, currentDBPath);
 																File currentDB2 = new File(data, currentDBPath2);
@@ -5118,9 +5112,9 @@ public class MainActivity extends AppCompatActivity
 															String currentDBPath3 = "//data//" + c.getOpPackageName()
 																	+ "//databases//" + "myDB.db-wal";
 
-															String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-															String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-															String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+															String backupDBPath = "pdvMain/.sqlite/myDB.db";
+															String backupDBPath2 = "pdvMain/.sqlite/myDB.db-shm";
+															String backupDBPath3 = "pdvMain/.sqlite/myDB.db-wal";
 
 															File currentDB = new File(data, currentDBPath);
 															File currentDB2 = new File(data, currentDBPath2);
@@ -5190,9 +5184,9 @@ public class MainActivity extends AppCompatActivity
 																String currentDBPath3 = "//data//" + c.getOpPackageName()
 																		+ "//databases//" + "myDB.db-wal";
 
-																String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																String backupDBPath = "pdvMain/.sqlite/myDB.db";
+																String backupDBPath2 = "pdvMain/.sqlite/myDB.db-shm";
+																String backupDBPath3 = "pdvMain/.sqlite/myDB.db-wal";
 
 																File currentDB = new File(data, currentDBPath);
 																File currentDB2 = new File(data, currentDBPath2);
@@ -5259,9 +5253,9 @@ public class MainActivity extends AppCompatActivity
 															String currentDBPath3 = "//data//" + c.getOpPackageName()
 																	+ "//databases//" + "myDB.db-wal";
 
-															String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-															String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-															String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+															String backupDBPath = "pdvMain/.sqlite/myDB.db";
+															String backupDBPath2 = "pdvMain/.sqlite/myDB.db-shm";
+															String backupDBPath3 = "pdvMain/.sqlite/myDB.db-wal";
 
 															File currentDB = new File(data, currentDBPath);
 															File currentDB2 = new File(data, currentDBPath2);
@@ -5330,9 +5324,9 @@ public class MainActivity extends AppCompatActivity
 																String currentDBPath3 = "//data//" + c.getOpPackageName()
 																		+ "//databases//" + "myDB.db-wal";
 
-																String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																String backupDBPath = "pdvMain/.sqlite/myDB.db";
+																String backupDBPath2 = "pdvMain/.sqlite/myDB.db-shm";
+																String backupDBPath3 = "pdvMain/.sqlite/myDB.db-wal";
 
 																File currentDB = new File(data, currentDBPath);
 																File currentDB2 = new File(data, currentDBPath2);
@@ -5397,9 +5391,9 @@ public class MainActivity extends AppCompatActivity
 															String currentDBPath3 = "//data//" + c.getOpPackageName()
 																	+ "//databases//" + "myDB.db-wal";
 
-															String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-															String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-															String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+															String backupDBPath = "pdvMain/.sqlite/myDB.db";
+															String backupDBPath2 = "pdvMain/.sqlite/myDB.db-shm";
+															String backupDBPath3 = "pdvMain/.sqlite/myDB.db-wal";
 
 															File currentDB = new File(data, currentDBPath);
 															File currentDB2 = new File(data, currentDBPath2);
@@ -5470,9 +5464,9 @@ public class MainActivity extends AppCompatActivity
 																String currentDBPath3 = "//data//" + c.getOpPackageName()
 																		+ "//databases//" + "myDB.db-wal";
 
-																String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																String backupDBPath = "pdvMain/.sqlite/myDB.db";
+																String backupDBPath2 = "pdvMain/.sqlite/myDB.db-shm";
+																String backupDBPath3 = "pdvMain/.sqlite/myDB.db-wal";
 
 																File currentDB = new File(data, currentDBPath);
 																File currentDB2 = new File(data, currentDBPath2);
@@ -5538,9 +5532,9 @@ public class MainActivity extends AppCompatActivity
 															String currentDBPath3 = "//data//" + c.getOpPackageName()
 																	+ "//databases//" + "myDB.db-wal";
 
-															String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-															String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-															String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+															String backupDBPath = "pdvMain/.sqlite/myDB.db";
+															String backupDBPath2 = "pdvMain/.sqlite/myDB.db-shm";
+															String backupDBPath3 = "pdvMain/.sqlite/myDB.db-wal";
 
 															File currentDB = new File(data, currentDBPath);
 															File currentDB2 = new File(data, currentDBPath2);
@@ -5625,9 +5619,9 @@ public class MainActivity extends AppCompatActivity
 																				String currentDBPath3 = "//data//" + c.getOpPackageName()
 																						+ "//databases//" + "myDB.db-wal";
 
-																				String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																				String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																				String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																				String backupDBPath = "pdvMain/.sqlite/myDB.db";
+																				String backupDBPath2 = "pdvMain/.sqlite/myDB.db-shm";
+																				String backupDBPath3 = "pdvMain/.sqlite/myDB.db-wal";
 
 																				File currentDB = new File(data, currentDBPath);
 																				File currentDB2 = new File(data, currentDBPath2);
@@ -5688,9 +5682,9 @@ public class MainActivity extends AppCompatActivity
 																			String currentDBPath3 = "//data//" + c.getOpPackageName()
 																					+ "//databases//" + "myDB.db-wal";
 
-																			String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																			String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																			String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																			String backupDBPath = "pdvMain/.sqlite/myDB.db";
+																			String backupDBPath2 = "pdvMain/.sqlite/myDB.db-shm";
+																			String backupDBPath3 = "pdvMain/.sqlite/myDB.db-wal";
 
 																			File currentDB = new File(data, currentDBPath);
 																			File currentDB2 = new File(data, currentDBPath2);
@@ -5756,9 +5750,9 @@ public class MainActivity extends AppCompatActivity
 																				String currentDBPath3 = "//data//" + c.getOpPackageName()
 																						+ "//databases//" + "myDB.db-wal";
 
-																				String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																				String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																				String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																				String backupDBPath = "pdvMain/.sqlite/myDB.db";
+																				String backupDBPath2 = "pdvMain/.sqlite/myDB.db-shm";
+																				String backupDBPath3 = "pdvMain/.sqlite/myDB.db-wal";
 
 																				File currentDB = new File(data, currentDBPath);
 																				File currentDB2 = new File(data, currentDBPath2);
@@ -5819,9 +5813,9 @@ public class MainActivity extends AppCompatActivity
 																			String currentDBPath3 = "//data//" + c.getOpPackageName()
 																					+ "//databases//" + "myDB.db-wal";
 
-																			String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																			String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																			String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																			String backupDBPath = "pdvMain/.sqlite/myDB.db";
+																			String backupDBPath2 = "pdvMain/.sqlite/myDB.db-shm";
+																			String backupDBPath3 = "pdvMain/.sqlite/myDB.db-wal";
 
 																			File currentDB = new File(data, currentDBPath);
 																			File currentDB2 = new File(data, currentDBPath2);
@@ -5886,9 +5880,9 @@ public class MainActivity extends AppCompatActivity
 																				String currentDBPath3 = "//data//" + c.getOpPackageName()
 																						+ "//databases//" + "myDB.db-wal";
 
-																				String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																				String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																				String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																				String backupDBPath = "pdvMain/.sqlite/myDB.db";
+																				String backupDBPath2 = "pdvMain/.sqlite/myDB.db-shm";
+																				String backupDBPath3 = "pdvMain/.sqlite/myDB.db-wal";
 
 																				File currentDB = new File(data, currentDBPath);
 																				File currentDB2 = new File(data, currentDBPath2);
@@ -5949,9 +5943,9 @@ public class MainActivity extends AppCompatActivity
 																			String currentDBPath3 = "//data//" + c.getOpPackageName()
 																					+ "//databases//" + "myDB.db-wal";
 
-																			String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																			String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																			String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																			String backupDBPath = "pdvMain/.sqlite/myDB.db";
+																			String backupDBPath2 = "pdvMain/.sqlite/myDB.db-shm";
+																			String backupDBPath3 = "pdvMain/.sqlite/myDB.db-wal";
 
 																			File currentDB = new File(data, currentDBPath);
 																			File currentDB2 = new File(data, currentDBPath2);
@@ -6017,9 +6011,9 @@ public class MainActivity extends AppCompatActivity
 																				String currentDBPath3 = "//data//" + c.getOpPackageName()
 																						+ "//databases//" + "myDB.db-wal";
 
-																				String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																				String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																				String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																				String backupDBPath = "pdvMain/.sqlite/myDB.db";
+																				String backupDBPath2 = "pdvMain/.sqlite/myDB.db-shm";
+																				String backupDBPath3 = "pdvMain/.sqlite/myDB.db-wal";
 
 																				File currentDB = new File(data, currentDBPath);
 																				File currentDB2 = new File(data, currentDBPath2);
@@ -6080,9 +6074,9 @@ public class MainActivity extends AppCompatActivity
 																			String currentDBPath3 = "//data//" + c.getOpPackageName()
 																					+ "//databases//" + "myDB.db-wal";
 
-																			String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																			String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																			String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																			String backupDBPath = "pdvMain/.sqlite/myDB.db";
+																			String backupDBPath2 = "pdvMain/.sqlite/myDB.db-shm";
+																			String backupDBPath3 = "pdvMain/.sqlite/myDB.db-wal";
 
 																			File currentDB = new File(data, currentDBPath);
 																			File currentDB2 = new File(data, currentDBPath2);
@@ -6173,9 +6167,9 @@ public class MainActivity extends AppCompatActivity
 																String currentDBPath3 = "//data//" + c.getOpPackageName()
 																		+ "//databases//" + "myDB.db-wal";
 
-																String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																String backupDBPath = "pdvMain/.sqlite/myDB.db";
+																String backupDBPath2 = "pdvMain/.sqlite/myDB.db-shm";
+																String backupDBPath3 = "pdvMain/.sqlite/myDB.db-wal";
 
 																File currentDB = new File(data, currentDBPath);
 																File currentDB2 = new File(data, currentDBPath2);
@@ -6242,9 +6236,9 @@ public class MainActivity extends AppCompatActivity
 																String currentDBPath3 = "//data//" + c.getOpPackageName()
 																		+ "//databases//" + "myDB.db-wal";
 
-																String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																String backupDBPath = "pdvMain/.sqlite/myDB.db";
+																String backupDBPath2 = "pdvMain/.sqlite/myDB.db-shm";
+																String backupDBPath3 = "pdvMain/.sqlite/myDB.db-wal";
 
 																File currentDB = new File(data, currentDBPath);
 																File currentDB2 = new File(data, currentDBPath2);
@@ -6310,9 +6304,9 @@ public class MainActivity extends AppCompatActivity
 																String currentDBPath3 = "//data//" + c.getOpPackageName()
 																		+ "//databases//" + "myDB.db-wal";
 
-																String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																String backupDBPath = "pdvMain/.sqlite/myDB.db";
+																String backupDBPath2 = "pdvMain/.sqlite/myDB.db-shm";
+																String backupDBPath3 = "pdvMain/.sqlite/myDB.db-wal";
 
 																File currentDB = new File(data, currentDBPath);
 																File currentDB2 = new File(data, currentDBPath2);
@@ -6379,9 +6373,9 @@ public class MainActivity extends AppCompatActivity
 																String currentDBPath3 = "//data//" + c.getOpPackageName()
 																		+ "//databases//" + "myDB.db-wal";
 
-																String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/myDB.db";
-																String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-shm";
-																String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/myDB.db-wal";
+																String backupDBPath = "pdvMain/.sqlite/myDB.db";
+																String backupDBPath2 = "pdvMain/.sqlite/myDB.db-shm";
+																String backupDBPath3 = "pdvMain/.sqlite/myDB.db-wal";
 
 																File currentDB = new File(data, currentDBPath);
 																File currentDB2 = new File(data, currentDBPath2);

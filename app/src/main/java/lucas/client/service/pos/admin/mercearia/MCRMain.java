@@ -269,9 +269,9 @@ public class MCRMain extends AppCompatActivity {
                                                     String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                             + "//databases//" + "MCRDB.db-wal";
 
-                                                    String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                    String backupDBPath10  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                    String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                    String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                                    String backupDBPath10  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                    String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                     File currentDB = new File(data, currentDBPath);
                                                     File currentDB10 = new File(data, currentDBPath10);
@@ -333,9 +333,9 @@ public class MCRMain extends AppCompatActivity {
                                             String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                     + "//databases//" + "MCRDB.db-wal";
 
-                                            String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                            String backupDBPath10  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                            String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                            String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                            String backupDBPath10  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                            String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                             File currentDB = new File(data, currentDBPath);
                                             File currentDB10 = new File(data, currentDBPath10);
@@ -482,9 +482,9 @@ public class MCRMain extends AppCompatActivity {
                                                     String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                             + "//databases//" + "MCRDB.db-wal";
 
-                                                    String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                    String backupDBPath9  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                    String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                    String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                                    String backupDBPath9  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                    String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                     File currentDB = new File(data, currentDBPath);
                                                     File currentDB9 = new File(data, currentDBPath9);
@@ -546,9 +546,9 @@ public class MCRMain extends AppCompatActivity {
                                             String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                     + "//databases//" + "MCRDB.db-wal";
 
-                                            String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                            String backupDBPath9  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                            String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                            String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                            String backupDBPath9  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                            String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                             File currentDB = new File(data, currentDBPath);
                                             File currentDB9 = new File(data, currentDBPath9);
@@ -695,9 +695,9 @@ public class MCRMain extends AppCompatActivity {
                                                     String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                             + "//databases//" + "MCRDB.db-wal";
 
-                                                    String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                    String backupDBPath8  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                    String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                    String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                                    String backupDBPath8  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                    String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                     File currentDB = new File(data, currentDBPath);
                                                     File currentDB8 = new File(data, currentDBPath8);
@@ -759,9 +759,9 @@ public class MCRMain extends AppCompatActivity {
                                             String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                     + "//databases//" + "MCRDB.db-wal";
 
-                                            String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                            String backupDBPath8  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                            String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                            String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                            String backupDBPath8  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                            String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                             File currentDB = new File(data, currentDBPath);
                                             File currentDB8 = new File(data, currentDBPath8);
@@ -908,9 +908,9 @@ public class MCRMain extends AppCompatActivity {
                                                     String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                             + "//databases//" + "MCRDB.db-wal";
 
-                                                    String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                    String backupDBPath7  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                    String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                    String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                                    String backupDBPath7  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                    String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                     File currentDB = new File(data, currentDBPath);
                                                     File currentDB7 = new File(data, currentDBPath7);
@@ -972,9 +972,9 @@ public class MCRMain extends AppCompatActivity {
                                             String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                     + "//databases//" + "MCRDB.db-wal";
 
-                                            String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                            String backupDBPath7  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                            String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                            String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                            String backupDBPath7  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                            String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                             File currentDB = new File(data, currentDBPath);
                                             File currentDB7 = new File(data, currentDBPath7);
@@ -1121,9 +1121,9 @@ public class MCRMain extends AppCompatActivity {
                                                     String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                             + "//databases//" + "MCRDB.db-wal";
 
-                                                    String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                    String backupDBPath6  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                    String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                    String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                                    String backupDBPath6  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                    String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                     File currentDB = new File(data, currentDBPath);
                                                     File currentDB6 = new File(data, currentDBPath6);
@@ -1185,9 +1185,9 @@ public class MCRMain extends AppCompatActivity {
                                             String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                     + "//databases//" + "MCRDB.db-wal";
 
-                                            String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                            String backupDBPath6  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                            String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                            String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                            String backupDBPath6  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                            String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                             File currentDB = new File(data, currentDBPath);
                                             File currentDB6 = new File(data, currentDBPath6);
@@ -1334,9 +1334,9 @@ public class MCRMain extends AppCompatActivity {
                                                     String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                             + "//databases//" + "MCRDB.db-wal";
 
-                                                    String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                    String backupDBPath5  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                    String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                    String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                                    String backupDBPath5  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                    String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                     File currentDB = new File(data, currentDBPath);
                                                     File currentDB5 = new File(data, currentDBPath5);
@@ -1398,9 +1398,9 @@ public class MCRMain extends AppCompatActivity {
                                             String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                     + "//databases//" + "MCRDB.db-wal";
 
-                                            String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                            String backupDBPath5  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                            String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                            String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                            String backupDBPath5  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                            String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                             File currentDB = new File(data, currentDBPath);
                                             File currentDB5 = new File(data, currentDBPath5);
@@ -1547,9 +1547,9 @@ public class MCRMain extends AppCompatActivity {
                                                     String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                             + "//databases//" + "MCRDB.db-wal";
 
-                                                    String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                    String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                    String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                    String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                                    String backupDBPath2  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                    String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                     File currentDB = new File(data, currentDBPath);
                                                     File currentDB2 = new File(data, currentDBPath2);
@@ -1611,9 +1611,9 @@ public class MCRMain extends AppCompatActivity {
                                             String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                     + "//databases//" + "MCRDB.db-wal";
 
-                                            String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                            String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                            String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                            String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                            String backupDBPath2  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                            String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                             File currentDB = new File(data, currentDBPath);
                                             File currentDB2 = new File(data, currentDBPath2);
@@ -1761,9 +1761,9 @@ public class MCRMain extends AppCompatActivity {
                                                     String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                             + "//databases//" + "MCRDB.db-wal";
 
-                                                    String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                    String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                    String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                    String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                                    String backupDBPath2  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                    String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                     File currentDB = new File(data, currentDBPath);
                                                     File currentDB2 = new File(data, currentDBPath2);
@@ -1825,9 +1825,9 @@ public class MCRMain extends AppCompatActivity {
                                             String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                     + "//databases//" + "MCRDB.db-wal";
 
-                                            String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                            String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                            String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                            String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                            String backupDBPath2  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                            String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                             File currentDB = new File(data, currentDBPath);
                                             File currentDB2 = new File(data, currentDBPath2);
@@ -1974,9 +1974,9 @@ public class MCRMain extends AppCompatActivity {
                                                     String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                             + "//databases//" + "MCRDB.db-wal";
 
-                                                    String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                    String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                    String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                    String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                                    String backupDBPath2  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                    String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                     File currentDB = new File(data, currentDBPath);
                                                     File currentDB2 = new File(data, currentDBPath2);
@@ -2038,9 +2038,9 @@ public class MCRMain extends AppCompatActivity {
                                             String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                     + "//databases//" + "MCRDB.db-wal";
 
-                                            String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                            String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                            String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                            String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                            String backupDBPath2  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                            String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                             File currentDB = new File(data, currentDBPath);
                                             File currentDB2 = new File(data, currentDBPath2);
@@ -2187,9 +2187,9 @@ public class MCRMain extends AppCompatActivity {
                                                     String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                             + "//databases//" + "MCRDB.db-wal";
 
-                                                    String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                    String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                    String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                    String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                                    String backupDBPath2  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                    String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                     File currentDB = new File(data, currentDBPath);
                                                     File currentDB2 = new File(data, currentDBPath2);
@@ -2251,9 +2251,9 @@ public class MCRMain extends AppCompatActivity {
                                             String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                     + "//databases//" + "MCRDB.db-wal";
 
-                                            String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                            String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                            String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                            String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                            String backupDBPath2  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                            String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                             File currentDB = new File(data, currentDBPath);
                                             File currentDB2 = new File(data, currentDBPath2);
@@ -2504,9 +2504,9 @@ public class MCRMain extends AppCompatActivity {
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                                 + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                         File currentDB = new File(data, currentDBPath);
                                                         File currentDB2 = new File(data, currentDBPath2);
@@ -2584,9 +2584,9 @@ public class MCRMain extends AppCompatActivity {
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                                 + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                         File currentDB = new File(data, currentDBPath);
                                                         File currentDB2 = new File(data, currentDBPath2);
@@ -2664,9 +2664,9 @@ public class MCRMain extends AppCompatActivity {
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                                 + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                         File currentDB = new File(data, currentDBPath);
                                                         File currentDB2 = new File(data, currentDBPath2);
@@ -2745,9 +2745,9 @@ public class MCRMain extends AppCompatActivity {
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                                 + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                         File currentDB = new File(data, currentDBPath);
                                                         File currentDB2 = new File(data, currentDBPath2);
@@ -2826,9 +2826,9 @@ public class MCRMain extends AppCompatActivity {
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                                 + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                         File currentDB = new File(data, currentDBPath);
                                                         File currentDB2 = new File(data, currentDBPath2);
@@ -2907,9 +2907,9 @@ public class MCRMain extends AppCompatActivity {
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                                 + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                         File currentDB = new File(data, currentDBPath);
                                                         File currentDB2 = new File(data, currentDBPath2);
@@ -2989,9 +2989,9 @@ public class MCRMain extends AppCompatActivity {
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                                 + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                         File currentDB = new File(data, currentDBPath);
                                                         File currentDB2 = new File(data, currentDBPath2);
@@ -3071,9 +3071,9 @@ public class MCRMain extends AppCompatActivity {
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                                 + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                         File currentDB = new File(data, currentDBPath);
                                                         File currentDB2 = new File(data, currentDBPath2);
@@ -3153,9 +3153,9 @@ public class MCRMain extends AppCompatActivity {
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                                 + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                         File currentDB = new File(data, currentDBPath);
                                                         File currentDB2 = new File(data, currentDBPath2);
@@ -3238,9 +3238,9 @@ public class MCRMain extends AppCompatActivity {
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                                 + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
 
                                                         File currentDB = new File(data, currentDBPath);
@@ -3327,9 +3327,9 @@ public class MCRMain extends AppCompatActivity {
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                                 + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                         File currentDB = new File(data, currentDBPath);
                                                         File currentDB2 = new File(data, currentDBPath2);
@@ -3415,9 +3415,9 @@ public class MCRMain extends AppCompatActivity {
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                                 + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                         File currentDB = new File(data, currentDBPath);
                                                         File currentDB2 = new File(data, currentDBPath2);
@@ -3502,9 +3502,9 @@ public class MCRMain extends AppCompatActivity {
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                                 + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                         File currentDB = new File(data, currentDBPath);
                                                         File currentDB2 = new File(data, currentDBPath2);
@@ -3589,9 +3589,9 @@ public class MCRMain extends AppCompatActivity {
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                                 + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                         File currentDB = new File(data, currentDBPath);
                                                         File currentDB2 = new File(data, currentDBPath2);
@@ -3676,9 +3676,9 @@ public class MCRMain extends AppCompatActivity {
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                                 + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                         File currentDB = new File(data, currentDBPath);
                                                         File currentDB2 = new File(data, currentDBPath2);
@@ -3763,9 +3763,9 @@ public class MCRMain extends AppCompatActivity {
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                                 + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                         File currentDB = new File(data, currentDBPath);
                                                         File currentDB2 = new File(data, currentDBPath2);
@@ -3850,9 +3850,9 @@ public class MCRMain extends AppCompatActivity {
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                                 + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                         File currentDB = new File(data, currentDBPath);
                                                         File currentDB2 = new File(data, currentDBPath2);
@@ -3937,9 +3937,9 @@ public class MCRMain extends AppCompatActivity {
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                                 + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                         File currentDB = new File(data, currentDBPath);
                                                         File currentDB2 = new File(data, currentDBPath2);
@@ -4024,9 +4024,9 @@ public class MCRMain extends AppCompatActivity {
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                                 + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                         File currentDB = new File(data, currentDBPath);
                                                         File currentDB2 = new File(data, currentDBPath2);
@@ -4111,9 +4111,9 @@ public class MCRMain extends AppCompatActivity {
                                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                                 + "//databases//" + "MCRDB.db-wal";
 
-                                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                        String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                                        String backupDBPath2  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                        String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                         File currentDB = new File(data, currentDBPath);
                                                         File currentDB2 = new File(data, currentDBPath2);
@@ -4198,9 +4198,9 @@ public class MCRMain extends AppCompatActivity {
                                                 String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                         + "//databases//" + "MCRDB.db-wal";
 
-                                                String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                                String backupDBPath2  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                 File currentDB = new File(data, currentDBPath);
                                                 File currentDB2 = new File(data, currentDBPath2);
@@ -4761,9 +4761,9 @@ public class MCRMain extends AppCompatActivity {
                                         String  currentDBPath3 = "//data//" + c.getOpPackageName()
                                                 + "//databases//" + "MCRDB.db-wal";
 
-                                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                        String backupDBPath2  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                        String backupDBPath3  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                        String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
+                                        String backupDBPath2  = "pdvMain/.sqlite/MCRDB.db-shm";
+                                        String backupDBPath3  = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                         File currentDB = new File(data, currentDBPath);
                                         File currentDB2 = new File(data, currentDBPath2);
@@ -5015,9 +5015,9 @@ public class MCRMain extends AppCompatActivity {
                                                             String currentDBPath3 = "//data//" + c.getOpPackageName()
                                                                     + "//databases//" + "MCRDB.db-wal";
 
-                                                            String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                            String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                            String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                            String backupDBPath = "pdvMain/.sqlite/MCRDB.db";
+                                                            String backupDBPath2 = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                            String backupDBPath3 = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                             File currentDB = new File(data, currentDBPath);
                                                             File currentDB2 = new File(data, currentDBPath2);
@@ -5094,9 +5094,9 @@ public class MCRMain extends AppCompatActivity {
                                                             String currentDBPath3 = "//data//" + c.getOpPackageName()
                                                                     + "//databases//" + "MCRDB.db-wal";
 
-                                                            String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                            String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                            String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                            String backupDBPath = "pdvMain/.sqlite/MCRDB.db";
+                                                            String backupDBPath2 = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                            String backupDBPath3 = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                             File currentDB = new File(data, currentDBPath);
                                                             File currentDB2 = new File(data, currentDBPath2);
@@ -5171,9 +5171,9 @@ public class MCRMain extends AppCompatActivity {
                                                             String currentDBPath3 = "//data//" + c.getOpPackageName()
                                                                     + "//databases//" + "MCRDB.db-wal";
 
-                                                            String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                            String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                            String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                            String backupDBPath = "pdvMain/.sqlite/MCRDB.db";
+                                                            String backupDBPath2 = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                            String backupDBPath3 = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                             File currentDB = new File(data, currentDBPath);
                                                             File currentDB2 = new File(data, currentDBPath2);
@@ -5250,9 +5250,9 @@ public class MCRMain extends AppCompatActivity {
                                                             String currentDBPath3 = "//data//" + c.getOpPackageName()
                                                                     + "//databases//" + "MCRDB.db-wal";
 
-                                                            String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                            String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                            String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                            String backupDBPath = "pdvMain/.sqlite/MCRDB.db";
+                                                            String backupDBPath2 = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                            String backupDBPath3 = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                             File currentDB = new File(data, currentDBPath);
                                                             File currentDB2 = new File(data, currentDBPath2);
@@ -5339,9 +5339,9 @@ public class MCRMain extends AppCompatActivity {
                                                                             String currentDBPath3 = "//data//" + c.getOpPackageName()
                                                                                     + "//databases//" + "MCRDB.db-wal";
 
-                                                                            String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                                            String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                                            String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                                            String backupDBPath = "pdvMain/.sqlite/MCRDB.db";
+                                                                            String backupDBPath2 = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                                            String backupDBPath3 = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                                             File currentDB = new File(data, currentDBPath);
                                                                             File currentDB2 = new File(data, currentDBPath2);
@@ -5409,9 +5409,9 @@ public class MCRMain extends AppCompatActivity {
                                                                             String currentDBPath3 = "//data//" + c.getOpPackageName()
                                                                                     + "//databases//" + "MCRDB.db-wal";
 
-                                                                            String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                                            String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                                            String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                                            String backupDBPath = "pdvMain/.sqlite/MCRDB.db";
+                                                                            String backupDBPath2 = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                                            String backupDBPath3 = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                                             File currentDB = new File(data, currentDBPath);
                                                                             File currentDB2 = new File(data, currentDBPath2);
@@ -5478,9 +5478,9 @@ public class MCRMain extends AppCompatActivity {
                                                                             String currentDBPath3 = "//data//" + c.getOpPackageName()
                                                                                     + "//databases//" + "MCRDB.db-wal";
 
-                                                                            String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                                            String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                                            String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                                            String backupDBPath = "pdvMain/.sqlite/MCRDB.db";
+                                                                            String backupDBPath2 = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                                            String backupDBPath3 = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                                             File currentDB = new File(data, currentDBPath);
                                                                             File currentDB2 = new File(data, currentDBPath2);
@@ -5548,9 +5548,9 @@ public class MCRMain extends AppCompatActivity {
                                                                             String currentDBPath3 = "//data//" + c.getOpPackageName()
                                                                                     + "//databases//" + "MCRDB.db-wal";
 
-                                                                            String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                                            String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                                            String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                                            String backupDBPath = "pdvMain/.sqlite/MCRDB.db";
+                                                                            String backupDBPath2 = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                                            String backupDBPath3 = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                                             File currentDB = new File(data, currentDBPath);
                                                                             File currentDB2 = new File(data, currentDBPath2);
@@ -5641,9 +5641,9 @@ public class MCRMain extends AppCompatActivity {
                                                                 String currentDBPath3 = "//data//" + c.getOpPackageName()
                                                                         + "//databases//" + "MCRDB.db-wal";
 
-                                                                String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                                String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                                String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                                String backupDBPath = "pdvMain/.sqlite/MCRDB.db";
+                                                                String backupDBPath2 = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                                String backupDBPath3 = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                                 File currentDB = new File(data, currentDBPath);
                                                                 File currentDB2 = new File(data, currentDBPath2);
@@ -5710,9 +5710,9 @@ public class MCRMain extends AppCompatActivity {
                                                                 String currentDBPath3 = "//data//" + c.getOpPackageName()
                                                                         + "//databases//" + "MCRDB.db-wal";
 
-                                                                String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                                String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                                String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                                String backupDBPath = "pdvMain/.sqlite/MCRDB.db";
+                                                                String backupDBPath2 = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                                String backupDBPath3 = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                                 File currentDB = new File(data, currentDBPath);
                                                                 File currentDB2 = new File(data, currentDBPath2);
@@ -5778,9 +5778,9 @@ public class MCRMain extends AppCompatActivity {
                                                                 String currentDBPath3 = "//data//" + c.getOpPackageName()
                                                                         + "//databases//" + "MCRDB.db-wal";
 
-                                                                String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                                String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                                String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                                String backupDBPath = "pdvMain/.sqlite/MCRDB.db";
+                                                                String backupDBPath2 = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                                String backupDBPath3 = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                                 File currentDB = new File(data, currentDBPath);
                                                                 File currentDB2 = new File(data, currentDBPath2);
@@ -5847,9 +5847,9 @@ public class MCRMain extends AppCompatActivity {
                                                                 String currentDBPath3 = "//data//" + c.getOpPackageName()
                                                                         + "//databases//" + "MCRDB.db-wal";
 
-                                                                String backupDBPath = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
-                                                                String backupDBPath2 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-shm";
-                                                                String backupDBPath3 = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db-wal";
+                                                                String backupDBPath = "pdvMain/.sqlite/MCRDB.db";
+                                                                String backupDBPath2 = "pdvMain/.sqlite/MCRDB.db-shm";
+                                                                String backupDBPath3 = "pdvMain/.sqlite/MCRDB.db-wal";
 
                                                                 File currentDB = new File(data, currentDBPath);
                                                                 File currentDB2 = new File(data, currentDBPath2);
@@ -5919,7 +5919,7 @@ public class MCRMain extends AppCompatActivity {
                     if (sd.canWrite()) {
                         String  currentDBPath= "//data//" + c.getOpPackageName()
                                 + "//databases//" + "MCRDB.db";
-                        String backupDBPath  = "pdvMain/data/lucas.client.service/.sqlite/MCRDB.db";
+                        String backupDBPath  = "pdvMain/.sqlite/MCRDB.db";
                         File dbshm = new File(data, currentDBPath + "-shm");
                         File dbwal = new File(data, currentDBPath + "-wal");
                         if (dbshm.exists()) {
