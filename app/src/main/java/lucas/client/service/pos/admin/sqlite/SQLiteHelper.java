@@ -7,12 +7,16 @@ public class SQLiteHelper extends SQLiteOpenHelper
 	public static String DB ="myDB.db";
 	
 	public SQLiteHelper (Context c){
-		super(c, DB, null, 1);
+		super(c, DB, null, 4);
 	}
 
 	@Override
 	public void onCreate(SQLiteDatabase db)
 	{
+
+		db.execSQL("CREATE TABLE valTemp" +
+				"(id integer primary key, valorRestante text);");
+
 		db.execSQL("CREATE TABLE temp (id integer primary key, valRest text);");
 
 		db.execSQL("CREATE TABLE ContasReceber" +
