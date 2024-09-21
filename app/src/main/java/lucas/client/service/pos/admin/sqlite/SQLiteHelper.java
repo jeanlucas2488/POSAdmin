@@ -4,18 +4,16 @@ import android.content.*;
 
 public class SQLiteHelper extends SQLiteOpenHelper
 {
-	public static String DB ="myDB.db";
-	
-	public SQLiteHelper (Context c){
-		super(c, DB, null, 4);
-	}
+	public static String name = "myDB.db";
 
+	public SQLiteHelper(Context c){
+		super(c, name, null, 1);
+	}
 	@Override
 	public void onCreate(SQLiteDatabase db)
 	{
-
-		db.execSQL("CREATE TABLE valTemp" +
-				"(id integer primary key, valorRestante text);");
+		db.execSQL("CREATE TABLE ftpServer" +
+				"(id integer primary key, host text, user text, pass text, port integer);");
 
 		db.execSQL("CREATE TABLE temp (id integer primary key, valRest text);");
 
@@ -98,18 +96,28 @@ public class SQLiteHelper extends SQLiteOpenHelper
 		db.execSQL("CREATE TABLE paginaTen" +
 				"(id integer primary key, prod text, quant text, valor text, image blob, forn text, dataIn text, dataOut text, etotal text, tipo text);");
 
-		db.execSQL("CREATE TABLE dinheiro (id integer primary key autoincrement, money TEXT);");
-		db.execSQL("CREATE TABLE operador (id integer primary key autoincrement, operador TEXT);");
-		db.execSQL("CREATE TABLE fundo (id integer primary key autoincrement, fundo TEXT);");
-		db.execSQL("CREATE TABLE saldo (id integer primary key autoincrement, sangria TEXT);");
+		db.execSQL("CREATE TABLE dinheiro (id integer primary key, money TEXT);");
+
+		db.execSQL("CREATE TABLE operador (id integer primary key, operador TEXT);");
+		db.execSQL("CREATE TABLE fundo (id integer primary key, fundo TEXT);");
+		db.execSQL("CREATE TABLE saldo (id integer primary key, sangria TEXT);");
 		db.execSQL("CREATE TABLE suprimento(id integer primary key, supVal text, supDesc text);");
 		db.execSQL("CREATE TABLE supSom(id integer primary key, sup text);");
 		db.execSQL("CREATE TABLE sangria (id integer primary key, valor TEXT, motivo TEXT);");
 
 		db.execSQL("CREATE TABLE cartaoD (id integer primary key, carD text);");
+
 		db.execSQL("CREATE TABLE cartaoC (id integer primary key, carC text);");
+
 		db.execSQL("CREATE TABLE Pix (id integer primary key, pix text);");
 
+	}
+
+	@Override
+	public void onConfigure(SQLiteDatabase db)
+	{
+		// TODO: Implement this method
+		super.onConfigure(db);
 	}
 
 	@Override
@@ -117,4 +125,5 @@ public class SQLiteHelper extends SQLiteOpenHelper
 	{
 		// TODO: Implement this method
 	}
+
 }
