@@ -5,7 +5,6 @@ import axios from "axios";
 import dotenv from "dotenv";
 
 dotenv.config();
-
 const app = express();
 app.use(express.json());
 
@@ -15,9 +14,10 @@ const {
   PIX_KEY,
   CERT_PATH,
   ENVIRONMENT,
+  WEBHOOK_URL,
 } = process.env;
 
-if (!CLIENT_ID || !CLIENT_SECRET || !PIX_KEY || !CERT_PATH) {
+if (!CLIENT_ID || !CLIENT_SECRET || !PIX_KEY || !CERT_PATH || !WEBHOOK_URL) {
   console.error("❌ Variáveis faltando no .env");
   process.exit(1);
 }
@@ -52,14 +52,34 @@ async function getAccessToken() {
   return cachedToken;
 }
 
-// 🔗 Gerar Pix via Efí Pay
+// 🔗 Registrar Webhook Efí Pay
+async function registerWebhook() {
+  try {
+    const token = await getAccessToken();
+
+    const res = await axios.put(
+      `${BASE_URL}/v2/webhook/${PIX_KEY}`,
+      { webhookUrl: WEBHOOK_URL },
+      { headers: { Authorization: `Bearer ${token}` }, httpsAgent: agent }
+    );
+
+    console.log("✅ Webhook registrado com sucesso:", res.data);
+  } catch (err) {
+    console.error(
+      "❌ Erro ao registrar webhook:",
+      err.response?.data || err.message
+    );
+  }
+}
+
+// 💰 Criar Pix
 async function criarPix(valor) {
   const token = await getAccessToken();
 
   const res = await axios.post(
-    `${BASE_URL}/v2/pix`,
+    `${BASE_URL}/v2/cob`,
     {
-      calendario: { expiracao: 3600 }, // 1 hora
+      calendario: { expiracao: 3600 },
       devedor: { nome: "Cliente Teste" },
       valor: { original: valor },
       chave: PIX_KEY,
@@ -71,26 +91,60 @@ async function criarPix(valor) {
   return res.data;
 }
 
+// 💬 Consultar status do Pix (TXID)
+async function consultarPix(txid) {
+  const token = await getAccessToken();
+
+  const res = await axios.get(`${BASE_URL}/v2/cob/${txid}`, {
+    headers: { Authorization: `Bearer ${token}` },
+    httpsAgent: agent,
+  });
+
+  return res.data;
+}
+
 // 🔁 Endpoint para gerar QR Code Pix
 app.get("/pix/:valor", async (req, res) => {
   const valor = req.params.valor;
-
   try {
     const pixData = await criarPix(valor);
-
-    // Retorna JSON com txid e qrCode
     res.json({
       txid: pixData.txid,
-      qrCode: pixData.qrcode, // ⚠️ string para gerar QR no app Android
+      qrCode: pixData.qrcode,
     });
   } catch (err) {
-    console.error(err.response?.data || err.message);
+    console.error("Erro ao gerar Pix:", err.response?.data || err.message);
     res.status(500).json({ error: "Erro ao gerar Pix" });
   }
 });
 
-// 🔄 Teste simples
-app.get("/", (req, res) => res.json({ ok: true, message: "Servidor Efí ativo" }));
+// 🔍 Endpoint para consultar status Pix
+app.get("/pix/status/:txid", async (req, res) => {
+  const txid = req.params.txid;
+  try {
+    const statusData = await consultarPix(txid);
+    res.json({
+      txid: statusData.txid,
+      status: statusData.status,
+      valor: statusData.valor.original,
+    });
+  } catch (err) {
+    console.error("Erro ao consultar status:", err.response?.data || err.message);
+    res.status(500).json({ error: "Erro ao consultar status do Pix" });
+  }
+});
+
+// 📩 Webhook para receber notificações Efí Pay
+app.post("/efipay/webhook", (req, res) => {
+  console.log("📩 PIX RECEBIDO:", JSON.stringify(req.body, null, 2));
+  res.status(200).json({ ok: true });
+});
+
+// 🧭 Endpoint de teste
+app.get("/", (req, res) => res.json({ ok: true, msg: "Servidor Efí ativo" }));
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`🚀 Servidor rodando na porta ${PORT}`));
+app.listen(PORT, () => {
+  console.log(`🚀 Servidor rodando na porta ${PORT}`);
+  registerWebhook();
+});
