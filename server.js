@@ -73,22 +73,21 @@ async function registerWebhook() {
 }
 
 // 💰 Criar Pix e gerar QR Code
+
 async function criarPix(valor) {
   const token = await getAccessToken();
 
-  // 🧾 Monta o corpo da cobrança
   const body = {
     calendario: { expiracao: 3600 },
     devedor: {
       nome: "Cliente Teste",
-      cpf: "12345678909" // ⚠️ CPF obrigatório ou CNPJ
+      cpf: "12345678909" // ⚠️ CPF obrigatório ou CNPJ real
     },
-    valor: { original: valor.toString() }, // Valor como string
-    chave: PIX_KEY, // Sua chave Pix cadastrada na Efí
+    valor: { original: valor.toString() },
+    chave: PIX_KEY,
     solicitacaoPagador: "Pagamento via App"
   };
 
-  // 🔥 Cria a cobrança
   const cobranca = await axios.post(`${BASE_URL}/v2/cob`, body, {
     headers: { Authorization: `Bearer ${token}` },
     httpsAgent: agent
@@ -96,24 +95,17 @@ async function criarPix(valor) {
 
   const idLoc = cobranca.data.loc.id;
 
-  console.log("✅ Cobrança criada:", cobranca.data.txid);
-
-  // 🎯 Busca o QR Code usando o id da cobrança
   const qr = await axios.get(`${BASE_URL}/v2/loc/${idLoc}/qrcode`, {
     headers: { Authorization: `Bearer ${token}` },
     httpsAgent: agent
   });
 
-  console.log("✅ QR Code gerado com sucesso");
-
-  // Retorna o txid e o código para o app
   return {
     txid: cobranca.data.txid,
-    qrCode: qr.data.qrcode, // código Pix Copia e Cola
-    imagemQrcode: qr.data.imagemQrcode // imagem em base64
+    qrCode: qr.data.qrcode,        // Código Copia e Cola
+    imagemQrcode: qr.data.imagemQrcode // Imagem base64
   };
 }
-
 // 💬 Consultar status do Pix (TXID)
 async function consultarPix(txid) {
   const token = await getAccessToken();
@@ -131,9 +123,11 @@ app.get("/pix/:valor", async (req, res) => {
   const valor = req.params.valor;
   try {
     const pixData = await criarPix(valor);
+
     res.json({
-      txid: pixData.txid,
-      qrCode: pixData.qrcode,
+      txid: pixData.txid,               // TXID da cobrança
+      qrCode: pixData.qrCode,           // Código Pix Copia e Cola
+      imagemQrcode: pixData.imagemQrcode // Imagem do QR Code em base64
     });
   } catch (err) {
     console.error("Erro ao gerar Pix:", err.response?.data || err.message);
