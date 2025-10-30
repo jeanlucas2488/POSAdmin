@@ -100,6 +100,9 @@ async function criarPix(valor) {
     httpsAgent: agent
   });
 
+  // 👇 Log restaurado
+  console.log(`💰 Pix gerado: TXID ${cobranca.data.txid} | Valor: R$${valor}`);
+
   const idLoc = cobranca.data.loc.id;
 
   const qr = await axios.get(`${BASE_URL}/v2/loc/${idLoc}/qrcode`, {
