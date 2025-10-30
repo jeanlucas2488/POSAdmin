@@ -3,11 +3,15 @@ import https from "https";
 import express from "express";
 import axios from "axios";
 import dotenv from "dotenv";
+import bodyParser from "body-parser";
 
 dotenv.config();
 const app = express();
 app.use(express.json());
 
+// --------------------
+// Configuração do ambiente
+// --------------------
 const {
   CLIENT_ID,
   CLIENT_SECRET,
@@ -35,6 +39,10 @@ const agent = new https.Agent({
 let cachedToken = null;
 let tokenExpiresAt = 0;
 
+// --------------------
+// Funções auxiliares
+// --------------------
+
 // 🔐 Obter token OAuth2
 async function getAccessToken() {
   const now = Date.now();
@@ -52,7 +60,7 @@ async function getAccessToken() {
   return cachedToken;
 }
 
-// 🔗 Registrar Webhook Efí Pay
+// 🔗 Registrar Webhook Efipay
 async function registerWebhook() {
   try {
     const token = await getAccessToken();
@@ -73,7 +81,6 @@ async function registerWebhook() {
 }
 
 // 💰 Criar Pix e gerar QR Code
-
 async function criarPix(valor) {
   const token = await getAccessToken();
 
@@ -106,6 +113,7 @@ async function criarPix(valor) {
     imagemQrcode: qr.data.imagemQrcode // Imagem base64
   };
 }
+
 // 💬 Consultar status do Pix (TXID)
 async function consultarPix(txid) {
   const token = await getAccessToken();
@@ -117,6 +125,15 @@ async function consultarPix(txid) {
 
   return res.data;
 }
+
+// --------------------
+// Armazenamento simples em memória
+// --------------------
+const pixStatusMap = {}; // txid -> { status, valor }
+
+// --------------------
+// Endpoints
+// --------------------
 
 // 🔁 Endpoint para gerar QR Code Pix
 app.get("/pix/:valor", async (req, res) => {
@@ -138,6 +155,17 @@ app.get("/pix/:valor", async (req, res) => {
 // 🔍 Endpoint para consultar status Pix
 app.get("/pix/status/:txid", async (req, res) => {
   const txid = req.params.txid;
+
+  // Primeiro tenta ler do webhook local
+  if (pixStatusMap[txid]) {
+    return res.json({
+      txid,
+      status: pixStatusMap[txid].status,
+      valor: pixStatusMap[txid].valor
+    });
+  }
+
+  // Se não estiver no local, consulta a Efipay
   try {
     const statusData = await consultarPix(txid);
     res.json({
@@ -153,13 +181,25 @@ app.get("/pix/status/:txid", async (req, res) => {
 
 // 📩 Webhook para receber notificações Efí Pay
 app.post("/efipay/webhook", (req, res) => {
-  console.log("📩 PIX RECEBIDO:", JSON.stringify(req.body, null, 2));
+  const pixList = req.body.pix || [];
+  
+  pixList.forEach(pix => {
+    console.log("📩 PIX RECEBIDO via webhook:", pix);
+    pixStatusMap[pix.txid] = {
+      status: pix.status,   // CONCLUIDO ou outro status
+      valor: pix.valor.original || pix.valor
+    };
+  });
+
   res.status(200).json({ ok: true });
 });
 
 // 🧭 Endpoint de teste
 app.get("/", (req, res) => res.json({ ok: true, msg: "Servidor Efí ativo" }));
 
+// --------------------
+// Inicialização
+// --------------------
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`🚀 Servidor rodando na porta ${PORT}`);
