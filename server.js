@@ -77,20 +77,28 @@ app.post("/efipay/webhook", async (req, res) => {
   res.json({ success: true, message: "Pix recebido", data: req.body.pix || [] });
 });
 
-// 🔁 Endpoint para gerar QR Code Pix
+// Endpoint para gerar QR Code Pix para Android
 app.get("/pix/:valor", async (req, res) => {
   const valor = req.params.valor;
-  // ⚠️ Aqui você precisa montar o payload Pix correto (EMV ou via SDK da Efí Pay)
-  const pixPayload = `000201...${valor}...52040000`; 
+
   try {
-    const qr = await QRCode.toDataURL(pixPayload);
-    res.send(`<img src="${qr}"/>`);
+    // Aqui você deve gerar o payload Pix real via Efí Pay
+    const pixPayload = `000201...${valor}...52040000`; // placeholder
+
+    // Gerar QR Code em string (Data URL opcional)
+    const qrCodeString = pixPayload;
+
+    // Retorna JSON para o Android
+    res.json({
+      txid: "TESTE12345",  // você pode gerar um txid real
+      qrCode: qrCodeString
+    });
+
   } catch (err) {
     console.error(err);
-    res.status(500).send("Erro ao gerar QR Code");
+    res.status(500).json({ error: "Erro ao gerar Pix" });
   }
 });
-
 // 🔄 Endpoint teste
 app.get("/", (req, res) => res.send("Servidor Efí Pay ativo 🚀"));
 
