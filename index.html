@@ -1,0 +1,50 @@
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Teste Webhook Pix</h2>
+<button onclick="enviarPix()">Enviar Pix</button>
+
+<script>
+function enviarPix() {
+fetch("https://script.google.com/macros/s/AKfycbxxN_72Fewi2Plw5YYuQk85Z8NsSu-6u9wVUduqNeCllGRof0v6ef717lssm4327FybbQ/exec", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      pix: [
+        { id: "1", valor: 10, pagador: "Jean", chave: "pix", status: "OK" }
+      ]
+    })
+  })
+  .then(res => res.json())
+  .then(data => alert("Resposta: " + JSON.stringify(data)))
+  .catch(err => alert("Erro: " + err));
+}
+</script>
+</body>
+</html>
+
+fetch("https://script.google.com/macros/s/AKfycbxxN_72Fewi2Plw5YYuQk85Z8NsSu-6u9wVUduqNeCllGRof0v6ef717lssm4327FybbQ/exec", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    pix: [{ id: "1", valor: 10, pagador: "Jean", chave: "pix", status: "OK" }]
+  })
+})
+.then(res => res.json())
+.then(console.log)
+.catch(console.error);
+
+fetch("https://script.google.com/macros/s/AKfycbxxN_72Fewi2Plw5YYuQk85Z8NsSu-6u9wVUduqNeCllGRof0v6ef717lssm4327FybbQ/exec", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    pix: [
+      { id: "1", valor: 10, pagador: "Jean", chave: "pix", status: "OK" }
+    ]
+  })
+})
+.then(res => res.json())
+.then(data => console.log("✅ Resposta:", data))
+.catch(err => console.error("❌ Erro:", err));
