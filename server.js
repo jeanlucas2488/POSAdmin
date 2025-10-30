@@ -88,7 +88,7 @@ async function criarPix(valor) {
     calendario: { expiracao: 3600 },
     devedor: {
       nome: "Cliente Teste",
-      cpf: "12345678909" // ⚠️ CPF obrigatório ou CNPJ real
+      cpf: "12345678909"
     },
     valor: { original: valor.toString() },
     chave: PIX_KEY,
@@ -109,8 +109,8 @@ async function criarPix(valor) {
 
   return {
     txid: cobranca.data.txid,
-    qrCode: qr.data.qrcode,        // Código Copia e Cola
-    imagemQrcode: qr.data.imagemQrcode // Imagem base64
+    qrCode: qr.data.qrcode,
+    imagemQrcode: qr.data.imagemQrcode
   };
 }
 
@@ -142,9 +142,9 @@ app.get("/pix/:valor", async (req, res) => {
     const pixData = await criarPix(valor);
 
     res.json({
-      txid: pixData.txid,               // TXID da cobrança
-      qrCode: pixData.qrCode,           // Código Pix Copia e Cola
-      imagemQrcode: pixData.imagemQrcode // Imagem do QR Code em base64
+      txid: pixData.txid,
+      qrCode: pixData.qrCode,
+      imagemQrcode: pixData.imagemQrcode
     });
   } catch (err) {
     console.error("Erro ao gerar Pix:", err.response?.data || err.message);
@@ -156,7 +156,6 @@ app.get("/pix/:valor", async (req, res) => {
 app.get("/pix/status/:txid", async (req, res) => {
   const txid = req.params.txid;
 
-  // Primeiro tenta ler do webhook local
   if (pixStatusMap[txid]) {
     return res.json({
       txid,
@@ -165,7 +164,6 @@ app.get("/pix/status/:txid", async (req, res) => {
     });
   }
 
-  // Se não estiver no local, consulta a Efipay
   try {
     const statusData = await consultarPix(txid);
     res.json({
@@ -180,17 +178,31 @@ app.get("/pix/status/:txid", async (req, res) => {
 });
 
 // 📩 Webhook para receber notificações Efí Pay
-app.post("/efipay/webhook", (req, res) => {
+app.post("/efipay/webhook", async (req, res) => {
   const pixList = req.body.pix || [];
-  
-  pixList.forEach(pix => {
-    console.log("📩 PIX RECEBIDO via webhook:", pix);
-    pixStatusMap[pix.txid] = {
-      status: pix.status,   // CONCLUIDO ou outro status
-      valor: pix.valor.original || pix.valor
-    };
-  });
 
+  for (const pix of pixList) {
+    console.log("📩 PIX RECEBIDO via webhook:", pix);
+
+    try {
+      // 🔎 Consulta o status real da cobrança
+      const statusData = await consultarPix(pix.txid);
+
+      pixStatusMap[pix.txid] = {
+        status: statusData.status,        // ✅ Agora vem da Efí
+        valor: statusData.valor.original, // valor confirmado
+      };
+
+      console.log(`✅ Status atualizado: ${pix.txid} = ${statusData.status}`);
+    } catch (err) {
+      console.error(
+        "❌ Erro ao consultar status Pix:",
+        err.response?.data || err.message
+      );
+    }
+  }
+
+  // ✅ Retorna 200 para confirmar recebimento à Efí
   res.status(200).json({ ok: true });
 });
 
