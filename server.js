@@ -72,23 +72,46 @@ async function registerWebhook() {
   }
 }
 
-// 💰 Criar Pix
+// 💰 Criar Pix e gerar QR Code
 async function criarPix(valor) {
   const token = await getAccessToken();
 
-  const res = await axios.post(
-    `${BASE_URL}/v2/cob`,
-    {
-      calendario: { expiracao: 3600 },
-      devedor: { nome: "Cliente Teste" },
-      valor: { original: valor },
-      chave: PIX_KEY,
-      solicitacaoPagador: "Pagamento via App",
+  // 🧾 Monta o corpo da cobrança
+  const body = {
+    calendario: { expiracao: 3600 },
+    devedor: {
+      nome: "Cliente Teste",
+      cpf: "12345678909" // ⚠️ CPF obrigatório ou CNPJ
     },
-    { headers: { Authorization: `Bearer ${token}` }, httpsAgent: agent }
-  );
+    valor: { original: valor.toString() }, // Valor como string
+    chave: PIX_KEY, // Sua chave Pix cadastrada na Efí
+    solicitacaoPagador: "Pagamento via App"
+  };
 
-  return res.data;
+  // 🔥 Cria a cobrança
+  const cobranca = await axios.post(`${BASE_URL}/v2/cob`, body, {
+    headers: { Authorization: `Bearer ${token}` },
+    httpsAgent: agent
+  });
+
+  const idLoc = cobranca.data.loc.id;
+
+  console.log("✅ Cobrança criada:", cobranca.data.txid);
+
+  // 🎯 Busca o QR Code usando o id da cobrança
+  const qr = await axios.get(`${BASE_URL}/v2/loc/${idLoc}/qrcode`, {
+    headers: { Authorization: `Bearer ${token}` },
+    httpsAgent: agent
+  });
+
+  console.log("✅ QR Code gerado com sucesso");
+
+  // Retorna o txid e o código para o app
+  return {
+    txid: cobranca.data.txid,
+    qrCode: qr.data.qrcode, // código Pix Copia e Cola
+    imagemQrcode: qr.data.imagemQrcode // imagem em base64
+  };
 }
 
 // 💬 Consultar status do Pix (TXID)
