@@ -6,19 +6,18 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const app = express();
-app.use(express.json());
-
 const {
   CLIENT_ID,
   CLIENT_SECRET,
   PIX_KEY,
+  ENVIRONMENT,
+  WEBHOOK_URL,
   CERT_PATH,
-  GAS_WEBHOOK_URL,
-  ENVIRONMENT
+  CERT_PASSPHRASE,
+  PORT
 } = process.env;
 
-if (!CLIENT_ID || !CLIENT_SECRET || !PIX_KEY || !CERT_PATH || !GAS_WEBHOOK_URL) {
+if (!CLIENT_ID || !CLIENT_SECRET || !PIX_KEY || !CERT_PATH || !WEBHOOK_URL) {
   console.error("❌ Variáveis faltando no .env");
   process.exit(1);
 }
@@ -28,17 +27,22 @@ const BASE_URL = isSandbox
   ? "https://pix-h.api.efipay.com.br"
   : "https://pix.api.efipay.com.br";
 
-// 🔐 HTTPS Agent com certificado PFX (mTLS)
-const agent = new https.Agent({
-  pfx: Buffer.from(process.env.CERT_PFX_BASE64, "base64"),
-  passphrase: "", // sem senha
-  rejectUnauthorized: false,
-});
+const app = express();
+app.use(express.json());
 
+// TLS mútuo usando arquivo .p12
+const httpsOptions = {
+  pfx: fs.readFileSync(CERT_PATH),
+  passphrase: CERT_PASSPHRASE || "",
+  requestCert: true,      // TLS mútuo
+  rejectUnauthorized: true
+};
+
+const server = https.createServer(httpsOptions, app);
+
+// 🔐 Função para obter token OAuth2
 let cachedToken = null;
 let tokenExpiresAt = 0;
-
-// Token OAuth2
 async function getAccessToken() {
   const now = Date.now();
   if (cachedToken && now < tokenExpiresAt - 5000) return cachedToken;
@@ -47,53 +51,41 @@ async function getAccessToken() {
   const res = await axios.post(
     `${BASE_URL}/oauth/token`,
     { grant_type: "client_credentials" },
-    { headers: { Authorization: `Basic ${auth}` }, httpsAgent: agent }
+    { headers: { Authorization: `Basic ${auth}` }, httpsAgent: new https.Agent({ pfx: fs.readFileSync(CERT_PATH), passphrase: CERT_PASSPHRASE || "" }) }
   );
 
   cachedToken = res.data.access_token;
   tokenExpiresAt = now + res.data.expires_in * 1000;
-  console.log("✅ Token obtido");
   return cachedToken;
 }
 
-// Registrar Webhook com mTLS
+// 🔗 Registrar webhook na Efí Pay
 async function registerWebhook() {
-  const token = await getAccessToken();
-
-  const webhookUrl = process.env.SERVER_WEBHOOK_URL;
-  console.log("🔗 Registrando Webhook:", webhookUrl);
-
-  const res = await axios.put(
-    `${BASE_URL}/v2/webhook/${PIX_KEY}`,
-    { webhookUrl },
-    { headers: { Authorization: `Bearer ${token}` }, httpsAgent: agent }
-  );
-
-  console.log("✅ Webhook registrado:", res.data);
+  try {
+    const token = await getAccessToken();
+    const res = await axios.put(
+      `${BASE_URL}/v2/webhook/${PIX_KEY}`,
+      { webhookUrl: WEBHOOK_URL },
+      { headers: { Authorization: `Bearer ${token}` }, httpsAgent: new https.Agent({ pfx: fs.readFileSync(CERT_PATH), passphrase: CERT_PASSPHRASE || "" }) }
+    );
+    console.log("✅ Webhook registrado na Efí Pay:", res.data);
+  } catch (err) {
+    console.error("❌ Erro ao registrar webhook:", err.response?.data || err.message);
+  }
 }
 
-// Endpoint para callbacks Pix
-app.post("/efipay/webhook", async (req, res) => {
+// 🔁 Endpoint do webhook
+app.post("/efipay/webhook", (req, res) => {
   console.log("📥 Callback recebido:", req.body);
-
-  try {
-    await axios.post(GAS_WEBHOOK_URL, req.body);
-    console.log("✅ Enviado ao Google Apps Script");
-  } catch (err) {
-    console.error("❌ Erro ao enviar ao GAS:", err.message);
-  }
-
-  res.sendStatus(200);
+  res.json({ success: true, message: "Pix recebido", data: req.body.pix || [] });
 });
 
-app.get("/", (_, res) => res.send("Servidor Efí ativo ✅"));
+// 🔄 Teste simples
+app.get("/", (req, res) => res.send("Servidor Efí Pay ativo 🚀"));
 
-// Criar servidor HTTPS com certificado PFX
-const PORT = 8443;
-https.createServer({ pfx: fs.readFileSync(CERT_PATH), passphrase: "" }, app)
-  .listen(PORT, async () => {
-    console.log(`🚀 Servidor rodando em https://localhost:${PORT}`);
-    await registerWebhook().catch(e => {
-      console.error("❌ Erro ao registrar webhook:", e.response?.data || e.message);
-    });
-  });
+// 🔁 Registrar webhook ao iniciar
+registerWebhook().catch(console.error);
+
+server.listen(PORT || 8443, () => {
+  console.log(`🚀 Servidor rodando com TLS mútuo na porta ${PORT || 8443}`);
+});
