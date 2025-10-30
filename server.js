@@ -1,6 +1,7 @@
 import express from "express";
 import axios from "axios";
 import dotenv from "dotenv";
+import QRCode from "qrcode";
 
 dotenv.config();
 
@@ -26,7 +27,7 @@ const BASE_URL = isSandbox
   ? "https://pix-h.api.efipay.com.br"
   : "https://pix.api.efipay.com.br";
 
-// 🔐 Função para obter token OAuth2
+// 🔐 Token OAuth2
 let cachedToken = null;
 let tokenExpiresAt = 0;
 
@@ -47,7 +48,7 @@ async function getAccessToken() {
   return cachedToken;
 }
 
-// 🔗 Registrar webhook Efí Pay apontando para Render
+// 🔗 Registrar Webhook Efí Pay
 async function registerWebhook() {
   try {
     const token = await getAccessToken();
@@ -66,7 +67,6 @@ async function registerWebhook() {
 app.post("/efipay/webhook", async (req, res) => {
   console.log("📥 Callback recebido:", req.body);
 
-  // Enviar para o Apps Script
   try {
     await axios.post(GAS_WEBHOOK_URL, req.body, { headers: { "Content-Type": "application/json" } });
     console.log("➡️ Dados enviados para Apps Script");
@@ -77,12 +77,26 @@ app.post("/efipay/webhook", async (req, res) => {
   res.json({ success: true, message: "Pix recebido", data: req.body.pix || [] });
 });
 
-// 🔄 Endpoint simples de teste
+// 🔁 Endpoint para gerar QR Code Pix
+app.get("/pix/:valor", async (req, res) => {
+  const valor = req.params.valor;
+  // ⚠️ Aqui você precisa montar o payload Pix correto (EMV ou via SDK da Efí Pay)
+  const pixPayload = `000201...${valor}...52040000`; 
+  try {
+    const qr = await QRCode.toDataURL(pixPayload);
+    res.send(`<img src="${qr}"/>`);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Erro ao gerar QR Code");
+  }
+});
+
+// 🔄 Endpoint teste
 app.get("/", (req, res) => res.send("Servidor Efí Pay ativo 🚀"));
 
 // 🔁 Registrar webhook ao iniciar
 registerWebhook().catch(console.error);
 
-// Render disponibiliza porta via ENV
+// Porta Render ou local
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`🚀 Servidor rodando na porta ${PORT}`));
