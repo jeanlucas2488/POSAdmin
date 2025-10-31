@@ -122,7 +122,7 @@ async function criarPix(valor) {
 }
 
 // --------------------
-/ 🔍 Consultar status do Pix
+// 🔍 Consultar status do Pix
 // --------------------
 async function consultarPix(txid) {
   const token = await getAccessToken();
@@ -136,7 +136,7 @@ async function consultarPix(txid) {
 // --------------------
 // 🔄 Polling de fallback (caso webhook não chegue)
 // --------------------
-function monitorarPix(txid, interval = 5000, timeout = 3600000, initialDelay = 100000) {
+function monitorarPix(txid, interval = 5000, timeout = 3600000, initialDelay = 45000) {
   setTimeout(() => {
     const start = Date.now();
     const timer = setInterval(async () => {
