@@ -122,38 +122,41 @@ async function consultarPix(txid) {
 }
 
 // --------------------
-// Polling automático como fallback
+// Polling automático como fallback (com delay inicial otimizado)
 // --------------------
-function monitorarPix(txid, interval = 5000, timeout = 3600000) {
-  const start = Date.now();
-  const timer = setInterval(async () => {
-    if (pixStatusMap[txid]?.webhookRecebido) {
-      clearInterval(timer); // webhook chegou, para polling
-      return;
-    }
-
-    if (Date.now() - start > timeout) {
-      console.log(`⏰ Timeout: Pix ${txid} não recebeu pagamento em ${timeout / 1000}s`);
-      clearInterval(timer);
-      return;
-    }
-
-    try {
-      const data = await consultarPix(txid);
-      if (pixStatusMap[txid].status !== data.status) {
-        pixStatusMap[txid].status = data.status;
-        pixStatusMap[txid].valor = data.valor.original;
-        console.log(`🔄 Status atualizado via polling: ${txid} = ${data.status}`);
-      }
-
-      if (data.status === "CONCLUIDO") {
-        console.log(`✅ Pix ${txid} foi pago (polling)`);
+function monitorarPix(txid, interval = 5000, timeout = 3600000, initialDelay = 10000) {
+  setTimeout(() => {
+    const start = Date.now();
+    const timer = setInterval(async () => {
+      // Para o polling se o webhook já atualizou
+      if (pixStatusMap[txid]?.webhookRecebido) {
         clearInterval(timer);
+        return;
       }
-    } catch (err) {
-      console.error(`❌ Erro ao consultar Pix ${txid}:`, err.message);
-    }
-  }, interval);
+
+      if (Date.now() - start > timeout) {
+        console.log(`⏰ Timeout: Pix ${txid} não recebeu pagamento em ${timeout / 1000}s`);
+        clearInterval(timer);
+        return;
+      }
+
+      try {
+        const data = await consultarPix(txid);
+        if (pixStatusMap[txid].status !== data.status) {
+          pixStatusMap[txid].status = data.status;
+          pixStatusMap[txid].valor = data.valor.original;
+          console.log(`🔄 Status atualizado via polling: ${txid} = ${data.status}`);
+        }
+
+        if (data.status === "CONCLUIDO") {
+          console.log(`✅ Pix ${txid} foi pago (polling)`);
+          clearInterval(timer);
+        }
+      } catch (err) {
+        console.error(`❌ Erro ao consultar Pix ${txid}:`, err.message);
+      }
+    }, interval);
+  }, initialDelay);
 }
 
 // --------------------
