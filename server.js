@@ -124,7 +124,7 @@ async function consultarPix(txid) {
 // --------------------
 // Polling automático como fallback (com delay inicial otimizado)
 // --------------------
-function monitorarPix(txid, interval = 5000, timeout = 3600000, initialDelay = 10000) {
+function monitorarPix(txid, interval = 5000, timeout = 3600000, initialDelay = 50000) {
   setTimeout(() => {
     const start = Date.now();
     const timer = setInterval(async () => {
