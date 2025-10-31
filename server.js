@@ -9,38 +9,40 @@ const app = express();
 app.use(express.json());
 
 // --------------------
-// Configuração do ambiente
+// 🔧 Configuração do ambiente
 // --------------------
-const { CLIENT_ID, CLIENT_SECRET, PIX_KEY, CERT_PATH, ENVIRONMENT, WEBHOOK_URL } = process.env;
+const {
+  CLIENT_ID,
+  CLIENT_SECRET,
+  PIX_KEY,
+  CERT_PATH,
+  WEBHOOK_URL,
+} = process.env;
 
 if (!CLIENT_ID || !CLIENT_SECRET || !PIX_KEY || !CERT_PATH || !WEBHOOK_URL) {
   console.error("❌ Variáveis faltando no .env");
   process.exit(1);
 }
 
-const isSandbox = ENVIRONMENT === "sandbox";
-const BASE_URL = isSandbox
-  ? "https://pix-h.api.efipay.com.br"
-  : "https://pix.api.efipay.com.br";
+// ⚙️ Produção (sem sandbox)
+const BASE_URL = "https://pix.api.efipay.com.br";
 
+// Configura o certificado pfx
 const agent = new https.Agent({
   pfx: fs.readFileSync(CERT_PATH),
   rejectUnauthorized: false,
 });
 
+// --------------------
+// 💾 Armazenamento simples em memória
+// --------------------
+const pixStatusMap = {}; // txid -> { status, valor, webhookRecebido }
 let cachedToken = null;
 let tokenExpiresAt = 0;
 
 // --------------------
-// Armazenamento simples em memória
+// 🔐 Função — obter token OAuth2
 // --------------------
-const pixStatusMap = {}; // txid -> { status, valor, webhookRecebido }
-
-// --------------------
-// Funções auxiliares
-// --------------------
-
-// 🔐 Obter token OAuth2
 async function getAccessToken() {
   const now = Date.now();
   if (cachedToken && now < tokenExpiresAt - 5000) return cachedToken;
@@ -57,27 +59,38 @@ async function getAccessToken() {
   return cachedToken;
 }
 
-// 🔗 Registrar Webhook Efipay
-async function registerWebhook() {
-  try {
-    const token = await getAccessToken();
-
-    const res = await axios.put(
-      `${BASE_URL}/v2/webhook/${PIX_KEY}`,
-      { webhookUrl: WEBHOOK_URL },
-      { headers: { Authorization: `Bearer ${token}` }, httpsAgent: agent }
-    );
-
-    console.log("✅ Webhook registrado com sucesso:", res.data);
-  } catch (err) {
-    console.error("❌ Erro ao registrar webhook:", err.response?.data || err.message);
+// --------------------
+// 🌐 Registrar Webhook (com retry automático)
+// --------------------
+async function registerWebhook(maxRetries = 5, delay = 8000) {
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    try {
+      const token = await getAccessToken();
+      const res = await axios.put(
+        `${BASE_URL}/v2/webhook/${PIX_KEY}`,
+        { webhookUrl: WEBHOOK_URL },
+        { headers: { Authorization: `Bearer ${token}` }, httpsAgent: agent }
+      );
+      console.log("✅ Webhook registrado com sucesso:", res.data);
+      return true;
+    } catch (err) {
+      const msg = err.response?.data || err.message;
+      console.error(`❌ Tentativa ${attempt} ao registrar webhook falhou:`, msg);
+      if (attempt < maxRetries) {
+        console.log(`⏳ Aguardando ${delay / 1000}s para tentar novamente...`);
+        await new Promise((r) => setTimeout(r, delay));
+      } else {
+        console.error("🚨 Falha definitiva ao registrar webhook após várias tentativas.");
+      }
+    }
   }
 }
 
-// 💰 Criar Pix e gerar QR Code
+// --------------------
+// 💰 Criar Pix + QR Code
+// --------------------
 async function criarPix(valor) {
   const token = await getAccessToken();
-
   const body = {
     calendario: { expiracao: 3600 },
     devedor: { nome: "Cliente Teste", cpf: "12345678909" },
@@ -97,10 +110,7 @@ async function criarPix(valor) {
     httpsAgent: agent,
   });
 
-  // Inicializa status em memória
-  pixStatusMap[cobranca.data.txid] = { status: "ATIVA", valor: valor, webhookRecebido: false };
-
-  // Inicia polling apenas se webhook não chegar
+  pixStatusMap[cobranca.data.txid] = { status: "ATIVA", valor, webhookRecebido: false };
   monitorarPix(cobranca.data.txid);
 
   console.log(`💰 Pix gerado: TXID ${cobranca.data.txid} | Valor: R$${valor}`);
@@ -111,7 +121,9 @@ async function criarPix(valor) {
   };
 }
 
-// 💬 Consultar status do Pix (TXID)
+// --------------------
+// 🔍 Consultar status do Pix
+// --------------------
 async function consultarPix(txid) {
   const token = await getAccessToken();
   const res = await axios.get(`${BASE_URL}/v2/cob/${txid}`, {
@@ -122,20 +134,19 @@ async function consultarPix(txid) {
 }
 
 // --------------------
-// Polling automático como fallback (com delay inicial otimizado)
+// 🔄 Polling de fallback (caso webhook não chegue)
 // --------------------
-function monitorarPix(txid, interval = 5000, timeout = 3600000, initialDelay = 50000) {
+function monitorarPix(txid, interval = 5000, timeout = 3600000, initialDelay = 45000) {
   setTimeout(() => {
     const start = Date.now();
     const timer = setInterval(async () => {
-      // Para o polling se o webhook já atualizou
       if (pixStatusMap[txid]?.webhookRecebido) {
         clearInterval(timer);
         return;
       }
 
       if (Date.now() - start > timeout) {
-        console.log(`⏰ Timeout: Pix ${txid} não recebeu pagamento em ${timeout / 1000}s`);
+        console.log(`⏰ Timeout: Pix ${txid} sem pagamento após ${timeout / 1000}s`);
         clearInterval(timer);
         return;
       }
@@ -144,45 +155,43 @@ function monitorarPix(txid, interval = 5000, timeout = 3600000, initialDelay = 5
         const data = await consultarPix(txid);
         if (pixStatusMap[txid].status !== data.status) {
           pixStatusMap[txid].status = data.status;
-          pixStatusMap[txid].valor = data.valor.original;
-          console.log(`🔄 Status atualizado via polling: ${txid} = ${data.status}`);
+          console.log(`🔄 Polling atualizou ${txid}: ${data.status}`);
         }
-
         if (data.status === "CONCLUIDO") {
-          console.log(`✅ Pix ${txid} foi pago (polling)`);
+          console.log(`✅ Pix ${txid} pago (polling)`);
           clearInterval(timer);
         }
       } catch (err) {
-        console.error(`❌ Erro ao consultar Pix ${txid}:`, err.message);
+        console.error(`❌ Erro no polling ${txid}:`, err.message);
       }
     }, interval);
   }, initialDelay);
 }
 
 // --------------------
-// Endpoints
+// 🌍 Endpoints
 // --------------------
 
-// 🔁 Endpoint para gerar QR Code Pix
+// 📦 Gerar Pix
 app.get("/pix/:valor", async (req, res) => {
   try {
-    const pixData = await criarPix(req.params.valor);
-    res.json(pixData);
+    const data = await criarPix(req.params.valor);
+    res.json(data);
   } catch (err) {
     console.error("❌ Erro ao gerar Pix:", err.response?.data || err.message);
     res.status(500).json({ error: "Erro ao gerar Pix" });
   }
 });
 
-// 🔍 Endpoint para consultar status Pix
+// 🔎 Consultar status
 app.get("/pix/status/:txid", (req, res) => {
-  const data = pixStatusMap[req.params.txid] || { status: "ATIVA", valor: 0 };
-  res.json({ txid: req.params.txid, status: data.status, valor: data.valor });
+  const info = pixStatusMap[req.params.txid] || { status: "ATIVA", valor: 0 };
+  res.json({ txid: req.params.txid, ...info });
 });
 
-// 📩 Webhook Efí Pay
+// 📬 Webhook EfíPay
 app.post("/efipay/webhook", (req, res) => {
-  console.log("📥 Webhook recebido (raw):", JSON.stringify(req.body));
+  console.log("📥 Webhook recebido:", JSON.stringify(req.body));
   res.status(200).json({ ok: true });
 
   const pixList = req.body.pix || [];
@@ -193,9 +202,9 @@ app.post("/efipay/webhook", (req, res) => {
         pixStatusMap[pix.txid] = {
           status: statusData.status,
           valor: statusData.valor.original,
-          webhookRecebido: true, // marca que webhook chegou
+          webhookRecebido: true,
         };
-        console.log(`✅ Status atualizado via webhook: ${pix.txid} = ${statusData.status}`);
+        console.log(`✅ Webhook confirmou pagamento: ${pix.txid} = ${statusData.status}`);
       } catch (err) {
         console.error("❌ Erro ao processar webhook:", err.response?.data || err.message);
       }
@@ -203,14 +212,14 @@ app.post("/efipay/webhook", (req, res) => {
   }
 });
 
-// 🧭 Endpoint de teste
-app.get("/", (req, res) => res.json({ ok: true, msg: "Servidor Efí ativo" }));
+// 🧭 Status servidor
+app.get("/", (req, res) => res.json({ ok: true, msg: "Servidor EfíPay rodando (produção)" }));
 
 // --------------------
-// Inicialização
+// 🚀 Inicialização
 // --------------------
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
+app.listen(PORT, async () => {
   console.log(`🚀 Servidor rodando na porta ${PORT}`);
-  registerWebhook(); // registra webhook automaticamente
+  await registerWebhook(); // faz retry automático
 });
