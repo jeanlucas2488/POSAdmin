@@ -177,23 +177,26 @@ app.get("/pix/status/:txid", async (req, res) => {
   res.json({ txid, status: data.status, valor: data.valor });
 });
 
-// 📩 Webhook para receber notificações Efipay
-app.post("/efipay/webhook", async (req, res) => {
+// 📩 Webhook Efí Pay — responde rápido e processa em background
+app.post("/efipay/webhook", (req, res) => {
+  console.log("📥 Webhook recebido (raw):", JSON.stringify(req.body));
+  res.status(200).json({ ok: true }); // responde rápido pra Efí não abortar
+
   const pixList = req.body.pix || [];
   for (const pix of pixList) {
-    console.log("📩 PIX RECEBIDO via webhook:", pix);
-    try {
-      const statusData = await consultarPix(pix.txid);
-      pixStatusMap[pix.txid] = {
-        status: statusData.status,
-        valor: statusData.valor.original,
-      };
-      console.log(`✅ Status atualizado via webhook: ${pix.txid} = ${statusData.status}`);
-    } catch (err) {
-      console.error(`❌ Erro ao consultar Pix ${pix.txid}:`, err.message);
-    }
+    (async () => {
+      try {
+        const statusData = await consultarPix(pix.txid);
+        pixStatusMap[pix.txid] = {
+          status: statusData.status,
+          valor: statusData.valor.original,
+        };
+        console.log(`✅ Status atualizado via webhook: ${pix.txid} = ${statusData.status}`);
+      } catch (err) {
+        console.error("❌ Erro ao consultar status Pix:", err.response?.data || err.message);
+      }
+    })();
   }
-  res.status(200).json({ ok: true });
 });
 
 // 🧭 Endpoint de teste
