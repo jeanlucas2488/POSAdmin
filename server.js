@@ -41,7 +41,7 @@ let cachedToken = null;
 let tokenExpiresAt = 0;
 
 // --------------------
-// 🔐 Função — obter token OAuth2
+// 🔐 Obter token OAuth2
 // --------------------
 async function getAccessToken() {
   const now = Date.now();
@@ -60,7 +60,7 @@ async function getAccessToken() {
 }
 
 // --------------------
-// 🌐 Registrar Webhook (com retry automático)
+// 🌐 Registrar Webhook (com retry + delay inicial)
 // --------------------
 async function registerWebhook(maxRetries = 5, delay = 8000) {
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
@@ -134,7 +134,7 @@ async function consultarPix(txid) {
 }
 
 // --------------------
-// 🔄 Polling de fallback (caso webhook não chegue)
+// 🔄 Polling (fallback se webhook não chega)
 // --------------------
 function monitorarPix(txid, interval = 5000, timeout = 3600000, initialDelay = 100000) {
   setTimeout(() => {
@@ -221,5 +221,20 @@ app.get("/", (req, res) => res.json({ ok: true, msg: "Servidor EfíPay rodando (
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, async () => {
   console.log(`🚀 Servidor rodando na porta ${PORT}`);
-  await registerWebhook(); // faz retry automático
+
+  // ⏱️ Aguarda o servidor acordar totalmente antes de registrar o webhook
+  setTimeout(async () => {
+    console.log("🔄 Registrando webhook (com delay inicial)...");
+    await registerWebhook();
+  }, 15000); // 15 segundos após o start
+
+  // 🔁 Mantém o Render acordado (ping a cada 5 minutos)
+  setInterval(async () => {
+    try {
+      await axios.get("https://posadmin.onrender.com/");
+      console.log("💡 Mantendo Render acordado...");
+    } catch (err) {
+      console.log("⚠️ Falha ao manter ativo:", err.message);
+    }
+  }, 5 * 60 * 1000);
 });
