@@ -122,6 +122,8 @@ async function criarPix(valor) {
 }
 
 // --------------------
+/ 🔍 Consultar status do Pix
+// --------------------
 async function consultarPix(txid) {
   const token = await getAccessToken();
   const res = await axios.get(`${BASE_URL}/v2/cob/${txid}`, {
@@ -129,6 +131,41 @@ async function consultarPix(txid) {
     httpsAgent: agent,
   });
   return res.data;
+}
+
+// --------------------
+// 🔄 Polling de fallback (caso webhook não chegue)
+// --------------------
+function monitorarPix(txid, interval = 5000, timeout = 3600000, initialDelay = 100000) {
+  setTimeout(() => {
+    const start = Date.now();
+    const timer = setInterval(async () => {
+      if (pixStatusMap[txid]?.webhookRecebido) {
+        clearInterval(timer);
+        return;
+      }
+
+      if (Date.now() - start > timeout) {
+        console.log(`⏰ Timeout: Pix ${txid} sem pagamento após ${timeout / 1000}s`);
+        clearInterval(timer);
+        return;
+      }
+
+      try {
+        const data = await consultarPix(txid);
+        if (pixStatusMap[txid].status !== data.status) {
+          pixStatusMap[txid].status = data.status;
+          console.log(`🔄 Polling atualizou ${txid}: ${data.status}`);
+        }
+        if (data.status === "CONCLUIDO") {
+          console.log(`✅ Pix ${txid} pago (polling)`);
+          clearInterval(timer);
+        }
+      } catch (err) {
+        console.error(`❌ Erro no polling ${txid}:`, err.message);
+      }
+    }, interval);
+  }, initialDelay);
 }
 
 // --------------------
