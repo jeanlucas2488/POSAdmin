@@ -122,7 +122,14 @@ async function criarPix(valor) {
 }
 
 // --------------------
-
+async function consultarPix(txid) {
+  const token = await getAccessToken();
+  const res = await axios.get(`${BASE_URL}/v2/cob/${txid}`, {
+    headers: { Authorization: `Bearer ${token}` },
+    httpsAgent: agent,
+  });
+  return res.data;
+}
 
 // --------------------
 // 🌍 Endpoints
