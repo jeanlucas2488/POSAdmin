@@ -34,7 +34,7 @@ const agent = new https.Agent({
 });
 
 // --------------------
-// 💾 Armazenamento simples em memória
+// 💾 Armazenamento em memória
 // --------------------
 const pixStatusMap = {}; // txid -> { status, valor, webhookRecebido }
 let cachedToken = null;
@@ -60,7 +60,7 @@ async function getAccessToken() {
 }
 
 // --------------------
-// 🌐 Registrar Webhook (com retry + delay inicial)
+// 🌐 Registrar Webhook (com retry e delay inicial)
 // --------------------
 async function registerWebhook(maxRetries = 5, delay = 8000) {
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
@@ -87,7 +87,19 @@ async function registerWebhook(maxRetries = 5, delay = 8000) {
 }
 
 // --------------------
-// 💰 Criar Pix + QR Code
+// 🔍 Consultar status do Pix (direto na Efí)
+// --------------------
+async function consultarPix(txid) {
+  const token = await getAccessToken();
+  const res = await axios.get(`${BASE_URL}/v2/cob/${txid}`, {
+    headers: { Authorization: `Bearer ${token}` },
+    httpsAgent: agent,
+  });
+  return res.data;
+}
+
+// --------------------
+// 💰 Criar Pix + QR Code + verificação periódica automática
 // --------------------
 async function criarPix(valor) {
   const token = await getAccessToken();
@@ -110,62 +122,39 @@ async function criarPix(valor) {
     httpsAgent: agent,
   });
 
-  pixStatusMap[cobranca.data.txid] = { status: "ATIVA", valor, webhookRecebido: false };
-  monitorarPix(cobranca.data.txid);
+  const txid = cobranca.data.txid;
+  pixStatusMap[txid] = { status: "ATIVA", valor, webhookRecebido: false };
 
-  console.log(`💰 Pix gerado: TXID ${cobranca.data.txid} | Valor: R$${valor}`);
+  // ✅ Verifica pagamento direto após alguns segundos
+  verificarPixDireto(txid);
+
+  console.log(`💰 Pix gerado: TXID ${txid} | Valor: R$${valor}`);
   return {
-    txid: cobranca.data.txid,
+    txid,
     qrCode: qr.data.qrcode,
     imagemQrcode: qr.data.imagemQrcode,
   };
 }
 
 // --------------------
-// 🔍 Consultar status do Pix
+// 🔎 Verificação automática direta (sem polling constante)
 // --------------------
-async function consultarPix(txid) {
-  const token = await getAccessToken();
-  const res = await axios.get(`${BASE_URL}/v2/cob/${txid}`, {
-    headers: { Authorization: `Bearer ${token}` },
-    httpsAgent: agent,
-  });
-  return res.data;
-}
-
-// --------------------
-// 🔄 Polling (fallback se webhook não chega)
-// --------------------
-function monitorarPix(txid, interval = 5000, timeout = 3600000, initialDelay = 100000) {
-  setTimeout(() => {
-    const start = Date.now();
-    const timer = setInterval(async () => {
-      if (pixStatusMap[txid]?.webhookRecebido) {
-        clearInterval(timer);
+async function verificarPixDireto(txid, tentativas = 10, delay = 15000) {
+  for (let i = 1; i <= tentativas; i++) {
+    try {
+      const data = await consultarPix(txid);
+      if (data.status === "CONCLUIDO") {
+        pixStatusMap[txid].status = data.status;
+        console.log(`✅ Confirmado direto na Efí: ${txid}`);
         return;
       }
-
-      if (Date.now() - start > timeout) {
-        console.log(`⏰ Timeout: Pix ${txid} sem pagamento após ${timeout / 1000}s`);
-        clearInterval(timer);
-        return;
-      }
-
-      try {
-        const data = await consultarPix(txid);
-        if (pixStatusMap[txid].status !== data.status) {
-          pixStatusMap[txid].status = data.status;
-          console.log(`🔄 Polling atualizou ${txid}: ${data.status}`);
-        }
-        if (data.status === "CONCLUIDO") {
-          console.log(`✅ Pix ${txid} pago (polling)`);
-          clearInterval(timer);
-        }
-      } catch (err) {
-        console.error(`❌ Erro no polling ${txid}:`, err.message);
-      }
-    }, interval);
-  }, initialDelay);
+      console.log(`🔎 Tentativa ${i}: Pix ${txid} ainda ${data.status}`);
+    } catch (err) {
+      console.error(`❌ Erro ao consultar Pix (${txid}):`, err.message);
+    }
+    await new Promise((r) => setTimeout(r, delay));
+  }
+  console.log(`⏰ Finalizado: Pix ${txid} não pago após ${tentativas * (delay / 1000)}s`);
 }
 
 // --------------------
@@ -222,16 +211,16 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, async () => {
   console.log(`🚀 Servidor rodando na porta ${PORT}`);
 
-  // ⏱️ Aguarda o servidor acordar totalmente antes de registrar o webhook
+  // ⏱️ Aguarda o Render acordar antes de registrar webhook
   setTimeout(async () => {
     console.log("🔄 Registrando webhook (com delay inicial)...");
     await registerWebhook();
-  }, 15000); // 15 segundos após o start
+  }, 15000);
 
-  // 🔁 Mantém o Render acordado (ping a cada 5 minutos)
+  // 🔁 Mantém o Render acordado
   setInterval(async () => {
     try {
-      await axios.get("https://posadmin.onrender.com/");
+      await axios.get(WEBHOOK_URL.replace("/efipay/webhook", ""));
       console.log("💡 Mantendo Render acordado...");
     } catch (err) {
       console.log("⚠️ Falha ao manter ativo:", err.message);
