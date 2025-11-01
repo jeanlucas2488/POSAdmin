@@ -99,7 +99,7 @@ async function consultarPix(txid) {
 }
 
 // --------------------
-// 💰 Criar Pix + QR Code + verificação periódica automática
+// 💰 Criar Pix + QR Code + verificação direta
 // --------------------
 async function criarPix(valor) {
   const token = await getAccessToken();
@@ -125,7 +125,7 @@ async function criarPix(valor) {
   const txid = cobranca.data.txid;
   pixStatusMap[txid] = { status: "ATIVA", valor, webhookRecebido: false };
 
-  // ✅ Verifica pagamento direto após alguns segundos
+  // ✅ Inicia a verificação direta após a criação
   verificarPixDireto(txid);
 
   console.log(`💰 Pix gerado: TXID ${txid} | Valor: R$${valor}`);
@@ -137,24 +137,29 @@ async function criarPix(valor) {
 }
 
 // --------------------
-// 🔎 Verificação automática direta (sem polling constante)
+// 🔎 Verificação direta (substitui polling)
 // --------------------
 async function verificarPixDireto(txid, tentativas = 10, delay = 15000) {
   for (let i = 1; i <= tentativas; i++) {
     try {
       const data = await consultarPix(txid);
+      pixStatusMap[txid].status = data.status;
+
       if (data.status === "CONCLUIDO") {
-        pixStatusMap[txid].status = data.status;
-        console.log(`✅ Confirmado direto na Efí: ${txid}`);
-        return;
+        console.log(`✅ Pix ${txid} confirmado direto na Efí (tentativa ${i})`);
+        return true; // encerra a verificação
       }
+
       console.log(`🔎 Tentativa ${i}: Pix ${txid} ainda ${data.status}`);
     } catch (err) {
       console.error(`❌ Erro ao consultar Pix (${txid}):`, err.message);
     }
+
     await new Promise((r) => setTimeout(r, delay));
   }
+
   console.log(`⏰ Finalizado: Pix ${txid} não pago após ${tentativas * (delay / 1000)}s`);
+  return false;
 }
 
 // --------------------
